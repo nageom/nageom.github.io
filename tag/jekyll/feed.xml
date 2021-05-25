@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/jekyll/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-05-25T00:11:34+09:00</updated>
+  <updated>2021-05-25T12:57:17+09:00</updated>
   <id>https://nageom.github.io/tag/jekyll/feed.xml</id>
 
   
@@ -30,6 +30,40 @@
   
   
 
+  
+    <entry>
+      <title type="html">Google Check</title>
+      <link href="https://nageom.github.io/jekyll-check" rel="alternate" type="text/html" title="Google Check" />
+      <published>2021-05-25T01:40:00+09:00</published>
+      <updated>2021-05-25T01:40:00+09:00</updated>
+      <id>https://nageom.github.io/jekyll-check</id>
+      <content type="html" xml:base="https://nageom.github.io/jekyll-check">&lt;p&gt;google-site-verification: google58f7d8a62c483666.html&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="jekyll" />
+      
+
+      
+        <summary type="html">google-site-verification: google58f7d8a62c483666.html</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Jekyll 강좌(1)</title>

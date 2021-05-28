@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e78d8d52-7f3c-4273-bea4-647d8d6d3106" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/nageom/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author/nageom/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/nageom/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/nageom/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll-check.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll-check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-address.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-control-statement.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-control-statement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/jekyll/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/jekyll/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/python/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blogmaker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -49,6 +37,7 @@
       <workItem from="1621869116787" duration="1017000" />
       <workItem from="1621914677928" duration="32000" />
       <workItem from="1621914719934" duration="2810000" />
+      <workItem from="1622133887104" duration="966000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1621869175688</created>
@@ -71,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621915183368</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit">
+      <created>1622133923688</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622133923688</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

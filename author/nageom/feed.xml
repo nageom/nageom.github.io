@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-05-28T16:27:26+09:00</updated>
+  <updated>2021-05-28T16:43:48+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -67,14 +67,14 @@
   
     <entry>
       <title type="html">Oracle-basic_1</title>
-      <link href="https://nageom.github.io/Oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" />
+      <link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" />
       <published>2021-05-25T09:14:00+09:00</published>
       <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/Oracle-basic_1</id>
-      <content type="html" xml:base="https://nageom.github.io/Oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+      <id>https://nageom.github.io/oracle-basic_1</id>
+      <content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./Oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;1) RDBMS : 관계형 데이터베이스 관리 시스템&lt;/p&gt;
@@ -148,7 +148,7 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
       
 
       
-        <category term="Oracle" />
+        <category term="oracle" />
       
 
       
@@ -161,14 +161,14 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
   
     <entry>
       <title type="html">Oracle-DataType_2</title>
-      <link href="https://nageom.github.io/Oracle_DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
+      <link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
       <published>2021-05-25T09:14:00+09:00</published>
       <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/Oracle_DataType_2</id>
-      <content type="html" xml:base="https://nageom.github.io/Oracle_DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+      <id>https://nageom.github.io/oracle-DataType_2</id>
+      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./Oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;3) 데이터타입
@@ -192,7 +192,7 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
       
 
       
-        <category term="Oracle" />
+        <category term="oracle" />
       
 
       

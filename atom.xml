@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>우리는 한낱 원숭이에 불과하다.</description>
+    <description>IT 공부방</description>
     <link>
     https://nageom.github.io</link>
     
@@ -66,6 +66,24 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
         <link>
         https://nageom.github.io/oracle-basic_1</link>
         <guid isPermaLink="true">https://nageom.github.io/oracle-basic_1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Java_equals와 &quot;==&quot;연산자의 차이</title>
+        
+          <description>&lt;hr /&gt;
+&lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
+우선  equals는 메서드 &lt;br /&gt;
+      ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 May 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/java-equals</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-equals</guid>
       </item>
       
     

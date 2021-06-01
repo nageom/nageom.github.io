@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-05-28T16:43:48+09:00</updated>
+  <updated>2021-06-01T11:53:31+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -12,11 +12,11 @@
   
 
   
-    <title type="html">Nageom | </title>
+    <title type="html">nageom’s blog | </title>
   
 
   
-    <subtitle>우리는 한낱 원숭이에 불과하다.</subtitle>
+    <subtitle>IT 공부방</subtitle>
   
 
   
@@ -153,6 +153,113 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
 
       
         <summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Java_equals와 “==”연산자의 차이</title>
+      <link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 &quot;==&quot;연산자의 차이" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/java-equals</id>
+      <content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
+&lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
+우선  equals는 메서드 &lt;br /&gt;
+      ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
+
+&lt;p&gt;equals는 대상의 hashcode를 비교하고 &lt;br /&gt;
+== 연산자는 대상의 주소값을 비교합니다.  &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;hashCode란?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Object클래스는 hashCode() 라는 메서드를 가지고 있습니다 &lt;br /&gt;
+hashCode() 메서드는 말그대로 hashCode를 생성해 리턴해주는 메서드이죠 &lt;br /&gt;
+hashcode란 Object클래스의 메서드가 리턴하는 각 객체에 대응하는 고유한 정수값을 이야기하며     &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;
+기본적으로 hashCode는 객체의 주소값과 연관이 있습니다&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;비교했을때 주소값이 다른 obj와 obj2의 hashcode값이 다르죠 &lt;br /&gt;
+그리고 &lt;br /&gt;
+obj2의 주소값 @ 뒤의 값 6d06d69c (16진수) -&amp;gt; hashCode 1829164700(10진수) 값으로
+변환이 되는것을 볼 수 있습니다. &lt;br /&gt;
+&lt;br /&gt;
+그렇다면 주소값으로도 hashCode처럼 대상을 비교할 수 있지않나?
+그럼 equals랑 ==이랑 같게 쓰여야하는거 아닌가?
+라는 생각을 했었는데  &lt;br /&gt;
+멍-충 &lt;br /&gt;
+주소값이 서로 다르지만 문자열은 같은 두 String 객체를 가지고 hashCode를 비교해보았습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+&lt;img src=&quot;./assets/built/images/java/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+주소값은 다르지만 같은 문자열에 대해 hashCode가 같은 것을 볼 수 있습니다.  &lt;br /&gt;
+응? 주소값으로 hashCode만드는데 주소값이 다른데 hashCode가 같네? 모순모순!  &lt;br /&gt;
+이라고 할 뻔 했지만 &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;String의 hashCode() 는 재정의가 되어 사용된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;가 정답입니다.&lt;/p&gt;
+
+&lt;p&gt;String은 문자열이고 “에이”와 “에이”가 주소가 다르다고 다른말이라면 hashCode의 의미가 없을뿐더러 발생할 수 있는 나쁜 예로  &lt;br /&gt;
+-&amp;gt; HashMap에서 일치하는 key 값을 찾아낼 수 없게 되겠죠 &lt;br /&gt;
+그래서 String은 hashCode를 생성할 때 주소값 말고 문자열로 생성하는 것으로 hashCode() 메서드가 재정의 된 것이랍니다.&lt;/p&gt;
+
+&lt;p&gt;여기까지 equals메서드와 ‘==’연산자의 간단한 차이였습니다.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;아래는 String 기본 설명 살짝 덧붙여봤습니다.&lt;/p&gt;
+
+&lt;p&gt;우선 spring 둘의 주소값이 다른 이유&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;리터널 aa변수는 stack 메모리에, “에이”라는 문자열은 Heap 메모리 내에 String pool 이라는 곳에 저장. 그 주소가 aa변수에 저장됩니다. 
+또한 String pool에 저장될때 intern() 이라는 메서드가 실행되는데  &lt;br /&gt;
+intern() = 같은 값이 있는 경우 기존 값의 메모리 주소를 사용하고, 다른 값일 경우 객체를 생성해 값을 저장하고 그 메모리 주소를 리턴합니다.
+Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막습니다. 
+그래서&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;라는 결과를 얻게되는것이죠.&lt;/p&gt;
+
+&lt;p&gt;반대로  &lt;br /&gt;
+ new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. &lt;br /&gt;
+그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? &lt;br /&gt;
+오늘도 화이팅입니다!&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary>
       
 
       

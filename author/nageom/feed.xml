@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-01T11:53:31+09:00</updated>
+  <updated>2021-06-01T23:33:59+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -59,6 +59,50 @@
 
       
         <summary type="html">Spring</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Oracle-DataType_2</title>
+      <link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/oracle-DataType_2</id>
+      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;3) 데이터타입
+   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
+이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="oracle" />
+      
+
+      
+        <summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
       
 
       
@@ -267,22 +311,67 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
     </entry>
   
     <entry>
-      <title type="html">Oracle-DataType_2</title>
-      <link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
+      <title type="html">알고리즘과 자료구조는?</title>
+      <link href="https://nageom.github.io/algorithm-basic" rel="alternate" type="text/html" title="알고리즘과 자료구조는?" />
       <published>2021-05-25T09:14:00+09:00</published>
       <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/oracle-DataType_2</id>
-      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;3) 데이터타입
-   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+      <id>https://nageom.github.io/algorithm-basic</id>
+      <content type="html" xml:base="https://nageom.github.io/algorithm-basic">&lt;hr /&gt;
+&lt;p&gt;오늘의 주제는 알고리즘과 자료구조의 차이입니다. &lt;br /&gt;
+카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요? &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
-이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content>
+&lt;p&gt;자료구조와 알고리즘의 차이를 설명할때 가장 많이 나오는 예시가 도서관이더라구요.  &lt;br /&gt;
+자료구조는 ‘책장에 꽂혀있는 책들의 정리&lt;em&gt;방법&lt;/em&gt;’ -&amp;gt; ex) 알파벳순, 연도순 등 &lt;br /&gt;
+알고리즘은 ‘책장에서 책을 찾는 절차’ -&amp;gt; ex) 위에서 아래, 왼쪽에서 오른쪽 또는 무작위 등&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;자료구조 + 알고리즘 = 프로그램&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;
+자료구조는 데이터에 편하게 접근,변경하기 위한 데이터의 저장&amp;amp;조직하는 방법을 말하는 것 입니다. 
+그래서 모든 목적에 맞는 자료구조는 없다 -&amp;gt; 각 자료구조가 갖는 장점과 단점을 잘 아는 것이 중요하죠.&lt;/p&gt;
+
+&lt;p&gt;자료구조의 간단 설명!  &lt;br /&gt;
+1.배열 (Array) &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/algorithm/basic_array.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;
+&lt;br /&gt;
+2.큐 (Queue) &lt;br /&gt;
+&lt;img src=&quot;./assets/built/images/algorithm/basic_queue.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+참고 그림처럼 마치 다 쓴 두루마리 휴지심처럼 입구와 출구가 두 개 있는 구조. &lt;br /&gt;
+입구의 주소를 rear로 명시, 출구의 주소를 제일 처음들어온 친구의 주고 front로 명시해두어서 &lt;br /&gt;
+데이터를 넣을때는 rear뒤로, 삭제 시에는 front에 있는 데이터를 삭제하고 front는 다음 주소로 
+이동합니다. –&amp;gt; 기억을 더듬으며 적은거라 수정 요망!! :)
+FIFO(First In First Out)&lt;/p&gt;
+
+&lt;p&gt;3.스택 (Stack)
+&lt;img src=&quot;./assets/built/images/algorithm/basic_stack.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+입/출구가 하나뿐이라 마지막에 넣은 반찬이 제일 위에 있어서 먼저 꺼내먹을 수 밖에 없는 구조.  &lt;br /&gt;
+LIFO(Last In First Out)&lt;/p&gt;
+
+&lt;p&gt;4.연결 리스트(Linked List)
+&lt;img src=&quot;./assets/built/images/algorithm/basic_list.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+한 클래스가 데이터와 링크를 멤버로 갖고있는것입니다 &lt;br /&gt;
+그래서 클1, 클2, 클3 이렇게 차례로 연결 되어있다면 &lt;br /&gt;
+클1(“데이터1”, head의 주소), 클2(“데이터2”, 클1의 주소), 클3(“데이터3”, 클2의주소)… &lt;br /&gt;
+이렇게 자기 앞에 주소를 갖고 찾아가는식으로 연결연결 되어있는 자료구조입니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;단일 연결 리스트, 단일 원형 연결 리스트, 이중 연결 리스트, 이중 원형 연결 리스트가 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;5.트리 (Tree)
+&lt;img src=&quot;./assets/built/images/algorithm/basic_tree.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/algorithm/basic_tree2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;6.그래프 (graph)
+&lt;img src=&quot;./assets/built/images/algorithm/basic_graph.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+관계를 그래프로 추상화하여 다룰 수 있다. 
+Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+여기까지 자료구조와 알고리즘의 간단! 설명 이였습니다.  &lt;br /&gt;
+다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;</content>
 
       
       
@@ -299,11 +388,11 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
       
 
       
-        <category term="oracle" />
+        <category term="algorithm" />
       
 
       
-        <summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
+        <summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary>
       
 
       

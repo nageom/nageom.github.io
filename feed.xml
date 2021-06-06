@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-02T02:53:44+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">알고리즘과 자료구조는?</title><link href="https://nageom.github.io/algorithm-hashTable" rel="alternate" type="text/html" title="알고리즘과 자료구조는?" /><published>2021-06-01T09:14:00+09:00</published><updated>2021-06-01T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-hashTable</id><content type="html" xml:base="https://nageom.github.io/algorithm-hashTable">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-06T23:17:55+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">hashTable과 hashMap의 차이는?</title><link href="https://nageom.github.io/algorithm-basic" rel="alternate" type="text/html" title="hashTable과 hashMap의 차이는?" /><published>2021-06-02T09:14:00+09:00</published><updated>2021-06-02T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-basic</id><content type="html" xml:base="https://nageom.github.io/algorithm-basic">&lt;hr /&gt;
+&lt;p&gt;해시테이블과 해시맵의 차이를 알아보기 전, 어떤 것 인지부터 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;해시테이블(Hash Table)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;키(key)와 값 (value)이 하나의 쌍으로 이루어진 데이터 구조입니다.&lt;/li&gt;
+  &lt;li&gt;해시테이블은 내부적으로 배열(버킷)을 사용하여 키를 인덱스값으로 놓고 배열(버킷)에 값을 저장하는 형태입니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/algorithm/hashTable/hashTable1.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;key와 value가 put()메서드로 저장될때,  &lt;br /&gt;
+ key값에 해시함수를 적용해 배열의 index를 생성해냅니다. 
+and 그 index스에 해당 value가 저장되는것이죠. &lt;br /&gt;
+이 때, 실제 값이 저장되는 배열을 버킷 or 슬롯이라 합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;해시함수는?
+고유한 인덱스 값을 생성하는 메서드입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;대표적인 해시 함수
+-&amp;gt; 1. Division Method: 주소=입력값 % 테이블 크기 &lt;br /&gt;
+테이블의 크기를 소수로 정해 2의 제곱수와 먼 값을 사용하는 것이 좋다.
+-&amp;gt; 2. Digit Folding : 
+각 Key 의 문자열을 아스키 코드로 바꾸고, 값을 합한 데이터를 데이터 내의 주소로 사용하는 방법
+-&amp;gt; 3. Multiplication Method: 숫자로 된 Key값 -&amp;gt; k , 0과 1사이의 실수 -&amp;gt; A, 2의 제곱수 -&amp;gt; 을 이용하여
+ h(k) = (kAmod1) x m 계산을 해준다. 
+-&amp;gt; 4. Univeral Hashing : 다수의 해시함수를 만들어 집합 H에 넣어두고,
+ 무작위로 해시함수를 선택해 해시값을 만드는 기법&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;해시값이 충돌하는 경우&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“nageom” 을 해시 함수를 돌아나온 해시값이 “dawon”의 해시함수를 돌려 나온 값과 동일하는 경우를
+충돌한다 말한다.  &lt;br /&gt;
+이러한 충돌을 해결하는 방법은 크게 두 가지가 있다.
+&amp;lt;분리 연결법(Separate Chaining)&amp;gt;
+&lt;img src=&quot;../../assets/built/images/algorithm/hashTable/hashTable1.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;분리 연결법 (Separate Chaining) 위의 그림처럼 해시값이 충돌할 경우 추가 메모리를 사용하여 다음 데이터의 주소를 저장
+하는 것이다. 위의 그림처럼&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">해시테이블과 해시맵의 차이를 알아보기 전, 어떤 것 인지부터 알아보도록 하겠습니다. 해시테이블(Hash Table)</summary></entry><entry><title type="html">알고리즘과 자료구조는?</title><link href="https://nageom.github.io/algorithm-hashTable" rel="alternate" type="text/html" title="알고리즘과 자료구조는?" /><published>2021-06-01T09:14:00+09:00</published><updated>2021-06-01T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-hashTable</id><content type="html" xml:base="https://nageom.github.io/algorithm-hashTable">&lt;hr /&gt;
 &lt;p&gt;오늘의 주제는 알고리즘과 자료구조의 차이입니다. &lt;br /&gt;
 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요? &lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -53,7 +99,77 @@ Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 여기까지 자료구조와 알고리즘의 간단! 설명 이였습니다.  &lt;br /&gt;
-다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry><entry><title type="html">Spring - basic</title><link href="https://nageom.github.io/Spring-basic" rel="alternate" type="text/html" title="Spring - basic" /><published>2021-05-25T09:28:00+09:00</published><updated>2021-05-25T09:28:00+09:00</updated><id>https://nageom.github.io/Spring-basic</id><content type="html" xml:base="https://nageom.github.io/Spring-basic">&lt;p&gt;Spring&lt;/p&gt;</content><author><name>nageom</name></author><category term="Spring" /><summary type="html">Spring</summary></entry><entry><title type="html">Java_equals와 “==”연산자의 차이</title><link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 “==”연산자의 차이" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/java-equals</id><content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
+다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry><entry><title type="html">Spring - basic</title><link href="https://nageom.github.io/Spring-basic" rel="alternate" type="text/html" title="Spring - basic" /><published>2021-05-25T09:28:00+09:00</published><updated>2021-05-25T09:28:00+09:00</updated><id>https://nageom.github.io/Spring-basic</id><content type="html" xml:base="https://nageom.github.io/Spring-basic">&lt;p&gt;Spring&lt;/p&gt;</content><author><name>nageom</name></author><category term="Spring" /><summary type="html">Spring</summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;3) 데이터타입
+   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
+이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary></entry><entry><title type="html">Oracle-basic_1</title><link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-basic_1</id><content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;1) RDBMS : 관계형 데이터베이스 관리 시스템&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB &lt;br /&gt;
+그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를
+RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/basicTable.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;행과열 조합으로 테이블 형태를 띄고있으며 각 테이블과 테이블의 관계를 제약조건에 따라 구분할 수 있으며 &lt;br /&gt;
+대표적으로 Oracle, MySQL, MriaDB, MS-SQL 등이 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2)  SQL    (Oracle)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;관계형 데이터베이서 관리 시스템 (RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;즉! 쉽게! 데이터를 관리하기위해 사용하는 언어입니다.
+백번 설명보다 해보는게 최고입니다. 바로 사용법 보도록하죠
+개념적으로&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DDL_Data Definition Language (데이터 정의어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;테이블 자체를 생성,변경,삭제 등&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/ddl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DML_Data Manipulation Language (데이터 조작어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;테이블안의 내용을 조회,삽입,삭제 등 
+&lt;img src=&quot;./assets/built/images/dml.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DCL_Data Control Language (데이터 제어어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;DB에 접근하고 객체를 사용함에 대한 권한에 대한 명령어
+&lt;img src=&quot;./assets/built/images/dcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TCL_Transaction Control Language (트랜잭션 제어어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;논리적인 작업의 단위를 묶어서 DML 에 의한 조작된 결과를 작업단위(트랜잭션)별로 제어하는 명령어 &lt;br /&gt;
+ :&amp;gt; 그냥 아차! 싶은 작업을 되돌릴수도 있고, 아차! 하기전에 저장하기도 할 수 있는 명령어    &lt;br /&gt;
+&lt;img src=&quot;./assets/built/images/tcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary></entry><entry><title type="html">Java_equals와 “==”연산자의 차이</title><link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 “==”연산자의 차이" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/java-equals</id><content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
 &lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
 우선  equals는 메서드 &lt;br /&gt;
       ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
@@ -126,77 +242,7 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
 &lt;p&gt;반대로  &lt;br /&gt;
  new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. &lt;br /&gt;
 그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? &lt;br /&gt;
-오늘도 화이팅입니다!&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;3) 데이터타입
-   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
-이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary></entry><entry><title type="html">Oracle-basic_1</title><link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-basic_1</id><content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;1) RDBMS : 관계형 데이터베이스 관리 시스템&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB &lt;br /&gt;
-그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를
-RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/basicTable.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;행과열 조합으로 테이블 형태를 띄고있으며 각 테이블과 테이블의 관계를 제약조건에 따라 구분할 수 있으며 &lt;br /&gt;
-대표적으로 Oracle, MySQL, MriaDB, MS-SQL 등이 있습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;2)  SQL    (Oracle)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;관계형 데이터베이서 관리 시스템 (RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;즉! 쉽게! 데이터를 관리하기위해 사용하는 언어입니다.
-백번 설명보다 해보는게 최고입니다. 바로 사용법 보도록하죠
-개념적으로&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DDL_Data Definition Language (데이터 정의어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;테이블 자체를 생성,변경,삭제 등&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/ddl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DML_Data Manipulation Language (데이터 조작어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;테이블안의 내용을 조회,삽입,삭제 등 
-&lt;img src=&quot;./assets/built/images/dml.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DCL_Data Control Language (데이터 제어어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;DB에 접근하고 객체를 사용함에 대한 권한에 대한 명령어
-&lt;img src=&quot;./assets/built/images/dcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;TCL_Transaction Control Language (트랜잭션 제어어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;논리적인 작업의 단위를 묶어서 DML 에 의한 조작된 결과를 작업단위(트랜잭션)별로 제어하는 명령어 &lt;br /&gt;
- :&amp;gt; 그냥 아차! 싶은 작업을 되돌릴수도 있고, 아차! 하기전에 저장하기도 할 수 있는 명령어    &lt;br /&gt;
-&lt;img src=&quot;./assets/built/images/tcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary></entry><entry><title type="html">Google Check</title><link href="https://nageom.github.io/jekyll-check" rel="alternate" type="text/html" title="Google Check" /><published>2021-05-25T01:40:00+09:00</published><updated>2021-05-25T01:40:00+09:00</updated><id>https://nageom.github.io/jekyll-check</id><content type="html" xml:base="https://nageom.github.io/jekyll-check">&lt;p&gt;google-site-verification: google58f7d8a62c483666.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="jekyll" /><summary type="html">google-site-verification: google58f7d8a62c483666.html</summary></entry><entry><title type="html">Python 강좌(2) - Python 제어문</title><link href="https://nageom.github.io/python-control-statement" rel="alternate" type="text/html" title="Python 강좌(2) - Python 제어문" /><published>2021-05-21T01:40:00+09:00</published><updated>2021-05-21T01:40:00+09:00</updated><id>https://nageom.github.io/python-control-statement</id><content type="html" xml:base="https://nageom.github.io/python-control-statement">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+오늘도 화이팅입니다!&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary></entry><entry><title type="html">Google Check</title><link href="https://nageom.github.io/jekyll-check" rel="alternate" type="text/html" title="Google Check" /><published>2021-05-25T01:40:00+09:00</published><updated>2021-05-25T01:40:00+09:00</updated><id>https://nageom.github.io/jekyll-check</id><content type="html" xml:base="https://nageom.github.io/jekyll-check">&lt;p&gt;google-site-verification: google58f7d8a62c483666.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="jekyll" /><summary type="html">google-site-verification: google58f7d8a62c483666.html</summary></entry><entry><title type="html">Python 강좌(2) - Python 제어문</title><link href="https://nageom.github.io/python-control-statement" rel="alternate" type="text/html" title="Python 강좌(2) - Python 제어문" /><published>2021-05-21T01:40:00+09:00</published><updated>2021-05-21T01:40:00+09:00</updated><id>https://nageom.github.io/python-control-statement</id><content type="html" xml:base="https://nageom.github.io/python-control-statement">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-address&quot;&gt;Python 강좌(1) - Python 기본&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
@@ -371,8 +417,4 @@ exclude:
    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello World&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>nageom</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 기본 Python 강좌(2) - Python 제어문</summary></entry><entry><title type="html">Jekyll 강좌(1)</title><link href="https://nageom.github.io/jekyll-basic" rel="alternate" type="text/html" title="Jekyll 강좌(1)" /><published>2021-05-17T01:40:00+09:00</published><updated>2021-05-17T01:40:00+09:00</updated><id>https://nageom.github.io/jekyll-basic</id><content type="html" xml:base="https://nageom.github.io/jekyll-basic">&lt;p&gt;이 글은 jekyll-basic 입니다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="jekyll" /><summary type="html">이 글은 jekyll-basic 입니다.</summary></entry><entry><title type="html">Gettysburg Address</title><link href="https://nageom.github.io/gettysburg-address" rel="alternate" type="text/html" title="Gettysburg Address" /><published>1863-11-19T19:18:00+09:00</published><updated>1863-11-19T19:18:00+09:00</updated><id>https://nageom.github.io/gettysburg-address</id><content type="html" xml:base="https://nageom.github.io/gettysburg-address">&lt;p&gt;Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.&lt;/p&gt;
-
-&lt;p&gt;Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.&lt;/p&gt;
-
-&lt;p&gt;But, in a larger sense, we can not dedicate-we can not consecrate-we can not hallow-this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us-that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion-that we here highly resolve that these dead shall not have died in vain-that this nation, under God, shall have a new birth of freedom-and that government of the people, by the people, for the people shall not perish from the earth.&lt;/p&gt;</content><author><name>abraham</name></author><summary type="html">Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>nageom</name></author><category term="python" /><summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 기본 Python 강좌(2) - Python 제어문</summary></entry><entry><title type="html">Jekyll 강좌(1)</title><link href="https://nageom.github.io/jekyll-basic" rel="alternate" type="text/html" title="Jekyll 강좌(1)" /><published>2021-05-17T01:40:00+09:00</published><updated>2021-05-17T01:40:00+09:00</updated><id>https://nageom.github.io/jekyll-basic</id><content type="html" xml:base="https://nageom.github.io/jekyll-basic">&lt;p&gt;이 글은 jekyll-basic 입니다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="jekyll" /><summary type="html">이 글은 jekyll-basic 입니다.</summary></entry></feed>

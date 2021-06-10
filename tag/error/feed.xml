@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://nageom.github.io/tag/error/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-06-12T23:48:51+09:00</updated>
+  <id>https://nageom.github.io/tag/error/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">nageom’s blog | </title>
+  
+
+  
+    <subtitle>IT 공부방</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">REST-API JDK ERROR</title>
+      <link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/error-JDK</id>
+      <content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
+
+&lt;p&gt;now.. no korean.. 
+I will fix it later… &lt;br /&gt;
+Error: A JNI error has occurred, please check your installation and try again
+&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+project right click -&amp;gt; Properties    &lt;br /&gt;
+Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
+&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;if problem again.. 
+project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
+‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
+check the ‘JRE System Library’ is red   &lt;br /&gt;
+Is it red?? &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
+-&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="error" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

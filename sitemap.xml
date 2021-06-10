@@ -104,6 +104,22 @@
     </url>
     
     <url>
+        <loc>https://nageom.github.io/error-JDK.html</loc>
+        
+        <lastmod>2021-05-25T09:14:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://nageom.github.io/jekyll-check.html</loc>
         
         <lastmod>2021-05-25T01:40:00+09:00</lastmod>

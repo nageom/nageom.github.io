@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-12T23:48:51+09:00</updated>
+  <updated>2021-06-14T23:49:05+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -235,211 +235,6 @@ Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">Oracle-DataType_2</title>
-      <link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
-      <published>2021-05-25T09:14:00+09:00</published>
-      <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/oracle-DataType_2</id>
-      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;3) 데이터타입
-   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
-이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="oracle" />
-      
-
-      
-        <summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">REST-API JDK ERROR</title>
-      <link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" />
-      <published>2021-05-25T09:14:00+09:00</published>
-      <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/error-JDK</id>
-      <content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
-
-&lt;p&gt;now.. no korean.. 
-I will fix it later… &lt;br /&gt;
-Error: A JNI error has occurred, please check your installation and try again
-&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-project right click -&amp;gt; Properties    &lt;br /&gt;
-Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
-&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;if problem again.. 
-project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
-‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
-check the ‘JRE System Library’ is red   &lt;br /&gt;
-Is it red?? &lt;br /&gt;
-&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
--&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="error" />
-      
-
-      
-        <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Java_equals와 “==”연산자의 차이</title>
-      <link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 &quot;==&quot;연산자의 차이" />
-      <published>2021-05-25T09:14:00+09:00</published>
-      <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/java-equals</id>
-      <content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
-&lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
-우선  equals는 메서드 &lt;br /&gt;
-      ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
-
-&lt;p&gt;equals는 대상의 hashcode를 비교하고 &lt;br /&gt;
-== 연산자는 대상의 주소값을 비교합니다.  &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;hashCode란?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Object클래스는 hashCode() 라는 메서드를 가지고 있습니다 &lt;br /&gt;
-hashCode() 메서드는 말그대로 hashCode를 생성해 리턴해주는 메서드이죠 &lt;br /&gt;
-hashcode란 Object클래스의 메서드가 리턴하는 각 객체에 대응하는 고유한 정수값을 이야기하며     &lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;
-기본적으로 hashCode는 객체의 주소값과 연관이 있습니다&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;비교했을때 주소값이 다른 obj와 obj2의 hashcode값이 다르죠 &lt;br /&gt;
-그리고 &lt;br /&gt;
-obj2의 주소값 @ 뒤의 값 6d06d69c (16진수) -&amp;gt; hashCode 1829164700(10진수) 값으로
-변환이 되는것을 볼 수 있습니다. &lt;br /&gt;
-&lt;br /&gt;
-그렇다면 주소값으로도 hashCode처럼 대상을 비교할 수 있지않나?
-그럼 equals랑 ==이랑 같게 쓰여야하는거 아닌가?
-라는 생각을 했었는데  &lt;br /&gt;
-멍-충 &lt;br /&gt;
-주소값이 서로 다르지만 문자열은 같은 두 String 객체를 가지고 hashCode를 비교해보았습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-&lt;img src=&quot;./assets/built/images/java/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-주소값은 다르지만 같은 문자열에 대해 hashCode가 같은 것을 볼 수 있습니다.  &lt;br /&gt;
-응? 주소값으로 hashCode만드는데 주소값이 다른데 hashCode가 같네? 모순모순!  &lt;br /&gt;
-이라고 할 뻔 했지만 &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;String의 hashCode() 는 재정의가 되어 사용된다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;가 정답입니다.&lt;/p&gt;
-
-&lt;p&gt;String은 문자열이고 “에이”와 “에이”가 주소가 다르다고 다른말이라면 hashCode의 의미가 없을뿐더러 발생할 수 있는 나쁜 예로  &lt;br /&gt;
--&amp;gt; HashMap에서 일치하는 key 값을 찾아낼 수 없게 되겠죠 &lt;br /&gt;
-그래서 String은 hashCode를 생성할 때 주소값 말고 문자열로 생성하는 것으로 hashCode() 메서드가 재정의 된 것이랍니다.&lt;/p&gt;
-
-&lt;p&gt;여기까지 equals메서드와 ‘==’연산자의 간단한 차이였습니다.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;아래는 String 기본 설명 살짝 덧붙여봤습니다.&lt;/p&gt;
-
-&lt;p&gt;우선 spring 둘의 주소값이 다른 이유&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;리터널 aa변수는 stack 메모리에, “에이”라는 문자열은 Heap 메모리 내에 String pool 이라는 곳에 저장. 그 주소가 aa변수에 저장됩니다. 
-또한 String pool에 저장될때 intern() 이라는 메서드가 실행되는데  &lt;br /&gt;
-intern() = 같은 값이 있는 경우 기존 값의 메모리 주소를 사용하고, 다른 값일 경우 객체를 생성해 값을 저장하고 그 메모리 주소를 리턴합니다.
-Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막습니다. 
-그래서&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;라는 결과를 얻게되는것이죠.&lt;/p&gt;
-
-&lt;p&gt;반대로  &lt;br /&gt;
- new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. &lt;br /&gt;
-그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? &lt;br /&gt;
-오늘도 화이팅입니다!&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">기술면접 예상 질문</title>
       <link href="https://nageom.github.io/java-interview" rel="alternate" type="text/html" title="기술면접 예상 질문" />
       <published>2021-05-25T09:14:00+09:00</published>
@@ -447,7 +242,7 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
       <id>https://nageom.github.io/java-interview</id>
       <content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
 
-&lt;h4&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h4&gt;
+&lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
 &lt;p&gt;JRE : 자바코드가 실행 될 수 있는 환경 &lt;br /&gt;
 JVM : JRE 내에 존재한다. &lt;br /&gt;
 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고 재사용을 가능하게 해준다. &lt;br /&gt;
@@ -457,14 +252,14 @@ JVM : JRE 내에 존재한다. &lt;br /&gt;
 javac는 컴퓨터가 이해하는 기계어로 변환 해주는 컴파일을 하는 녀석인데   &lt;br /&gt;
 정확히는 OS와 자바의 중개자인 JVM이 이해할 수 있는 형태로 컴파일된다.(바이트코드)&lt;/p&gt;
 
-&lt;h4&gt;&amp;lt;equals와 '=='의 차이&amp;gt;  &lt;/h4&gt;
+&lt;h5&gt;&amp;lt;equals와 '=='의 차이&amp;gt;  &lt;/h5&gt;
 &lt;p&gt;equals는 대상의 hashcode를 비교하고 &lt;br /&gt;
 ‘==’ 연산자는 대상의 주소값을 비교합니다.   &lt;br /&gt;
 equals는 &lt;br /&gt;
 object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고유한 정수값인 hashCode를 통해 각 객체를 비교한다. &lt;br /&gt;
 예외로 string은 재정의하여 문자열로 hashCode를 생성해낸다.&lt;/p&gt;
 
-&lt;h4&gt;동기와 비동기 &lt;/h4&gt;
+&lt;h5&gt;동기와 비동기 &lt;/h5&gt;
 &lt;p&gt;동기식 처리 모델 (Synchronous processing model) 은 직렬적으로 태스크(task)를 수행한다.   &lt;br /&gt;
 즉, 태스크는 순차적으로 실행되며 어떤 작업이 수행 중이면 다음 작업은 대기하게 된다.&lt;/p&gt;
 
@@ -472,7 +267,61 @@ object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고�
 즉, 태스크가 종료되지 않은 상태라 하더라도 대기하지 않고 다음 태스크를 실행한다.      &lt;br /&gt;
 자바에서는 대표적으로 멀티스레드의 동작이 비동기식으로 작동한다.&lt;/p&gt;
 
-&lt;p&gt;To be continue…&lt;/p&gt;</content>
+&lt;h5&gt;오버라이딩, 오버로딩 &lt;/h5&gt;
+&lt;p&gt;오버로딩의 정의는 자바의 한 클래스 내에 이미 사용하려는 이름과 같은 이름을 가진 메소드가 있더라도 매개변수의 개수 또는 타입이 다르면, 같은 이름을 사용해서 메소드를 정의할 수 있다.   &lt;br /&gt;
+오버라이딩은 부모자식에게 상속받은 메서드를 재정의함을 뜻한다. 
+사용이유 
+오버로딩 : 같은 이름의 메서드 사용으로 개발의 편의성, 함수의 다형성을 지원하기 위함.   &lt;br /&gt;
+오버라이딩 : 상속 클래스의 재정의를 위함.&lt;/p&gt;
+
+&lt;h5&gt;추상화란?&lt;/h5&gt;
+&lt;p&gt;:　여러 객체에 공통적으로 사용되는, 사용되어야 하는 내용을 뽑아 모아두는 것을 말합니다. 예를 들어 떡라면, 만두라면 등 모든 라면레시피의 공통된 조리과정을 각각 넣는 것은 비효율적임으로
+공통되는 조리과정을 골라 부모클래스로 만드는 작업이 추상화입니다.&lt;/p&gt;
+
+&lt;h5&gt;자바 메모리 구조&lt;/h5&gt;
+&lt;p&gt;static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.      &lt;br /&gt;
+static(스태틱)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.      &lt;br /&gt;
+전역변수, 정적변수&lt;/p&gt;
+
+&lt;p&gt;(LIFO)
+stack (스택) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;메서드가 호출 될 때 메모리에 할당되고 종료되면 메모리가 해제된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Heap 영역 (힙 메모리 영역)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;참조형의 데이터 타입을 갖는 객체(인스턴스), 배열 등이 heap 영역에 데이터가 저장된다.       &lt;br /&gt;
+실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;GC(Garbage Collection)&lt;/h5&gt;
+&lt;p&gt;프로그래머는 힙을 사용할 수 있는 만큼 자유롭게 사용하고,    &lt;br /&gt;
+더 이상 사용되지 않는 오브젝트들은 가비지 컬렉션을 담당하는 프로세스가 자동으로 메모리에서 제거하도록 하는 것이 가비지 컬렉션의 기본 개념이다.&lt;/p&gt;
+
+&lt;h5&gt;StringBuffer와 String Builder의 차이&lt;/h5&gt;
+&lt;p&gt;그럼 두 클래스의 차이점은 무엇일까요? 바로 동기화 여부입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;StringBuffer는 각 메서드별로 Synchronized Keyword가 존재하여, 멀티스레드 환경에서도 동기화를 지원.&lt;/li&gt;
+  &lt;li&gt;반면, StringBuilder는 동기화를 보장하지 않음.
+그렇기때문에 멀티스레드 환경이라면 값 동기화 보장을 위해 StringBuffer를 사용하고,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;단일스레드 환경이라면 StringBuilder를 사용하는 것이 좋습니다.  &lt;br /&gt;
+단일 스레드환경에서 StringBuffer를 사용한다고 문제가 되는 것은 아니지만,  &lt;br /&gt;
+동기화 관련 처리로 인해 StringBuilder에 비해 성능이 좋지 않습니다.&lt;/p&gt;
+
+&lt;h5&gt;객체지향프로그래밍&lt;/h5&gt;
+&lt;p&gt;애플리케이션을 구성하는 요소들을 객체로 바라보고,    &lt;br /&gt;
+객체들을 유기적으로 연결하여 프로그래밍 하는 것&lt;/p&gt;
+
+&lt;p&gt;참고 &lt;br /&gt;
+https://jwkim96.tistory.com/90      &lt;br /&gt;
+https://m.blog.naver.com/heartflow89/220954420688    &lt;br /&gt;
+https://12bme.tistory.com/42    &lt;br /&gt;
+https://www.donga.com/news/Economy/article/all/20170508/84256817/1 (사진)
+To be continue…&lt;/p&gt;</content>
 
       
       
@@ -595,12 +444,22 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">Google Check</title>
-      <link href="https://nageom.github.io/jekyll-check" rel="alternate" type="text/html" title="Google Check" />
-      <published>2021-05-25T01:40:00+09:00</published>
-      <updated>2021-05-25T01:40:00+09:00</updated>
-      <id>https://nageom.github.io/jekyll-check</id>
-      <content type="html" xml:base="https://nageom.github.io/jekyll-check">&lt;p&gt;google-site-verification: google58f7d8a62c483666.html&lt;/p&gt;</content>
+      <title type="html">Oracle-DataType_2</title>
+      <link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/oracle-DataType_2</id>
+      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;3) 데이터타입
+   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
+이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content>
 
       
       
@@ -617,11 +476,172 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
       
 
       
-        <category term="jekyll" />
+        <category term="oracle" />
       
 
       
-        <summary type="html">google-site-verification: google58f7d8a62c483666.html</summary>
+        <summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Java_equals와 “==”연산자의 차이</title>
+      <link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 &quot;==&quot;연산자의 차이" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/java-equals</id>
+      <content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
+&lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
+우선  equals는 메서드 &lt;br /&gt;
+      ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
+
+&lt;p&gt;equals는 대상의 hashcode를 비교하고 &lt;br /&gt;
+== 연산자는 대상의 주소값을 비교합니다.  &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;hashCode란?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Object클래스는 hashCode() 라는 메서드를 가지고 있습니다 &lt;br /&gt;
+hashCode() 메서드는 말그대로 hashCode를 생성해 리턴해주는 메서드이죠 &lt;br /&gt;
+hashcode란 Object클래스의 메서드가 리턴하는 각 객체에 대응하는 고유한 정수값을 이야기하며     &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;
+기본적으로 hashCode는 객체의 주소값과 연관이 있습니다&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;비교했을때 주소값이 다른 obj와 obj2의 hashcode값이 다르죠 &lt;br /&gt;
+그리고 &lt;br /&gt;
+obj2의 주소값 @ 뒤의 값 6d06d69c (16진수) -&amp;gt; hashCode 1829164700(10진수) 값으로
+변환이 되는것을 볼 수 있습니다. &lt;br /&gt;
+&lt;br /&gt;
+그렇다면 주소값으로도 hashCode처럼 대상을 비교할 수 있지않나?
+그럼 equals랑 ==이랑 같게 쓰여야하는거 아닌가?
+라는 생각을 했었는데  &lt;br /&gt;
+멍-충 &lt;br /&gt;
+주소값이 서로 다르지만 문자열은 같은 두 String 객체를 가지고 hashCode를 비교해보았습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+&lt;img src=&quot;./assets/built/images/java/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+주소값은 다르지만 같은 문자열에 대해 hashCode가 같은 것을 볼 수 있습니다.  &lt;br /&gt;
+응? 주소값으로 hashCode만드는데 주소값이 다른데 hashCode가 같네? 모순모순!  &lt;br /&gt;
+이라고 할 뻔 했지만 &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;String의 hashCode() 는 재정의가 되어 사용된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;가 정답입니다.&lt;/p&gt;
+
+&lt;p&gt;String은 문자열이고 “에이”와 “에이”가 주소가 다르다고 다른말이라면 hashCode의 의미가 없을뿐더러 발생할 수 있는 나쁜 예로  &lt;br /&gt;
+-&amp;gt; HashMap에서 일치하는 key 값을 찾아낼 수 없게 되겠죠 &lt;br /&gt;
+그래서 String은 hashCode를 생성할 때 주소값 말고 문자열로 생성하는 것으로 hashCode() 메서드가 재정의 된 것이랍니다.&lt;/p&gt;
+
+&lt;p&gt;여기까지 equals메서드와 ‘==’연산자의 간단한 차이였습니다.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;아래는 String 기본 설명 살짝 덧붙여봤습니다.&lt;/p&gt;
+
+&lt;p&gt;우선 spring 둘의 주소값이 다른 이유&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;리터널 aa변수는 stack 메모리에, “에이”라는 문자열은 Heap 메모리 내에 String pool 이라는 곳에 저장. 그 주소가 aa변수에 저장됩니다. 
+또한 String pool에 저장될때 intern() 이라는 메서드가 실행되는데  &lt;br /&gt;
+intern() = 같은 값이 있는 경우 기존 값의 메모리 주소를 사용하고, 다른 값일 경우 객체를 생성해 값을 저장하고 그 메모리 주소를 리턴합니다.
+Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막습니다. 
+그래서&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;라는 결과를 얻게되는것이죠.&lt;/p&gt;
+
+&lt;p&gt;반대로  &lt;br /&gt;
+ new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. &lt;br /&gt;
+그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? &lt;br /&gt;
+오늘도 화이팅입니다!&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">REST-API JDK ERROR</title>
+      <link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/error-JDK</id>
+      <content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
+
+&lt;p&gt;now.. no korean.. 
+I will fix it later… &lt;br /&gt;
+Error: A JNI error has occurred, please check your installation and try again
+&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+project right click -&amp;gt; Properties    &lt;br /&gt;
+Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
+&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;if problem again.. 
+project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
+‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
+check the ‘JRE System Library’ is red   &lt;br /&gt;
+Is it red?? &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
+-&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="error" />
+      
+
+      
+        <summary type="html"></summary>
       
 
       
@@ -639,165 +659,15 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;./python-address&quot;&gt;Python 강좌(1) - Python 기본&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;파이선 제어문 관련 내용&lt;/p&gt;
+&lt;h5&gt;마크업 언어 사용 예시&lt;/h5&gt;
+&lt;p&gt;1) 목록 보여줄때 (홀따음표 제거) &lt;br /&gt;
+   “{“% include python-table-of-contents.html %}” &lt;br /&gt;
+2) gist 문서가져올때 (따음표 제거) &lt;br /&gt;
+&amp;lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&amp;gt;&amp;lt;/script’&amp;gt; &lt;br /&gt;
+   또는    &lt;br /&gt;
+   {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;
-
-&lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
-markdown: kramdown
-# kramdown : markdown의 개조판.
-# markdown에서 불편한 사항을 개선한 형태.
-
-# MyData
-owner:
-  name:           Nageom
-  avatar:         photo.jpg
-  bio:            &amp;quot;Ph.D. in Computer Science&amp;quot;
-  email:          nageom1123@naver.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  facebook:
-  github:
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
-  # google plus id, include the &amp;#39;+&amp;#39;, eg +mmistakes
-  google_plus:
-
-highlighter: rouge
-# text highlighter로 rouge이용
-# 2016.02월 이후로 syntax highlighter는 rouge만 지원.
-# Pygments 사용불가.
-
-paginate: 20
-# 작성한 모든 post를 하나의 페이지에 열거할 수 없으니
-# pagination이 필요하고 몇개의 post를 하나의 page에서
-# 보여줄 건지를 설정.
-
-language: &amp;#39;en-uk&amp;#39;
-# 언어 설정
-
-url: https://nageom.github.io
-# Google Search Console에서 사용하는 sitemap.xml 생성시
-# 이 url key값이 존재하지 않으면 sitemap.xml이
-# 정상적으로 생성되지 않는다.
-# 또한 disqus(댓글시스템)를 이용하기 위해서도 필요.
-# 자신의 github page url을 입력
-# ( https://your_github_id.github.io 형식 )
-
-baseurl: /
-
-# Website info
-title: IT Technical Training
-# 자신의 blog title.
-
-description: IT기반기술교육 블로그
-# blog home에 표시될 blog에 대한 전반적인 설명.
-
-cover: assets/built/images/ComeOn.png
-# blog home에 표시될 blog cover image.
-
-logo:
-logo_dark:
-
-#루비
-favicon: assets/built/images/favicon.jpg
-# favicon으로 사용할 image - title 부분
-
-production_url: https://nageom.github.io/
-# 최종적으로 blog가 운영될 url
-
-source_url: https://github.com/moon9342/GitHubPageMaker/
-# blogmaker(jekyll source folder)에 대한 github repository
-
-# Social info
-navigation: True
-# Navigation bar link를 보여줄건지 여부
-
-subscribers: True
-# subscriber 기능을 사용할건지의 여부
-# 저는 약간의 수정을 통해 subscriber 기능대신
-# lunr.js를 이용한 검색 기능으로 대체 사용했습니다.
-# 검색기능으로 대체하기 위해서
-# `_includes/subscribe-form.html` 파일의 수정이 필요합니다.
-
-twitter:
-facebook:
-# 만약 twitter와 facebook을 이용하면 username을 입력
-
-# Disqus
-disqus: True
-disqus_shortname: xxxxxxxx
-# disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해
-# disqus를 이용할 것인지 여부와 만약 사용하면
-# disqus shortname을 입력 ( disqus username이 아님 )
-
-
-# Google Analytics
-google_analytics: UA-xxxxxxxx-x # replace with your GA tracking identifier
-# Google Analytics을 사용할 경우 GA tracking identifier를 입력
-
-# Permalinks
-permalink: /:title
-# permalink: /author/:author
-# permalink: /tag/:title
-# 각각의 post에 고정주소를 어떤 방식으로 할당할 것인지를 결정
-# 이 값을 바꾸면 작성한 포스트의 저장위치나 파일이름이 변경된다.
-
-# gems and other configs
-plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
-
-feed:
-  path: feed.xml
-
-# Travis-CI 설정입니다.
-safe: False
-lsi: False
-
-username: nageom
-repo: GitHubPageMaker
-# username : travis-ci와 연동하는 github의 username
-# repo: travis-ci와 연동하는 github의 repository이름
-# https://github.com/&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;
-
-branch: master
-# 사용할 branch명
-
-relative_source:
-
-destination: ../[GitHubPage]/
-# compile된 결과가 생성되는 폴더
-# 이 폴더안의 내용이 우리가 운영하는 블로그 내용이 컴파일되서 들어간다.
-# 이 폴더안의 내용을 github repository(https://username.github.io)에 push
-# 만약 Travis-CI를 이용할 예정이면 이 부분을 git submodule로
-# github repository(https://username.github.io)에 연결해야 한다.
-
-
-# exclude는 Jekyll컴파일 시 destination에 포함될 필요가
-# 없는것들을 명시한다. (node_modules와 필요없는 것들은 제외)
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - &amp;quot;*.Rmd&amp;quot;
-  - vendor
-  - .travis.yml
-  - node_modules
-  - assets/css
-  - assets/images
-  - _posts/angular
-  - _posts/et-cetera
-  #  - _posts/python
-  - _posts/typescript
-  #  - _posts/jekyll
-  - _posts/iot
-  - _posts/r
-  - _posts/economy&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt; &lt;/script&gt;</content>
+&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;</content>
 
       
       
@@ -818,7 +688,42 @@ exclude:
       
 
       
-        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 기본 Python 강좌(2) - Python 제어문 파이선 제어문 관련 내용</summary>
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. Python 강좌(1) - Python 기본 Python 강좌(2) - Python 제어문 마크업 언어 사용 예시 1) 목록 보여줄때 (홀따음표 제거) “{“% include python-table-of-contents.html %}” 2) gist 문서가져올때 (따음표 제거) &amp;lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&amp;gt;&amp;lt;/script’&amp;gt; 또는 {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Python 강좌(1) - Python 기본</title>
+      <link href="https://nageom.github.io/python-address" rel="alternate" type="text/html" title="Python 강좌(1) - Python 기본" />
+      <published>2021-05-18T01:40:00+09:00</published>
+      <updated>2021-05-18T01:40:00+09:00</updated>
+      <id>https://nageom.github.io/python-address</id>
+      <content type="html" xml:base="https://nageom.github.io/python-address">&lt;p&gt;마크업언어 활용하기 코드 넣기 (검정바탕)    &lt;br /&gt;
+‘~~~’javascript ~~~&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="python" />
+      
+
+      
+        <summary type="html">마크업언어 활용하기 코드 넣기 (검정바탕) ‘~~~’javascript ~~~</summary>
       
 
       

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-12T23:48:51+09:00</updated>
+  <updated>2021-06-14T23:49:05+09:00</updated>
   <id>https://nageom.github.io/tag/java/feed.xml</id>
 
   
@@ -146,7 +146,7 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
       <id>https://nageom.github.io/java-interview</id>
       <content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
 
-&lt;h4&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h4&gt;
+&lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
 &lt;p&gt;JRE : 자바코드가 실행 될 수 있는 환경 &lt;br /&gt;
 JVM : JRE 내에 존재한다. &lt;br /&gt;
 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고 재사용을 가능하게 해준다. &lt;br /&gt;
@@ -156,14 +156,14 @@ JVM : JRE 내에 존재한다. &lt;br /&gt;
 javac는 컴퓨터가 이해하는 기계어로 변환 해주는 컴파일을 하는 녀석인데   &lt;br /&gt;
 정확히는 OS와 자바의 중개자인 JVM이 이해할 수 있는 형태로 컴파일된다.(바이트코드)&lt;/p&gt;
 
-&lt;h4&gt;&amp;lt;equals와 '=='의 차이&amp;gt;  &lt;/h4&gt;
+&lt;h5&gt;&amp;lt;equals와 '=='의 차이&amp;gt;  &lt;/h5&gt;
 &lt;p&gt;equals는 대상의 hashcode를 비교하고 &lt;br /&gt;
 ‘==’ 연산자는 대상의 주소값을 비교합니다.   &lt;br /&gt;
 equals는 &lt;br /&gt;
 object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고유한 정수값인 hashCode를 통해 각 객체를 비교한다. &lt;br /&gt;
 예외로 string은 재정의하여 문자열로 hashCode를 생성해낸다.&lt;/p&gt;
 
-&lt;h4&gt;동기와 비동기 &lt;/h4&gt;
+&lt;h5&gt;동기와 비동기 &lt;/h5&gt;
 &lt;p&gt;동기식 처리 모델 (Synchronous processing model) 은 직렬적으로 태스크(task)를 수행한다.   &lt;br /&gt;
 즉, 태스크는 순차적으로 실행되며 어떤 작업이 수행 중이면 다음 작업은 대기하게 된다.&lt;/p&gt;
 
@@ -171,7 +171,61 @@ object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고�
 즉, 태스크가 종료되지 않은 상태라 하더라도 대기하지 않고 다음 태스크를 실행한다.      &lt;br /&gt;
 자바에서는 대표적으로 멀티스레드의 동작이 비동기식으로 작동한다.&lt;/p&gt;
 
-&lt;p&gt;To be continue…&lt;/p&gt;</content>
+&lt;h5&gt;오버라이딩, 오버로딩 &lt;/h5&gt;
+&lt;p&gt;오버로딩의 정의는 자바의 한 클래스 내에 이미 사용하려는 이름과 같은 이름을 가진 메소드가 있더라도 매개변수의 개수 또는 타입이 다르면, 같은 이름을 사용해서 메소드를 정의할 수 있다.   &lt;br /&gt;
+오버라이딩은 부모자식에게 상속받은 메서드를 재정의함을 뜻한다. 
+사용이유 
+오버로딩 : 같은 이름의 메서드 사용으로 개발의 편의성, 함수의 다형성을 지원하기 위함.   &lt;br /&gt;
+오버라이딩 : 상속 클래스의 재정의를 위함.&lt;/p&gt;
+
+&lt;h5&gt;추상화란?&lt;/h5&gt;
+&lt;p&gt;:　여러 객체에 공통적으로 사용되는, 사용되어야 하는 내용을 뽑아 모아두는 것을 말합니다. 예를 들어 떡라면, 만두라면 등 모든 라면레시피의 공통된 조리과정을 각각 넣는 것은 비효율적임으로
+공통되는 조리과정을 골라 부모클래스로 만드는 작업이 추상화입니다.&lt;/p&gt;
+
+&lt;h5&gt;자바 메모리 구조&lt;/h5&gt;
+&lt;p&gt;static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.      &lt;br /&gt;
+static(스태틱)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.      &lt;br /&gt;
+전역변수, 정적변수&lt;/p&gt;
+
+&lt;p&gt;(LIFO)
+stack (스택) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;메서드가 호출 될 때 메모리에 할당되고 종료되면 메모리가 해제된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Heap 영역 (힙 메모리 영역)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;참조형의 데이터 타입을 갖는 객체(인스턴스), 배열 등이 heap 영역에 데이터가 저장된다.       &lt;br /&gt;
+실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;GC(Garbage Collection)&lt;/h5&gt;
+&lt;p&gt;프로그래머는 힙을 사용할 수 있는 만큼 자유롭게 사용하고,    &lt;br /&gt;
+더 이상 사용되지 않는 오브젝트들은 가비지 컬렉션을 담당하는 프로세스가 자동으로 메모리에서 제거하도록 하는 것이 가비지 컬렉션의 기본 개념이다.&lt;/p&gt;
+
+&lt;h5&gt;StringBuffer와 String Builder의 차이&lt;/h5&gt;
+&lt;p&gt;그럼 두 클래스의 차이점은 무엇일까요? 바로 동기화 여부입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;StringBuffer는 각 메서드별로 Synchronized Keyword가 존재하여, 멀티스레드 환경에서도 동기화를 지원.&lt;/li&gt;
+  &lt;li&gt;반면, StringBuilder는 동기화를 보장하지 않음.
+그렇기때문에 멀티스레드 환경이라면 값 동기화 보장을 위해 StringBuffer를 사용하고,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;단일스레드 환경이라면 StringBuilder를 사용하는 것이 좋습니다.  &lt;br /&gt;
+단일 스레드환경에서 StringBuffer를 사용한다고 문제가 되는 것은 아니지만,  &lt;br /&gt;
+동기화 관련 처리로 인해 StringBuilder에 비해 성능이 좋지 않습니다.&lt;/p&gt;
+
+&lt;h5&gt;객체지향프로그래밍&lt;/h5&gt;
+&lt;p&gt;애플리케이션을 구성하는 요소들을 객체로 바라보고,    &lt;br /&gt;
+객체들을 유기적으로 연결하여 프로그래밍 하는 것&lt;/p&gt;
+
+&lt;p&gt;참고 &lt;br /&gt;
+https://jwkim96.tistory.com/90      &lt;br /&gt;
+https://m.blog.naver.com/heartflow89/220954420688    &lt;br /&gt;
+https://12bme.tistory.com/42    &lt;br /&gt;
+https://www.donga.com/news/Economy/article/all/20170508/84256817/1 (사진)
+To be continue…&lt;/p&gt;</content>
 
       
       

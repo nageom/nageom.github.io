@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-12T23:48:51+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">hashTable과 hashMap의 차이는?</title><link href="https://nageom.github.io/algorithm-basic" rel="alternate" type="text/html" title="hashTable과 hashMap의 차이는?" /><published>2021-06-02T09:14:00+09:00</published><updated>2021-06-02T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-basic</id><content type="html" xml:base="https://nageom.github.io/algorithm-basic">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-13T23:04:24+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">hashTable과 hashMap의 차이는?</title><link href="https://nageom.github.io/algorithm-basic" rel="alternate" type="text/html" title="hashTable과 hashMap의 차이는?" /><published>2021-06-02T09:14:00+09:00</published><updated>2021-06-02T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-basic</id><content type="html" xml:base="https://nageom.github.io/algorithm-basic">&lt;hr /&gt;
 &lt;p&gt;해시테이블과 해시맵의 차이를 알아보기 전, 어떤 것 인지부터 알아보도록 하겠습니다.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;해시테이블(Hash Table)&lt;/p&gt;
@@ -186,7 +186,35 @@ object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고�
 즉, 태스크가 종료되지 않은 상태라 하더라도 대기하지 않고 다음 태스크를 실행한다.      &lt;br /&gt;
 자바에서는 대표적으로 멀티스레드의 동작이 비동기식으로 작동한다.&lt;/p&gt;
 
-&lt;p&gt;To be continue…&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html"></summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+&lt;h5&gt;오버라이딩, 오버로딩 &lt;/h5&gt;
+&lt;p&gt;오버로딩의 정의는 자바의 한 클래스 내에 이미 사용하려는 이름과 같은 이름을 가진 메소드가 있더라도 매개변수의 개수 또는 타입이 다르면, 같은 이름을 사용해서 메소드를 정의할 수 있다.
+오버라이딩은 부모자식에게 상속받은 메서드를 재정의함을 뜻한다.&lt;/p&gt;
+
+&lt;h5&gt;추상화란?&lt;/h5&gt;
+&lt;p&gt;:　여러 객체에 공통적으로 사용되는, 사용되어야 하는 내용을 뽑아 모아두는 것을 말합니다. 예를 들어 떡라면, 만두라면 등 모든 라면레시피의 공통된 조리과정을 각각 넣는 것은 비효율적임으로
+공통되는 조리과정을 골라 부모클래스로 만드는 작업이 추상화입니다.&lt;/p&gt;
+
+&lt;p&gt;자바 메모리 구조
+static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.  &lt;br /&gt;
+static(스태틱)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.  &lt;br /&gt;
+전역변수, 정적변수&lt;/p&gt;
+
+&lt;p&gt;(LIFO)
+stack (스택) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;메서드가 호출 될 때 메모리에 할당되고 종료되면 메모리가 해제된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Heap 영역 (힙 메모리 영역)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;참조형의 데이터 타입을 갖는 객체(인스턴스), 배열 등이 heap 영역에 데이터가 저장된다.       &lt;br /&gt;
+실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;참고
+https://jwkim96.tistory.com/90 &lt;br /&gt;
+https://m.blog.naver.com/heartflow89/220954420688
+To be continue…&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html"></summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;

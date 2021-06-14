@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6abf2923-d6d4-462b-a4a6-c1be610b57c6" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Oracle-basic_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Oracle-basic_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm-basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm-hashTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm-hashTable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/author/nageom/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author/nageom/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/nageom/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/nageom/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author_archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/author_archive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll-basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jekyll-check.html" beforeDir="false" afterPath="$PROJECT_DIR$/jekyll-check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oracle-DataType_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/oracle-DataType_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-address.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-control-statement.html" beforeDir="false" afterPath="$PROJECT_DIR$/python-control-statement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-interview.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-interview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tag/algorithm/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/algorithm/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tag/error/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/error/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tag/java/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/java/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/jekyll/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/jekyll/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/jekyll/feed.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tag/oracle/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/oracle/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tag/python/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tag/spring/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/spring/feed.xml" afterDir="false" />
@@ -54,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1623509341600</updated>
       <workItem from="1623509342816" duration="1350000" />
+      <workItem from="1623593109286" duration="2696000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1623509403257</created>
@@ -62,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623509403257</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <created>1623593127482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623593127482</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +79,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />

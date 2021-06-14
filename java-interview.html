@@ -56,7 +56,7 @@
     <meta property="og:title" content="기술면접 예상 질문" />
     <meta property="og:description" content="&lt;자바 JVM, 컴파일러, JDK와 JRE&gt; JRE : 자바코드가 실행 될 수 있는 환경 JVM : JRE 내에 존재한다. 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고 재사용을 가능하게 해준다. 자바로 만들어진 프로그램을 실행할때에는 JRE설치 / 개발시에는 JDK설치 (JDK 내에 JRE 포함) 자바 컴파일러(javac) : JDK가 컴파일하는 기능을 가지고 있는데" />
     <meta property="og:url" content="https://nageom.github.io/java-interview" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/1.png" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/interview.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2021-05-25T09:14:00+09:00" />
@@ -66,7 +66,7 @@
     <meta name="twitter:title" content="기술면접 예상 질문" />
     <meta name="twitter:description" content="&lt;자바 JVM, 컴파일러, JDK와 JRE&gt; JRE : 자바코드가 실행 될 수 있는 환경 JVM : JRE 내에 존재한다. 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고 재사용을 가능하게 해준다. 자바로 만들어진 프로그램을 실행할때에는 JRE설치 / 개발시에는 JDK설치 (JDK 내에 JRE 포함) 자바 컴파일러(javac) : JDK가 컴파일하는 기능을 가지고 있는데" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/1.png" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/interview.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:label2" content="Filed under" />
@@ -88,7 +88,7 @@
     "url": "https://nageom.github.io/java-interview",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/java/1.png",
+        "url": "https://nageom.github.io/assets/built/images/java/interview.png",
         "width": 2000,
         "height": 666
     },
@@ -196,7 +196,7 @@ into the {body} of the default.hbs template -->
 
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/java/1.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/java/interview.png)">
             </figure>
             
             -->
@@ -204,7 +204,7 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <hr />
 
-<h4>&lt;자바 JVM, 컴파일러, JDK와 JRE&gt;</h4>
+<h5>&lt;자바 JVM, 컴파일러, JDK와 JRE&gt;</h5>
 <p>JRE : 자바코드가 실행 될 수 있는 환경 <br />
 JVM : JRE 내에 존재한다. <br />
 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고 재사용을 가능하게 해준다. <br />
@@ -214,14 +214,14 @@ JVM : JRE 내에 존재한다. <br />
 javac는 컴퓨터가 이해하는 기계어로 변환 해주는 컴파일을 하는 녀석인데   <br />
 정확히는 OS와 자바의 중개자인 JVM이 이해할 수 있는 형태로 컴파일된다.(바이트코드)</p>
 
-<h4>&lt;equals와 '=='의 차이&gt;  </h4>
+<h5>&lt;equals와 '=='의 차이&gt;  </h5>
 <p>equals는 대상의 hashcode를 비교하고 <br />
 ‘==’ 연산자는 대상의 주소값을 비교합니다.   <br />
 equals는 <br />
 object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고유한 정수값인 hashCode를 통해 각 객체를 비교한다. <br />
 예외로 string은 재정의하여 문자열로 hashCode를 생성해낸다.</p>
 
-<h4>동기와 비동기 </h4>
+<h5>동기와 비동기 </h5>
 <p>동기식 처리 모델 (Synchronous processing model) 은 직렬적으로 태스크(task)를 수행한다.   <br />
 즉, 태스크는 순차적으로 실행되며 어떤 작업이 수행 중이면 다음 작업은 대기하게 된다.</p>
 
@@ -230,16 +230,19 @@ object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고�
 자바에서는 대표적으로 멀티스레드의 동작이 비동기식으로 작동한다.</p>
 
 <h5>오버라이딩, 오버로딩 </h5>
-<p>오버로딩의 정의는 자바의 한 클래스 내에 이미 사용하려는 이름과 같은 이름을 가진 메소드가 있더라도 매개변수의 개수 또는 타입이 다르면, 같은 이름을 사용해서 메소드를 정의할 수 있다.
-오버라이딩은 부모자식에게 상속받은 메서드를 재정의함을 뜻한다.</p>
+<p>오버로딩의 정의는 자바의 한 클래스 내에 이미 사용하려는 이름과 같은 이름을 가진 메소드가 있더라도 매개변수의 개수 또는 타입이 다르면, 같은 이름을 사용해서 메소드를 정의할 수 있다.   <br />
+오버라이딩은 부모자식에게 상속받은 메서드를 재정의함을 뜻한다. 
+사용이유 
+오버로딩 : 같은 이름의 메서드 사용으로 개발의 편의성, 함수의 다형성을 지원하기 위함.   <br />
+오버라이딩 : 상속 클래스의 재정의를 위함.</p>
 
 <h5>추상화란?</h5>
 <p>:　여러 객체에 공통적으로 사용되는, 사용되어야 하는 내용을 뽑아 모아두는 것을 말합니다. 예를 들어 떡라면, 만두라면 등 모든 라면레시피의 공통된 조리과정을 각각 넣는 것은 비효율적임으로
 공통되는 조리과정을 골라 부모클래스로 만드는 작업이 추상화입니다.</p>
 
-<p>자바 메모리 구조
-static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.  <br />
-static(스태틱)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.  <br />
+<h5>자바 메모리 구조</h5>
+<p>static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.      <br />
+static(스태틱)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.      <br />
 전역변수, 정적변수</p>
 
 <p>(LIFO)
@@ -254,10 +257,33 @@ stack (스택) 영역 : 메서드 내에서 정의하는 기본 자료형에 해
 실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.</li>
 </ul>
 
-<p>참고
-https://jwkim96.tistory.com/90 <br />
-https://m.blog.naver.com/heartflow89/220954420688
-To be continue…</p>
+<h5>GC(Garbage Collection)</h5>
+<p>프로그래머는 힙을 사용할 수 있는 만큼 자유롭게 사용하고,    <br />
+더 이상 사용되지 않는 오브젝트들은 가비지 컬렉션을 담당하는 프로세스가 자동으로 메모리에서 제거하도록 하는 것이 가비지 컬렉션의 기본 개념이다.</p>
+
+<h5>StringBuffer와 String Builder의 차이</h5>
+<p>그럼 두 클래스의 차이점은 무엇일까요? 바로 동기화 여부입니다.</p>
+
+<ul>
+  <li>StringBuffer는 각 메서드별로 Synchronized Keyword가 존재하여, 멀티스레드 환경에서도 동기화를 지원.</li>
+  <li>반면, StringBuilder는 동기화를 보장하지 않음.
+그렇기때문에 멀티스레드 환경이라면 값 동기화 보장을 위해 StringBuffer를 사용하고,</li>
+</ul>
+
+<p>단일스레드 환경이라면 StringBuilder를 사용하는 것이 좋습니다.  <br />
+단일 스레드환경에서 StringBuffer를 사용한다고 문제가 되는 것은 아니지만,  <br />
+동기화 관련 처리로 인해 StringBuilder에 비해 성능이 좋지 않습니다.</p>
+
+<h5>객체지향프로그래밍</h5>
+<p>애플리케이션을 구성하는 요소들을 객체로 바라보고,    <br />
+객체들을 유기적으로 연결하여 프로그래밍 하는 것</p>
+
+<p>참고 <br />
+https://jwkim96.tistory.com/90      <br />
+https://m.blog.naver.com/heartflow89/220954420688    <br />
+https://12bme.tistory.com/42    <br />
+https://www.donga.com/news/Economy/article/all/20170508/84256817/1 (사진)
+To be continue… .</p>
 
 
                 </div>
@@ -391,10 +417,6 @@ To be continue…</p>
                                             <li><a href="/java-equals">Java_equals와 "=="연산자의 차이</a></li>
                                         
                                     
-                                  
-                                
-                                  
-                                
                                   
                                 
                                   

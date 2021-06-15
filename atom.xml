@@ -157,44 +157,43 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
     
       
       <item>
-        <title>Python 강좌(2) - Python 제어문</title>
+        <title>추천 목록, gist 보여주기</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-address&quot;&gt;Python 강좌(1) - Python 기본&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Python 강좌(2) - Python 제어문&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./some-code&quot;&gt;코드보여주기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./some-listAndGist&quot;&gt;추천 목록, gist 보여주기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5&gt;마크업 언어 사용 예시&lt;/h5&gt;
-&lt;p&gt;1) 목록 보여줄때 (홀따음표 제거) &lt;br /&gt;
-   “{“% include python-table-of-contents.html %}” &lt;br /&gt;
-2) gist 문서가져올때 (따음표 제거) &lt;br /&gt;
-&amp;lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&amp;gt;&amp;lt;/script’&amp;gt; &lt;br /&gt;
-   또는    &lt;br /&gt;
-   {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;1) 목록 보여줄때 (홀따음표 제거)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;”{“% include python-table-of-contents.html %}”&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         
         <pubDate>Fri, 21 May 2021 01:40:00 +0900</pubDate>
         <link>
-        https://nageom.github.io/python-control-statement</link>
-        <guid isPermaLink="true">https://nageom.github.io/python-control-statement</guid>
+        https://nageom.github.io/some-listAndGist</link>
+        <guid isPermaLink="true">https://nageom.github.io/some-listAndGist</guid>
       </item>
       
     
       
       <item>
-        <title>Python 강좌(1) - Python 기본</title>
+        <title>코드 보여주기</title>
         
-          <description>&lt;p&gt;마크업언어 활용하기 코드 넣기 (검정바탕)    &lt;br /&gt;
-‘~~~’javascript ~~~&lt;/p&gt;
+          <description>&lt;p&gt;마크업언어 활용하기 코드 넣기 (검정바탕)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;’~~~javascript’&lt;/p&gt;
+&lt;/blockquote&gt;
+
 </description>
         
         <pubDate>Tue, 18 May 2021 01:40:00 +0900</pubDate>
         <link>
-        https://nageom.github.io/python-address</link>
-        <guid isPermaLink="true">https://nageom.github.io/python-address</guid>
+        https://nageom.github.io/some-code</link>
+        <guid isPermaLink="true">https://nageom.github.io/some-code</guid>
       </item>
       
     

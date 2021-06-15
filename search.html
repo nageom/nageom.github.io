@@ -56,13 +56,13 @@
     <meta property="og:title" content="Search Result" />
     <meta property="og:description" content="IT 공부방" />
     <meta property="og:url" content="https://nageom.github.io/search" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/cover/cover2.png" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/cover/cover_yellow_main.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Search Result" />
     <meta name="twitter:description" content="IT 공부방" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/cover/cover2.png" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/cover/cover_yellow_main.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:site" content="@" />
@@ -82,7 +82,7 @@
     "url": "https://nageom.github.io/search",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/cover/cover2.png",
+        "url": "https://nageom.github.io/assets/built/images/cover/cover_yellow_main.png",
         "width": 2000,
         "height": 666
     },
@@ -129,15 +129,15 @@ into the {body} of the default.hbs template -->
         
             
 <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <!--<li class="nav-home" role="menuitem"><a href="/">Home</a></li> -->
+    <!--<li class="nav-about" role="menuitem"><a href="/about/">About</a></li> -->
 
     <li class="nav-archive" role="menuitem">
         <a href="/author_archive.html">Tag별 Posts</a>
     </li>
 
-    <li class="nav-jekyll" role="menuitem"><a href="/tag/jekyll/">Jekyll</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/python/">Python</a></li>
+
+    <li class="nav-python" role="menuitem"><a href="/tag/some/">알쓸잡</a></li>
     <li class="nav-python" role="menuitem"><a href="/tag/oracle/">Oracle</a></li>
     <li class="nav-python" role="menuitem"><a href="/tag/spring/">Spring</a></li>
     <li class="nav-python" role="menuitem"><a href="/tag/java/">Java</a></li>
@@ -204,7 +204,7 @@ into the {body} of the default.hbs template -->
         "title": "hashTable과 hashMap의 차이는?",
             "author": "nageom",
             "category": "",
-            "content": "해시테이블과 해시맵의 차이를 알아보기 전, 어떤 것 인지부터 알아보도록 하겠습니다.  해시테이블(Hash Table)  키(key)와 값 (value)이 하나의 쌍으로 이루어진 데이터 구조입니다.  해시테이블은 내부적으로 배열(버킷)을 사용하여 키를 인덱스값으로 놓고 배열(버킷)에 값을 저장하는 형태입니다.  key와 value가 put()메서드로 저장될때,   key값에 해시함수를 적용해 배열의 index를 생성해냅니다. and 그 index스에 해당 value가 저장되는것이죠. 이 때, 실제 값이 저장되는 배열을 버킷 or 슬롯이라 합니다.  해시함수는?고유한 인덱스 값을 생성하는 메서드입니다.대표적인 해시 함수-&gt; 1. Division Method: 주소=입력값 % 테이블 크기 테이블의 크기를 소수로 정해 2의 제곱수와 먼 값을 사용하는 것이 좋다.-&gt; 2. Digit Folding : 각 Key 의 문자열을 아스키 코드로 바꾸고, 값을 합한 데이터를 데이터 내의 주소로 사용하는 방법-&gt; 3. Multiplication Method: 숫자로 된 Key값 -&gt; k , 0과 1사이의 실수 -&gt; A, 2의 제곱수 -&gt; 을 이용하여 h(k) = (kAmod1) x m 계산을 해준다. -&gt; 4. Univeral Hashing : 다수의 해시함수를 만들어 집합 H에 넣어두고, 무작위로 해시함수를 선택해 해시값을 만드는 기법  해시값이 충돌하는 경우“nageom” 을 해시 함수를 돌아나온 해시값이 “dawon”의 해시함수를 돌려 나온 값과 동일하는 경우를충돌한다 말한다.  이러한 충돌을 해결하는 방법은 크게 두 가지가 있다.&lt;분리 연결법(Separate Chaining)&gt;분리 연결법 (Separate Chaining) 위의 그림처럼 해시값이 충돌할 경우 추가 메모리를 사용하여 다음 데이터의 주소를 저장하는 것이다. 위의 그림처럼",
+            "content": "해시테이블과 해시맵의 차이를 알아보기 전, 어떤 것 인지부터 알아보도록 하겠습니다.  해시테이블(Hash Table)  키(key)와 값 (value)이 하나의 쌍으로 이루어진 데이터 구조입니다.  해시테이블은 내부적으로 배열(버킷)을 사용하여 키를 인덱스값으로 놓고 배열(버킷)에 값을 저장하는 형태입니다.  key와 value가 put()메서드로 저장될때,   key값에 해시함수를 적용해 배열의 index를 생성해냅니다. and 그 index스에 해당 value가 저장되는것이죠. 이 때, 실제 값이 저장되는 배열을 버킷 or 슬롯이라 합니다.  해시함수는?고유한 인덱스 값을 생성하는 메서드입니다.대표적인 해시 함수-&gt; 1. Division Method: 주소=입력값 % 테이블 크기 테이블의 크기를 소수로 정해 2의 제곱수와 먼 값을 사용하는 것이 좋다.-&gt; 2. Digit Folding : 각 Key 의 문자열을 아스키 코드로 바꾸고, 값을 합한 데이터를 데이터 내의 주소로 사용하는 방법-&gt; 3. Multiplication Method: 숫자로 된 Key값 -&gt; k , 0과 1사이의 실수 -&gt; A, 2의 제곱수 -&gt; 을 이용하여 h(k) = (kAmod1) x m 계산을 해준다. -&gt; 4. Univeral Hashing : 다수의 해시함수를 만들어 집합 H에 넣어두고, 무작위로 해시함수를 선택해 해시값을 만드는 기법  해시값이 충돌하는 경우“nageom” 을 해시 함수를 돌아나온 해시값이 “dawon”의 해시함수를 돌려 나온 값과 동일하는 경우를충돌한다 말한다.  이러한 충돌을 해결하는 방법은 크게 두 가지가 있다.&lt;분리 연결법(Separate Chaining)&gt;분리 연결법 (Separate Chaining) 위의 그림처럼 해시값이 충돌할 경우 추가 메모리를 사용하여 다음 데이터의 주소를 저장하는 것이다. 위의 그림처럼References   https://hee96-story.tistory.com/48    https://mangkyu.tistory.com/102",
         "url": "/algorithm-basic"
     }
     ,
@@ -213,7 +213,7 @@ into the {body} of the default.hbs template -->
         "title": "알고리즘과 자료구조는?",
             "author": "nageom",
             "category": "",
-            "content": "오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요? 자료구조와 알고리즘의 차이를 설명할때 가장 많이 나오는 예시가 도서관이더라구요.  자료구조는 ‘책장에 꽂혀있는 책들의 정리방법’ -&gt; ex) 알파벳순, 연도순 등 알고리즘은 ‘책장에서 책을 찾는 절차’ -&gt; ex) 위에서 아래, 왼쪽에서 오른쪽 또는 무작위 등  자료구조 + 알고리즘 = 프로그램자료구조는 데이터에 편하게 접근,변경하기 위한 데이터의 저장&amp;조직하는 방법을 말하는 것 입니다. 그래서 모든 목적에 맞는 자료구조는 없다 -&gt; 각 자료구조가 갖는 장점과 단점을 잘 아는 것이 중요하죠.자료구조의 간단 설명!  1.배열 (Array) 2.큐 (Queue) 참고 그림처럼 마치 다 쓴 두루마리 휴지심처럼 입구와 출구가 두 개 있는 구조. 입구의 주소를 rear로 명시, 출구의 주소를 제일 처음들어온 친구의 주고 front로 명시해두어서 데이터를 넣을때는 rear뒤로, 삭제 시에는 front에 있는 데이터를 삭제하고 front는 다음 주소로 이동합니다. –&gt; 기억을 더듬으며 적은거라 수정 요망!! :)FIFO(First In First Out)3.스택 (Stack)입/출구가 하나뿐이라 마지막에 넣은 반찬이 제일 위에 있어서 먼저 꺼내먹을 수 밖에 없는 구조.  LIFO(Last In First Out)4.연결 리스트(Linked List)한 클래스가 데이터와 링크를 멤버로 갖고있는것입니다 그래서 클1, 클2, 클3 이렇게 차례로 연결 되어있다면 클1(“데이터1”, head의 주소), 클2(“데이터2”, 클1의 주소), 클3(“데이터3”, 클2의주소)… 이렇게 자기 앞에 주소를 갖고 찾아가는식으로 연결연결 되어있는 자료구조입니다.  단일 연결 리스트, 단일 원형 연결 리스트, 이중 연결 리스트, 이중 원형 연결 리스트가 있습니다.5.트리 (Tree)6.그래프 (graph)관계를 그래프로 추상화하여 다룰 수 있다. Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)여기까지 자료구조와 알고리즘의 간단! 설명 이였습니다.  다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!",
+            "content": "오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요? 자료구조와 알고리즘의 차이를 설명할때 가장 많이 나오는 예시가 도서관이더라구요.  자료구조는 ‘책장에 꽂혀있는 책들의 정리방법’ -&gt; ex) 알파벳순, 연도순 등 알고리즘은 ‘책장에서 책을 찾는 절차’ -&gt; ex) 위에서 아래, 왼쪽에서 오른쪽 또는 무작위 등  자료구조 + 알고리즘 = 프로그램자료구조는 데이터에 편하게 접근,변경하기 위한 데이터의 저장&amp;조직하는 방법을 말하는 것 입니다. 그래서 모든 목적에 맞는 자료구조는 없다 -&gt; 각 자료구조가 갖는 장점과 단점을 잘 아는 것이 중요하죠.자료구조의 간단 설명!  1.배열 (Array) 2.큐 (Queue) 참고 그림처럼 마치 다 쓴 두루마리 휴지심처럼 입구와 출구가 두 개 있는 구조. 입구의 주소를 rear로 명시, 출구의 주소를 제일 처음들어온 친구의 주고 front로 명시해두어서 데이터를 넣을때는 rear뒤로, 삭제 시에는 front에 있는 데이터를 삭제하고 front는 다음 주소로 이동합니다. –&gt; 기억을 더듬으며 적은거라 수정 요망!! :)FIFO(First In First Out)3.스택 (Stack)입/출구가 하나뿐이라 마지막에 넣은 반찬이 제일 위에 있어서 먼저 꺼내먹을 수 밖에 없는 구조.  LIFO(Last In First Out)4.연결 리스트(Linked List)한 클래스가 데이터와 링크를 멤버로 갖고있는것입니다 그래서 클1, 클2, 클3 이렇게 차례로 연결 되어있다면 클1(“데이터1”, head의 주소), 클2(“데이터2”, 클1의 주소), 클3(“데이터3”, 클2의주소)… 이렇게 자기 앞에 주소를 갖고 찾아가는식으로 연결연결 되어있는 자료구조입니다.  단일 연결 리스트, 단일 원형 연결 리스트, 이중 연결 리스트, 이중 원형 연결 리스트가 있습니다.5.트리 (Tree)6.그래프 (graph)관계를 그래프로 추상화하여 다룰 수 있다. Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)여기까지 자료구조와 알고리즘의 간단! 설명 이였습니다.  다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!references   https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html",
         "url": "/algorithm-hashTable"
     }
     ,
@@ -263,21 +263,21 @@ into the {body} of the default.hbs template -->
     }
     ,
     
-    "python-control-statement": {
-        "title": "Python 강좌(2) - Python 제어문",
+    "some-listandgist": {
+        "title": "추천 목록, gist 보여주기",
             "author": "nageom",
             "category": "",
-            "content": "Python 강좌는 여러 절로 구성되어 있습니다.     Python 강좌(1) - Python 기본    Python 강좌(2) - Python 제어문마크업 언어 사용 예시1) 목록 보여줄때 (홀따음표 제거)    “{“% include python-table-of-contents.html %}” 2) gist 문서가져올때 (따음표 제거) &lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&gt;&lt;/script’&gt;    또는       {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’",
-        "url": "/python-control-statement"
+            "content": "Python 강좌는 여러 절로 구성되어 있습니다.     코드보여주기    추천 목록, gist 보여주기마크업 언어 사용 예시1) 목록 보여줄때 (홀따음표 제거)  ”{“% include python-table-of-contents.html %}”_includes / oracle-table-of-contents.html 목록파일 추가해줘야함2) gist 문서가져올때 (따음표 제거)  &lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&gt;&lt;/script’&gt;    또는       {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’",
+        "url": "/some-listAndGist"
     }
     ,
     
-    "python-address": {
-        "title": "Python 강좌(1) - Python 기본",
+    "some-code": {
+        "title": "코드 보여주기",
             "author": "nageom",
             "category": "",
-            "content": "마크업언어 활용하기 코드 넣기 (검정바탕)    ‘~~~’javascript ~~~",
-        "url": "/python-address"
+            "content": "마크업언어 활용하기 코드 넣기 (검정바탕)  ’~~~javascript’@RequestMapping(value=\"/content/getPersonNumber\", method=RequestMethod.GET)@ResponseBody\t\t\t\t//inputcode는 날짜와 cid public int getPersonNumber(String inputcode, String cid) {//\t\tString date = req.getParameter(\"inputcode\");//\t\tint cid = Integer.parseInt(req.getParameter(\"cid\"));    int cid2 = Integer.parseInt(cid);    System.out.println(\"inputcode: \"+ inputcode);    System.out.println(\"cid2: \"+ cid2);",
+        "url": "/some-code"
     }
     ,
     

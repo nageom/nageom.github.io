@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-15T14:12:04+09:00</updated>
+  <updated>2021-06-15T15:37:02+09:00</updated>
   <id>https://nageom.github.io/tag/algorithm/feed.xml</id>
 
   
@@ -83,7 +83,11 @@ and 그 index스에 해당 value가 저장되는것이죠. &lt;br /&gt;
 &lt;img src=&quot;../../assets/built/images/algorithm/hashTable/hashTable.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;분리 연결법 (Separate Chaining) 위의 그림처럼 해시값이 충돌할 경우 추가 메모리를 사용하여 다음 데이터의 주소를 저장
-하는 것이다. 위의 그림처럼&lt;/p&gt;</content>
+하는 것이다. 위의 그림처럼&lt;/p&gt;
+
+&lt;p&gt;References   &lt;br /&gt;
+https://hee96-story.tistory.com/48    &lt;br /&gt;
+https://mangkyu.tistory.com/102&lt;/p&gt;</content>
 
       
       
@@ -172,7 +176,10 @@ Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 여기까지 자료구조와 알고리즘의 간단! 설명 이였습니다.  &lt;br /&gt;
-다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;</content>
+다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;
+
+&lt;p&gt;references   &lt;br /&gt;
+https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</content>
 
       
       

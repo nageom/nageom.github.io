@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/oracle/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-15T14:20:02+09:00</updated>
+  <updated>2021-06-15T15:51:32+09:00</updated>
   <id>https://nageom.github.io/tag/oracle/feed.xml</id>
 
   
@@ -37,7 +37,7 @@
       <published>2021-05-25T09:14:00+09:00</published>
       <updated>2021-05-25T09:14:00+09:00</updated>
       <id>https://nageom.github.io/oracle-basic_1</id>
-      <content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+      <content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
@@ -118,7 +118,7 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
       
 
       
-        <summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary>
+        <summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary>
       
 
       
@@ -131,7 +131,7 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
       <published>2021-05-25T09:14:00+09:00</published>
       <updated>2021-05-25T09:14:00+09:00</updated>
       <id>https://nageom.github.io/oracle-DataType_2</id>
-      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 같이보기 좋은 게시물 추천 ↓↓ &lt;/span&gt;&lt;/p&gt;
+      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
@@ -162,7 +162,7 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
       
 
       
-        <summary type="html">같이보기 좋은 게시물 추천 ↓↓ Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
+        <summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
       
 
       

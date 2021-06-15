@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a369b43-67e5-41de-938d-ae776d6b9428" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/author/nageom/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author/nageom/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/algorithm/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/algorithm/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/error/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/error/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/java/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/java/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/oracle/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/oracle/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/python/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/python/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/spring/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/spring/feed.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e498f290-169f-4183-b903-e6d05bfdb833" name="Default Changelist" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +98,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />

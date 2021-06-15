@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://nageom.github.io/tag/some/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-06-15T15:37:02+09:00</updated>
+  <id>https://nageom.github.io/tag/some/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">nageom’s blog | </title>
+  
+
+  
+    <subtitle>IT 공부방</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">추천 목록, gist 보여주기</title>
+      <link href="https://nageom.github.io/some-listAndGist" rel="alternate" type="text/html" title="추천 목록, gist 보여주기" />
+      <published>2021-05-21T01:40:00+09:00</published>
+      <updated>2021-05-21T01:40:00+09:00</updated>
+      <id>https://nageom.github.io/some-listAndGist</id>
+      <content type="html" xml:base="https://nageom.github.io/some-listAndGist">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Python 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./some-code&quot;&gt;코드보여주기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./some-listAndGist&quot;&gt;추천 목록, gist 보여주기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;마크업 언어 사용 예시&lt;/h5&gt;
+&lt;p&gt;1) 목록 보여줄때 (홀따음표 제거)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;”{“% include python-table-of-contents.html %}”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;_includes / oracle-table-of-contents.html 목록파일 추가해줘야함
+2) gist 문서가져올때 (따음표 제거)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&amp;lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&amp;gt;&amp;lt;/script’&amp;gt; &lt;br /&gt;
+   또는    &lt;br /&gt;
+   {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="some" />
+      
+
+      
+        <summary type="html">Python 강좌는 여러 절로 구성되어 있습니다. 코드보여주기 추천 목록, gist 보여주기 마크업 언어 사용 예시 1) 목록 보여줄때 (홀따음표 제거) ”{“% include python-table-of-contents.html %}”</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">코드 보여주기</title>
+      <link href="https://nageom.github.io/some-code" rel="alternate" type="text/html" title="코드 보여주기" />
+      <published>2021-05-18T01:40:00+09:00</published>
+      <updated>2021-05-18T01:40:00+09:00</updated>
+      <id>https://nageom.github.io/some-code</id>
+      <content type="html" xml:base="https://nageom.github.io/some-code">&lt;p&gt;마크업언어 활용하기 코드 넣기 (검정바탕)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;’~~~javascript’&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;RequestMapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/content/getPersonNumber&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;ResponseBody&lt;/span&gt;				&lt;span class=&quot;c1&quot;&gt;//inputcode는 날짜와 cid &lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getPersonNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//		String date = req.getParameter(&quot;inputcode&quot;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//		int cid = Integer.parseInt(req.getParameter(&quot;cid&quot;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;inputcode: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cid2: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="some" />
+      
+
+      
+        <summary type="html">마크업언어 활용하기 코드 넣기 (검정바탕) ’~~~javascript’</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

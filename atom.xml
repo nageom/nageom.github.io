@@ -11,16 +11,8 @@
         <title>기술면접 예상 질문</title>
         
           <description>&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/test.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-&lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
-&lt;p&gt;JRE : 자바코드가 실행 될 수 있는 환경 &lt;br /&gt;
-JVM : JRE 내에 존재한다. &lt;br /&gt;
-자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고 재사용을 가능하게 해준다. &lt;br /&gt;
- 자바로 만들어진 프로그램을 실행할때에는 JRE설치 / 개발시에는 JDK설치 (JDK 내에 JRE 포함)&lt;/p&gt;
-
-&lt;p&gt;자바 컴파일러(javac) : JDK가 컴파일하는 기능을 가지고 있는데 그게 javac이다.  &lt;br /&gt;
-javac는 컴퓨터가 이해하는 기계어로 변환 해주는 컴파일을 하는 녀석인데   &lt;br /&gt;
-정확히는 OS와 자바의 중개자인 JVM이 이해할 수 있는 형태로 컴파일된다.(바이트코드)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/test.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+&lt;img src=&quot;../../assets/built/images/error/img.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 </description>
         

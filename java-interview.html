@@ -46,7 +46,7 @@
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 공부방" />
-    <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/favicon.jpg" type="image/png" />
+    <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
     <link rel="canonical" href="https://nageom.github.io/java-interview" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -242,21 +242,48 @@ object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고�
 공통되는 조리과정을 골라 부모클래스로 만드는 작업이 추상화입니다.</p>
 
 <h5>자바 메모리 구조</h5>
-<p>static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.      <br />
-static(스태틱)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.      <br />
-전역변수, 정적변수</p>
+<p>static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.</p>
+
+<p>스태틱(static)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.      <br />
+정적변수</p>
 
 <p>(LIFO)
-stack (스택) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간</p>
+스택 (stack) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간</p>
 <ul>
   <li>메서드가 호출 될 때 메모리에 할당되고 종료되면 메모리가 해제된다.</li>
 </ul>
 
-<p>Heap 영역 (힙 메모리 영역)</p>
+<p>힙 영역 ( heap 메모리 영역)</p>
 <ul>
   <li>참조형의 데이터 타입을 갖는 객체(인스턴스), 배열 등이 heap 영역에 데이터가 저장된다.       <br />
-실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.</li>
+실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.
+    <h5>  <싱글톤과 static=""> &lt;/h5&gt;    
+싱글톤    
+싱글톤 - 애플리케이션이 시작될 때, 어떤 클래스가 최초 한 번만 메모리를 할당(static)하고      
+해당 메모리에 인스턴스를 만들어 사용하고 공유하는 제한하는 패턴      
+즉, 싱글톤 패턴은 '하나'의 인스턴스만 생성하여 사용하고 공유하는 디자인 패턴이다.     
+     
+     
+     
+</싱글톤과></h5>
+  </li>
 </ul>
+<p>static 변수     <br />
+모든 인스턴스에 공통적으로 사용되는 클래스 변수(정적 변수)   <br />
+클래스 이름으로 참조하여 사용하는 static 변수를 위한 클래스 메서드(정적 메서드)    <br />
+인스턴스를 생성하지 않고도 사용 가능하다. 클래스가 메모리에 로드될 때 생성된다. 모든 인스턴스가 공유한다.</p>
+
+<p>static - 객체의 생성 시점을 제어할 수 없다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">public</span> <span class="kd">class</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">int</span> <span class="nx">num</span><span class="p">;</span> <span class="c1">//멤버 변수</span>
+    <span class="kd">static</span> <span class="nx">int</span> <span class="nx">num2</span><span class="p">;</span> <span class="c1">// 클래스 변수(정적 변수)</span>
+    
+    <span class="kr">public</span> <span class="nb">String</span> <span class="nx">printTest</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">String</span> <span class="nx">id</span><span class="p">;</span> <span class="c1">//지역 변수</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h5>GC(Garbage Collection)</h5>
 <p>프로그래머는 힙을 사용할 수 있는 만큼 자유롭게 사용하고,    <br />
@@ -382,7 +409,7 @@ To be continue… .</p>
                 
                     <article class="read-next-card"
                         
-                            style="background-image: url(/assets/built/images/cover/cover_yellow_main.png)"
+                            style="background-image: url(/assets/built/images/cover_yellow_main.png)"
                         
                     >
                         <header class="read-next-card-header">

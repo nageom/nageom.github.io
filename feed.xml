@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-15T15:51:32+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">기술면접 예상 질문</title><link href="https://nageom.github.io/java-interview" rel="alternate" type="text/html" title="기술면접 예상 질문" /><published>2021-06-11T09:14:00+09:00</published><updated>2021-06-11T09:14:00+09:00</updated><id>https://nageom.github.io/java-interview</id><content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-16T23:19:42+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">기술면접 예상 질문</title><link href="https://nageom.github.io/java-interview" rel="alternate" type="text/html" title="기술면접 예상 질문" /><published>2021-06-11T09:14:00+09:00</published><updated>2021-06-11T09:14:00+09:00</updated><id>https://nageom.github.io/java-interview</id><content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
 &lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/itv.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
@@ -38,21 +38,48 @@ object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고�
 공통되는 조리과정을 골라 부모클래스로 만드는 작업이 추상화입니다.&lt;/p&gt;
 
 &lt;h5&gt;자바 메모리 구조&lt;/h5&gt;
-&lt;p&gt;static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.      &lt;br /&gt;
-static(스태틱)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.      &lt;br /&gt;
-전역변수, 정적변수&lt;/p&gt;
+&lt;p&gt;static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.&lt;/p&gt;
+
+&lt;p&gt;스태틱(static)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.      &lt;br /&gt;
+정적변수&lt;/p&gt;
 
 &lt;p&gt;(LIFO)
-stack (스택) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간&lt;/p&gt;
+스택 (stack) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;메서드가 호출 될 때 메모리에 할당되고 종료되면 메모리가 해제된다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Heap 영역 (힙 메모리 영역)&lt;/p&gt;
+&lt;p&gt;힙 영역 ( heap 메모리 영역)&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;참조형의 데이터 타입을 갖는 객체(인스턴스), 배열 등이 heap 영역에 데이터가 저장된다.       &lt;br /&gt;
-실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.&lt;/li&gt;
+실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다.
+    &lt;h5&gt;  &lt;싱글톤과 static=&quot;&quot;&gt; &amp;lt;/h5&amp;gt;    
+싱글톤    
+싱글톤 - 애플리케이션이 시작될 때, 어떤 클래스가 최초 한 번만 메모리를 할당(static)하고      
+해당 메모리에 인스턴스를 만들어 사용하고 공유하는 제한하는 패턴      
+즉, 싱글톤 패턴은 '하나'의 인스턴스만 생성하여 사용하고 공유하는 디자인 패턴이다.     
+     
+     
+     
+&lt;/싱글톤과&gt;&lt;/h5&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;static 변수     &lt;br /&gt;
+모든 인스턴스에 공통적으로 사용되는 클래스 변수(정적 변수)   &lt;br /&gt;
+클래스 이름으로 참조하여 사용하는 static 변수를 위한 클래스 메서드(정적 메서드)    &lt;br /&gt;
+인스턴스를 생성하지 않고도 사용 가능하다. 클래스가 메모리에 로드될 때 생성된다. 모든 인스턴스가 공유한다.&lt;/p&gt;
+
+&lt;p&gt;static - 객체의 생성 시점을 제어할 수 없다.&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//멤버 변수&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 클래스 변수(정적 변수)&lt;/span&gt;
+    
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;printTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//지역 변수&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5&gt;GC(Garbage Collection)&lt;/h5&gt;
 &lt;p&gt;프로그래머는 힙을 사용할 수 있는 만큼 자유롭게 사용하고,    &lt;br /&gt;

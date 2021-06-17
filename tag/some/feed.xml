@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/some/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-17T21:15:00+09:00</updated>
+  <updated>2021-06-17T22:11:19+09:00</updated>
   <id>https://nageom.github.io/tag/some/feed.xml</id>
 
   
@@ -30,6 +30,46 @@
   
   
 
+  
+    <entry>
+      <title type="html">마크업 [이미지 삽입]</title>
+      <link href="https://nageom.github.io/some-image" rel="alternate" type="text/html" title="마크업 [이미지 삽입]" />
+      <published>2021-06-17T01:40:00+09:00</published>
+      <updated>2021-06-17T01:40:00+09:00</updated>
+      <id>https://nageom.github.io/some-image</id>
+      <content type="html" xml:base="https://nageom.github.io/some-image">&lt;p&gt;이미지 삽입
+&lt;img src=&quot;../../assets/built/images/cover/monkey.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;![ex_screenshot] 뒤에 홀따옴표 지우고 사용&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;![ex_screenshot]’(../../assets/built/images/파일명.png)&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="some" />
+      
+
+      
+        <summary type="html">이미지 삽입</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">추천 목록, gist 보여주기</title>

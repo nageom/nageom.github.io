@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-17T21:15:00+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">기술면접 예상 질문</title><link href="https://nageom.github.io/java-interview" rel="alternate" type="text/html" title="기술면접 예상 질문" /><published>2021-06-11T09:14:00+09:00</published><updated>2021-06-11T09:14:00+09:00</updated><id>https://nageom.github.io/java-interview</id><content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-17T22:11:19+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">마크업 [이미지 삽입]</title><link href="https://nageom.github.io/some-image" rel="alternate" type="text/html" title="마크업 [이미지 삽입]" /><published>2021-06-17T01:40:00+09:00</published><updated>2021-06-17T01:40:00+09:00</updated><id>https://nageom.github.io/some-image</id><content type="html" xml:base="https://nageom.github.io/some-image">&lt;p&gt;이미지 삽입
+&lt;img src=&quot;../../assets/built/images/cover/monkey.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;![ex_screenshot] 뒤에 홀따옴표 지우고 사용&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;![ex_screenshot]’(../../assets/built/images/파일명.png)&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>nageom</name></author><category term="some" /><summary type="html">이미지 삽입</summary></entry><entry><title type="html">기술면접 예상 질문</title><link href="https://nageom.github.io/java-interview" rel="alternate" type="text/html" title="기술면접 예상 질문" /><published>2021-06-11T09:14:00+09:00</published><updated>2021-06-11T09:14:00+09:00</updated><id>https://nageom.github.io/java-interview</id><content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
 &lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/itv.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
@@ -267,7 +273,77 @@ Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)&lt;/p&gt;
 다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;
 
 &lt;p&gt;references   &lt;br /&gt;
-https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry><entry><title type="html">Spring - basic</title><link href="https://nageom.github.io/Spring-basic" rel="alternate" type="text/html" title="Spring - basic" /><published>2021-05-25T09:28:00+09:00</published><updated>2021-05-25T09:28:00+09:00</updated><id>https://nageom.github.io/Spring-basic</id><content type="html" xml:base="https://nageom.github.io/Spring-basic">&lt;p&gt;Spring&lt;/p&gt;</content><author><name>nageom</name></author><category term="Spring" /><summary type="html">Spring</summary></entry><entry><title type="html">Java_equals와 “==”연산자의 차이</title><link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 “==”연산자의 차이" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/java-equals</id><content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
+https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry><entry><title type="html">Spring - basic</title><link href="https://nageom.github.io/Spring-basic" rel="alternate" type="text/html" title="Spring - basic" /><published>2021-05-25T09:28:00+09:00</published><updated>2021-05-25T09:28:00+09:00</updated><id>https://nageom.github.io/Spring-basic</id><content type="html" xml:base="https://nageom.github.io/Spring-basic">&lt;p&gt;Spring&lt;/p&gt;</content><author><name>nageom</name></author><category term="Spring" /><summary type="html">Spring</summary></entry><entry><title type="html">Oracle-basic_1</title><link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-basic_1</id><content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;1) RDBMS : 관계형 데이터베이스 관리 시스템&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB &lt;br /&gt;
+그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를
+RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/basicTable.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;행과열 조합으로 테이블 형태를 띄고있으며 각 테이블과 테이블의 관계를 제약조건에 따라 구분할 수 있으며 &lt;br /&gt;
+대표적으로 Oracle, MySQL, MriaDB, MS-SQL 등이 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2)  SQL    (Oracle)&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;관계형 데이터베이서 관리 시스템 (RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;즉! 쉽게! 데이터를 관리하기위해 사용하는 언어입니다.
+백번 설명보다 해보는게 최고입니다. 바로 사용법 보도록하죠
+개념적으로&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DDL_Data Definition Language (데이터 정의어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;테이블 자체를 생성,변경,삭제 등&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/ddl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DML_Data Manipulation Language (데이터 조작어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;테이블안의 내용을 조회,삽입,삭제 등 
+&lt;img src=&quot;./assets/built/images/dml.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DCL_Data Control Language (데이터 제어어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;DB에 접근하고 객체를 사용함에 대한 권한에 대한 명령어
+&lt;img src=&quot;./assets/built/images/dcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;TCL_Transaction Control Language (트랜잭션 제어어)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;논리적인 작업의 단위를 묶어서 DML 에 의한 조작된 결과를 작업단위(트랜잭션)별로 제어하는 명령어 &lt;br /&gt;
+ :&amp;gt; 그냥 아차! 싶은 작업을 되돌릴수도 있고, 아차! 하기전에 저장하기도 할 수 있는 명령어    &lt;br /&gt;
+&lt;img src=&quot;./assets/built/images/tcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;3) 데이터타입
+   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
+이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary></entry><entry><title type="html">Java_equals와 “==”연산자의 차이</title><link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 “==”연산자의 차이" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/java-equals</id><content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
 &lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
 우선  equals는 메서드 &lt;br /&gt;
       ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
@@ -340,77 +416,7 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
 &lt;p&gt;반대로  &lt;br /&gt;
  new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. &lt;br /&gt;
 그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? &lt;br /&gt;
-오늘도 화이팅입니다!&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary></entry><entry><title type="html">Oracle-basic_1</title><link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-basic_1</id><content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;1) RDBMS : 관계형 데이터베이스 관리 시스템&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB &lt;br /&gt;
-그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를
-RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/basicTable.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;행과열 조합으로 테이블 형태를 띄고있으며 각 테이블과 테이블의 관계를 제약조건에 따라 구분할 수 있으며 &lt;br /&gt;
-대표적으로 Oracle, MySQL, MriaDB, MS-SQL 등이 있습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;2)  SQL    (Oracle)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;관계형 데이터베이서 관리 시스템 (RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;즉! 쉽게! 데이터를 관리하기위해 사용하는 언어입니다.
-백번 설명보다 해보는게 최고입니다. 바로 사용법 보도록하죠
-개념적으로&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DDL_Data Definition Language (데이터 정의어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;테이블 자체를 생성,변경,삭제 등&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/ddl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DML_Data Manipulation Language (데이터 조작어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;테이블안의 내용을 조회,삽입,삭제 등 
-&lt;img src=&quot;./assets/built/images/dml.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DCL_Data Control Language (데이터 제어어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;DB에 접근하고 객체를 사용함에 대한 권한에 대한 명령어
-&lt;img src=&quot;./assets/built/images/dcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;TCL_Transaction Control Language (트랜잭션 제어어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;논리적인 작업의 단위를 묶어서 DML 에 의한 조작된 결과를 작업단위(트랜잭션)별로 제어하는 명령어 &lt;br /&gt;
- :&amp;gt; 그냥 아차! 싶은 작업을 되돌릴수도 있고, 아차! 하기전에 저장하기도 할 수 있는 명령어    &lt;br /&gt;
-&lt;img src=&quot;./assets/built/images/tcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;3) 데이터타입
-   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
-이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary></entry><entry><title type="html">REST-API JDK ERROR</title><link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/error-JDK</id><content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
+오늘도 화이팅입니다!&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary></entry><entry><title type="html">REST-API JDK ERROR</title><link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/error-JDK</id><content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
 
 &lt;p&gt;now.. no korean.. 
 I will fix it later… &lt;br /&gt;
@@ -449,22 +455,4 @@ Is it red?? &lt;br /&gt;
    {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;</content><author><name>nageom</name></author><category term="some" /><summary type="html">연관 게시물 코드보여주기 추천 목록, gist 보여주기 마크업 언어 사용 예시 1) 목록 보여줄때 (홀따음표 제거) ”{“% include python-table-of-contents.html %}”</summary></entry><entry><title type="html">코드 보여주기</title><link href="https://nageom.github.io/some-code" rel="alternate" type="text/html" title="코드 보여주기" /><published>2021-05-18T01:40:00+09:00</published><updated>2021-05-18T01:40:00+09:00</updated><id>https://nageom.github.io/some-code</id><content type="html" xml:base="https://nageom.github.io/some-code">&lt;p&gt;마크업언어 활용하기 코드 넣기 (검정바탕)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;’~~~javascript’&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;RequestMapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/content/getPersonNumber&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;ResponseBody&lt;/span&gt;				&lt;span class=&quot;c1&quot;&gt;//inputcode는 날짜와 cid &lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getPersonNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//		String date = req.getParameter(&quot;inputcode&quot;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//		int cid = Integer.parseInt(req.getParameter(&quot;cid&quot;));&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;inputcode: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cid2: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>nageom</name></author><category term="some" /><summary type="html">마크업언어 활용하기 코드 넣기 (검정바탕) ’~~~javascript’</summary></entry></feed>
+&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;</content><author><name>nageom</name></author><category term="some" /><summary type="html">연관 게시물 코드보여주기 추천 목록, gist 보여주기 마크업 언어 사용 예시 1) 목록 보여줄때 (홀따음표 제거) ”{“% include python-table-of-contents.html %}”</summary></entry></feed>

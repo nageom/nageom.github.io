@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-17T21:15:00+09:00</updated>
+  <updated>2021-06-17T22:11:19+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -30,6 +30,46 @@
   
   
 
+  
+    <entry>
+      <title type="html">마크업 [이미지 삽입]</title>
+      <link href="https://nageom.github.io/some-image" rel="alternate" type="text/html" title="마크업 [이미지 삽입]" />
+      <published>2021-06-17T01:40:00+09:00</published>
+      <updated>2021-06-17T01:40:00+09:00</updated>
+      <id>https://nageom.github.io/some-image</id>
+      <content type="html" xml:base="https://nageom.github.io/some-image">&lt;p&gt;이미지 삽입
+&lt;img src=&quot;../../assets/built/images/cover/monkey.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;![ex_screenshot] 뒤에 홀따옴표 지우고 사용&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;![ex_screenshot]’(../../assets/built/images/파일명.png)&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="some" />
+      
+
+      
+        <summary type="html">이미지 삽입</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">기술면접 예상 질문</title>
@@ -481,6 +521,60 @@ https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</cont
     </entry>
   
     <entry>
+      <title type="html">REST-API JDK ERROR</title>
+      <link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/error-JDK</id>
+      <content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
+
+&lt;p&gt;now.. no korean.. 
+I will fix it later… &lt;br /&gt;
+Error: A JNI error has occurred, please check your installation and try again
+&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+project right click -&amp;gt; Properties    &lt;br /&gt;
+Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
+&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;if problem again.. 
+project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
+‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
+check the ‘JRE System Library’ is red   &lt;br /&gt;
+Is it red?? &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
+-&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="error" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Oracle-basic_1</title>
       <link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" />
       <published>2021-05-25T09:14:00+09:00</published>
@@ -682,60 +776,6 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
     </entry>
   
     <entry>
-      <title type="html">REST-API JDK ERROR</title>
-      <link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" />
-      <published>2021-05-25T09:14:00+09:00</published>
-      <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/error-JDK</id>
-      <content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
-
-&lt;p&gt;now.. no korean.. 
-I will fix it later… &lt;br /&gt;
-Error: A JNI error has occurred, please check your installation and try again
-&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-project right click -&amp;gt; Properties    &lt;br /&gt;
-Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
-&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;if problem again.. 
-project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
-‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
-check the ‘JRE System Library’ is red   &lt;br /&gt;
-Is it red?? &lt;br /&gt;
-&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
--&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="error" />
-      
-
-      
-        <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">추천 목록, gist 보여주기</title>
       <link href="https://nageom.github.io/some-listAndGist" rel="alternate" type="text/html" title="추천 목록, gist 보여주기" />
       <published>2021-05-21T01:40:00+09:00</published>
@@ -782,58 +822,6 @@ Is it red?? &lt;br /&gt;
 
       
         <summary type="html">연관 게시물 코드보여주기 추천 목록, gist 보여주기 마크업 언어 사용 예시 1) 목록 보여줄때 (홀따음표 제거) ”{“% include python-table-of-contents.html %}”</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">코드 보여주기</title>
-      <link href="https://nageom.github.io/some-code" rel="alternate" type="text/html" title="코드 보여주기" />
-      <published>2021-05-18T01:40:00+09:00</published>
-      <updated>2021-05-18T01:40:00+09:00</updated>
-      <id>https://nageom.github.io/some-code</id>
-      <content type="html" xml:base="https://nageom.github.io/some-code">&lt;p&gt;마크업언어 활용하기 코드 넣기 (검정바탕)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;’~~~javascript’&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;RequestMapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/content/getPersonNumber&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RequestMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;ResponseBody&lt;/span&gt;				&lt;span class=&quot;c1&quot;&gt;//inputcode는 날짜와 cid &lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getPersonNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//		String date = req.getParameter(&quot;inputcode&quot;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//		int cid = Integer.parseInt(req.getParameter(&quot;cid&quot;));&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;inputcode: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cid2: &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cid2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="some" />
-      
-
-      
-        <summary type="html">마크업언어 활용하기 코드 넣기 (검정바탕) ’~~~javascript’</summary>
       
 
       

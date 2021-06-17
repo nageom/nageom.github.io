@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>마크업 [이미지 삽입]</title>
+        
+          <description>&lt;p&gt;이미지 삽입
+&lt;img src=&quot;../../assets/built/images/cover/monkey.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 17 Jun 2021 01:40:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/some-image</link>
+        <guid isPermaLink="true">https://nageom.github.io/some-image</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>기술면접 예상 질문</title>
         
           <description>&lt;hr /&gt;

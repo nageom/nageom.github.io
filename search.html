@@ -56,13 +56,13 @@
     <meta property="og:title" content="Search Result" />
     <meta property="og:description" content="IT 공부방" />
     <meta property="og:url" content="https://nageom.github.io/search" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/cover_yellow_main.png" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/cover/cover_yellow_main.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Search Result" />
     <meta name="twitter:description" content="IT 공부방" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/cover_yellow_main.png" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/cover/cover_yellow_main.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:site" content="@" />
@@ -82,7 +82,7 @@
     "url": "https://nageom.github.io/search",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/cover_yellow_main.png",
+        "url": "https://nageom.github.io/assets/built/images/cover/cover_yellow_main.png",
         "width": 2000,
         "height": 666
     },
@@ -190,6 +190,15 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
+    
+    "some-image": {
+        "title": "마크업 [이미지 삽입]",
+            "author": "nageom",
+            "category": "",
+            "content": "이미지 삽입![ex_screenshot] 뒤에 홀따옴표 지우고 사용  ![ex_screenshot]’(../../assets/built/images/파일명.png)",
+        "url": "/some-image"
+    }
+    ,
     
     "java-interview": {
         "title": "기술면접 예상 질문",

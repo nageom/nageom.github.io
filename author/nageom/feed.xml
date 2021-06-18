@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-17T22:11:19+09:00</updated>
+  <updated>2021-06-18T23:11:44+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -30,6 +30,59 @@
   
   
 
+  
+    <entry>
+      <title type="html">추상클래스(abstract class)</title>
+      <link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상클래스(abstract class)" />
+      <published>2021-06-17T09:14:00+09:00</published>
+      <updated>2021-06-17T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/java-abstract%20class</id>
+      <content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
+
+&lt;h5&gt; 추상클래스 &lt;/h5&gt;
+&lt;p&gt;추상클래스는 미완성 설계도에 비유할 수 있습니다. &lt;br /&gt;
+좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다.   &lt;br /&gt;
+&lt;br /&gt;
+아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는 없습니다.&lt;br /&gt;
+추상클래스는 상속을 통해 오직 자손클래스에 의해서만 완성될 수 있습니다.   &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;추상클래스는 키워드 ‘abstract’를 붙이기만 하면 됩니다. &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;클래스&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이름&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+    
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;추상클래스 상속시에는 extends 를 붙여줍니다. &lt;br /&gt;
+interface와는 다릅니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">마크업 [이미지 삽입]</title>
@@ -477,104 +530,6 @@ https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</cont
     </entry>
   
     <entry>
-      <title type="html">Oracle-DataType_2</title>
-      <link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
-      <published>2021-05-25T09:14:00+09:00</published>
-      <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/oracle-DataType_2</id>
-      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;3) 데이터타입
-   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
-이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="oracle" />
-      
-
-      
-        <summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">REST-API JDK ERROR</title>
-      <link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" />
-      <published>2021-05-25T09:14:00+09:00</published>
-      <updated>2021-05-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/error-JDK</id>
-      <content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
-
-&lt;p&gt;now.. no korean.. 
-I will fix it later… &lt;br /&gt;
-Error: A JNI error has occurred, please check your installation and try again
-&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-project right click -&amp;gt; Properties    &lt;br /&gt;
-Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
-&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;if problem again.. 
-project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
-‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
-check the ‘JRE System Library’ is red   &lt;br /&gt;
-Is it red?? &lt;br /&gt;
-&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
--&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="error" />
-      
-
-      
-        <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">Oracle-basic_1</title>
       <link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" />
       <published>2021-05-25T09:14:00+09:00</published>
@@ -776,31 +731,32 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
     </entry>
   
     <entry>
-      <title type="html">추천 목록, gist 보여주기</title>
-      <link href="https://nageom.github.io/some-listAndGist" rel="alternate" type="text/html" title="추천 목록, gist 보여주기" />
-      <published>2021-05-21T01:40:00+09:00</published>
-      <updated>2021-05-21T01:40:00+09:00</updated>
-      <id>https://nageom.github.io/some-listAndGist</id>
-      <content type="html" xml:base="https://nageom.github.io/some-listAndGist">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./some-code&quot;&gt;코드보여주기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./some-listAndGist&quot;&gt;추천 목록, gist 보여주기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5&gt;마크업 언어 사용 예시&lt;/h5&gt;
-&lt;p&gt;1) 목록 보여줄때 (홀따음표 제거)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;”{“% include python-table-of-contents.html %}”&lt;/p&gt;
-&lt;/blockquote&gt;
+      <title type="html">REST-API JDK ERROR</title>
+      <link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/error-JDK</id>
+      <content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
 
-&lt;p&gt;_includes / oracle-table-of-contents.html 목록파일 추가해줘야함
-2) gist 문서가져올때 (따음표 제거)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&amp;lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&amp;gt;&amp;lt;/script’&amp;gt; &lt;br /&gt;
-   또는    &lt;br /&gt;
-   {‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %}’&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;now.. no korean.. 
+I will fix it later… &lt;br /&gt;
+Error: A JNI error has occurred, please check your installation and try again
+&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+project right click -&amp;gt; Properties    &lt;br /&gt;
+Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
+&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;</content>
+&lt;p&gt;if problem again.. 
+project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
+‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
+check the ‘JRE System Library’ is red   &lt;br /&gt;
+Is it red?? &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
+-&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
 
       
       
@@ -817,11 +773,55 @@ Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막�
       
 
       
-        <category term="some" />
+        <category term="error" />
       
 
       
-        <summary type="html">연관 게시물 코드보여주기 추천 목록, gist 보여주기 마크업 언어 사용 예시 1) 목록 보여줄때 (홀따음표 제거) ”{“% include python-table-of-contents.html %}”</summary>
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Oracle-DataType_2</title>
+      <link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" />
+      <published>2021-05-25T09:14:00+09:00</published>
+      <updated>2021-05-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/oracle-DataType_2</id>
+      <content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;3) 데이터타입
+   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
+이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="oracle" />
+      
+
+      
+        <summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary>
       
 
       

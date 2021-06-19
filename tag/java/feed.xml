@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-18T23:11:44+09:00</updated>
+  <updated>2021-06-19T23:25:03+09:00</updated>
   <id>https://nageom.github.io/tag/java/feed.xml</id>
 
   
@@ -32,20 +32,148 @@
 
   
     <entry>
-      <title type="html">추상클래스(abstract class)</title>
-      <link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상클래스(abstract class)" />
+      <title type="html">쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</title>
+      <link href="https://nageom.github.io/java-thread" rel="alternate" type="text/html" title="쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현" />
+      <published>2021-06-18T09:14:00+09:00</published>
+      <updated>2021-06-18T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/java-thread</id>
+      <content type="html" xml:base="https://nageom.github.io/java-thread">&lt;hr /&gt;
+&lt;p&gt;오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다.&lt;br /&gt;
+옛 기억을 살려가며 포스팅&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//Thread &lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/*
+ * 
+ * 자바에서 Thread를 만드는 방법 2가지
+ * 1. Thread를 상속 받아 정의
+ * 
+ * 2. Runnable 인터페이스 구현하여 Thread를 생성하는 방법
+ * * Runnable 은 쓰레드의 인터페이스화 된 형태
+ * 자바에서 다중상속이 불가능 함으로 다른 클래스를 상속 받은 클래스의 경우
+ * implements 로 Runnable을 상속받아 쓰레드를 구현 할 수있습니다. 
+ * 
+ * 
+ * */&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//1번 방법&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyThread01&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	
+	&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Override&lt;/span&gt;
+	&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//새로운 스레드의 main함수와 같은 역할을 하는 메서드&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		
+		
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//2번 방법 &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//내가 이미 하나의 다른 클래스를 상속받고있다면 쓰레드를 동시에 상속받을 수 없으니&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 인터페이스 Runnable를 상속받아 쓰레드구현 하는 방법이 있다.  &lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyThread02&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Runnable&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Override&lt;/span&gt;
+	&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Z&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//실행해보자&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ex01&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;MyThread01&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mt01&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyThread01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		
+		
+		&lt;span class=&quot;c1&quot;&gt;// run을 호출(XXX) start사용&lt;/span&gt;
+		
+		&lt;span class=&quot;c1&quot;&gt;//1번 방법. Thread 상속받아 사용&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;mt01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//위의 override한 run이 자동 실행 &lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// A~N 출력&lt;/span&gt;
+		
+		
+		&lt;span class=&quot;c1&quot;&gt;//2번 방법. Runnable 인터페이스를 사용해서 스레드 생성&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;th&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyThread02&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;th&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// N ~ Z 출력&lt;/span&gt;
+		
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;%3d&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+				
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+		
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;결과&lt;br /&gt;
+A~~Z 1~ 100 까지 순서대로 출력되지 않고 번갈아가며 쓰레드가 실행되는것을 볼 수 있습니다
+&lt;img src=&quot;../../assets/built/images/java/thread/resultThread.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다. 옛 기억을 살려가며 포스팅</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">추상과 인터페이스</title>
+      <link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상과 인터페이스" />
       <published>2021-06-17T09:14:00+09:00</published>
       <updated>2021-06-17T09:14:00+09:00</updated>
       <id>https://nageom.github.io/java-abstract%20class</id>
       <content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
 
-&lt;h5&gt; 추상클래스 &lt;/h5&gt;
-&lt;p&gt;추상클래스는 미완성 설계도에 비유할 수 있습니다. &lt;br /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;면접질문 쭉 훑는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
+그래서 이번에 산 자바의정석으로 공부하고 포스팅 도전! &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h6&gt; 추상클래스 &lt;/h6&gt;
+&lt;p&gt;&lt;br /&gt;
+추상클래스는 미완성 설계도에 비유할 수 있습니다. &lt;br /&gt;
 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다.   &lt;br /&gt;
-&lt;br /&gt;
-아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는 없습니다.&lt;br /&gt;
-추상클래스는 상속을 통해 오직 자손클래스에 의해서만 완성될 수 있습니다.   &lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는 없습니다.&lt;br /&gt;
+즉, 추상클래스는 상속을 통해 오직 자손클래스에 의해서만 완성될 수 있습니다. 
+두번째로는 추상클래스를 상속받은 클래스가 미완성 메서드를 반드시 재정의 해줘야합니다.
+&lt;br /&gt;&lt;br /&gt;
+사용이유?&lt;br /&gt;
+여러 객체를 한번에 모아두기위해? &lt;br /&gt;
+재정의를 강조하기 위해?&lt;/p&gt;
 
 &lt;p&gt;추상클래스는 키워드 ‘abstract’를 붙이기만 하면 됩니다. &lt;br /&gt;&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;클래스&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이름&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -56,7 +184,9 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;추상클래스 상속시에는 extends 를 붙여줍니다. &lt;br /&gt;
-interface와는 다릅니다.&lt;/p&gt;</content>
+interface와는 다릅니다. &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;
+내일 계속..!&lt;/p&gt;</content>
 
       
       
@@ -161,11 +291,11 @@ static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따
   
 
   &lt;h5&gt; 싱글톤과 스태틱 &lt;/h5&gt; 
-싱글톤 - 애플리케이션이 시작될 때, 어떤 클래스가 최초 한 번만 메모리를 할당(static)하고      
-해당 메모리에 인스턴스를 만들어 사용하고 공유하는 제한하는 패턴      
-즉, 싱글톤 패턴은 '하나'의 인스턴스만 생성하여 사용하고 공유하는 디자인 패턴이다.     
+싱글톤 - 애플리케이션이 시작될 때, 어떤 클래스가 최초 한 번만 메모리를 할당(static)하고   &lt;br /&gt;     
+해당 메모리에 인스턴스를 만들어 사용하고 공유하는 제한하는 패턴      &lt;br /&gt;  
+즉, 싱글톤 패턴은 '하나'의 인스턴스만 생성하여 사용하고 공유하는 디자인 패턴이다.     &lt;br /&gt;  
      
-     
+     &lt;br /&gt;  
      
 static 변수       
 모든 인스턴스에 공통적으로 사용되는 클래스 변수(정적 변수)     
@@ -174,7 +304,9 @@ static 변수
 
 static - 객체의 생성 시점을 제어할 수 없다. &lt;br /&gt;  
 
-![ex_screenshot](./assets/built/images/java/code.png)
+
+![ex_screenshot](../../assets/built/images/java/code.png)
+
 
 
 
@@ -184,7 +316,7 @@ static - 객체의 생성 시점을 제어할 수 없다. &lt;br /&gt;
 더 이상 사용되지 않는 오브젝트들은 가비지 컬렉션을 담당하는 프로세스가 자동으로 메모리에서 제거하도록 하는 것이 가비지 컬렉션의 기본 개념이다.
 
 &lt;h5&gt;StringBuffer와 String Builder의 차이&lt;/h5&gt;&lt;br /&gt;
-그럼 두 클래스의 차이점은 무엇일까요? 바로 동기화 여부입니다.   &lt;br /&gt;&lt;br /&gt;
+그럼 두 클래스의 차이점은 무엇일까요? 바로 동기화 여부입니다.   &lt;br /&gt;
 
 - StringBuffer는 각 메서드별로 Synchronized Keyword가 존재하여, 멀티스레드 환경에서도 동기화를 지원.&lt;br /&gt;
 - 반면, StringBuilder는 동기화를 보장하지 않음.&lt;br /&gt;
@@ -227,8 +359,8 @@ HTTP(Hypertext Transfer Protocol)는 인터넷상에서 데이터를 주고 받�
 &lt;br /&gt;     
 &lt;h5&gt; OSI 7계층 정리 &lt;/h5&gt;
 https://velog.io/@dyllis/OSI-7%EA%B3%84%EC%B8%B5-%EC%A0%95%EB%A6%AC
-&lt;br /&gt;     
-참고   
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+참고   &lt;br /&gt;
 https://jwkim96.tistory.com/90        
 https://m.blog.naver.com/heartflow89/220954420688      
 https://12bme.tistory.com/42      

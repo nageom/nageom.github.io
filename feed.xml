@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-20T21:44:02+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</title><link href="https://nageom.github.io/java-thread" rel="alternate" type="text/html" title="쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현" /><published>2021-06-18T09:14:00+09:00</published><updated>2021-06-18T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread</id><content type="html" xml:base="https://nageom.github.io/java-thread">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-21T23:27:50+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</title><link href="https://nageom.github.io/java-thread" rel="alternate" type="text/html" title="쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현" /><published>2021-06-18T09:14:00+09:00</published><updated>2021-06-18T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread</id><content type="html" xml:base="https://nageom.github.io/java-thread">&lt;hr /&gt;
 &lt;p&gt;오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다.&lt;br /&gt;
 옛 기억을 살려가며 포스팅&lt;/p&gt;
 
@@ -83,7 +83,72 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;결과&lt;br /&gt;
 A~~Z 1~ 100 까지 순서대로 출력되지 않고 번갈아가며 쓰레드가 실행되는것을 볼 수 있습니다
-&lt;img src=&quot;../../assets/built/images/java/thread/resultThread.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다. 옛 기억을 살려가며 포스팅</summary></entry><entry><title type="html">추상과 인터페이스</title><link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상과 인터페이스" /><published>2021-06-17T09:14:00+09:00</published><updated>2021-06-17T09:14:00+09:00</updated><id>https://nageom.github.io/java-abstract%20class</id><content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
+&lt;img src=&quot;../../assets/built/images/java/thread/resultThread.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다. 옛 기억을 살려가며 포스팅</summary></entry><entry><title type="html">자바 1.8버전 이후 달라진 것들</title><link href="https://nageom.github.io/java-version" rel="alternate" type="text/html" title="자바 1.8버전 이후 달라진 것들" /><published>2021-06-18T09:14:00+09:00</published><updated>2021-06-18T09:14:00+09:00</updated><id>https://nageom.github.io/java-version</id><content type="html" xml:base="https://nageom.github.io/java-version">&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도
+조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 
+1) 멀티 catch블럭&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;JDK1.7부터 여러 catch블럭을 ‘|’ 기호를 이용해서, 하나의 catch블럭로 합칠 수 있게 되었고, 이를 ‘멀티 catch블럭’이라한다. &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//본래 사용법&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//변경후 멀티 catch블럭&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;중복된 코드를 줄일 수 있는 큰 장점이 있는데&lt;br /&gt;
+멀티 catch블럭을 사용할 때 지켜줘야하는 것이 있다.&lt;br /&gt;
+바로 ‘|’ 기호로 연결된 예외 클래스가 조상과 자손의 관계에 있다면 컴파일 에러가 발생한다는것, &lt;br /&gt;
+왜냐하면, 두 예외 클래스가 조상과 자손의 관계에 있다면, 그것은 조상 클래스만 써주는 것과 똑같기 때문이다. &lt;br /&gt;
+불필요한 코드는 제거하라는 의미에서 에러가 발생한다. &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ParentException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ChildException&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//에러가 난다. &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;그리고 멀티 catch는 하나의 catch블럭으로 여러 예외를 처리하는 것이기 때문에,&lt;br /&gt;
+멀티 catch 블럭 내에서는 실제로 어떤 예외가 발생한 것인지 알 수 없다. &lt;br /&gt;
+그래서 연결된 예외 클래스들의 공통 분모인 조상 예외 클래스에 선언된 멤버만을 사용할 수 있다. &lt;br /&gt;
+필요하다면 이러한 코드로 어떤 에러가 발생한 것인지 확인 할 수 있다. &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//에러 -&amp;gt; Exception A에서 선언된 methodA() 는 호출불가 &lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 호출 가능&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;..&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;상수와 리터럴 (constant &amp;amp; literal)&lt;br /&gt;
+본래 상수 &lt;br /&gt;
+ final int MAX_SPEED = 10; &lt;br /&gt;
+은 반드시 선언과 동시에 초기화해야 하며, 그 후 부터는 상수의 값을 변경하는 것이 허용되지 않는다. &lt;br /&gt;
+final int MAX_SPEED ; //에러&lt;br /&gt;
+final int MAX_VALUE = 100; // OK&lt;br /&gt;
+&lt;br /&gt;
+현재는 JDK1.6부터 상수를 선언과 동시에 초기화 하지 않아도 되며, 사용하기 전에만 초기화하면 되도록 바뀌었다. &lt;br /&gt;
+하지만 상수는 성언과 동시에 초기화하는 습관을 들이는 것이 좋다고 한다. _2021-06-21&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도 조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 1) 멀티 catch블럭</summary></entry><entry><title type="html">추상과 인터페이스</title><link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상과 인터페이스" /><published>2021-06-17T09:14:00+09:00</published><updated>2021-06-17T09:14:00+09:00</updated><id>https://nageom.github.io/java-abstract%20class</id><content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;면접질문 쭉 훑는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
@@ -432,7 +497,27 @@ Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)&lt;/p&gt;
 다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;
 
 &lt;p&gt;references   &lt;br /&gt;
-https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry><entry><title type="html">Spring - basic</title><link href="https://nageom.github.io/Spring-basic" rel="alternate" type="text/html" title="Spring - basic" /><published>2021-05-25T09:28:00+09:00</published><updated>2021-05-25T09:28:00+09:00</updated><id>https://nageom.github.io/Spring-basic</id><content type="html" xml:base="https://nageom.github.io/Spring-basic">&lt;p&gt;Spring&lt;/p&gt;</content><author><name>nageom</name></author><category term="Spring" /><summary type="html">Spring</summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
+https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry><entry><title type="html">Spring - basic</title><link href="https://nageom.github.io/Spring-basic" rel="alternate" type="text/html" title="Spring - basic" /><published>2021-05-25T09:28:00+09:00</published><updated>2021-05-25T09:28:00+09:00</updated><id>https://nageom.github.io/Spring-basic</id><content type="html" xml:base="https://nageom.github.io/Spring-basic">&lt;p&gt;Spring&lt;/p&gt;</content><author><name>nageom</name></author><category term="Spring" /><summary type="html">Spring</summary></entry><entry><title type="html">REST-API JDK ERROR</title><link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/error-JDK</id><content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
+
+&lt;p&gt;now.. no korean.. 
+I will fix it later… &lt;br /&gt;
+Error: A JNI error has occurred, please check your installation and try again
+&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+project right click -&amp;gt; Properties    &lt;br /&gt;
+Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
+&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;if problem again.. 
+project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
+‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
+check the ‘JRE System Library’ is red   &lt;br /&gt;
+Is it red?? &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
+-&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="error" /><summary type="html"></summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
@@ -442,137 +527,4 @@ https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</cont
    &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
-이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary></entry><entry><title type="html">Oracle-basic_1</title><link href="https://nageom.github.io/oracle-basic_1" rel="alternate" type="text/html" title="Oracle-basic_1" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-basic_1</id><content type="html" xml:base="https://nageom.github.io/oracle-basic_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;1) RDBMS : 관계형 데이터베이스 관리 시스템&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB &lt;br /&gt;
-그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를
-RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/basicTable.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;행과열 조합으로 테이블 형태를 띄고있으며 각 테이블과 테이블의 관계를 제약조건에 따라 구분할 수 있으며 &lt;br /&gt;
-대표적으로 Oracle, MySQL, MriaDB, MS-SQL 등이 있습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;2)  SQL    (Oracle)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;관계형 데이터베이서 관리 시스템 (RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;즉! 쉽게! 데이터를 관리하기위해 사용하는 언어입니다.
-백번 설명보다 해보는게 최고입니다. 바로 사용법 보도록하죠
-개념적으로&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DDL_Data Definition Language (데이터 정의어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;테이블 자체를 생성,변경,삭제 등&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/ddl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DML_Data Manipulation Language (데이터 조작어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;테이블안의 내용을 조회,삽입,삭제 등 
-&lt;img src=&quot;./assets/built/images/dml.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;DCL_Data Control Language (데이터 제어어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;DB에 접근하고 객체를 사용함에 대한 권한에 대한 명령어
-&lt;img src=&quot;./assets/built/images/dcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;TCL_Transaction Control Language (트랜잭션 제어어)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;논리적인 작업의 단위를 묶어서 DML 에 의한 조작된 결과를 작업단위(트랜잭션)별로 제어하는 명령어 &lt;br /&gt;
- :&amp;gt; 그냥 아차! 싶은 작업을 되돌릴수도 있고, 아차! 하기전에 저장하기도 할 수 있는 명령어    &lt;br /&gt;
-&lt;img src=&quot;./assets/built/images/tcl.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 1) RDBMS : 관계형 데이터베이스 관리 시스템 데이터베이스의 종류: 네트워크형, 계층형, 관계형, NoSQL DB 그 중, 시각적으로 쉽게 데이터를 확인 할 수 있는 장점으로 가장 많이 사용되는 형태의 데이터베이스를 RDB_관계형 데이터베이스라고 합니다.</summary></entry><entry><title type="html">Java_equals와 ‘==’연산자의 차이</title><link href="https://nageom.github.io/java-equals" rel="alternate" type="text/html" title="Java_equals와 ‘==’연산자의 차이" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/java-equals</id><content type="html" xml:base="https://nageom.github.io/java-equals">&lt;hr /&gt;
-&lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
-우선  equals는 메서드 &lt;br /&gt;
-      ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
-
-&lt;p&gt;equals는 대상의 hashcode를 비교하고 &lt;br /&gt;
-== 연산자는 대상의 주소값을 비교합니다.  &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;hashCode란?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Object클래스는 hashCode() 라는 메서드를 가지고 있습니다 &lt;br /&gt;
-hashCode() 메서드는 말그대로 hashCode를 생성해 리턴해주는 메서드이죠 &lt;br /&gt;
-hashcode란 Object클래스의 메서드가 리턴하는 각 객체에 대응하는 고유한 정수값을 이야기하며     &lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;
-기본적으로 hashCode는 객체의 주소값과 연관이 있습니다&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;비교했을때 주소값이 다른 obj와 obj2의 hashcode값이 다르죠 &lt;br /&gt;
-그리고 &lt;br /&gt;
-obj2의 주소값 @ 뒤의 값 6d06d69c (16진수) -&amp;gt; hashCode 1829164700(10진수) 값으로
-변환이 되는것을 볼 수 있습니다. &lt;br /&gt;
-&lt;br /&gt;
-그렇다면 주소값으로도 hashCode처럼 대상을 비교할 수 있지않나?
-그럼 equals랑 ==이랑 같게 쓰여야하는거 아닌가?
-라는 생각을 했었는데  &lt;br /&gt;
-멍-충 &lt;br /&gt;
-주소값이 서로 다르지만 문자열은 같은 두 String 객체를 가지고 hashCode를 비교해보았습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-&lt;img src=&quot;./assets/built/images/java/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-주소값은 다르지만 같은 문자열에 대해 hashCode가 같은 것을 볼 수 있습니다.  &lt;br /&gt;
-응? 주소값으로 hashCode만드는데 주소값이 다른데 hashCode가 같네? 모순모순!  &lt;br /&gt;
-이라고 할 뻔 했지만 &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;String의 hashCode() 는 재정의가 되어 사용된다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;가 정답입니다.&lt;/p&gt;
-
-&lt;p&gt;String은 문자열이고 “에이”와 “에이”가 주소가 다르다고 다른말이라면 hashCode의 의미가 없을뿐더러 발생할 수 있는 나쁜 예로  &lt;br /&gt;
--&amp;gt; HashMap에서 일치하는 key 값을 찾아낼 수 없게 되겠죠 &lt;br /&gt;
-그래서 String은 hashCode를 생성할 때 주소값 말고 문자열로 생성하는 것으로 hashCode() 메서드가 재정의 된 것이랍니다.&lt;/p&gt;
-
-&lt;p&gt;여기까지 equals메서드와 ‘==’연산자의 간단한 차이였습니다.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;아래는 String 기본 설명 살짝 덧붙여봤습니다.&lt;/p&gt;
-
-&lt;p&gt;우선 spring 둘의 주소값이 다른 이유&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;에이&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;리터널 aa변수는 stack 메모리에, “에이”라는 문자열은 Heap 메모리 내에 String pool 이라는 곳에 저장. 그 주소가 aa변수에 저장됩니다. 
-또한 String pool에 저장될때 intern() 이라는 메서드가 실행되는데  &lt;br /&gt;
-intern() = 같은 값이 있는 경우 기존 값의 메모리 주소를 사용하고, 다른 값일 경우 객체를 생성해 값을 저장하고 그 메모리 주소를 리턴합니다.
-Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막습니다. 
-그래서&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;씨&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;라는 결과를 얻게되는것이죠.&lt;/p&gt;
-
-&lt;p&gt;반대로  &lt;br /&gt;
- new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. &lt;br /&gt;
-그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? &lt;br /&gt;
-오늘도 화이팅입니다!&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다. 우선 equals는 메서드 ‘==’은 비교를 위한 연산자입니다.</summary></entry></feed>
+이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary></entry></feed>

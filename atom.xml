@@ -8,6 +8,26 @@
     
       
       <item>
+        <title>자바 1.8버전 이후 달라진 것들</title>
+        
+          <description>&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도
+조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 
+1) 멀티 catch블럭&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        
+        <pubDate>Fri, 18 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/java-version</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-version</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</title>
         
           <description>&lt;hr /&gt;

@@ -1,4 +1,228 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-21T23:32:54+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</title><link href="https://nageom.github.io/java-thread" rel="alternate" type="text/html" title="쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현" /><published>2021-06-18T09:14:00+09:00</published><updated>2021-06-18T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread</id><content type="html" xml:base="https://nageom.github.io/java-thread">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-22T16:43:05+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">버블정렬(Bubble Sort)</title><link href="https://nageom.github.io/algorithm-bubble-sort" rel="alternate" type="text/html" title="버블정렬(Bubble Sort)" /><published>2021-06-22T09:14:00+09:00</published><updated>2021-06-22T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-bubble%20sort</id><content type="html" xml:base="https://nageom.github.io/algorithm-bubble-sort">&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;h4&gt;버블정렬 &lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;h6&gt;[옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 방법]&lt;/h6&gt;
+&lt;p&gt;직관적이고 쉽게 구현할 수 있지만 정렬 알고리즘 중에서 가장 비효율적인 알고리즘이다!&lt;br /&gt;
+&lt;u&gt;1 10&lt;/u&gt; 5 8 7 6 4 3 2 9    &amp;lt;- 두개를 한 묶음으로 비교&lt;br /&gt;
+1 &lt;u&gt;10 5 &lt;/u&gt;8 7 6 4 3 2 9 &lt;br /&gt;
+1 10 &lt;u&gt;5 8 &lt;/u&gt; 7 6 4 3 2 9 &lt;br /&gt;&lt;br /&gt;
+(1회전)&lt;br /&gt;
+1 5 8 7 6 4 3 2 9 10 &amp;lt;- 가장 큰 값이 맨 뒤로 간다&lt;br /&gt;
+                              그래서 1회전 반복때마다 반복 횟수를 줄여준다.&lt;br /&gt;
+(2회전)&lt;br /&gt;
+1 5 7 6 4 3 2 8 9 10  &lt;br /&gt;&lt;br /&gt;
+결과&lt;br /&gt;
+1 2 3 4 5 6 7 8 9 10&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt; 구현해보자 &lt;/h6&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;%d &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h6&gt;[버블 정렬의 시간 복잡도 O(N^2) ]&lt;/h6&gt;
+&lt;p&gt;&lt;u&gt;1 10&lt;/u&gt; 5 8 7 6 4 3 2 9&lt;br /&gt;
+=&amp;gt; 10 + 9 + … + 1&lt;br /&gt;
+=&amp;gt; 10 + 9 + … + 1&lt;br /&gt;
+=&amp;gt; 등차수열&lt;br /&gt;
+=&amp;gt; N* (N+1)/2&lt;br /&gt;
+=&amp;gt; O(N^2)&lt;br /&gt;&lt;/p&gt;
+&lt;h6&gt;선택정렬과 동일한 시간 복잡도이지만 왜 가장 비효율적인 정렬이라 하지?&lt;/h6&gt;
+&lt;p&gt;&lt;br /&gt;
+선택정렬은 가장 작은 데이터를 골라 마지막에 자리 이동을 한다. &lt;br /&gt;즉, 1회전에 자리이동 1회&lt;br /&gt; 
+버블정렬은 매번 교체를 해줘야하기 때문에 더 오랜 시간이 걸린다. &lt;br /&gt; 즉, 1회전에 자리이동 여러번  &lt;br /&gt;
+그래서 정렬중 가장 비효율적 정렬이라 함! &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;References 알고리즘 공부하실분들 참고하세요 ↓ &lt;br /&gt;
+https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;amp;index=3&lt;br /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">버블정렬</summary></entry><entry><title type="html">정렬 알고리즘의 개요와 선택정렬(Select Sort)</title><link href="https://nageom.github.io/algorithm-select-sort" rel="alternate" type="text/html" title="정렬 알고리즘의 개요와 선택정렬(Select Sort)" /><published>2021-06-22T09:14:00+09:00</published><updated>2021-06-22T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-select%20sort</id><content type="html" xml:base="https://nageom.github.io/algorithm-select-sort">&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;h3&gt;알고리즘의 시작, 정렬 &lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;h6&gt;왜 알고리즘 공부는 정렬부터할까?&lt;/h6&gt;
+&lt;p&gt;정력만큼 알고리즘의 효율성 차이를 극명하게 보여주는 것이 없기 때문이다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;비효율 정렬 -&amp;gt; 효율 정렬 순으로 공부! &lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt;[가장 작은 거을 선택해서 제일 앞으로 보내면 어떨까?]&lt;/h6&gt;
+&lt;p&gt;(구현하긴 쉽지만 효율적이진 않다)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;1 10 5 8 7 6 4 3 2 9&lt;br /&gt;
+1 2 5 8 7 6 4 3 10 9&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt; 구현해보자 &lt;/h6&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//선택정렬  &lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+
+	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arraySize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	
+
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모든 원소들보다 큰 숫자&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arraySize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+				&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+		&lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+		
+		
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;%d &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h6&gt;[선택 정렬의 시간 복잡도 O(N^2) ]&lt;/h6&gt;
+&lt;p&gt;int arr[] = {1 10 5 8 7 6 4 3 2 9} 를 정렬하기위해 비교하는 횟수&lt;br /&gt;
+10 + 9 + 8 + 7 + .. + 1&lt;br /&gt;
+=&amp;gt; 등차수열 공식으로 봤을 때&lt;br /&gt;
+10* (10+1)/2 = 55 번의 비교연산을 하게 된다.&lt;br /&gt;
+=&amp;gt; N * (N+1)/2&lt;br /&gt;
+일반적으로 컴퓨터에서는 N이 굉장히 큰 수라는 가정하에&lt;br /&gt;
+2로 나눈값이 별다른 큰 의미가 없다고 보고 간단하게 나누고 더하는 연산을 무시한다&lt;br /&gt;
+=&amp;gt; N&lt;em&gt;N 으로 표기&lt;br /&gt;
+=&amp;gt; O(N&lt;/em&gt;N)  &lt;br /&gt;
+이 때 사용하는 것이 &lt;strong&gt;‘빅오 표기법(big-O notation)’&lt;/strong&gt; &lt;br /&gt;
+&lt;u&gt;특정한 알고리즘의 수행시간을 가장 간략하게 표기하는것 &lt;/u&gt;&lt;br /&gt;
+그리하여 선택 정렬의 시간 복잡도가 O(N^2)라 말한다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;x값 처리할 데이터가 많을수록 연산 횟수가 엄청나게 증가한다. &lt;br /&gt;
+x제곱 그래프 
+&lt;img src=&quot;../../assets/built/images/algorithm/sort/select sort.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;References&lt;br /&gt; 
+https://www.youtube.com/watch?v=8ZiSzteFRYc&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;amp;index=2 &lt;br /&gt;
+강의 최고시다..&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;사진&lt;br /&gt;
+https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squared.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">알고리즘의 시작, 정렬</summary></entry><entry><title type="html">알고리즘의 시작</title><link href="https://nageom.github.io/algorithm-start" rel="alternate" type="text/html" title="알고리즘의 시작" /><published>2021-06-21T09:14:00+09:00</published><updated>2021-06-21T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-start</id><content type="html" xml:base="https://nageom.github.io/algorithm-start">&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;본격적으로 알고리즘 공부를 시작해보려한다. 좋은 강의영상을 찾아서 기분이 조크등요!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h6&gt;항상 공부하기 전 왜 이걸 공부해야하는가에 대한 답변&lt;/h6&gt;
+&lt;p&gt;알고리즘은 ‘개발’의 전체 과정에 사용이 되기때문.&lt;br /&gt;
+실제 프로그램을 개발할 때 효율적인 알고리즘을 적용함으로써 원하는 결과를 도출해내기 위함. 이라고 하는데 
+예시를 보면 더 이해가 쉬울 것이다.&lt;br /&gt;
+ex1) 스케줄 관리 프로그램 : 예전에 구현해보려 애썼던 달력에서 특정한 달에 해당하는 일 수 구하기&lt;br /&gt;
+ex2) 내비게이션 프로그램 : 여러 개의 중간 지점을 거쳐서 특정 지저으로 갈 때 가장 빠른 경로찾기&lt;br /&gt;
+-&amp;gt; 다익스트라 알고리즘, 플로이드 와샬 알고리즘&lt;br /&gt;
+ex3) 게시판 프로그램 : 한 페이지당 게시글을 10개씩 출력해야 하는데 어떻게 출력할까&lt;br /&gt;
+-&amp;gt; 페이징 처리 &lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt;왜 공부해야할까?&lt;/h6&gt;
+&lt;p&gt;프로그래머의 숙명.. &lt;br /&gt;&lt;br /&gt;
+사실 자바를 이용해 웹을 만들다보면 그렇게 복잡한 알고리즘을 사용할 일이 없는데 &lt;br /&gt;
+취업시에 개발자의 역량을 확인할 수 있는 수단으로 사용되기도하고( 복잡한 알고리즘이 가능하면 어떤 일도 수월히 풀 수 있을것이라는 판단하에 )&lt;br /&gt;
+알고리즘 구현이 가능하다면 어떤 개발에서도 라이브러리를 쓸게 아니라 만들어서 마음대로 커스터마이징이 가능하다는점이&lt;br /&gt;
+큰 이유인것같다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt;개발환경? &lt;/h6&gt;
+&lt;p&gt;C언어로 공부할거다 신난다 오랜만에 C언어&lt;br /&gt;
+C언어 개발환경은 코드 블럭쓰 또는 비주얼스튜디오를 사용하는데&lt;br /&gt;
+알고리즘 공부만 할 경우에는 비주얼스튜디오 보다 더 가벼운 코드 블럭쓰를 사용하는것이 좋다.&lt;br /&gt;
+https://sourceforge.net/projects/orwelldevcpp/&lt;/p&gt;
+
+&lt;p&gt;References&lt;br /&gt; 
+우연히 알고리즘 강의를 찾아 알게 되었는데 가려웠던곳 다 긁어주시는 선생님.. 재밌게 공부할 수 있을것같다.&lt;br /&gt;
+https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">본격적으로 알고리즘 공부를 시작해보려한다. 좋은 강의영상을 찾아서 기분이 조크등요!</summary></entry><entry><title type="html">자바 1.8버전 차이를 알아보자</title><link href="https://nageom.github.io/java-version" rel="alternate" type="text/html" title="자바 1.8버전 차이를 알아보자" /><published>2021-06-18T09:14:00+09:00</published><updated>2021-06-18T09:14:00+09:00</updated><id>https://nageom.github.io/java-version</id><content type="html" xml:base="https://nageom.github.io/java-version">&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도
+조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 
+1) 멀티 catch블럭&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;JDK1.7부터 여러 catch블럭을 ‘|’ 기호를 이용해서, 하나의 catch블럭로 합칠 수 있게 되었고, 이를 ‘멀티 catch블럭’이라한다. &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//본래 사용법&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//변경후 멀티 catch블럭&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;중복된 코드를 줄일 수 있는 큰 장점이 있는데&lt;br /&gt;
+멀티 catch블럭을 사용할 때 지켜줘야하는 것이 있다.&lt;br /&gt;
+바로 ‘|’ 기호로 연결된 예외 클래스가 조상과 자손의 관계에 있다면 컴파일 에러가 발생한다는것, &lt;br /&gt;
+왜냐하면, 두 예외 클래스가 조상과 자손의 관계에 있다면, 그것은 조상 클래스만 써주는 것과 똑같기 때문이다. &lt;br /&gt;
+불필요한 코드는 제거하라는 의미에서 에러가 발생한다. &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ParentException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ChildException&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//에러가 난다. &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;그리고 멀티 catch는 하나의 catch블럭으로 여러 예외를 처리하는 것이기 때문에,&lt;br /&gt;
+멀티 catch 블럭 내에서는 실제로 어떤 예외가 발생한 것인지 알 수 없다. &lt;br /&gt;
+그래서 연결된 예외 클래스들의 공통 분모인 조상 예외 클래스에 선언된 멤버만을 사용할 수 있다. &lt;br /&gt;
+필요하다면 이러한 코드로 어떤 에러가 발생한 것인지 확인 할 수 있다. &lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//에러 -&amp;gt; Exception A에서 선언된 methodA() 는 호출불가 &lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 호출 가능&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;..&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;상수와 리터럴 (constant &amp;amp; literal)&lt;br /&gt;
+본래 상수 &lt;br /&gt;
+ final int MAX_SPEED = 10; &lt;br /&gt;
+은 반드시 선언과 동시에 초기화해야 하며, 그 후 부터는 상수의 값을 변경하는 것이 허용되지 않는다. &lt;br /&gt;
+final int MAX_SPEED ; //에러&lt;br /&gt;
+final int MAX_VALUE = 100; // OK&lt;br /&gt;
+&lt;br /&gt;
+현재는 JDK1.6부터 상수를 선언과 동시에 초기화 하지 않아도 되며, 사용하기 전에만 초기화하면 되도록 바뀌었다. &lt;br /&gt;
+하지만 상수는 성언과 동시에 초기화하는 습관을 들이는 것이 좋다고 한다. _2021-06-21&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도 조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 1) 멀티 catch블럭</summary></entry><entry><title type="html">쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</title><link href="https://nageom.github.io/java-thread" rel="alternate" type="text/html" title="쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현" /><published>2021-06-18T09:14:00+09:00</published><updated>2021-06-18T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread</id><content type="html" xml:base="https://nageom.github.io/java-thread">&lt;hr /&gt;
 &lt;p&gt;오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다.&lt;br /&gt;
 옛 기억을 살려가며 포스팅&lt;/p&gt;
 
@@ -83,76 +307,11 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;결과&lt;br /&gt;
 A~~Z 1~ 100 까지 순서대로 출력되지 않고 번갈아가며 쓰레드가 실행되는것을 볼 수 있습니다
-&lt;img src=&quot;../../assets/built/images/java/thread/resultThread.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다. 옛 기억을 살려가며 포스팅</summary></entry><entry><title type="html">자바 1.8버전 이후 달라진 것들</title><link href="https://nageom.github.io/java-version" rel="alternate" type="text/html" title="자바 1.8버전 이후 달라진 것들" /><published>2021-06-18T09:14:00+09:00</published><updated>2021-06-18T09:14:00+09:00</updated><id>https://nageom.github.io/java-version</id><content type="html" xml:base="https://nageom.github.io/java-version">&lt;hr /&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도
-조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 
-1) 멀티 catch블럭&lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;JDK1.7부터 여러 catch블럭을 ‘|’ 기호를 이용해서, 하나의 catch블럭로 합칠 수 있게 되었고, 이를 ‘멀티 catch블럭’이라한다. &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//본래 사용법&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//변경후 멀티 catch블럭&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;중복된 코드를 줄일 수 있는 큰 장점이 있는데&lt;br /&gt;
-멀티 catch블럭을 사용할 때 지켜줘야하는 것이 있다.&lt;br /&gt;
-바로 ‘|’ 기호로 연결된 예외 클래스가 조상과 자손의 관계에 있다면 컴파일 에러가 발생한다는것, &lt;br /&gt;
-왜냐하면, 두 예외 클래스가 조상과 자손의 관계에 있다면, 그것은 조상 클래스만 써주는 것과 똑같기 때문이다. &lt;br /&gt;
-불필요한 코드는 제거하라는 의미에서 에러가 발생한다. &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ParentException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ChildException&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//에러가 난다. &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;그리고 멀티 catch는 하나의 catch블럭으로 여러 예외를 처리하는 것이기 때문에,&lt;br /&gt;
-멀티 catch 블럭 내에서는 실제로 어떤 예외가 발생한 것인지 알 수 없다. &lt;br /&gt;
-그래서 연결된 예외 클래스들의 공통 분모인 조상 예외 클래스에 선언된 멤버만을 사용할 수 있다. &lt;br /&gt;
-필요하다면 이러한 코드로 어떤 에러가 발생한 것인지 확인 할 수 있다. &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//에러 -&amp;gt; Exception A에서 선언된 methodA() 는 호출불가 &lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 호출 가능&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;..&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;상수와 리터럴 (constant &amp;amp; literal)&lt;br /&gt;
-본래 상수 &lt;br /&gt;
- final int MAX_SPEED = 10; &lt;br /&gt;
-은 반드시 선언과 동시에 초기화해야 하며, 그 후 부터는 상수의 값을 변경하는 것이 허용되지 않는다. &lt;br /&gt;
-final int MAX_SPEED ; //에러&lt;br /&gt;
-final int MAX_VALUE = 100; // OK&lt;br /&gt;
-&lt;br /&gt;
-현재는 JDK1.6부터 상수를 선언과 동시에 초기화 하지 않아도 되며, 사용하기 전에만 초기화하면 되도록 바뀌었다. &lt;br /&gt;
-하지만 상수는 성언과 동시에 초기화하는 습관을 들이는 것이 좋다고 한다. _2021-06-21&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도 조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 1) 멀티 catch블럭</summary></entry><entry><title type="html">추상과 인터페이스</title><link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상과 인터페이스" /><published>2021-06-17T09:14:00+09:00</published><updated>2021-06-17T09:14:00+09:00</updated><id>https://nageom.github.io/java-abstract%20class</id><content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
+&lt;img src=&quot;../../assets/built/images/java/thread/resultThread.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다. 옛 기억을 살려가며 포스팅</summary></entry><entry><title type="html">추상과 인터페이스</title><link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상과 인터페이스" /><published>2021-06-17T09:14:00+09:00</published><updated>2021-06-17T09:14:00+09:00</updated><id>https://nageom.github.io/java-abstract%20class</id><content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;면접질문 쭉 훑는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
-그래서 이번에 산 자바의정석으로 공부하고 포스팅 도전! &lt;br /&gt;&lt;/p&gt;
+  &lt;p&gt;면접질문 공부하는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
+그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전! &lt;br /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h6&gt; 추상클래스 &lt;/h6&gt;
@@ -165,12 +324,12 @@ final int MAX_VALUE = 100; // OK&lt;br /&gt;
 
 &lt;h6&gt; 추상메서드(abstract method)&lt;/h6&gt;
 &lt;p&gt;메서드는 선언부와 구현부(몸통)으로 구성되어 있는데&lt;br /&gt;
-추상메서드는 선언부만 작성하고 구현부는 작성하지 않은 채로 남겨둡니다&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-사용이유?&lt;br /&gt;
-여러 객체를 한번에 모아두기위해? &lt;br /&gt;
-재정의를 강조하기 위해?&lt;/p&gt;
+추상메서드는 선언부만 작성하고 구현부는 작성하지 않은 채로 남겨둡니다
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h6&gt;사용이유?&lt;/h6&gt;
+&lt;p&gt;&lt;br /&gt;
+여러 객체를 부모클래스로 하나의 list에 모으기 편리함 떄문 &lt;br /&gt;
+재정의를 강조하기 위해&lt;/p&gt;
 
 &lt;p&gt;추상클래스는 키워드 ‘abstract’를 붙이기만 하면 됩니다. &lt;br /&gt;&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;추상클래스&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이름&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -497,34 +656,4 @@ Vertex 집합 V와 Edge집합 E에 대해 그래프 G=(V,E)&lt;/p&gt;
 다음 게시물은 알고리즘을 하나씩 다뤄 볼 것입니다. 오늘도 열공!&lt;/p&gt;
 
 &lt;p&gt;references   &lt;br /&gt;
-https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry><entry><title type="html">Spring - basic</title><link href="https://nageom.github.io/Spring-basic" rel="alternate" type="text/html" title="Spring - basic" /><published>2021-05-25T09:28:00+09:00</published><updated>2021-05-25T09:28:00+09:00</updated><id>https://nageom.github.io/Spring-basic</id><content type="html" xml:base="https://nageom.github.io/Spring-basic">&lt;p&gt;Spring&lt;/p&gt;</content><author><name>nageom</name></author><category term="Spring" /><summary type="html">Spring</summary></entry><entry><title type="html">REST-API JDK ERROR</title><link href="https://nageom.github.io/error-JDK" rel="alternate" type="text/html" title="REST-API JDK ERROR" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/error-JDK</id><content type="html" xml:base="https://nageom.github.io/error-JDK">&lt;hr /&gt;
-
-&lt;p&gt;now.. no korean.. 
-I will fix it later… &lt;br /&gt;
-Error: A JNI error has occurred, please check your installation and try again
-&lt;img src=&quot;../../assets/built/images/error/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-project right click -&amp;gt; Properties    &lt;br /&gt;
-Java Compiler -&amp;gt; Compiler compliance level-&amp;gt; change version
-&lt;img src=&quot;../../assets/built/images/error/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;if problem again.. 
-project right click -&amp;gt; ‘Properties’ &lt;br /&gt;
-‘Java Build Path’ -&amp;gt; ‘Libraries’ &lt;br /&gt;
-check the ‘JRE System Library’ is red   &lt;br /&gt;
-Is it red?? &lt;br /&gt;
-&lt;img src=&quot;../../assets/built/images/error/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;click ‘Add Library…’ on the right side &lt;br /&gt;
--&amp;gt;  click ‘JRE System Library’ !!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/error/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="error" /><summary type="html"></summary></entry><entry><title type="html">Oracle-DataType_2</title><link href="https://nageom.github.io/oracle-DataType_2" rel="alternate" type="text/html" title="Oracle-DataType_2" /><published>2021-05-25T09:14:00+09:00</published><updated>2021-05-25T09:14:00+09:00</updated><id>https://nageom.github.io/oracle-DataType_2</id><content type="html" xml:base="https://nageom.github.io/oracle-DataType_2">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 연관 게시물 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-basic_1&quot;&gt; Oracle RDBMS란? SQL은? &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./oracle-DataType_2&quot;&gt;Oracle 데이터타입? &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;3) 데이터타입
-   &lt;img src=&quot;./assets/built/images/create.png&quot; alt=&quot;ex_screenshot&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;데이터 타입 : 컬럼이 저장되는 데이터 유형이다. &lt;br /&gt;
-이는 문자 데이터, 숫자 데이터 , 날짜 데이터, LOB 데이터 타입이 있다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="oracle" /><summary type="html">연관 게시물 Oracle RDBMS란? SQL은? Oracle 데이터타입? 3) 데이터타입</summary></entry></feed>
+https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">오늘의 주제는 알고리즘과 자료구조의 차이입니다. 카테고리를 정하려다보니까 궁금해지더라고요. 한번 볼까요?</summary></entry></feed>

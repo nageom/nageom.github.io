@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-21T23:32:54+09:00</updated>
+  <updated>2021-06-22T16:43:05+09:00</updated>
   <id>https://nageom.github.io/tag/java/feed.xml</id>
 
   
@@ -151,8 +151,8 @@ A~~Z 1~ 100 까지 순서대로 출력되지 않고 번갈아가며 쓰레드가
     </entry>
   
     <entry>
-      <title type="html">자바 1.8버전 이후 달라진 것들</title>
-      <link href="https://nageom.github.io/java-version" rel="alternate" type="text/html" title="자바 1.8버전 이후 달라진 것들" />
+      <title type="html">자바 1.8버전 차이를 알아보자</title>
+      <link href="https://nageom.github.io/java-version" rel="alternate" type="text/html" title="자바 1.8버전 차이를 알아보자" />
       <published>2021-06-18T09:14:00+09:00</published>
       <updated>2021-06-18T09:14:00+09:00</updated>
       <id>https://nageom.github.io/java-version</id>
@@ -258,8 +258,8 @@ final int MAX_VALUE = 100; // OK&lt;br /&gt;
       <content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;면접질문 쭉 훑는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
-그래서 이번에 산 자바의정석으로 공부하고 포스팅 도전! &lt;br /&gt;&lt;/p&gt;
+  &lt;p&gt;면접질문 공부하는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
+그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전! &lt;br /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h6&gt; 추상클래스 &lt;/h6&gt;
@@ -272,12 +272,12 @@ final int MAX_VALUE = 100; // OK&lt;br /&gt;
 
 &lt;h6&gt; 추상메서드(abstract method)&lt;/h6&gt;
 &lt;p&gt;메서드는 선언부와 구현부(몸통)으로 구성되어 있는데&lt;br /&gt;
-추상메서드는 선언부만 작성하고 구현부는 작성하지 않은 채로 남겨둡니다&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-사용이유?&lt;br /&gt;
-여러 객체를 한번에 모아두기위해? &lt;br /&gt;
-재정의를 강조하기 위해?&lt;/p&gt;
+추상메서드는 선언부만 작성하고 구현부는 작성하지 않은 채로 남겨둡니다
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h6&gt;사용이유?&lt;/h6&gt;
+&lt;p&gt;&lt;br /&gt;
+여러 객체를 부모클래스로 하나의 list에 모으기 편리함 떄문 &lt;br /&gt;
+재정의를 강조하기 위해&lt;/p&gt;
 
 &lt;p&gt;추상클래스는 키워드 ‘abstract’를 붙이기만 하면 됩니다. &lt;br /&gt;&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;추상클래스&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이름&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -576,9 +576,9 @@ hashcode란 Object클래스의 메서드가 리턴하는 각 객체에 대응하
 &lt;br /&gt;&lt;br /&gt;
 기본적으로 hashCode는 객체의 주소값과 연관이 있습니다&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/equals/1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/equals/2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;비교했을때 주소값이 다른 obj와 obj2의 hashcode값이 다르죠 &lt;br /&gt;
 그리고 &lt;br /&gt;
@@ -591,8 +591,8 @@ obj2의 주소값 @ 뒤의 값 6d06d69c (16진수) -&amp;gt; hashCode 1829164700
 멍-충 &lt;br /&gt;
 주소값이 서로 다르지만 문자열은 같은 두 String 객체를 가지고 hashCode를 비교해보았습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/java/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-&lt;img src=&quot;./assets/built/images/java/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/equals/4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+&lt;img src=&quot;../../assets/built/images/java/equals/3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
 주소값은 다르지만 같은 문자열에 대해 hashCode가 같은 것을 볼 수 있습니다.  &lt;br /&gt;
 응? 주소값으로 hashCode만드는데 주소값이 다른데 hashCode가 같네? 모순모순!  &lt;br /&gt;
 이라고 할 뻔 했지만 &lt;br /&gt;

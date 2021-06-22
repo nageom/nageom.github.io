@@ -8,7 +8,61 @@
     
       
       <item>
-        <title>자바 1.8버전 이후 달라진 것들</title>
+        <title>&lt;정렬&gt; 정렬 알고리즘의 개요와 선택정렬(Select Sort)</title>
+        
+          <description>&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;h3&gt;알고리즘의 시작, 정렬 &lt;/h3&gt;
+&lt;/blockquote&gt;
+
+</description>
+        
+        <pubDate>Tue, 22 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/algorithm-select-sort</link>
+        <guid isPermaLink="true">https://nageom.github.io/algorithm-select-sort</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>&lt;정렬&gt;버블정렬(Bubble Sort)</title>
+        
+          <description>&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;h4&gt;버블정렬 &lt;/h4&gt;
+&lt;/blockquote&gt;
+
+</description>
+        
+        <pubDate>Tue, 22 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/algorithm-bubble-sort</link>
+        <guid isPermaLink="true">https://nageom.github.io/algorithm-bubble-sort</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>알고리즘의 시작</title>
+        
+          <description>&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;본격적으로 알고리즘 공부를 시작해보려한다. 좋은 강의영상을 찾아서 기분이 조크등요!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        
+        <pubDate>Mon, 21 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/algorithm-start</link>
+        <guid isPermaLink="true">https://nageom.github.io/algorithm-start</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>자바 1.8버전 차이를 알아보자</title>
         
           <description>&lt;hr /&gt;
 &lt;blockquote&gt;

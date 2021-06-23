@@ -8,6 +8,28 @@
     
       
       <item>
+        <title>&lt;정렬&gt; 삽입 정렬(Insertion Sort)</title>
+        
+          <description>&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;h3&gt; 삽입 정렬(Insertion Sort) &lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;h6&gt;[각 숫자를 적절한 위치에 삽입하는 방법 ]&lt;/h6&gt;
+&lt;p&gt;필요할 때만 위치를 바꾸기 떄문에 &lt;br /&gt;
+버블 정렬, 선택정렬보다 더 빠르다. (O(N^2) 중에서)&lt;br /&gt;
+그렇지만 정렬이 되어있지 않은 경우는 다름없는 O(N^2) 이기때문에 항상 비효율적이지 않다고는 말할 수 없다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 22 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/algorithm-insertion-sort</link>
+        <guid isPermaLink="true">https://nageom.github.io/algorithm-insertion-sort</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>&lt;정렬&gt; 정렬 알고리즘의 개요와 선택정렬(Select Sort)</title>
         
           <description>&lt;hr /&gt;

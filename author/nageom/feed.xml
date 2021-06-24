@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-24T23:20:00+09:00</updated>
+  <updated>2021-06-24T23:27:25+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -52,7 +52,18 @@ log2N -&amp;gt; N이 1,000,000일 때는 ? 20
 피봇 값을 기준으로 왼쪽끝에서 오른쪽으로 피봇값보다 큰 값을 찾고, 
                 오른끝에서 왼쪽으로 피봇값보다 작은 값을 찾아
                 서로 바꿔준다. 
-계속 나아가다가 결국 값들끼리 크로스가 됐을때&lt;/p&gt;</content>
+계속 나아가다가 결국 값들끼리 위치가 엇갈리게 됐을 때
+즉, 작은값의 인덱스가 큰 값의 인덱스보다 더 작을 때
+왼쪽에 있는 값 (작은값)과 피봇 값을 바꿔준다.&lt;/p&gt;
+
+&lt;p&gt;피봇 값의 위치가 바뀐 뒤에는 바뀐 위치를 기준으로 
+왼쪽의 값들은 피봇값보다 작고
+오른쪽의 값들은 피봇값보다 크다는 특징을 갖는다. (두 집합으로 분할됨)&lt;/p&gt;
+
+&lt;p&gt;피봇값의 위치가 바뀐 뒤 바뀐 위치를 기준으로 왼쪽 데이터들, 오른쪽 데이터들 두 집합으로 분할되었다. 
+두 개의 배열이 되었다고 생각하면 더 편하다
+나누었으니 이제 피봇값은 두개가 되고, 
+각각 처음처럼 비교를 시작한다.&lt;/p&gt;</content>
 
       
       

@@ -191,12 +191,12 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
-    "java-coding-test": {
-        "title": "a",
+    "algorithm-quick-sort": {
+        "title": "&lt;정렬&gt; 퀵 정렬 (Quick Sort)",
             "author": "nageom",
             "category": "",
-            "content": "배열  선언 : int[] a = new int[8];int[] a = {1,2,3,4,5};  배열 -&gt; 문자열 : Arrays.toString();  char 배열 -&gt; 문자열 : String.valueOf();       문자열 -&gt; char : .toCharArray;    배열 오름차순 : Arrays.sort(arr);      배열 내림차순 : Arrays.sort(arr, Collections.reverseOrder());    배열의 길이 : arr.length;      2차원 배열의 길이 : arr[0].length; 0번째 배열의 길이    배열의 특정 범위만 빼기 : Arrays.copyOfRange(arr, 2 ,4 ); 2번째 인자(포함)부터 3번째 인자(미포함) 앞까지 추출)문자열      선언 : String str = “”;    str.startWith(a); : 특정 문자로 시작하는지 판단  str.endWith(a); : 특정 문자로 끝나는지 판단  str.equals(a); : 같은지 아닌지 판단  str.indexOf(“a”); : a가 몇번째 위치하는지 판단  str.length; : 문자열길이판단  String[] strArr = str.split(“”) : 문자열 1개씩 나누어 배열로 반환, 넣는 값을 기준으로 나눌수도있음 (str.split(“ “)  str.substring(0, 2); : 1번째 인자부터 2번째 인자 앞까지 문자추출  str.toLowerCase : 모든문자 소문자 변환  str.toUpperCase : 모든문자 대문자 변환  str.trim(); : 문자열 빈칸 제거  String.valueOf(int i) : i를 문자열로 변환  str.charAt(i) : i번째 문자 추출  StringBuilder sb -&gt; sb.toString : StringBuilder을 문자열로 변환  sb.append(); : 문자열 뒤에 붙임 우선순위 큐 생성PriorityQueue&lt;String&gt; pq = new PriorityQueue&lt;&gt;();    pq.offer(\"b\");    pq.offer(\"a\");    pq.offer(\"c\");    pq.offer(\"d\");    pq.offer(\"f\");while(!pq.isEmpty()) {     System.out.println(pq.poll());}StringBuilder\tStringBuilder sb = new StringBuilder(); \t\tsb.append(\"abc\");\t\tsb.append(\"ghi\");\t\tsb.append(\"def\");\t\t//sb.reverse();거꾸로\t\t\t\tSystem.out.println(sb);\t\t깊은 복사ArrayList&lt;Integer&gt; w=new ArrayList&lt;Integer&gt;();\t\tArrayList&lt;Integer&gt; copy_w=new ArrayList&lt;Integer&gt;();\t\tcopy_w.addAll(w);set -&gt; listListPermalinkset =&gt; List 변경Permalink생성자에 값을 넣어주면, set -&gt; List로 변경할 수 있다.Set&lt;String&gt; set = new HashSet&lt;String&gt;();List&lt;String&gt; menuList = new ArrayList&lt;&gt;(set);",
-        "url": "/java-coding-test"
+            "content": "시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다.그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* logN) 이란다.2 ^ 10 = 1,0002 ^ 20 = 1,000,000log2N -&gt; N이 1,000,000일 때는 ? 20고로 엄청 빠르다.[특정한 값을 기준으로 큰 숫자와 작은 숫자를 나누자]피봇 값을 기준으로 왼쪽끝에서 오른쪽으로 피봇값보다 큰 값을 찾고,                 오른끝에서 왼쪽으로 피봇값보다 작은 값을 찾아                서로 바꿔준다. 계속 나아가다가 결국 값들끼리 크로스가 됐을때",
+        "url": "/algorithm-quick-sort"
     }
     ,
     

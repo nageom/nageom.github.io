@@ -11,7 +11,7 @@
 
 
 
-    <title>a</title>
+    <title><정렬> 퀵 정렬 (Quick Sort)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -47,30 +47,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 공부방" />
     <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
-    <link rel="canonical" href="https://nageom.github.io/java-coding-test" />
+    <link rel="canonical" href="https://nageom.github.io/algorithm-quick-sort" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="a" />
-    <meta property="og:description" content="배열 선언 : int[] a = new int[8]; int[] a = {1,2,3,4,5}; 배열 -&gt; 문자열 : Arrays.toString(); char 배열 -&gt; 문자열 : String.valueOf(); 문자열 -&gt; char : .toCharArray; 배열 오름차순 : Arrays.sort(arr); 배열 내림차순 : Arrays.sort(arr, Collections.reverseOrder()); 배열의 길이 : arr.length; 2차원 배열의 길이 : arr[0].length; 0번째 배열의 길이 배열의" />
-    <meta property="og:url" content="https://nageom.github.io/java-coding-test" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_equals.jpg" />
+    <meta property="og:title" content="<정렬> 퀵 정렬 (Quick Sort)" />
+    <meta property="og:description" content="시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* logN) 이란다. 2 ^ 10 = 1,000 2 ^ 20 = 1,000,000 log2N -&gt; N이 1,000,000일 때는 ? 20 고로 엄청 빠르다. [특정한" />
+    <meta property="og:url" content="https://nageom.github.io/algorithm-quick-sort" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/algorithm/structure/basic_cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-06-23T09:14:00+09:00" />
-    <meta property="article:modified_time" content="2021-06-23T09:14:00+09:00" />
-    <meta property="article:tag" content="Java" />
+    <meta property="article:published_time" content="2021-06-24T09:14:00+09:00" />
+    <meta property="article:modified_time" content="2021-06-24T09:14:00+09:00" />
+    <meta property="article:tag" content="Algorithm" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="a" />
-    <meta name="twitter:description" content="배열 선언 : int[] a = new int[8]; int[] a = {1,2,3,4,5}; 배열 -&gt; 문자열 : Arrays.toString(); char 배열 -&gt; 문자열 : String.valueOf(); 문자열 -&gt; char : .toCharArray; 배열 오름차순 : Arrays.sort(arr); 배열 내림차순 : Arrays.sort(arr, Collections.reverseOrder()); 배열의 길이 : arr.length; 2차원 배열의 길이 : arr[0].length; 0번째 배열의 길이 배열의" />
+    <meta name="twitter:title" content="<정렬> 퀵 정렬 (Quick Sort)" />
+    <meta name="twitter:description" content="시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* logN) 이란다. 2 ^ 10 = 1,000 2 ^ 20 = 1,000,000 log2N -&gt; N이 1,000,000일 때는 ? 20 고로 엄청 빠르다. [특정한" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_equals.jpg" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/algorithm/structure/basic_cover.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Java" />
+    <meta name="twitter:data2" content="Algorithm" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -85,18 +85,18 @@
         "name": "nageom's blog",
         "logo": "https://nageom.github.io/"
     },
-    "url": "https://nageom.github.io/java-coding-test",
+    "url": "https://nageom.github.io/algorithm-quick-sort",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/java/cover/cover_equals.jpg",
+        "url": "https://nageom.github.io/assets/built/images/algorithm/structure/basic_cover.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://nageom.github.io/java-coding-test"
+        "@id": "https://nageom.github.io/algorithm-quick-sort"
     },
-    "description": "배열 선언 : int[] a = new int[8]; int[] a = {1,2,3,4,5}; 배열 -&gt; 문자열 : Arrays.toString(); char 배열 -&gt; 문자열 : String.valueOf(); 문자열 -&gt; char : .toCharArray; 배열 오름차순 : Arrays.sort(arr); 배열 내림차순 : Arrays.sort(arr, Collections.reverseOrder()); 배열의 길이 : arr.length; 2차원 배열의 길이 : arr[0].length; 0번째 배열의 길이 배열의"
+    "description": "시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* logN) 이란다. 2 ^ 10 = 1,000 2 ^ 20 = 1,000,000 log2N -&gt; N이 1,000,000일 때는 ? 20 고로 엄청 빠르다. [특정한"
 }
     </script>
 
@@ -109,7 +109,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="a" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="<정렬> 퀵 정렬 (Quick Sort)" href="/feed.xml" />
 
 
 </head>
@@ -177,119 +177,48 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-java post ">
+        <article class="post-full  tag-algorithm post ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="23 June 2021">23 June 2021</time>
+                    <time class="post-full-meta-date" datetime="24 June 2021">24 June 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/java/'>JAVA</a>
+                               <a href='/tag/algorithm/'>ALGORITHM</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">a</h1>
+                <h1 class="post-full-title"><정렬> 퀵 정렬 (Quick Sort)</h1>
             </header>
 
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/java/cover/cover_equals.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/algorithm/structure/basic_cover.png)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
                     <hr />
-<h2 id="배열">배열<br /></h2>
 
-<ul>
-  <li>선언 : int[] a = new int[8];<br />
-int[] a = {1,2,3,4,5};<br /></li>
-  <li>배열 -&gt; 문자열 : Arrays.toString();<br /></li>
-  <li>char 배열 -&gt; 문자열 : String.valueOf(); <br /></li>
-  <li>
-    <p>문자열 -&gt; char : .toCharArray;<br /><br /></p>
-  </li>
-  <li>배열 오름차순 : Arrays.sort(arr);<br /></li>
-  <li>
-    <p>배열 내림차순 : Arrays.sort(arr, Collections.reverseOrder());<br /><br /></p>
-  </li>
-  <li>배열의 길이 : arr.length;<br /></li>
-  <li>
-    <p>2차원 배열의 길이 : arr[0].length; 0번째 배열의 길이<br /><br /></p>
-  </li>
-  <li>배열의 특정 범위만 빼기 : Arrays.copyOfRange(arr, 2 ,4 ); 2번째 인자(포함)부터 3번째 인자(미포함) 앞까지 추출)<br />
-<br /></li>
-</ul>
+<p>시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다.
+그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. 
+‘분할 정복’ 알고리즘으로 평균 속도가 O(N* logN) 이란다.</p>
 
-<h2 id="문자열">문자열<br /></h2>
-<p><br /></p>
-<ul>
-  <li>
-    <p>선언 : String str = “”;<br /><br /></p>
-  </li>
-  <li>str.startWith(a); : 특정 문자로 시작하는지 판단<br /></li>
-  <li>str.endWith(a); : 특정 문자로 끝나는지 판단<br />
-<br /></li>
-  <li>str.equals(a); : 같은지 아닌지 판단<br /></li>
-  <li>str.indexOf(“a”); : a가 몇번째 위치하는지 판단<br />
-<br /></li>
-  <li>str.length; : 문자열길이판단<br /></li>
-  <li>String[] strArr = str.split(“”) : 문자열 1개씩 나누어 배열로 반환, 넣는 값을 기준으로 나눌수도있음 (str.split(“ “)<br /></li>
-  <li>str.substring(0, 2); : 1번째 인자부터 2번째 인자 앞까지 문자추출<br /></li>
-  <li>str.toLowerCase : 모든문자 소문자 변환<br /></li>
-  <li>str.toUpperCase : 모든문자 대문자 변환<br />
-<br /></li>
-  <li>str.trim(); : 문자열 빈칸 제거<br /></li>
-  <li>String.valueOf(int i) : i를 문자열로 변환<br />
-<br /></li>
-  <li>str.charAt(i) : i번째 문자 추출<br />
-<br /></li>
-  <li>StringBuilder sb -&gt; sb.toString : StringBuilder을 문자열로 변환<br /></li>
-  <li>sb.append(); : 문자열 뒤에 붙임 <br />
-<br /></li>
-</ul>
+<p>2 ^ 10 = 1,000
+2 ^ 20 = 1,000,000
+log2N -&gt; N이 1,000,000일 때는 ? 20
+고로 엄청 빠르다.</p>
 
-<h1 id="우선순위-큐-생성">우선순위 큐 생성</h1>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">PriorityQueue</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span> <span class="nx">pq</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PriorityQueue</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-    <span class="nx">pq</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">);</span>
-    <span class="nx">pq</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">);</span>
-    <span class="nx">pq</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="dl">"</span><span class="s2">c</span><span class="dl">"</span><span class="p">);</span>
-    <span class="nx">pq</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="dl">"</span><span class="s2">d</span><span class="dl">"</span><span class="p">);</span>
-    <span class="nx">pq</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="dl">"</span><span class="s2">f</span><span class="dl">"</span><span class="p">);</span>
+<p>[특정한 값을 기준으로 큰 숫자와 작은 숫자를 나누자]
+피봇 값을 기준으로 왼쪽끝에서 오른쪽으로 피봇값보다 큰 값을 찾고, 
+                오른끝에서 왼쪽으로 피봇값보다 작은 값을 찾아
+                서로 바꿔준다. 
+계속 나아가다가 결국 값들끼리 크로스가 됐을때</p>
 
-<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nx">pq</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-     <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">pq</span><span class="p">.</span><span class="nx">poll</span><span class="p">());</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<h1 id="stringbuilder">StringBuilder</h1>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nx">StringBuilder</span> <span class="nx">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">StringBuilder</span><span class="p">();</span> 
-		<span class="nx">sb</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">abc</span><span class="dl">"</span><span class="p">);</span>
-		<span class="nx">sb</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">ghi</span><span class="dl">"</span><span class="p">);</span>
-		<span class="nx">sb</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">def</span><span class="dl">"</span><span class="p">);</span>
-		<span class="c1">//sb.reverse();거꾸로</span>
-		
-		<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">sb</span><span class="p">);</span>
-		
-
-</code></pre></div></div>
-<h1 id="깊은-복사">깊은 복사</h1>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">w</span><span class="o">=</span><span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span><span class="p">();</span>
-		<span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">copy_w</span><span class="o">=</span><span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span><span class="p">();</span>
-		<span class="nx">copy_w</span><span class="p">.</span><span class="nx">addAll</span><span class="p">(</span><span class="nx">w</span><span class="p">);</span>
-
-</code></pre></div></div>
-
-<h1 id="set---list">set -&gt; list</h1>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ListPermalink</span>
-<span class="kd">set</span> <span class="o">=&gt;</span> <span class="nx">List</span> <span class="nx">변경Permalink</span>
-<span class="nx">생성자에</span> <span class="nx">값을</span> <span class="nx">넣어주면</span><span class="p">,</span> <span class="kd">set</span> <span class="o">-&gt;</span> <span class="nx">List로</span> <span class="nx">변경할</span> <span class="nx">수</span> <span class="nx">있다</span><span class="p">.</span>
-<span class="nb">Set</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span> <span class="kd">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashSet</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="nx">List</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span> <span class="nx">menuList</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="kd">set</span><span class="p">);</span>
-</code></pre></div></div>
 
                 </div>
             </section>
@@ -356,9 +285,9 @@ int[] a = {1,2,3,4,5};<br /></li>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://nageom.github.io/java-coding-test';
-                            var this_page_identifier = '/java-coding test';
-                            var this_page_title = 'a';
+                            var this_page_url = 'https://nageom.github.io/algorithm-quick-sort';
+                            var this_page_identifier = '/algorithm-quick sort';
+                            var this_page_title = '<정렬> 퀵 정렬 (Quick Sort)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -392,7 +321,7 @@ int[] a = {1,2,3,4,5};<br /></li>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; nageom's blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/java/">Java</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/algorithm/">Algorithm</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -406,18 +335,10 @@ int[] a = {1,2,3,4,5};<br /></li>
                                   
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
                                     
                                         
                                         
-                                            <li><a href="/java-version">자바 1.8버전 차이를 알아보자</a></li>
+                                            <li><a href="/algorithm-insertion-sort"><정렬> 삽입 정렬(Insertion Sort)</a></li>
                                         
                                     
                                   
@@ -426,7 +347,7 @@ int[] a = {1,2,3,4,5};<br /></li>
                                     
                                         
                                         
-                                            <li><a href="/java-thread">쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</a></li>
+                                            <li><a href="/algorithm-select-sort"><정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)</a></li>
                                         
                                     
                                   
@@ -435,11 +356,9 @@ int[] a = {1,2,3,4,5};<br /></li>
                                     
                                         
                                         
-                                            <li><a href="/java-abstract-class">추상과 인터페이스</a></li>
+                                            <li><a href="/algorithm-bubble-sort"><정렬>버블정렬(Bubble Sort)</a></li>
                                         
                                     
-                                  
-                                
                                   
                                 
                                   
@@ -464,6 +383,21 @@ int[] a = {1,2,3,4,5};<br /></li>
                                         
                                         
                                     
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -477,9 +411,9 @@ int[] a = {1,2,3,4,5};<br /></li>
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/java/">
+                            <a href="/tag/algorithm/">
                                 
-                                    See all 5 posts  →
+                                    See all 6 posts  →
                                 
                             </a>
                         </footer>
@@ -555,18 +489,18 @@ int[] a = {1,2,3,4,5};<br /></li>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">a</div>
+    <div class="floating-header-title"><정렬> 퀵 정렬 (Quick Sort)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=a&amp;url=https://nageom.github.io/java-coding-test"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%EC%A0%95%EB%A0%AC%3E+%ED%80%B5+%EC%A0%95%EB%A0%AC+%28Quick+Sort%29&amp;url=https://nageom.github.io/algorithm-quick-sort"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/java-coding-test"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/algorithm-quick-sort"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

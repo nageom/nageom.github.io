@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-25T01:15:32+09:00</updated>
+  <updated>2021-06-25T22:18:10+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -30,6 +30,102 @@
   
   
 
+  
+    <entry>
+      <title type="html">해시 위장문제 (1)</title>
+      <link href="https://nageom.github.io/coding-test-hash(1)" rel="alternate" type="text/html" title="&lt;프로그래머스&gt; 해시 위장문제 (1)" />
+      <published>2021-06-25T09:14:00+09:00</published>
+      <updated>2021-06-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/coding%20test-hash(1)</id>
+      <content type="html" xml:base="https://nageom.github.io/coding-test-hash(1)">&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제&lt;/h6&gt;
+
+&lt;p&gt;경우의 수를 구하는 문제인데 &lt;br /&gt;
+나는 경우의 수를 구하는게 너무 약해서 도와줘요 구글! 을 했다 &lt;br /&gt;
+옷 경우의 수 구하기..  &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;상의 = 파란티, 빨강티 &lt;br /&gt;
+하의 = 바지, 치마, 레깅스  &lt;br /&gt;
+의 경우에 상의 두 장을 겹쳐입지 않으며, 뭐라도 최소 한장 걸치는 것이 목정인 경우들  &lt;br /&gt;
+파란티 + 바지 &lt;br /&gt;
+                 + 치마 &lt;br /&gt;
+                 + 레깅스 &lt;br /&gt;
+빨강티 + 바지 &lt;br /&gt;
+                 + 치마 &lt;br /&gt;
+                 + 레깅스 &lt;br /&gt;
+상의 안입기 + 바지 &lt;br /&gt;
+                 + 치마 &lt;br /&gt;
+                 + 레깅스 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 총 9개가 나온다. &lt;br /&gt;
+그럼 (상의 2개 + 안입는 경우) * (하의 3개 + 안입는 경우)  … &lt;br /&gt;
+의 공식을 뽑아낼 수 있다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그리하여 {/{“옷 “, “옷 타입”}/} 의 형태인 2차 배열에서 &lt;br /&gt;
+각 옷 타입의 수를 구해 경우의 수를 반환하는 식의 코드를 짰다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[][]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clothes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+       
+       &lt;span class=&quot;c1&quot;&gt;//map에 &amp;lt;&quot;face&quot;, 0&amp;gt; 이렇게 중복값 없이 넣어준다. &lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clothes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clothes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 배열과 직접 비교하며 +1로 옷 타입마다 몇개인지 세어 map에 다시 넣어준다. &lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keySet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clothes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clothes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//경우의 수 구하기 :  (상의 + 안 입는 경우 ) * (하의 + 안 입는 경우 )&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+       
+        
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+커버사진 출처 프로그래머스&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="coding" />
+      
+
+      
+        <summary type="html">프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">퀵 정렬 (Quick Sort)</title>
@@ -228,6 +324,109 @@ https://www.youtube.com/watch?v=gBcUO_6JXIA&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6
     </entry>
   
     <entry>
+      <title type="html">삽입 정렬(Insertion Sort)</title>
+      <link href="https://nageom.github.io/algorithm-insertion-sort" rel="alternate" type="text/html" title="&lt;정렬&gt; 삽입 정렬(Insertion Sort)" />
+      <published>2021-06-22T09:14:00+09:00</published>
+      <updated>2021-06-22T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/algorithm-insertion%20sort</id>
+      <content type="html" xml:base="https://nageom.github.io/algorithm-insertion-sort">&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;h3&gt; 삽입 정렬(Insertion Sort) &lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;h6&gt;[각 숫자를 적절한 위치에 삽입하는 방법 ]&lt;/h6&gt;
+&lt;p&gt;필요할 때만 위치를 바꾸기 떄문에 &lt;br /&gt;
+버블 정렬, 선택정렬보다 더 빠르다. (O(N^2) 중에서)&lt;br /&gt;
+그렇지만 정렬이 되어있지 않은 경우는 다름없는 O(N^2) 이기때문에 항상 비효율적이지 않다고는 말할 수 없다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;int arr[10]= {1,10,5,8,7,6,4,3,2,9}&lt;br /&gt;
+처음부터 하나씩 앞의 배열값들과 비교하며 선택값을 본인보다 작은값을 만났을때 작은값 &lt;br /&gt;
+바로 뒤에 삽입해준다.&lt;br /&gt;
+버블 정렬과 뭐가 다른가 할 수 있는데, &lt;br /&gt;
+삽입 정렬은 앞의 원소들이 이미 정렬이 되어있다 가정하기 때문에 &lt;br /&gt;
+작은값을 만났을때에만 조심스럽게 비교연산을 시작해서 속도가 줄어들 수 밖에 없다. &lt;br /&gt;&lt;br /&gt;
+1 5 10 8 7 6 4 3 2 9&lt;br /&gt;
+1 5 8 10 7 6 4 3 2 9&lt;br /&gt;
+1 5 7 8 10 6 4 3 2 &lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt;공부하다 드는 생각&lt;/h6&gt;
+&lt;p&gt;그럼 말 그대로 삽입정렬이라 삽입을 하게 되면 그 자리에있던 데이터들이 한 칸씩 자리 이동을 해주어야한다.
+그럼 삽입이 아니고 변경인가라고 생각했는데  &lt;br /&gt;&lt;br /&gt;
+코드를 보니 느낌은 삽입이고 자리의 변경이 맞았다. &lt;br /&gt;
+if (array[i] &amp;gt; array[i+1]) 이 경우에만 자리를 바꿔준다.  &lt;br /&gt;
+무조건 비교하는 정렬법이 아니라 이미 앞 원소들은 정렬이 된 상태이기 때문에 비교할 필요가 없는것이 장점이다.  &lt;br /&gt;
+이러한 특징으로 특정한 상황에서 속도가 굉장히 빠를 수 있다. &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt;코드를 살펴보자&lt;/h6&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	
+	&lt;span class=&quot;c1&quot;&gt;//삽입 정렬을 만들어 보자&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	
+	
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+		&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 앞의 값이 나보다 클때에만 while문 &lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;		
+	 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;%d &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h6&gt;[버블 정렬의 시간 복잡도 O(N^2) ]&lt;/h6&gt;
+
+&lt;p&gt;정렬이 거의 되어있지 않은 상황에는 &lt;br /&gt;
+10+8+7+…+1 으로 O(N*N) 의 시간복잡도에 충실하게 되지만 &lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt;'거의 정렬된 상태'&lt;/h6&gt;
+&lt;p&gt;라면 정렬이 거의 되어있는 &lt;br /&gt;
+arr={2,3,4,5,6,7,8,9,10,1}&lt;br /&gt;
+&lt;br /&gt;
+‘1’을 빼고는 거의 한번씩의 연산만 지나치게되어 아주 빠른 정렬 속도 
+즉, 퀵 정렬 보다 더 빠르거나 동등한 속도를 낼 수 있다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;References &lt;br /&gt;
+https://www.youtube.com/watch?v=16I9Z7bS1iM&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;amp;index=5&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">삽입 정렬(Insertion Sort) [각 숫자를 적절한 위치에 삽입하는 방법 ] 필요할 때만 위치를 바꾸기 떄문에 버블 정렬, 선택정렬보다 더 빠르다. (O(N^2) 중에서) 그렇지만 정렬이 되어있지 않은 경우는 다름없는 O(N^2) 이기때문에 항상 비효율적이지 않다고는 말할 수 없다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">정렬 알고리즘의 개요와 선택정렬(Select Sort)</title>
       <link href="https://nageom.github.io/algorithm-select-sort" rel="alternate" type="text/html" title="&lt;정렬&gt; 정렬 알고리즘의 개요와 선택정렬(Select Sort)" />
       <published>2021-06-22T09:14:00+09:00</published>
@@ -418,109 +617,6 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6
 
       
         <summary type="html">버블정렬</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">삽입 정렬(Insertion Sort)</title>
-      <link href="https://nageom.github.io/algorithm-insertion-sort" rel="alternate" type="text/html" title="&lt;정렬&gt; 삽입 정렬(Insertion Sort)" />
-      <published>2021-06-22T09:14:00+09:00</published>
-      <updated>2021-06-22T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/algorithm-insertion%20sort</id>
-      <content type="html" xml:base="https://nageom.github.io/algorithm-insertion-sort">&lt;hr /&gt;
-&lt;blockquote&gt;
-  &lt;h3&gt; 삽입 정렬(Insertion Sort) &lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;h6&gt;[각 숫자를 적절한 위치에 삽입하는 방법 ]&lt;/h6&gt;
-&lt;p&gt;필요할 때만 위치를 바꾸기 떄문에 &lt;br /&gt;
-버블 정렬, 선택정렬보다 더 빠르다. (O(N^2) 중에서)&lt;br /&gt;
-그렇지만 정렬이 되어있지 않은 경우는 다름없는 O(N^2) 이기때문에 항상 비효율적이지 않다고는 말할 수 없다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;int arr[10]= {1,10,5,8,7,6,4,3,2,9}&lt;br /&gt;
-처음부터 하나씩 앞의 배열값들과 비교하며 선택값을 본인보다 작은값을 만났을때 작은값 &lt;br /&gt;
-바로 뒤에 삽입해준다.&lt;br /&gt;
-버블 정렬과 뭐가 다른가 할 수 있는데, &lt;br /&gt;
-삽입 정렬은 앞의 원소들이 이미 정렬이 되어있다 가정하기 때문에 &lt;br /&gt;
-작은값을 만났을때에만 조심스럽게 비교연산을 시작해서 속도가 줄어들 수 밖에 없다. &lt;br /&gt;&lt;br /&gt;
-1 5 10 8 7 6 4 3 2 9&lt;br /&gt;
-1 5 8 10 7 6 4 3 2 9&lt;br /&gt;
-1 5 7 8 10 6 4 3 2 &lt;br /&gt;&lt;/p&gt;
-
-&lt;h6&gt;공부하다 드는 생각&lt;/h6&gt;
-&lt;p&gt;그럼 말 그대로 삽입정렬이라 삽입을 하게 되면 그 자리에있던 데이터들이 한 칸씩 자리 이동을 해주어야한다.
-그럼 삽입이 아니고 변경인가라고 생각했는데  &lt;br /&gt;&lt;br /&gt;
-코드를 보니 느낌은 삽입이고 자리의 변경이 맞았다. &lt;br /&gt;
-if (array[i] &amp;gt; array[i+1]) 이 경우에만 자리를 바꿔준다.  &lt;br /&gt;
-무조건 비교하는 정렬법이 아니라 이미 앞 원소들은 정렬이 된 상태이기 때문에 비교할 필요가 없는것이 장점이다.  &lt;br /&gt;
-이러한 특징으로 특정한 상황에서 속도가 굉장히 빠를 수 있다. &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h6&gt;코드를 살펴보자&lt;/h6&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	
-	&lt;span class=&quot;c1&quot;&gt;//삽입 정렬을 만들어 보자&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	
-	
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-		&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 앞의 값이 나보다 클때에만 while문 &lt;/span&gt;
-			&lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-			&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-			&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-			&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;		
-	 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arrSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;%d &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h6&gt;[버블 정렬의 시간 복잡도 O(N^2) ]&lt;/h6&gt;
-
-&lt;p&gt;정렬이 거의 되어있지 않은 상황에는 &lt;br /&gt;
-10+8+7+…+1 으로 O(N*N) 의 시간복잡도에 충실하게 되지만 &lt;br /&gt;&lt;/p&gt;
-
-&lt;h6&gt;'거의 정렬된 상태'&lt;/h6&gt;
-&lt;p&gt;라면 정렬이 거의 되어있는 &lt;br /&gt;
-arr={2,3,4,5,6,7,8,9,10,1}&lt;br /&gt;
-&lt;br /&gt;
-‘1’을 빼고는 거의 한번씩의 연산만 지나치게되어 아주 빠른 정렬 속도 
-즉, 퀵 정렬 보다 더 빠르거나 동등한 속도를 낼 수 있다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;References &lt;br /&gt;
-https://www.youtube.com/watch?v=16I9Z7bS1iM&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;amp;index=5&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="algorithm" />
-      
-
-      
-        <summary type="html">삽입 정렬(Insertion Sort) [각 숫자를 적절한 위치에 삽입하는 방법 ] 필요할 때만 위치를 바꾸기 떄문에 버블 정렬, 선택정렬보다 더 빠르다. (O(N^2) 중에서) 그렇지만 정렬이 되어있지 않은 경우는 다름없는 O(N^2) 이기때문에 항상 비효율적이지 않다고는 말할 수 없다.</summary>
       
 
       
@@ -949,203 +1045,6 @@ move(int x, int y)와 attack(D d)을 멤버로 갖게 된다.&lt;br /&gt;
 
       
         <summary type="html">이미지 삽입</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">기술면접 예상 질문</title>
-      <link href="https://nageom.github.io/java-interview" rel="alternate" type="text/html" title="기술면접 예상 질문" />
-      <published>2021-06-11T09:14:00+09:00</published>
-      <updated>2021-06-11T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/java-interview</id>
-      <content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/itv.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
-&lt;p&gt;JRE - 자바코드가 실행 될 수 있는 환경 , JVM을 생성하는 디스크 상의 부분  &lt;br /&gt;
-JVM - 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고   &lt;br /&gt;
-           재사용을 가능하게 해준다.&lt;br /&gt;
-         - JRE 내에 존재한다. &lt;br /&gt;
-JAVAC (자바 컴파일러)    &lt;br /&gt;
-    JDK가 컴파일하는 기능을 가지고 있는데 그게 javac이다.  &lt;br /&gt;
-   자바 컴파일러는 컴퓨터가 이해하는 기계어로 변환 해주는 컴파일을 하는 녀석인데,   &lt;br /&gt;
-   정확히는 OS와 자바의 중개자인 JVM이 이해할 수 있는 형태로 컴파일된다.(바이트코드)&lt;/p&gt;
-
-&lt;p&gt;JDK - (Java Development Kit) 자바 애플리케이션을 구축하기 위한 핵심 플랫폼 구성요소   &lt;br /&gt;
-       - 개발자들이 JVM과 JRE에 의해 실행되고 구동될 수 있는 자바 프로그램을    &lt;br /&gt;
-       생성할 수 있게 해준다.&lt;/p&gt;
-
-&lt;간단정리&gt; &lt;br /&gt;         
-JRE는 단지 자바 프로그램을 구동하기 위한 독립형 구성요소로 실행만 하는경우 설치&lt;br /&gt;               
-JDK는 자바 기반 소프트웨어를 개발하기 위한 도구들로 이루어진 패키지로 개발시에 설치 &lt;br /&gt;        
-JVM는 자바와 OS사이의 중개자&lt;br /&gt;    
-JAVAC는 자바 컴파일러&lt;br /&gt;
-    
-
-
-
-&lt;h5&gt;&amp;lt;equals와 '=='의 차이&amp;gt;  &lt;/h5&gt; 
-equals는 대상의 hashcode를 비교하고   
-'==' 연산자는 대상의 주소값을 비교합니다.     
-equals는   
-object클래스의 hashCode()메서드를 통해 각 객체에 대응하는 고유한 정수값인 hashCode를 통해 각 객체를 비교한다.   
-예외로 string은 재정의하여 문자열로 hashCode를 생성해낸다. 
-
-&lt;h5&gt;동기와 비동기 &lt;/h5&gt;      
-동기식 처리 모델 (Synchronous processing model) 은 직렬적으로 태스크(task)를 수행한다.     
-즉, 태스크는 순차적으로 실행되며 어떤 작업이 수행 중이면 다음 작업은 대기하게 된다.      
-   
-비동기식 처리 모델(Asynchronous processing model 또는 Non-Blocking processing model)은 병렬적으로 태스크를 수행한다.       
-즉, 태스크가 종료되지 않은 상태라 하더라도 대기하지 않고 다음 태스크를 실행한다.        
-자바에서는 대표적으로 멀티스레드의 동작이 비동기식으로 작동한다.        
-       
-&lt;h5&gt;오버라이딩, 오버로딩 &lt;/h5&gt;
-오버로딩의 정의는 자바의 한 클래스 내에 이미 사용하려는 이름과 같은 이름을 가진 메소드가 있더라도 매개변수의 개수 또는 타입이 다르면, 같은 이름을 사용해서 메소드를 정의할 수 있다.     
-오버라이딩은 부모자식에게 상속받은 메서드를 재정의함을 뜻한다. 
-사용이유 
-오버로딩 : 같은 이름의 메서드 사용으로 개발의 편의성, 함수의 다형성을 지원하기 위함.     
-오버라이딩 : 상속 클래스의 재정의를 위함.    
-
-
-&lt;h5&gt;추상화란?&lt;/h5&gt;
-:　여러 객체에 공통적으로 사용되는, 사용되어야 하는 내용을 뽑아 모아두는 것을 말합니다. 예를 들어 떡라면, 만두라면 등 모든 라면레시피의 공통된 조리과정을 각각 넣는 것은 비효율적임으로
-공통되는 조리과정을 골라 부모클래스로 만드는 작업이 추상화입니다.   
-
-
-
-&lt;h5&gt;자바 메모리 구조&lt;/h5&gt;
-static , stack, heap 영역으로 구분되고 데이터타입(자료형)에 따라서 해당 공간에 할당된다.     
-
-스태틱(static)영역 : 프로그램의 시작부터 종료가 될 때까지 메모리에 남는다.        
-정적변수
-
-(LIFO)
-스택 (stack) 영역 : 메서드 내에서 정의하는 기본 자료형에 해됭되는 지역변수의 데이터값이 저장되는 공간    
-- 메서드가 호출 될 때 메모리에 할당되고 종료되면 메모리가 해제된다.       
-
-힙 영역 ( heap 메모리 영역)     
-- 참조형의 데이터 타입을 갖는 객체(인스턴스), 배열 등이 heap 영역에 데이터가 저장된다.         
-  실제 데이터를 갖고 있는 heap 영역의 참조 값(주소값)을 stack 영역의 객첵 가지고 있다. 
-  
-
-  &lt;h5&gt; 싱글톤과 스태틱 &lt;/h5&gt; 
-싱글톤 - 애플리케이션이 시작될 때, 어떤 클래스가 최초 한 번만 메모리를 할당(static)하고   &lt;br /&gt;     
-해당 메모리에 인스턴스를 만들어 사용하고 공유하는 제한하는 패턴      &lt;br /&gt;  
-즉, 싱글톤 패턴은 '하나'의 인스턴스만 생성하여 사용하고 공유하는 디자인 패턴이다.     &lt;br /&gt;  
-     
-     &lt;br /&gt;  
-     
-static 변수       
-모든 인스턴스에 공통적으로 사용되는 클래스 변수(정적 변수)     
-클래스 이름으로 참조하여 사용하는 static 변수를 위한 클래스 메서드(정적 메서드)      
-인스턴스를 생성하지 않고도 사용 가능하다. 클래스가 메모리에 로드될 때 생성된다. 모든 인스턴스가 공유한다.     
-
-static - 객체의 생성 시점을 제어할 수 없다. &lt;br /&gt;  
-
-
-![ex_screenshot](../../assets/built/images/java/code.png)
-
-
-
-
-
-&lt;h5&gt;GC(Garbage Collection)&lt;/h5&gt;
-프로그래머는 힙을 사용할 수 있는 만큼 자유롭게 사용하고,      
-더 이상 사용되지 않는 오브젝트들은 가비지 컬렉션을 담당하는 프로세스가 자동으로 메모리에서 제거하도록 하는 것이 가비지 컬렉션의 기본 개념이다.
-
-&lt;h5&gt;StringBuffer와 String Builder의 차이&lt;/h5&gt;&lt;br /&gt;
-그럼 두 클래스의 차이점은 무엇일까요? 바로 동기화 여부입니다.   &lt;br /&gt;
-
-- StringBuffer는 각 메서드별로 Synchronized Keyword가 존재하여, 멀티스레드 환경에서도 동기화를 지원.&lt;br /&gt;
-- 반면, StringBuilder는 동기화를 보장하지 않음.&lt;br /&gt;
-  그렇기때문에 멀티스레드 환경이라면 값 동기화 보장을 위해 StringBuffer를 사용하고,&lt;br /&gt;&lt;br /&gt;
-  
-단일스레드 환경이라면 StringBuilder를 사용하는 것이 좋습니다.    &lt;br /&gt;
-단일 스레드환경에서 StringBuffer를 사용한다고 문제가 되는 것은 아니지만,    &lt;br /&gt;
-동기화 관련 처리로 인해 StringBuilder에 비해 성능이 좋지 않습니다.    &lt;br /&gt;
-
-&lt;h5&gt;객체지향프로그래밍&lt;/h5&gt;    
-애플리케이션을 구성하는 요소들을 객체로 바라보고,          
-객체들을 유기적으로 연결하여 프로그래밍 하는 것   
-
-&lt;h5&gt; 쿠키와 세션 &lt;/h5&gt;
-쿠키와 세션의 배경  &lt;br /&gt;   
-HTTP(Hypertext Transfer Protocol)는 인터넷상에서 데이터를 주고 받기 위해 서버/클라이언트 모델을 따르는 통신규약을 말합니다.&lt;br /&gt;   
-이 HTTP 프로토콜에는 비연결성(Connectionless)과 비상태성(Stateless)이라는 특징이 있습니다.&lt;br /&gt;      
-    
-이는 서버의 자원을 절약하기 위해 모든 사용자의 요청마다 연결과 해제의 과정을 거치기 때문에 연결 상태가 유지되지 않고, &lt;br /&gt;         
-연결 해제 후에 상태 정보가 저장되지 않는다는 것입니다. &lt;br /&gt;         
-이를 보완하기 위해 나온 것이 쿠키와 세션 인데&lt;br /&gt;
-&lt;br /&gt;     
-쿠키는 웹 사이트에 접속할 때 생성되는 정보를 담은 임시 파일 &lt;br /&gt;         
-쿠키는 서버가 사용자의 웹 브라우저에 저장하는 데이터를 말합니다.  &lt;br /&gt;               
-쿠키의 데이터 형태는 Key 와 Value로 구성되고 String 형태로 이루어져 있고   &lt;br /&gt;       
-브라우저에 저장되어 서버에 요청을 보낼때마다 쿠키가 함께 전송되어 서버가 사용자를 식별할 수 있게 합니다.  &lt;br /&gt;
-&lt;br /&gt;     
-세션은 서버쪽에서 제공하는 객체이며 서버에서 저장하는 데이터입니다. &lt;br /&gt;       
-서버로 첫 요청이 들어왔을 때 세션 객체를 하나 만들고 그 안에 sessionId라는 이름의 브라우저 마다 다른 값을 담습니다. 예로(sessionId=1)&lt;br /&gt;
-&lt;br /&gt;     
-요청에 응답을 할 때 쿠키에 sessionId 값을 담아 보내줍니다.&lt;br /&gt;     
-이로인해 요청마다 같이 오는 쿠키값을 확인 함으로써 브라우저를 식별할 수 있게 되는것이죠.  &lt;br /&gt;         
-세션객체는 서버에 그대로 있는 상태이구요 그래서 민감한 데이터는 세션에 저장해야합니다.&lt;br /&gt;
-&lt;br /&gt;     
-&lt;정리&gt;   &lt;br /&gt;     
-세션은 서버에서 가지고 있고&lt;br /&gt;     
-쿠키는 브라우저가 가지고 있어서   &lt;br /&gt;     
-쿠키에는 민감하지 않은 데이터를 저장 (장바구니 목록, 아이디 저장 체크 등)&lt;br /&gt;     
-민감한 데이터는 세션에 저장 (사용자 정보 )&lt;br /&gt;
-&lt;br /&gt;     
-&lt;h5&gt; OSI 7계층 정리 &lt;/h5&gt;
-https://velog.io/@dyllis/OSI-7%EA%B3%84%EC%B8%B5-%EC%A0%95%EB%A6%AC
-&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-참고   &lt;br /&gt;
-https://jwkim96.tistory.com/90        
-https://m.blog.naver.com/heartflow89/220954420688      
-https://12bme.tistory.com/42      
-https://www.donga.com/news/Economy/article/all/20170508/84256817/1 (사진)&lt;br /&gt;
-https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html
-https://itmining.tistory.com/20 [IT 마이닝]
-https://engkimbs.tistory.com/746
-https://jins-dev.tistory.com/entry/Spring-PSAPortable-Service-Abstraction의-개념 [Jins' Dev Inside]
-https://goddaehee.tistory.com/156
-https://hyoje420.tistory.com/14
-https://jwkim96.tistory.com/90
-https://devuna.tistory.com/23
-
-To be continue... .
-
-
- 
-
-
-
-
- 
-&lt;/정리&gt;&lt;/간단정리&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html"></summary>
       
 
       

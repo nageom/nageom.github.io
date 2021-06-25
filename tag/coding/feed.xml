@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-25T22:18:10+09:00</updated>
+  <updated>2021-06-25T23:01:38+09:00</updated>
   <id>https://nageom.github.io/tag/coding/feed.xml</id>
 
   
@@ -32,21 +32,24 @@
 
   
     <entry>
-      <title type="html">해시 위장문제 (1)</title>
-      <link href="https://nageom.github.io/coding-test-hash(1)" rel="alternate" type="text/html" title="&lt;프로그래머스&gt; 해시 위장문제 (1)" />
+      <title type="html">해시 Level 2 위장문제 (1)</title>
+      <link href="https://nageom.github.io/coding-hash(1)" rel="alternate" type="text/html" title="&lt;프로그래머스&gt; 해시 Level 2 위장문제  (1)" />
       <published>2021-06-25T09:14:00+09:00</published>
       <updated>2021-06-25T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/coding%20test-hash(1)</id>
-      <content type="html" xml:base="https://nageom.github.io/coding-test-hash(1)">&lt;hr /&gt;
+      <id>https://nageom.github.io/coding-hash(1)</id>
+      <content type="html" xml:base="https://nageom.github.io/coding-hash(1)">&lt;hr /&gt;
 &lt;h6&gt; 프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제&lt;/h6&gt;
 
 &lt;p&gt;경우의 수를 구하는 문제인데 &lt;br /&gt;
 나는 경우의 수를 구하는게 너무 약해서 도와줘요 구글! 을 했다 &lt;br /&gt;
 옷 경우의 수 구하기..  &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;상의 = 파란티, 빨강티 &lt;br /&gt;
-하의 = 바지, 치마, 레깅스  &lt;br /&gt;
-의 경우에 상의 두 장을 겹쳐입지 않으며, 뭐라도 최소 한장 걸치는 것이 목정인 경우들  &lt;br /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;상의 = 파란티, 빨강티 &lt;br /&gt;
+하의 = 바지, 치마, 레깅스  &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;같은 타입은 겹쳐입지 않으며, 뭐라도 최소 한장 걸치는 것이 목적인 경우들을 구해봤다  &lt;br /&gt;
 파란티 + 바지 &lt;br /&gt;
                  + 치마 &lt;br /&gt;
                  + 레깅스 &lt;br /&gt;
@@ -121,6 +124,142 @@
 
       
         <summary type="html">프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">스택/큐 Level 2 기능개발 (1)</title>
+      <link href="https://nageom.github.io/coding-stack&queue(1)" rel="alternate" type="text/html" title="&lt;프로그래머스&gt; 스택/큐 Level 2 기능개발 (1)" />
+      <published>2021-06-25T09:14:00+09:00</published>
+      <updated>2021-06-25T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/coding-stack&amp;queue(1)</id>
+      <content type="html" xml:base="https://nageom.github.io/coding-stack&amp;queue(1)">&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
+&lt;p&gt;큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다.&lt;/p&gt;
+
+&lt;p&gt;나는 코드를 굉장히 직관적으로 짰다. &lt;br /&gt;
+que에 progresses를 담고&lt;br /&gt;
+que.peek()를 이용해 값을 하나씩 꺼내어 &lt;br /&gt;
+que.peek() + day x speed 이 100을 넘기는지,&lt;br /&gt;
+넘을때마다 변수 k 에 +1 해주어 반환할 k를 변경시켜주는식 &lt;br /&gt;
+and 중간중간 맞는 조건문을 넣어주었다 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[코딩에 잠깐 난관이 있었다면]&lt;/strong&gt;&lt;br /&gt;
+이 문제는 날짜에 따라 &lt;strong&gt;100을 넘은 기능&lt;/strong&gt;들이 연속으로 있다면 k를 계속 올려주면 그만이지만 &lt;br /&gt;
+연속적일지 아닐지는 100이 넘었다는 조건문 안에서 알 수 없기 때문에 que2.offer(k)를 다른 곳에 넣을 수 밖에 없었다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;반대의 &lt;strong&gt;100을 넘지 않는다는 조건&lt;/strong&gt;에서
+day를 올려주거나 k=0 으로 맞춰주는데 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이 조건에 대해 &lt;br /&gt;
+바로 전에 100을 넘다가 온 경우에만 k값을 저장해주는 설계를 했기 때문에 
+40에서 41로 온것인지를 어떻게 구분해줄것인가를 한참 생각했다. &lt;br /&gt;
+쉬웠지만 너무 어렵게 생각한것 같다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;boolean check=false를 두고 &lt;br /&gt;
+&lt;strong&gt;100이 넘은 경우&lt;/strong&gt;에는 check=true, &lt;br /&gt;
+&lt;strong&gt;넘기지 못한 경우&lt;/strong&gt;에는 check=true의 조건문을 주고
+해당 될때만 k값을 반환할 que2.offer(k)해주고 k=0으로 다시 시작해준다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;코드를 살펴보자&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;progresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;speeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+		 
+		  &lt;span class=&quot;c1&quot;&gt;// progresses&lt;/span&gt;
+	      &lt;span class=&quot;nx&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+	      &lt;span class=&quot;c1&quot;&gt;// return 값이 들어갈 que2 &lt;/span&gt;
+	      &lt;span class=&quot;nx&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+
+	      
+	      &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	      &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+	      &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//k는 배포 횟수 &lt;/span&gt;
+	      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;progresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	         &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;progresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	      &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	      &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	      &lt;span class=&quot;nx&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 100이 안됐다. &lt;/span&gt;
+	       
+	      &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;progresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	                                                &lt;span class=&quot;c1&quot;&gt;//            1일 ,  2일     7일&lt;/span&gt;
+	         &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;peek&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;speeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// total = 93+1*1, 93+1*2  93+1*7 // 30 + 30*7 //55 + 5*7&lt;/span&gt;
+	          
+	         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//total 93  //94 //95 //100 //240  //&lt;/span&gt;
+	        	 &lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//k=1; k=2; // 배포 값 &lt;/span&gt;
+	        	 &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//i=1 i=2;  // 다음 숫자로 넘김 &lt;/span&gt;
+	        	 &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//[30,55] //[55]&lt;/span&gt;
+	        	 &lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+	        	 
+	        	 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;speeds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	        		 &lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	 
+	        		 &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	        	 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	            
+	         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// total=90&lt;/span&gt;
+	             
+	            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//배포한 후 더이상 배포할 애가 없을때 &lt;/span&gt;
+	               &lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// [2][0][0] &lt;/span&gt;
+	               &lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	               &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	            &lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	            &lt;span class=&quot;nx&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// j =1 j =2; 7 &lt;/span&gt;
+	         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	     
+	      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	  
+	      &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+	    
+	       
+	      &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	    
+	      &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	    	  &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	    	  &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	       
+	      
+	      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+	   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+커버사진 출처 프로그래머스&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="coding" />
+      
+
+      
+        <summary type="html">프로그래머스 &amp;gt; 스택/큐 큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다.</summary>
       
 
       

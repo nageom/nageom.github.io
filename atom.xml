@@ -8,7 +8,24 @@
     
       
       <item>
-        <title>&lt;프로그래머스&gt; 해시 위장문제 (1)</title>
+        <title>&lt;프로그래머스&gt; 스택/큐 Level 2 기능개발 (1)</title>
+        
+          <description>&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
+&lt;p&gt;큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 25 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/coding-stack&queue(1)</link>
+        <guid isPermaLink="true">https://nageom.github.io/coding-stack&queue(1)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>&lt;프로그래머스&gt; 해시 Level 2 위장문제  (1)</title>
         
           <description>&lt;hr /&gt;
 &lt;h6&gt; 프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제&lt;/h6&gt;
@@ -17,8 +34,8 @@
         
         <pubDate>Fri, 25 Jun 2021 09:14:00 +0900</pubDate>
         <link>
-        https://nageom.github.io/coding-test-hash(1)</link>
-        <guid isPermaLink="true">https://nageom.github.io/coding-test-hash(1)</guid>
+        https://nageom.github.io/coding-hash(1)</link>
+        <guid isPermaLink="true">https://nageom.github.io/coding-hash(1)</guid>
       </item>
       
     

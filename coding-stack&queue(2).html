@@ -11,7 +11,7 @@
 
 
 
-    <title><정렬>버블정렬(Bubble Sort)</title>
+    <title><프로그래머스> 스택/큐(2)  Level 2 프린터</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -47,30 +47,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="티끌 공부방" />
     <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
-    <link rel="canonical" href="https://nageom.github.io/algorithm-bubble-sort" />
+    <link rel="canonical" href="https://nageom.github.io/coding-stack&queue(2)" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<정렬>버블정렬(Bubble Sort)" />
-    <meta property="og:description" content="버블정렬 [옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 방법] 직관적이고 쉽게 구현할 수 있지만 정렬 알고리즘 중에서 가장 비효율적인 알고리즘이다! 1 10 5 8 7 6 4 3 2 9   &lt;- 두개를 한 묶음으로 비교 1 10 5 8 7 6 4 3 2 9 1 10" />
-    <meta property="og:url" content="https://nageom.github.io/algorithm-bubble-sort" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
+    <meta property="og:title" content="<프로그래머스> 스택/큐(2)  Level 2 프린터" />
+    <meta property="og:description" content="프로그래머스 &gt; 스택/큐 중요도에 관한 배열이 주어지고 프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 QUEUE를 이용한 ‘프린터’문제이다. [무슨 생각으로 두시간을 보냈는가] 일단 두시간 넘게 못풀었다. 처음 해결방법으로는 location의 인덱스를 같이 저장할 방법으로 큐 안에 map을 넣을 수는 없을까는데 당연히 안됐고 두번째로 큐의 정렬에 따라서" />
+    <meta property="og:url" content="https://nageom.github.io/coding-stack&queue(2)" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/coding/cover_coding.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-06-22T09:14:00+09:00" />
-    <meta property="article:modified_time" content="2021-06-22T09:14:00+09:00" />
-    <meta property="article:tag" content="Algorithm" />
+    <meta property="article:published_time" content="2021-06-26T09:14:00+09:00" />
+    <meta property="article:modified_time" content="2021-06-26T09:14:00+09:00" />
+    <meta property="article:tag" content="Coding" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<정렬>버블정렬(Bubble Sort)" />
-    <meta name="twitter:description" content="버블정렬 [옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 방법] 직관적이고 쉽게 구현할 수 있지만 정렬 알고리즘 중에서 가장 비효율적인 알고리즘이다! 1 10 5 8 7 6 4 3 2 9   &lt;- 두개를 한 묶음으로 비교 1 10 5 8 7 6 4 3 2 9 1 10" />
+    <meta name="twitter:title" content="<프로그래머스> 스택/큐(2)  Level 2 프린터" />
+    <meta name="twitter:description" content="프로그래머스 &gt; 스택/큐 중요도에 관한 배열이 주어지고 프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 QUEUE를 이용한 ‘프린터’문제이다. [무슨 생각으로 두시간을 보냈는가] 일단 두시간 넘게 못풀었다. 처음 해결방법으로는 location의 인덱스를 같이 저장할 방법으로 큐 안에 map을 넣을 수는 없을까는데 당연히 안됐고 두번째로 큐의 정렬에 따라서" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/coding/cover_coding.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Algorithm" />
+    <meta name="twitter:data2" content="Coding" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -85,18 +85,18 @@
         "name": "nageom's blog",
         "logo": "https://nageom.github.io/"
     },
-    "url": "https://nageom.github.io/algorithm-bubble-sort",
+    "url": "https://nageom.github.io/coding-stack&queue(2)",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/algorithm/cover.png",
+        "url": "https://nageom.github.io/assets/built/images/coding/cover_coding.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://nageom.github.io/algorithm-bubble-sort"
+        "@id": "https://nageom.github.io/coding-stack&queue(2)"
     },
-    "description": "버블정렬 [옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 방법] 직관적이고 쉽게 구현할 수 있지만 정렬 알고리즘 중에서 가장 비효율적인 알고리즘이다! 1 10 5 8 7 6 4 3 2 9   &lt;- 두개를 한 묶음으로 비교 1 10 5 8 7 6 4 3 2 9 1 10"
+    "description": "프로그래머스 &gt; 스택/큐 중요도에 관한 배열이 주어지고 프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 QUEUE를 이용한 ‘프린터’문제이다. [무슨 생각으로 두시간을 보냈는가] 일단 두시간 넘게 못풀었다. 처음 해결방법으로는 location의 인덱스를 같이 저장할 방법으로 큐 안에 map을 넣을 수는 없을까는데 당연히 안됐고 두번째로 큐의 정렬에 따라서"
 }
     </script>
 
@@ -109,7 +109,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="<정렬>버블정렬(Bubble Sort)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="<프로그래머스> 스택/큐(2)  Level 2 프린터" href="/feed.xml" />
 
 
 </head>
@@ -177,88 +177,112 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-algorithm post ">
+        <article class="post-full  tag-coding post ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="22 June 2021">22 June 2021</time>
+                    <time class="post-full-meta-date" datetime="26 June 2021">26 June 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/algorithm/'>ALGORITHM</a>
+                               <a href='/tag/coding/'>CODING</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title"><정렬>버블정렬(Bubble Sort)</h1>
+                <h1 class="post-full-title"><프로그래머스> 스택/큐(2)  Level 2 프린터</h1>
             </header>
 
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/algorithm/cover.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
                     <hr />
-<blockquote>
-  <h4>버블정렬 </h4>
-</blockquote>
+<h6> 프로그래머스 &gt; 스택/큐 </h6>
+<p>중요도에 관한 배열이 주어지고 
+프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 
+지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 <u>QUEUE</u>를 이용한 ‘프린터’문제이다.</p>
 
-<h6>[옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 방법]</h6>
-<p>직관적이고 쉽게 구현할 수 있지만 정렬 알고리즘 중에서 가장 비효율적인 알고리즘이다!<br />
-<u>1 10</u> 5 8 7 6 4 3 2 9    &lt;- 두개를 한 묶음으로 비교<br />
-1 <u>10 5 </u>8 7 6 4 3 2 9 <br />
-1 10 <u>5 8 </u> 7 6 4 3 2 9 <br /><br />
-(1회전)<br />
-1 5 8 7 6 4 3 2 9 10 &lt;- 가장 큰 값이 맨 뒤로 간다<br />
-                              그래서 1회전 반복때마다 반복 횟수를 줄여준다.<br />
-(2회전)<br />
-1 5 7 6 4 3 2 8 9 10  <br /><br />
-결과<br />
-1 2 3 4 5 6 7 8 9 10<br /><br /></p>
+<h6>[무슨 생각으로 두시간을 보냈는가]</h6>
+<p>일단 두시간 넘게 못풀었다. 
+처음 해결방법으로는 location의 인덱스를 같이 저장할 방법으로
+큐 안에 map을 넣을 수는 없을까는데 당연히 안됐고
+두번째로 큐의 정렬에 따라서 배열을 재정렬 시켜주는 방법이였는데 ㅎ 그것도 못했다.</p>
 
-<h6> 구현해보자 </h6>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">#</span><span class="nx">include</span> <span class="o">&lt;</span><span class="nx">stdio</span><span class="p">.</span><span class="nx">h</span><span class="o">&gt;</span>
-<span class="nx">int</span> <span class="nx">main</span><span class="p">(</span><span class="k">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">int</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">;</span>
-    <span class="nx">int</span> <span class="nx">arrSize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="nx">int</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">arrSize</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">};</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">arrSize</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<p>도저히 안되서 풀이를 보고나니 허탈해졌다. 맵 대신 객체를 넣으면 되는것을.. 후..
+문제풀이 경험이 많이 부족하다는 것을 한번 더 깨달았다.</p>
 
-        <span class="k">for</span> <span class="p">(</span><span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">arrSize</span><span class="o">-</span><span class="nx">i</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="o">&gt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
-                <span class="nx">tmp</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
-                <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
-                <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span> <span class="nx">tmp</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">arrSize</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">printf</span><span class="p">(</span><span class="dl">"</span><span class="s2">%d </span><span class="dl">"</span><span class="p">,</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<p>거두절미하고 코드를 살펴보자</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
+<span class="kd">class</span> <span class="nx">Solution</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">int</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">int</span><span class="p">[]</span> <span class="nx">priorities</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
+    
+        <span class="c1">//queue를 사용하는데, que안에 기본자료형이 아닌 객체를 생성해서 담아줌으로써 location위치도 같이 움직이도록한다. </span>
+		<span class="nx">int</span> <span class="nx">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	        <span class="kd">class</span> <span class="nx">Prior</span> <span class="p">{</span>
+	            <span class="nx">int</span> <span class="nx">index</span><span class="p">;</span>
+	            <span class="nx">int</span> <span class="nx">value</span><span class="p">;</span> 
+	            
+	            <span class="nx">Prior</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
+	                <span class="nx">index</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+	                <span class="nx">value</span> <span class="o">=</span> <span class="nx">v</span><span class="p">;</span>
+	                
+	            <span class="p">}</span>
+	        <span class="p">}</span>
+	        
+	        <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">Prior</span><span class="o">&gt;</span> <span class="nx">que</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;</span><span class="nx">Prior</span><span class="o">&gt;</span> <span class="p">();</span>
+      
+	        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">priorities</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	        	<span class="nx">que</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="k">new</span> <span class="nx">Prior</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">priorities</span><span class="p">[</span><span class="nx">i</span><span class="p">]));</span>	
+	        <span class="p">}</span>
+	        
+	        
+	       <span class="c1">// int count =0; </span>
+	        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">que</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+	            <span class="nx">boolean</span> <span class="nx">check</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+	            
+	            <span class="nx">int</span> <span class="nx">first</span> <span class="o">=</span> <span class="nx">que</span><span class="p">.</span><span class="nx">peek</span><span class="p">().</span><span class="nx">value</span><span class="p">;</span>
+	            
+	            <span class="k">for</span> <span class="p">(</span><span class="nx">Prior</span> <span class="nx">tmp</span> <span class="p">:</span> <span class="nx">que</span><span class="p">)</span> <span class="p">{</span>                
+	                <span class="k">if</span> <span class="p">(</span><span class="nx">first</span> <span class="o">&lt;</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">value</span> <span class="p">)</span> <span class="p">{</span>
+	                    <span class="nx">check</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	                    <span class="k">break</span><span class="p">;</span>
+	                <span class="p">}</span>
+	                
+	                
+	            <span class="p">}</span>
+	            
+	            <span class="k">if</span><span class="p">(</span><span class="nx">check</span><span class="p">)</span> <span class="p">{</span>
+	            	<span class="nx">que</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">que</span><span class="p">.</span><span class="nx">poll</span><span class="p">());</span>
+	                              
+	            <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+	                <span class="k">if</span> <span class="p">(</span><span class="nx">que</span><span class="p">.</span><span class="nx">poll</span><span class="p">().</span><span class="nx">index</span> <span class="o">==</span> <span class="nx">location</span> <span class="p">)</span> <span class="p">{</span>
+	                	<span class="c1">//6 - 4 </span>
+	                    <span class="nx">answer</span> <span class="o">=</span> <span class="nx">priorities</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">que</span><span class="p">.</span><span class="nx">size</span><span class="p">();</span>              
+	                <span class="p">}</span>
+	                
+	            <span class="p">}</span>
+
+	        <span class="p">}</span><span class="c1">//while 끝</span>
+			<span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+	   
+	    <span class="p">}</span>
 <span class="p">}</span>
+
+
+
 </code></pre></div></div>
 
-<h6>[버블 정렬의 시간 복잡도 O(N^2) ]</h6>
-<p><u>1 10</u> 5 8 7 6 4 3 2 9<br />
-=&gt; 10 + 9 + … + 1<br />
-=&gt; 10 + 9 + … + 1<br />
-=&gt; 등차수열<br />
-=&gt; N* (N+1)/2<br />
-=&gt; O(N^2)<br /></p>
-<h6>선택정렬과 동일한 시간 복잡도이지만 왜 가장 비효율적인 정렬이라 하지?</h6>
-<p><br />
-선택정렬은 가장 작은 데이터를 골라 마지막에 자리 이동을 한다. <br />즉, 1회전에 자리이동 1회<br /> 
-버블정렬은 매번 교체를 해줘야하기 때문에 더 오랜 시간이 걸린다. <br /> 즉, 1회전에 자리이동 여러번  <br />
-그래서 정렬중 가장 비효율적 정렬이라 함! <br /><br /></p>
-
-<p>References <br />
-https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;index=3<br /></p>
-
+<p><br /><br />
+References
+https://velog.io/@qweadzs/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%94%84%EB%A6%B0%ED%84%B0-java
+<br />커버사진 출처 프로그래머스</p>
 
                 </div>
             </section>
@@ -325,9 +349,9 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://nageom.github.io/algorithm-bubble-sort';
-                            var this_page_identifier = '/algorithm-bubble sort';
-                            var this_page_title = '<정렬>버블정렬(Bubble Sort)';
+                            var this_page_url = 'https://nageom.github.io/coding-stack&queue(2)';
+                            var this_page_identifier = '/coding-stack&queue(2)';
+                            var this_page_title = '<프로그래머스> 스택/큐(2)  Level 2 프린터';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -361,7 +385,7 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; nageom's blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/algorithm/">Algorithm</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/coding/">Coding</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -371,17 +395,6 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/algorithm-quick-sort"><정렬> 퀵 정렬 (Quick Sort)</a></li>
-                                        
                                     
                                   
                                 
@@ -389,7 +402,7 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
                                     
                                         
                                         
-                                            <li><a href="/algorithm-insertion-sort"><정렬> 삽입 정렬(Insertion Sort)</a></li>
+                                            <li><a href="/coding-stack&queue(1)"><프로그래머스> 스택/큐(1)  Level 2 기능개발</a></li>
                                         
                                     
                                   
@@ -398,18 +411,7 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
                                     
                                         
                                         
-                                            <li><a href="/algorithm-select-sort"><정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/coding-hash(1)"><프로그래머스> 해시 Level 2 위장문제  (1)</a></li>
                                         
                                     
                                   
@@ -425,17 +427,17 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -457,9 +459,9 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/algorithm/">
+                            <a href="/tag/coding/">
                                 
-                                    See all 6 posts  →
+                                    See all 2 posts  →
                                 
                             </a>
                         </footer>
@@ -469,60 +471,6 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/algorithm-select-sort">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/algorithm/cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/algorithm-select-sort">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Algorithm</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title"><정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>
-
-  알고리즘의 시작, 정렬 
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/RubyIcon.jpg" alt="nageom" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/nageom/">nageom</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -530,29 +478,28 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/algorithm-start">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/algorithm/cover.png)"></div>
+            <a class="post-card-image-link" href="/coding-stack&queue(1)">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/algorithm-start">
+            <a class="post-card-content-link" href="/coding-stack&queue(1)">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Algorithm</span>
+                                <span class="post-card-tags">Coding</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">알고리즘의 시작</h2>
+                    <h2 class="post-card-title"><프로그래머스> 스택/큐(1)  Level 2 기능개발</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
                         <p>
-
-  본격적으로 알고리즘 공부를 시작해보려한다. 좋은 강의영상을 찾아서 기분이 조크등요!
-
+ 프로그래머스 &gt; 스택/큐 
+큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다.
 
 </p>
                     
@@ -594,18 +541,18 @@ https://www.youtube.com/watch?v=EZN0Irp2aPs&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4d
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title"><정렬>버블정렬(Bubble Sort)</div>
+    <div class="floating-header-title"><프로그래머스> 스택/큐(2)  Level 2 프린터</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%EC%A0%95%EB%A0%AC%3E%EB%B2%84%EB%B8%94%EC%A0%95%EB%A0%AC%28Bubble+Sort%29&amp;url=https://nageom.github.io/algorithm-bubble-sort"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4%3E+%EC%8A%A4%ED%83%9D%2F%ED%81%90%282%29++Level+2+%ED%94%84%EB%A6%B0%ED%84%B0&amp;url=https://nageom.github.io/coding-stack&queue(2)"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/algorithm-bubble-sort"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/coding-stack&queue(2)"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

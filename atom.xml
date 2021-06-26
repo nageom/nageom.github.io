@@ -2,13 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>IT 공부방</description>
+    <description>티끌 공부방</description>
     <link>
     https://nageom.github.io</link>
     
       
       <item>
-        <title>&lt;프로그래머스&gt; 스택/큐 Level 2 기능개발 (1)</title>
+        <title>&lt;프로그래머스&gt; 스택/큐(2)  Level 2 프린터</title>
+        
+          <description>&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
+&lt;p&gt;중요도에 관한 배열이 주어지고 
+프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 
+지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 &lt;u&gt;QUEUE&lt;/u&gt;를 이용한 ‘프린터’문제이다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 26 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/coding-stack&queue(2)</link>
+        <guid isPermaLink="true">https://nageom.github.io/coding-stack&queue(2)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>&lt;프로그래머스&gt; 스택/큐(1)  Level 2 기능개발</title>
         
           <description>&lt;hr /&gt;
 &lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
@@ -44,6 +63,11 @@
         <title>&lt;정렬&gt; 퀵 정렬 (Quick Sort)</title>
         
           <description>&lt;hr /&gt;
+&lt;h6&gt;퀵 정렬 알고리즘&lt;/h6&gt;
+&lt;p&gt;시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 정말 오래걸린다는 말이다. &lt;br /&gt;
+그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. &lt;br /&gt;
+‘분할 정복’ 알고리즘으로 평균 속도가 O(N* log2N) 이다. &lt;br /&gt;
+이름 그대로 정말 빠른 정렬 &lt;br /&gt;&lt;/p&gt;
 
 </description>
         

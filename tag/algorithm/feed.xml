@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-25T23:01:38+09:00</updated>
+  <updated>2021-06-26T21:06:00+09:00</updated>
   <id>https://nageom.github.io/tag/algorithm/feed.xml</id>
 
   
@@ -16,7 +16,7 @@
   
 
   
-    <subtitle>IT 공부방</subtitle>
+    <subtitle>티끌 공부방</subtitle>
   
 
   
@@ -38,7 +38,7 @@
       <updated>2021-06-24T09:14:00+09:00</updated>
       <id>https://nageom.github.io/algorithm-quick%20sort</id>
       <content type="html" xml:base="https://nageom.github.io/algorithm-quick-sort">&lt;hr /&gt;
-
+&lt;h6&gt;퀵 정렬 알고리즘&lt;/h6&gt;
 &lt;p&gt;시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 정말 오래걸린다는 말이다. &lt;br /&gt;
 그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. &lt;br /&gt;
 ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* log2N) 이다. &lt;br /&gt;
@@ -220,7 +220,7 @@ https://www.youtube.com/watch?v=gBcUO_6JXIA&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">퀵 정렬 알고리즘 시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 정말 오래걸린다는 말이다. 그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* log2N) 이다. 이름 그대로 정말 빠른 정렬</summary>
       
 
       

@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-25T23:01:38+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>IT 공부방</subtitle><entry><title type="html">해시 Level 2 위장문제 (1)</title><link href="https://nageom.github.io/coding-hash(1)" rel="alternate" type="text/html" title="해시 Level 2 위장문제 (1)" /><published>2021-06-25T09:14:00+09:00</published><updated>2021-06-25T09:14:00+09:00</updated><id>https://nageom.github.io/coding-hash(1)</id><content type="html" xml:base="https://nageom.github.io/coding-hash(1)">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-06-26T21:06:00+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌 공부방</subtitle><entry><title type="html">스택/큐(2) Level 2 프린터</title><link href="https://nageom.github.io/coding-stack&queue(2)" rel="alternate" type="text/html" title="스택/큐(2) Level 2 프린터" /><published>2021-06-26T09:14:00+09:00</published><updated>2021-06-26T09:14:00+09:00</updated><id>https://nageom.github.io/coding-stack&amp;queue(2)</id><content type="html" xml:base="https://nageom.github.io/coding-stack&amp;queue(2)">&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
+&lt;p&gt;중요도에 관한 배열이 주어지고 
+프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 
+지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 &lt;u&gt;QUEUE&lt;/u&gt;를 이용한 ‘프린터’문제이다.&lt;/p&gt;
+
+&lt;h6&gt;[무슨 생각으로 두시간을 보냈는가]&lt;/h6&gt;
+&lt;p&gt;일단 두시간 넘게 못풀었다. 
+처음 해결방법으로는 location의 인덱스를 같이 저장할 방법으로
+큐 안에 map을 넣을 수는 없을까는데 당연히 안됐고
+두번째로 큐의 정렬에 따라서 배열을 재정렬 시켜주는 방법이였는데 ㅎ 그것도 못했다.&lt;/p&gt;
+
+&lt;p&gt;도저히 안되서 풀이를 보고나니 허탈해졌다. 맵 대신 객체를 넣으면 되는것을.. 후..
+문제풀이 경험이 많이 부족하다는 것을 한번 더 깨달았다.&lt;/p&gt;
+
+&lt;p&gt;거두절미하고 코드를 살펴보자&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;priorities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+        &lt;span class=&quot;c1&quot;&gt;//queue를 사용하는데, que안에 기본자료형이 아닌 객체를 생성해서 담아줌으로써 location위치도 같이 움직이도록한다. &lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	        &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Prior&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	            &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	            &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+	            
+	            &lt;span class=&quot;nx&quot;&gt;Prior&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	                &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	                &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	                
+	            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	        
+	        &lt;span class=&quot;nx&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Prior&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Prior&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      
+	        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;priorities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	        	&lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Prior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;priorities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]));&lt;/span&gt;	
+	        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	        
+	        
+	       &lt;span class=&quot;c1&quot;&gt;// int count =0; &lt;/span&gt;
+	        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	            &lt;span class=&quot;nx&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	            
+	            &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;peek&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	            
+	            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Prior&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                
+	                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	                    &lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	                
+	                
+	            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	            
+	            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	            	&lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+	                              
+	            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	                	&lt;span class=&quot;c1&quot;&gt;//6 - 4 &lt;/span&gt;
+	                    &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;priorities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;              
+	                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	                
+	            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//while 끝&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	   
+	    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+References
+https://velog.io/@qweadzs/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%94%84%EB%A6%B0%ED%84%B0-java
+&lt;br /&gt;커버사진 출처 프로그래머스&lt;/p&gt;</content><author><name>nageom</name></author><category term="coding" /><summary type="html">프로그래머스 &amp;gt; 스택/큐 중요도에 관한 배열이 주어지고 프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 QUEUE를 이용한 ‘프린터’문제이다.</summary></entry><entry><title type="html">해시 Level 2 위장문제 (1)</title><link href="https://nageom.github.io/coding-hash(1)" rel="alternate" type="text/html" title="해시 Level 2 위장문제 (1)" /><published>2021-06-25T09:14:00+09:00</published><updated>2021-06-25T09:14:00+09:00</updated><id>https://nageom.github.io/coding-hash(1)</id><content type="html" xml:base="https://nageom.github.io/coding-hash(1)">&lt;hr /&gt;
 &lt;h6&gt; 프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제&lt;/h6&gt;
 
 &lt;p&gt;경우의 수를 구하는 문제인데 &lt;br /&gt;
@@ -63,7 +143,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-커버사진 출처 프로그래머스&lt;/p&gt;</content><author><name>nageom</name></author><category term="coding" /><summary type="html">프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제</summary></entry><entry><title type="html">스택/큐 Level 2 기능개발 (1)</title><link href="https://nageom.github.io/coding-stack&queue(1)" rel="alternate" type="text/html" title="스택/큐 Level 2 기능개발 (1)" /><published>2021-06-25T09:14:00+09:00</published><updated>2021-06-25T09:14:00+09:00</updated><id>https://nageom.github.io/coding-stack&amp;queue(1)</id><content type="html" xml:base="https://nageom.github.io/coding-stack&amp;queue(1)">&lt;hr /&gt;
+커버사진 출처 프로그래머스&lt;/p&gt;</content><author><name>nageom</name></author><category term="coding" /><summary type="html">프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제</summary></entry><entry><title type="html">스택/큐(1) Level 2 기능개발</title><link href="https://nageom.github.io/coding-stack&queue(1)" rel="alternate" type="text/html" title="스택/큐(1) Level 2 기능개발" /><published>2021-06-25T09:14:00+09:00</published><updated>2021-06-25T09:14:00+09:00</updated><id>https://nageom.github.io/coding-stack&amp;queue(1)</id><content type="html" xml:base="https://nageom.github.io/coding-stack&amp;queue(1)">&lt;hr /&gt;
 &lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
 &lt;p&gt;큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다.&lt;/p&gt;
 
@@ -166,7 +246,7 @@ day를 올려주거나 k=0 으로 맞춰주는데 &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 커버사진 출처 프로그래머스&lt;/p&gt;</content><author><name>nageom</name></author><category term="coding" /><summary type="html">프로그래머스 &amp;gt; 스택/큐 큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다.</summary></entry><entry><title type="html">퀵 정렬 (Quick Sort)</title><link href="https://nageom.github.io/algorithm-quick-sort" rel="alternate" type="text/html" title="퀵 정렬 (Quick Sort)" /><published>2021-06-24T09:14:00+09:00</published><updated>2021-06-24T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-quick%20sort</id><content type="html" xml:base="https://nageom.github.io/algorithm-quick-sort">&lt;hr /&gt;
-
+&lt;h6&gt;퀵 정렬 알고리즘&lt;/h6&gt;
 &lt;p&gt;시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 정말 오래걸린다는 말이다. &lt;br /&gt;
 그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. &lt;br /&gt;
 ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* log2N) 이다. &lt;br /&gt;
@@ -327,7 +407,7 @@ N^2 = 10 * 10 = 100&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;그래서 문제의 특성에 따라 정렬을 잘 이용 할 줄 알아야한다~&lt;/p&gt;
 
 &lt;p&gt;References &lt;br /&gt;
-https://www.youtube.com/watch?v=gBcUO_6JXIA&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;amp;index=6&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html"></summary></entry><entry><title type="html">삽입 정렬(Insertion Sort)</title><link href="https://nageom.github.io/algorithm-insertion-sort" rel="alternate" type="text/html" title="삽입 정렬(Insertion Sort)" /><published>2021-06-22T09:14:00+09:00</published><updated>2021-06-22T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-insertion%20sort</id><content type="html" xml:base="https://nageom.github.io/algorithm-insertion-sort">&lt;hr /&gt;
+https://www.youtube.com/watch?v=gBcUO_6JXIA&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;amp;index=6&lt;/p&gt;</content><author><name>nageom</name></author><category term="algorithm" /><summary type="html">퀵 정렬 알고리즘 시간 복잡도 O(N^2)를 갖는 알고리즘은 10만 개가 넘어가면 일반적인 상황에서 사용하기가 매우 어렵다. 정말 오래걸린다는 말이다. 그리하여 나온 빠른 정렬 알고리즘이 퀵 정렬 알고리즘이다. ‘분할 정복’ 알고리즘으로 평균 속도가 O(N* log2N) 이다. 이름 그대로 정말 빠른 정렬</summary></entry><entry><title type="html">삽입 정렬(Insertion Sort)</title><link href="https://nageom.github.io/algorithm-insertion-sort" rel="alternate" type="text/html" title="삽입 정렬(Insertion Sort)" /><published>2021-06-22T09:14:00+09:00</published><updated>2021-06-22T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-insertion%20sort</id><content type="html" xml:base="https://nageom.github.io/algorithm-insertion-sort">&lt;hr /&gt;
 &lt;blockquote&gt;
   &lt;h3&gt; 삽입 정렬(Insertion Sort) &lt;/h3&gt;
 &lt;/blockquote&gt;
@@ -705,76 +785,4 @@ final int MAX_VALUE = 100; // OK&lt;br /&gt;
 &lt;br /&gt;
 현재는 JDK1.6부터 상수를 선언과 동시에 초기화 하지 않아도 되며, 사용하기 전에만 초기화하면 되도록 바뀌었다. &lt;br /&gt;
 하지만 상수는 성언과 동시에 초기화하는 습관을 들이는 것이 좋다고 한다. _2021-06-21&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도 조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 1) 멀티 catch블럭</summary></entry><entry><title type="html">추상과 인터페이스</title><link href="https://nageom.github.io/java-abstract-class" rel="alternate" type="text/html" title="추상과 인터페이스" /><published>2021-06-17T09:14:00+09:00</published><updated>2021-06-17T09:14:00+09:00</updated><id>https://nageom.github.io/java-abstract%20class</id><content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;면접질문 공부하는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
-그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전! &lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h6&gt; 추상클래스 &lt;/h6&gt;
-&lt;p&gt;&lt;br /&gt;
-추상클래스는 미완성 설계도에 비유할 수 있습니다.
-좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다.&lt;br /&gt;
-특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는 없습니다.&lt;br /&gt;
-즉, 추상클래스는 상속을 통해 오직 자손클래스에 의해서만 완성될 수 있습니다. 
-두번째로는 추상클래스를 상속받은 클래스가 미완성 메서드를 반드시 재정의 해줘야합니다.&lt;/p&gt;
-
-&lt;h6&gt; 추상메서드(abstract method)&lt;/h6&gt;
-&lt;p&gt;메서드는 선언부와 구현부(몸통)으로 구성되어 있는데&lt;br /&gt;
-추상메서드는 선언부만 작성하고 구현부는 작성하지 않은 채로 남겨둡니다
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h6&gt;사용이유?&lt;/h6&gt;
-&lt;p&gt;&lt;br /&gt;
-여러 객체를 부모클래스로 하나의 list에 모으기 편리함 떄문 &lt;br /&gt;
-재정의를 강조하기 위해&lt;/p&gt;
-
-&lt;p&gt;추상클래스는 키워드 ‘abstract’를 붙이기만 하면 됩니다. &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;추상클래스&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이름&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//상속 받을때는 확장이라는 뜻의 extends 사용&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;자식클래스&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;추상클래스&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/*생략*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/*생략*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h5&gt; 인터페이스 &lt;/h5&gt;
-&lt;p&gt;일종의 추상클래스&lt;br /&gt;
-인터페이스는 추상클래스처럼 추상메서드를 갖지만 추상클래스보다 &lt;br /&gt;
-추상화 정도가 높아서 추상클래스와 달리 몸통을 갖춘 일반 메서드 또는 멤버변수를 구성원으로 가질 수 없다.
-&lt;br /&gt;
-class에서 상속시에 interface를 사용한다.&lt;/p&gt;
-
-&lt;h6&gt;인터페이스 특징 &lt;/h6&gt;
-&lt;p&gt;특징 1. 제약사항 &lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;모든 멤버변수는 public static final 이어야하고, 생략가능&lt;/li&gt;
-  &lt;li&gt;모든 메서드는 public abstract이어야 하며, 생략 가능
-단, static 메서드와 디폴트 메서드는 예외(jdk1.8부터)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;wheel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;door&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;drive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// public abstract void stop();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;특징2. 인터페이스는 인터페이스로부터만 상속 받을 수 있으며, 클래스와는 달리 다중상속, 즉 여러 개의 인터페이스로부터 상속을 받는 것이 가능하다. 
-&lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;omt&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;D&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
-
-&lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;C&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;인터페이스 A에 정의된 멤버가 하나도 없지만 조상 인터페이스로부터 상속받은 두개의 추상메서드,
-move(int x, int y)와 attack(D d)을 멤버로 갖게 된다.&lt;br /&gt;
-특징.3 &lt;br /&gt;
-추상클래스처럼 그 자체로는 인스턴스를 생성할 수 없으며,&lt;br /&gt;
-추상클래스는 확장한다는 의미의 키워드’extends’를 사용하지만 &lt;br /&gt;
-인터페이스는 구현한다는 의미의 키워드 ‘implements’를 사용한다.&lt;br /&gt;&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html"></summary></entry></feed>
+&lt;/ol&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도 조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 1) 멀티 catch블럭</summary></entry></feed>

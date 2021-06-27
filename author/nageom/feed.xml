@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-26T21:06:00+09:00</updated>
+  <updated>2021-06-27T23:29:34+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -30,6 +30,113 @@
   
   
 
+  
+    <entry>
+      <title type="html">스택/큐(2) Level 2 주식가격</title>
+      <link href="https://nageom.github.io/coding-stack&queue(3)" rel="alternate" type="text/html" title="&lt;프로그래머스&gt; 스택/큐(2)  Level 2 주식가격" />
+      <published>2021-06-27T09:14:00+09:00</published>
+      <updated>2021-06-27T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/coding-stack&amp;queue(3)</id>
+      <content type="html" xml:base="https://nageom.github.io/coding-stack&amp;queue(3)">&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
+
+&lt;p&gt;문제 설명&lt;br /&gt;
+초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;제한사항&lt;br /&gt;
+prices의 각 가격은 1 이상 10,000 이하인 자연수입니다.&lt;br /&gt;
+prices의 길이는 2 이상 100,000 이하입니다.&lt;br /&gt;&lt;br /&gt;
+입출력 예&lt;br /&gt;
+prices             	return&lt;br /&gt;
+[1, 2, 3, 2, 3]	[4, 3, 1, 1, 0]&lt;br /&gt;
+입출력 예 설명&lt;br /&gt;
+1초 시점의 ₩1은 끝까지 가격이 떨어지지 않았습니다.&lt;br /&gt;
+2초 시점의 ₩2은 끝까지 가격이 떨어지지 않았습니다.&lt;br /&gt;
+3초 시점의 ₩3은 1초뒤에 가격이 떨어집니다. 따라서 1초간 가격이 떨어지지 않은 것으로 봅니다.&lt;br /&gt;
+4초 시점의 ₩2은 1초간 가격이 떨어지지 않았습니다.&lt;br /&gt;
+5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6&gt; 느낀점 &lt;/h6&gt;
+&lt;p&gt;쉬운 문제였다. 
+큐를 사용했고 친구는 사용하지 않고도 풀 수 있다고 했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h6&gt;[코드를 살펴보자]&lt;/h6&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+        
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+        	
+        	&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        	
+        	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  		
+        		&lt;span class=&quot;c1&quot;&gt;//작거나 같으면 떨어지지않음&lt;/span&gt;
+        		&lt;span class=&quot;c1&quot;&gt;// 3 &amp;lt;= 2 &lt;/span&gt;
+        		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        			&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        			
+        		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        			&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  	
+        	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        	&lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   	
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        
+
+        &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()];&lt;/span&gt;
+       
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        	
+        	&lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;que2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        	
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        
+        
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;커버사진 출처 프로그래머스&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="coding" />
+      
+
+      
+        <summary type="html">프로그래머스 &amp;gt; 스택/큐</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">스택/큐(2) Level 2 프린터</title>
@@ -109,6 +216,7 @@
 	   
 	    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
 
 
 
@@ -1053,105 +1161,6 @@ A~~Z 1~ 100 까지 순서대로 출력되지 않고 번갈아가며 쓰레드가
 
       
         <summary type="html">오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다. 옛 기억을 살려가며 포스팅</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">자바 1.8버전 차이를 알아보자</title>
-      <link href="https://nageom.github.io/java-version" rel="alternate" type="text/html" title="자바 1.8버전 차이를 알아보자" />
-      <published>2021-06-18T09:14:00+09:00</published>
-      <updated>2021-06-18T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/java-version</id>
-      <content type="html" xml:base="https://nageom.github.io/java-version">&lt;hr /&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도
-조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 
-1) 멀티 catch블럭&lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;JDK1.7부터 여러 catch블럭을 ‘|’ 기호를 이용해서, 하나의 catch블럭로 합칠 수 있게 되었고, 이를 ‘멀티 catch블럭’이라한다. &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//본래 사용법&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//변경후 멀티 catch블럭&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;중복된 코드를 줄일 수 있는 큰 장점이 있는데&lt;br /&gt;
-멀티 catch블럭을 사용할 때 지켜줘야하는 것이 있다.&lt;br /&gt;
-바로 ‘|’ 기호로 연결된 예외 클래스가 조상과 자손의 관계에 있다면 컴파일 에러가 발생한다는것, &lt;br /&gt;
-왜냐하면, 두 예외 클래스가 조상과 자손의 관계에 있다면, 그것은 조상 클래스만 써주는 것과 똑같기 때문이다. &lt;br /&gt;
-불필요한 코드는 제거하라는 의미에서 에러가 발생한다. &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ParentException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ChildException&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//에러가 난다. &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;그리고 멀티 catch는 하나의 catch블럭으로 여러 예외를 처리하는 것이기 때문에,&lt;br /&gt;
-멀티 catch 블럭 내에서는 실제로 어떤 예외가 발생한 것인지 알 수 없다. &lt;br /&gt;
-그래서 연결된 예외 클래스들의 공통 분모인 조상 예외 클래스에 선언된 멤버만을 사용할 수 있다. &lt;br /&gt;
-필요하다면 이러한 코드로 어떤 에러가 발생한 것인지 확인 할 수 있다. &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionB&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//에러 -&amp;gt; Exception A에서 선언된 methodA() 는 호출불가 &lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ExceptionA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;e1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;methodA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 호출 가능&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;..&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;상수와 리터럴 (constant &amp;amp; literal)&lt;br /&gt;
-본래 상수 &lt;br /&gt;
- final int MAX_SPEED = 10; &lt;br /&gt;
-은 반드시 선언과 동시에 초기화해야 하며, 그 후 부터는 상수의 값을 변경하는 것이 허용되지 않는다. &lt;br /&gt;
-final int MAX_SPEED ; //에러&lt;br /&gt;
-final int MAX_VALUE = 100; // OK&lt;br /&gt;
-&lt;br /&gt;
-현재는 JDK1.6부터 상수를 선언과 동시에 초기화 하지 않아도 되며, 사용하기 전에만 초기화하면 되도록 바뀌었다. &lt;br /&gt;
-하지만 상수는 성언과 동시에 초기화하는 습관을 들이는 것이 좋다고 한다. _2021-06-21&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도 조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 1) 멀티 catch블럭</summary>
       
 
       

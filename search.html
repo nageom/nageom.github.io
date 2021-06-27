@@ -191,6 +191,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "coding-stack-queue-3": {
+        "title": "&lt;프로그래머스&gt; 스택/큐(2)  Level 2 주식가격",
+            "author": "nageom",
+            "category": "",
+            "content": " 프로그래머스 &gt; 스택/큐 문제 설명초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요.제한사항prices의 각 가격은 1 이상 10,000 이하인 자연수입니다.prices의 길이는 2 이상 100,000 이하입니다.입출력 예prices             \treturn[1, 2, 3, 2, 3]\t[4, 3, 1, 1, 0]입출력 예 설명1초 시점의 ₩1은 끝까지 가격이 떨어지지 않았습니다.2초 시점의 ₩2은 끝까지 가격이 떨어지지 않았습니다.3초 시점의 ₩3은 1초뒤에 가격이 떨어집니다. 따라서 1초간 가격이 떨어지지 않은 것으로 봅니다.4초 시점의 ₩2은 1초간 가격이 떨어지지 않았습니다.5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다. 느낀점 쉬운 문제였다. 큐를 사용했고 친구는 사용하지 않고도 풀 수 있다고 했다.[코드를 살펴보자]    import java.util.*;    class Solution {    public int[] solution(int[] prices) {        Queue&lt;Integer&gt; que = new LinkedList&lt;Integer&gt; ();        Queue&lt;Integer&gt; que2 = new LinkedList&lt;Integer&gt; ();                for(int i=0; i&lt; prices.length; i++) {            que.offer(prices[i]);                }        int size = que.size();         for (int i=0; i&lt; size; i++)  {        \tint count = 0;         \t        \tint first = que.poll();        \t        \tfor (int tmp : que) {  \t\t        \t\t//작거나 같으면 떨어지지않음        \t\t// 3 &lt;= 2         \t\tif (first &lt;= tmp) {        \t\t\tcount++;        \t\t\t        \t\t}else {        \t\t\tcount++;        \t\t\tbreak;        \t\t}  \t        \t}        \tque2.offer(count);   \t        }                int[] answer = new int[que2.size()];               for (int i=0; i&lt;answer.length; i++) {        \t        \tanswer[i]= que2.poll();        \t        }                        return answer;    }}커버사진 출처 프로그래머스",
+        "url": "/coding-stack&amp;queue(3)"
+    }
+    ,
+    
     "coding-stack-queue-2": {
         "title": "&lt;프로그래머스&gt; 스택/큐(2)  Level 2 프린터",
             "author": "nageom",

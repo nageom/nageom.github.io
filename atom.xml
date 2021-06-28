@@ -8,7 +8,44 @@
     
       
       <item>
-        <title>&lt;프로그래머스&gt; 스택/큐(2)  Level 2 주식가격</title>
+        <title>&lt;프로그래머스&gt; 힙(Heap)(2) &gt; Level 3 이중우선순위큐</title>
+        
+          <description>&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 힙(Heap) &lt;/h6&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;문제 설명&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 28 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/coding-heap(2)</link>
+        <guid isPermaLink="true">https://nageom.github.io/coding-heap(2)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>&lt;프로그래머스&gt; 힙(Heap)(1)  Level 2 더 맵게</title>
+        
+          <description>&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 힙(Heap) &lt;/h6&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;문제 설명&lt;/strong&gt; &lt;br /&gt;
+매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 27 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/coding-heap(1)</link>
+        <guid isPermaLink="true">https://nageom.github.io/coding-heap(1)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>&lt;프로그래머스&gt; 스택/큐(3)  Level 2 주식가격</title>
         
           <description>&lt;hr /&gt;
 &lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
@@ -60,7 +97,7 @@
     
       
       <item>
-        <title>&lt;프로그래머스&gt; 해시 Level 2 위장문제  (1)</title>
+        <title>&lt;프로그래머스&gt; 해시(1)  Level 2 위장문제</title>
         
           <description>&lt;hr /&gt;
 &lt;h6&gt; 프로그래머스 &amp;gt; 해시 &amp;gt; 위장문제&lt;/h6&gt;

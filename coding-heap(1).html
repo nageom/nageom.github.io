@@ -11,7 +11,7 @@
 
 
 
-    <title><프로그래머스> 스택/큐(1)  Level 2 기능개발</title>
+    <title><프로그래머스> 힙(Heap)(1)  Level 2 더 맵게</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -47,24 +47,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="티끌 공부방" />
     <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
-    <link rel="canonical" href="https://nageom.github.io/coding-stack&queue(1)" />
+    <link rel="canonical" href="https://nageom.github.io/coding-heap(1)" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<프로그래머스> 스택/큐(1)  Level 2 기능개발" />
-    <meta property="og:description" content="프로그래머스 &gt; 스택/큐 큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다. 나는 코드를 굉장히 직관적으로 짰다. que에 progresses를 담고 que.peek()를 이용해 값을 하나씩 꺼내어 que.peek() + day x speed 이 100을 넘기는지, 넘을때마다 변수 k 에 +1 해주어 반환할 k를 변경시켜주는식 and 중간중간 맞는 조건문을 넣어주었다 [코딩에 잠깐 난관이 있었다면]" />
-    <meta property="og:url" content="https://nageom.github.io/coding-stack&queue(1)" />
+    <meta property="og:title" content="<프로그래머스> 힙(Heap)(1)  Level 2 더 맵게" />
+    <meta property="og:description" content="프로그래머스 &gt; 힙(Heap) 문제 설명 매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다. 섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의" />
+    <meta property="og:url" content="https://nageom.github.io/coding-heap(1)" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/coding/cover_coding.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-06-25T09:14:00+09:00" />
-    <meta property="article:modified_time" content="2021-06-25T09:14:00+09:00" />
+    <meta property="article:published_time" content="2021-06-27T09:14:00+09:00" />
+    <meta property="article:modified_time" content="2021-06-27T09:14:00+09:00" />
     <meta property="article:tag" content="Coding" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<프로그래머스> 스택/큐(1)  Level 2 기능개발" />
-    <meta name="twitter:description" content="프로그래머스 &gt; 스택/큐 큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다. 나는 코드를 굉장히 직관적으로 짰다. que에 progresses를 담고 que.peek()를 이용해 값을 하나씩 꺼내어 que.peek() + day x speed 이 100을 넘기는지, 넘을때마다 변수 k 에 +1 해주어 반환할 k를 변경시켜주는식 and 중간중간 맞는 조건문을 넣어주었다 [코딩에 잠깐 난관이 있었다면]" />
+    <meta name="twitter:title" content="<프로그래머스> 힙(Heap)(1)  Level 2 더 맵게" />
+    <meta name="twitter:description" content="프로그래머스 &gt; 힙(Heap) 문제 설명 매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다. 섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/coding/cover_coding.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "name": "nageom's blog",
         "logo": "https://nageom.github.io/"
     },
-    "url": "https://nageom.github.io/coding-stack&queue(1)",
+    "url": "https://nageom.github.io/coding-heap(1)",
     "image": {
         "@type": "ImageObject",
         "url": "https://nageom.github.io/assets/built/images/coding/cover_coding.jpg",
@@ -94,9 +94,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://nageom.github.io/coding-stack&queue(1)"
+        "@id": "https://nageom.github.io/coding-heap(1)"
     },
-    "description": "프로그래머스 &gt; 스택/큐 큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다. 나는 코드를 굉장히 직관적으로 짰다. que에 progresses를 담고 que.peek()를 이용해 값을 하나씩 꺼내어 que.peek() + day x speed 이 100을 넘기는지, 넘을때마다 변수 k 에 +1 해주어 반환할 k를 변경시켜주는식 and 중간중간 맞는 조건문을 넣어주었다 [코딩에 잠깐 난관이 있었다면]"
+    "description": "프로그래머스 &gt; 힙(Heap) 문제 설명 매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다. 섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의"
 }
     </script>
 
@@ -109,7 +109,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="<프로그래머스> 스택/큐(1)  Level 2 기능개발" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="<프로그래머스> 힙(Heap)(1)  Level 2 더 맵게" href="/feed.xml" />
 
 
 </head>
@@ -181,7 +181,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="25 June 2021">25 June 2021</time>
+                    <time class="post-full-meta-date" datetime="27 June 2021">27 June 2021</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -191,7 +191,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title"><프로그래머스> 스택/큐(1)  Level 2 기능개발</h1>
+                <h1 class="post-full-title"><프로그래머스> 힙(Heap)(1)  Level 2 더 맵게</h1>
             </header>
 
             <!--
@@ -203,108 +203,141 @@ into the {body} of the default.hbs template -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
                     <hr />
-<h6> 프로그래머스 &gt; 스택/큐 </h6>
-<p>큐를 사용해서 100을 넘은 데이터들은 순서대로 빼내는 문제였다.</p>
+<h6> 프로그래머스 &gt; 힙(Heap) </h6>
+<p><br />
+<strong>문제 설명</strong> <br />
+매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을 아래와 같이 특별한 방법으로 섞어 새로운 음식을 만듭니다.</p>
 
-<p>나는 코드를 굉장히 직관적으로 짰다. <br />
-que에 progresses를 담고<br />
-que.peek()를 이용해 값을 하나씩 꺼내어 <br />
-que.peek() + day x speed 이 100을 넘기는지,<br />
-넘을때마다 변수 k 에 +1 해주어 반환할 k를 변경시켜주는식 <br />
-and 중간중간 맞는 조건문을 넣어주었다 <br /></p>
+<p>섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의 스코빌 지수 + (두 번째로 맵지 않은 음식의 스코빌 지수 * 2)<br />
+Leo는 모든 음식의 스코빌 지수가 K 이상이 될 때까지 반복하여 섞습니다.<br />
+Leo가 가진 음식의 스코빌 지수를 담은 배열 scoville과 원하는 스코빌 지수 K가 주어질 때, 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 섞어야 하는 최소 횟수를 return 하도록 solution 함수를 작성해주세요.</p>
 
-<p><strong>[코딩에 잠깐 난관이 있었다면]</strong><br />
-이 문제는 날짜에 따라 <strong>100을 넘은 기능</strong>들이 연속으로 있다면 k를 계속 올려주면 그만이지만 <br />
-연속적일지 아닐지는 100이 넘었다는 조건문 안에서 알 수 없기 때문에 que2.offer(k)를 다른 곳에 넣을 수 밖에 없었다. <br /></p>
+<p><strong>제한 사항</strong><br />
+scoville의 길이는 2 이상 1,000,000 이하입니다.<br />
+K는 0 이상 1,000,000,000 이하입니다.<br />
+scoville의 원소는 각각 0 이상 1,000,000 이하입니다.<br />
+모든 음식의 스코빌 지수를 K 이상으로 만들 수 없는 경우에는 -1을 return 합니다.<br />
+입출력 예<br /></p>
 
-<p>반대의 <strong>100을 넘지 않는다는 조건</strong>에서
-day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
+<p><img src="../../assets/built/images/coding/heap(1).png" alt="ex_screenshot" />
+<br /></p>
 
-<p>이 조건에 대해 <br />
-바로 전에 100을 넘다가 온 경우에만 k값을 저장해주는 설계를 했기 때문에 
-40에서 41로 온것인지를 어떻게 구분해줄것인가를 한참 생각했다. <br />
-쉬웠지만 너무 어렵게 생각한것 같다. <br /></p>
+<p>입출력 예 설명<br /></p>
+<ol>
+  <li>
+    <p>스코빌 지수가 1인 음식과 2인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br />
+새로운 음식의 스코빌 지수 = 1 + (2 * 2) = 5<br />
+가진 음식의 스코빌 지수 = [5, 3, 9, 10, 12]<br /></p>
+  </li>
+  <li>
+    <p>스코빌 지수가 3인 음식과 5인 음식을 섞으면 음식의 스코빌 지수가 아래와 같이 됩니다.<br />
+새로운 음식의 스코빌 지수 = 3 + (5 * 2) = 13<br />
+가진 음식의 스코빌 지수 = [13, 9, 10, 12]<br /><br /></p>
+  </li>
+</ol>
 
-<p>boolean check=false를 두고 <br />
-<strong>100이 넘은 경우</strong>에는 check=true, <br />
-<strong>넘기지 못한 경우</strong>에는 check=true의 조건문을 주고
-해당 될때만 k값을 반환할 que2.offer(k)해주고 k=0으로 다시 시작해준다. <br /></p>
+<p>모든 음식의 스코빌 지수가 7 이상이 되었고 이때 섞은 횟수는 2회입니다.<br />
+<br /></p>
 
-<p><strong>코드를 살펴보자</strong> <br /></p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">LinkedList</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">LinkedList</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">Queue</span><span class="p">;</span>
+<h6>[LinkedList로 풀어봤습니다...] </h6>
+<p><img src="../../assets/built/images/coding/heap(2).png" alt="ex_screenshot" />
+효율성이 엉망진창이였다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
 <span class="kd">class</span> <span class="nx">Solution</span> <span class="p">{</span>
-    <span class="kr">public</span> <span class="kd">static</span> <span class="nx">int</span><span class="p">[]</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">int</span><span class="p">[]</span> <span class="nx">progresses</span><span class="p">,</span> <span class="nx">int</span><span class="p">[]</span> <span class="nx">speeds</span><span class="p">)</span> <span class="p">{</span>
-
-		 
-		  <span class="c1">// progresses</span>
-	      <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">que</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span> 
-	      <span class="c1">// return 값이 들어갈 que2 </span>
-	      <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">que2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span> 
-
-	      
-	      <span class="nx">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-	      <span class="nx">int</span> <span class="nx">day</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
-	      <span class="nx">int</span> <span class="nx">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//k는 배포 횟수 </span>
-	      <span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">progresses</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-	         <span class="nx">que</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">progresses</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-	      <span class="p">}</span>
-
-	      <span class="nx">int</span> <span class="nx">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-	      <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-	      <span class="nx">boolean</span> <span class="nx">check</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// 100이 안됐다. </span>
-	       
-	      <span class="k">while</span><span class="p">(</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">progresses</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-	                                                <span class="c1">//            1일 ,  2일     7일</span>
-	         <span class="nx">int</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">que</span><span class="p">.</span><span class="nx">peek</span><span class="p">()</span><span class="o">+</span><span class="p">(</span><span class="nx">speeds</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">*</span><span class="nx">day</span><span class="p">);</span> <span class="c1">// total = 93+1*1, 93+1*2  93+1*7 // 30 + 30*7 //55 + 5*7</span>
-	          
-	         <span class="k">if</span><span class="p">(</span><span class="nx">total</span><span class="o">&gt;=</span><span class="mi">100</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">//total 93  //94 //95 //100 //240  //</span>
-	        	 <span class="nx">k</span><span class="o">++</span><span class="p">;</span>   <span class="c1">//k=1; k=2; // 배포 값 </span>
-	        	 <span class="nx">i</span><span class="o">++</span><span class="p">;</span>   <span class="c1">//i=1 i=2;  // 다음 숫자로 넘김 </span>
-	        	 <span class="nx">que</span><span class="p">.</span><span class="nx">poll</span><span class="p">();</span> <span class="c1">//[30,55] //[55]</span>
-	        	 <span class="nx">check</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> 
-	        	 
-	        	 <span class="k">if</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">speeds</span><span class="p">.</span><span class="nx">length</span> <span class="p">)</span> <span class="p">{</span>
-	        		 <span class="nx">que2</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">k</span><span class="p">);</span>	 
-	        		 <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-	        	 <span class="p">}</span>
-	            
-	         <span class="p">}</span><span class="k">else</span> <span class="p">{</span>    <span class="c1">// total=90</span>
-	             
-	            <span class="k">if</span><span class="p">(</span><span class="nx">k</span><span class="o">!=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">check</span> <span class="o">==</span> <span class="kc">true</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">//배포한 후 더이상 배포할 애가 없을때 </span>
-	               <span class="nx">que2</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">k</span><span class="p">);</span> <span class="c1">// [2][0][0] </span>
-	               <span class="nx">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-	               <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-	            <span class="p">}</span>
-	            <span class="nx">check</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-	            <span class="nx">day</span><span class="o">++</span><span class="p">;</span>        <span class="c1">// j =1 j =2; 7 </span>
-	         <span class="p">}</span>
-	     
-	      <span class="p">}</span>
-	  
-	      <span class="nx">int</span><span class="p">[]</span> <span class="nx">answer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">int</span><span class="p">[</span><span class="nx">count</span><span class="p">];</span>
+    <span class="kr">public</span> <span class="nx">int</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">int</span><span class="p">[]</span> <span class="nx">scoville</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">K</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">int</span> <span class="nx">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="nx">LinkedList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span><span class="p">();</span>
 	    
-	       
-	      <span class="nx">int</span> <span class="nx">t</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-	    
-	      <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nx">que2</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-	    	  <span class="nx">answer</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span> <span class="nx">que2</span><span class="p">.</span><span class="nx">poll</span><span class="p">();</span>
-	    	  <span class="nx">t</span><span class="o">++</span><span class="p">;</span>
-	       <span class="p">}</span>
-	       
-	      
-	      <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+	    <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">scoville</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	        <span class="nx">list</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">scoville</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>	
+	    <span class="p">}</span>    
+        <span class="nx">Collections</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span>
+        
+        <span class="nx">int</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	        
+	    <span class="k">while</span> <span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">&lt;</span><span class="nx">K</span><span class="p">)</span> <span class="p">{</span>
+	        <span class="nx">Collections</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span>
+	        <span class="nx">sum</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="nx">list</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>           
+		    <span class="nx">list</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+		    <span class="nx">list</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+		    <span class="nx">list</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span>			        		
+		    <span class="nx">Collections</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">list</span><span class="p">);</span>    
+		    <span class="nx">answer</span><span class="o">++</span><span class="p">;</span>
+	    <span class="p">}</span>
+      
+	    <span class="k">if</span> <span class="p">(</span><span class="nx">answer</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+	        <span class="nx">answer</span> <span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+	    <span class="p">}</span>
+	    <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
 
-	   <span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
+</code></pre></div></div>
+<p>Collections.sort가 효율성을 많이 떨어트린것같아 좀 더 공부해봤다. <br /></p>
 
+<p><strong>Arrays.sort와 Collections.sort의 시간복잡도에 관한 궁금증</strong><br /></p>
 
+<p>간단히 요약하자면 
+Arrays.sort()는 듀얼피봇 퀵정렬로 랜덤 데이터에 대해서 평균적으로 퀵소트 보다 좋은 성능을 낸다. 
+Collections.sort() Tim 정렬이라는 삽입(Insertion) 정렬과 합병(Merge) 정렬을 결합하여 만든 정렬을 사용한다.
+https://sabarada.tistory.com/138
+왜 둘의 정렬 알고리즘이 다른지는 블로그를 위의 블로그를 참조하는 것이 더 좋을 것이다.</p>
+
+<p>어찌됐든 
+while 반복시마다 C * O(N<em>log(N)) + a 이라는 시간복잡도에 의해 holy..<br />
+테스트를 실패했고 시간복잡도가 O(N</em>logN) 인 우선순위 큐를 사용했고 결과는 성공적이였다. <br />
+언제나 어디서나 효율성을 생각하자<br /></p>
+
+<h6>[Priority Queue로 다시 풀었다.]</h6>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
+    <span class="kd">class</span> <span class="nx">Solution</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">int</span><span class="p">[]</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">int</span><span class="p">[]</span> <span class="nx">prices</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">que</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="p">();</span>
+        <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">que2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="p">();</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">prices</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">que</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">prices</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        
+        <span class="p">}</span>
+        <span class="nx">int</span> <span class="nx">size</span> <span class="o">=</span> <span class="nx">que</span><span class="p">.</span><span class="nx">size</span><span class="p">();</span> 
+        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">size</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>  <span class="p">{</span>
+        	<span class="nx">int</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+        	
+        	<span class="nx">int</span> <span class="nx">first</span> <span class="o">=</span> <span class="nx">que</span><span class="p">.</span><span class="nx">poll</span><span class="p">();</span>
+        	
+        	<span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">tmp</span> <span class="p">:</span> <span class="nx">que</span><span class="p">)</span> <span class="p">{</span>  		
+        		<span class="c1">//작거나 같으면 떨어지지않음</span>
+        		<span class="c1">// 3 &lt;= 2 </span>
+        		<span class="k">if</span> <span class="p">(</span><span class="nx">first</span> <span class="o">&lt;=</span> <span class="nx">tmp</span><span class="p">)</span> <span class="p">{</span>
+        			<span class="nx">count</span><span class="o">++</span><span class="p">;</span>        			
+        		<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+        			<span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+        			<span class="k">break</span><span class="p">;</span>
+        		<span class="p">}</span>  	
+        	<span class="p">}</span>
+
+        	<span class="nx">que2</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">count</span><span class="p">);</span>
+   	
+        <span class="p">}</span>
+        
+
+        <span class="nx">int</span><span class="p">[]</span> <span class="nx">answer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">int</span><span class="p">[</span><span class="nx">que2</span><span class="p">.</span><span class="nx">size</span><span class="p">()];</span>
+       
+        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">answer</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        	
+        	<span class="nx">answer</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">=</span> <span class="nx">que2</span><span class="p">.</span><span class="nx">poll</span><span class="p">();</span>
+        	
+        <span class="p">}</span>
+        
+        
+        <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
-<p><br /><br />
-커버사진 출처 프로그래머스</p>
+<p><br />
+<br />커버사진 출처 프로그래머스</p>
 
                 </div>
             </section>
@@ -371,9 +404,9 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://nageom.github.io/coding-stack&queue(1)';
-                            var this_page_identifier = '/coding-stack&queue(1)';
-                            var this_page_title = '<프로그래머스> 스택/큐(1)  Level 2 기능개발';
+                            var this_page_url = 'https://nageom.github.io/coding-heap(1)';
+                            var this_page_identifier = '/coding-heap(1)';
+                            var this_page_title = '<프로그래머스> 힙(Heap)(1)  Level 2 더 맵게';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -427,11 +460,6 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/coding-heap(1)"><프로그래머스> 힙(Heap)(1)  Level 2 더 맵게</a></li>
-                                        
-                                    
                                   
                                 
                                   
@@ -447,10 +475,15 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
                                     
                                         
                                         
+                                            <li><a href="/coding-stack&queue(2)"><프로그래머스> 스택/큐(2)  Level 2 프린터</a></li>
+                                        
                                     
                                   
                                 
                                   
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -520,12 +553,12 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/coding-stack&queue(2)">
+            <a class="post-card-image-link" href="/coding-heap(2)">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/coding-stack&queue(2)">
+            <a class="post-card-content-link" href="/coding-heap(2)">
                 <header class="post-card-header">
                     
                         
@@ -535,15 +568,14 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
                         
                     
 
-                    <h2 class="post-card-title"><프로그래머스> 스택/큐(2)  Level 2 프린터</h2>
+                    <h2 class="post-card-title"><프로그래머스> 힙(Heap)(2) > Level 3 이중우선순위큐</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
                         <p>
- 프로그래머스 &gt; 스택/큐 
-중요도에 관한 배열이 주어지고 
-프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 
-지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 QUEUE를 이용한 ‘프린터’문제이다.
+ 프로그래머스 &gt; 힙(Heap) 
+
+문제 설명 
 
 </p>
                     
@@ -578,12 +610,12 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/coding-hash(1)">
+            <a class="post-card-image-link" href="/coding-stack&queue(3)">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/coding-hash(1)">
+            <a class="post-card-content-link" href="/coding-stack&queue(3)">
                 <header class="post-card-header">
                     
                         
@@ -593,12 +625,12 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
                         
                     
 
-                    <h2 class="post-card-title"><프로그래머스> 해시(1)  Level 2 위장문제</h2>
+                    <h2 class="post-card-title"><프로그래머스> 스택/큐(3)  Level 2 주식가격</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
                         <p>
- 프로그래머스 &gt; 해시 &gt; 위장문제
+ 프로그래머스 &gt; 스택/큐 
 
 </p>
                     
@@ -640,18 +672,18 @@ day를 올려주거나 k=0 으로 맞춰주는데 <br /></p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title"><프로그래머스> 스택/큐(1)  Level 2 기능개발</div>
+    <div class="floating-header-title"><프로그래머스> 힙(Heap)(1)  Level 2 더 맵게</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4%3E+%EC%8A%A4%ED%83%9D%2F%ED%81%90%281%29++Level+2+%EA%B8%B0%EB%8A%A5%EA%B0%9C%EB%B0%9C&amp;url=https://nageom.github.io/coding-stack&queue(1)"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4%3E+%ED%9E%99%28Heap%29%281%29++Level+2+%EB%8D%94+%EB%A7%B5%EA%B2%8C&amp;url=https://nageom.github.io/coding-heap(1)"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/coding-stack&queue(1)"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/coding-heap(1)"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

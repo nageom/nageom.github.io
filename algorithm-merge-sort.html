@@ -54,7 +54,7 @@
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<정렬> 병합 정렬(Merge Sort)" />
-    <meta property="og:description" content="[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀸 정렬과 다르게 피벗 값이 없고 무조건 반으로 나누고 합하면서 정렬한다는 방법이다. //이미지 [코드를 살펴보자] #include &lt;stdio.h&gt; int number =8; int sorted[8]; // 정렬 배열은 반드시 전역 변수로 선언 //정렬된 배열을 담을 뱅 // 논리적으로 둘로 나누어진 i, j 배열을 정렬하며 합치는" />
+    <meta property="og:description" content="[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀸 정렬과 다르게 피벗 값이 없고 무조건 반으로 나누고 합하면서 정렬한다는 방법이다. 실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다. 각 하나로 만들고 분할 병합하며 정렬하는 방식이다. 더 자세히 코드느낌으로 보자면 나누어진 두 배열을 비교하며 작은 값을 k인덱스에 넣는다. 이" />
     <meta property="og:url" content="https://nageom.github.io/algorithm-merge-sort" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -64,7 +64,7 @@
     <meta property="article:tag" content="Algorithm" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="<정렬> 병합 정렬(Merge Sort)" />
-    <meta name="twitter:description" content="[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀸 정렬과 다르게 피벗 값이 없고 무조건 반으로 나누고 합하면서 정렬한다는 방법이다. //이미지 [코드를 살펴보자] #include &lt;stdio.h&gt; int number =8; int sorted[8]; // 정렬 배열은 반드시 전역 변수로 선언 //정렬된 배열을 담을 뱅 // 논리적으로 둘로 나누어진 i, j 배열을 정렬하며 합치는" />
+    <meta name="twitter:description" content="[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀸 정렬과 다르게 피벗 값이 없고 무조건 반으로 나누고 합하면서 정렬한다는 방법이다. 실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다. 각 하나로 만들고 분할 병합하며 정렬하는 방식이다. 더 자세히 코드느낌으로 보자면 나누어진 두 배열을 비교하며 작은 값을 k인덱스에 넣는다. 이" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -96,7 +96,7 @@
         "@type": "WebPage",
         "@id": "https://nageom.github.io/algorithm-merge-sort"
     },
-    "description": "[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀸 정렬과 다르게 피벗 값이 없고 무조건 반으로 나누고 합하면서 정렬한다는 방법이다. //이미지 [코드를 살펴보자] #include &lt;stdio.h&gt; int number =8; int sorted[8]; // 정렬 배열은 반드시 전역 변수로 선언 //정렬된 배열을 담을 뱅 // 논리적으로 둘로 나누어진 i, j 배열을 정렬하며 합치는"
+    "description": "[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀸 정렬과 다르게 피벗 값이 없고 무조건 반으로 나누고 합하면서 정렬한다는 방법이다. 실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다. 각 하나로 만들고 분할 병합하며 정렬하는 방식이다. 더 자세히 코드느낌으로 보자면 나누어진 두 배열을 비교하며 작은 값을 k인덱스에 넣는다. 이"
 }
     </script>
 
@@ -207,8 +207,15 @@ into the {body} of the default.hbs template -->
 <h6>[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ]</h6>
 <p>퀸 정렬과 다르게 피벗 값이 없고 무조건 반으로 나누고 합하면서 정렬한다는 방법이다.</p>
 
-<p>//이미지
-<img src="../../assets/built/images/coding/heap(3)_2.png" alt="ex_screenshot" width="1000" class="center" /></p>
+<p><img src="../../assets/built/images/algorithm/sort/merge sort(1).png" alt="ex_screenshot" /></p>
+
+<p>실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다. 
+각 하나로 만들고 분할 병합하며 정렬하는 방식이다.</p>
+
+<p>더 자세히 코드느낌으로 보자면
+<img src="../../assets/built/images/algorithm/sort/merge sort(2).png" alt="ex_screenshot" />
+나누어진 두 배열을 비교하며 작은 값을 k인덱스에 넣는다. 이 때 실제로 k은 새로운 배열이 아니라
+i와 같은 배열이다.</p>
 
 <h6>[코드를 살펴보자]</h6>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
@@ -280,30 +287,9 @@ into the {body} of the default.hbs template -->
 	<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<h6>[퀵 정렬의 시간 복잡도 O(N* log2N) ]</h6>
-<p><br />
-삽입,버블,선택 정렬의 시간 복잡도로는<br />
-1 2 3 4 5 6 7 8 9 10 에 대해<br />
-N^2 = 10 * 10 = 100<br /></p>
+<h6>[병합 정렬의 시간 복잡도 O(N* log2N) ]</h6>
 
-<p>퀵 정렬의 시간 복잡도로는 <br />
-1 2 3 4 5 =&gt; 5 * 5 = 25<br />
-6 7 8 9 10 =&gt; 5 * 5 = 25<br />
-이것이 ‘분할 정복’ 이 멋진 이유! <br /></p>
-
-<h6> [최악의 경우에는 시간 복잡도 O(N^2)이 된다] </h6>
-<p><u>1</u> 2 3 4 5 6 7 8 9 10</p>
-
-<p><strong>1</strong> <u>2</u> 3 4 5 6 7 8 9 10</p>
-
-<p><strong>1 2</strong> <u>3</u> 4 5 6 7 8 9 10</p>
-
-<p>분할정복의 이점을 사용하지 못하고 반복적으로 
-10 + 9 ..+1 로 시간 복잡도 O(N^2)가 될 수 있다는것을 알아두어야한다.</p>
-
-<p>이미 정렬이 되어있는 경우에는 삽입 정렬이 매우 빠르다.</p>
-
-<p>그래서 문제의 특성에 따라 정렬을 잘 이용 할 줄 알아야한다~</p>
+<p><img src="../../assets/built/images/algorithm/sort/merge sort(3).png" alt="ex_screenshot" /></p>
 
 <p>References <br />
 https://www.youtube.com/watch?v=gBcUO_6JXIA&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;index=6</p>

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-06-28T23:47:27+09:00</updated>
+  <updated>2021-06-29T23:51:51+09:00</updated>
   <id>https://nageom.github.io/tag/coding/feed.xml</id>
 
   
@@ -156,10 +156,6 @@ for문 마지막에 큐가 비었는지 확인하기 어렵지않았다.&lt;/p&g
 즉, jobs[i][0]인 요청 데이터 순으로 정렬할 필요가 있다. &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;커버사진 출처 프로그래머스&lt;/p&gt;</content>

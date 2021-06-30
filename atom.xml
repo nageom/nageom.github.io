@@ -8,6 +8,40 @@
     
       
       <item>
+        <title>Comparator와 Comparable</title>
+        
+          <description>&lt;blockquote&gt;
+  &lt;p&gt;자주 쓰이는 Arrays.sort() 를 이용해 배열을 정렬할 때, 사실 내림&amp;amp;오름차순 말고도 원하는 대로
+정렬이 가능한데 이를 가능하게 해주는 인터페이스 두가지를 소개하고자한다. &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        
+        <pubDate>Wed, 30 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/java-comparator-comparable</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-comparator-comparable</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>&lt;프로그래머스&gt; 정렬  Level 2 가장 큰 수(2)</title>
+        
+          <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 30 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/coding-sort(2)</link>
+        <guid isPermaLink="true">https://nageom.github.io/coding-sort(2)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>&lt;프로그래머스&gt; 정렬  Level 1 K번째 수(1)</title>
         
           <description>&lt;hr /&gt;

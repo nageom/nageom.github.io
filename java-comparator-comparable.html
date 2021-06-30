@@ -11,7 +11,7 @@
 
 
 
-    <title><정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)</title>
+    <title>Comparator와 Comparable</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -47,30 +47,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="티끌모아 공부방" />
     <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
-    <link rel="canonical" href="https://nageom.github.io/algorithm-select-sort" />
+    <link rel="canonical" href="https://nageom.github.io/java-comparator-comparable" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)" />
-    <meta property="og:description" content="알고리즘의 시작, 정렬 왜 알고리즘 공부는 정렬부터할까? 정력만큼 알고리즘의 효율성 차이를 극명하게 보여주는 것이 없기 때문이다. 비효율 정렬 -&gt; 효율 정렬 순으로 공부! [가장 작은 거을 선택해서 제일 앞으로 보내면 어떨까?] (구현하긴 쉽지만 효율적이진 않다) 1 10 5 8 7 6 4 3 2 9 1 2 5 8 7" />
-    <meta property="og:url" content="https://nageom.github.io/algorithm-select-sort" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
+    <meta property="og:title" content="Comparator와 Comparable" />
+    <meta property="og:description" content="자주 쓰이는 Arrays.sort() 를 이용해 배열을 정렬할 때, 사실 내림&amp;오름차순 말고도 원하는 대로 정렬이 가능한데 이를 가능하게 해주는 인터페이스 두가지를 소개하고자한다. Comparator와 Comparable 자주 쓰이는 Arrays.sort()를 호출만 하면 컴퓨터가 알아서 배열을 정렬하는 것처럼 보이지만, 사실은 Character클래스의 Comparable의 구현에 의해 정렬되었던 것이다. Comparator와 Comparable은 모두 인터페이스로 컬렉션을 정렬하는데 필요한 메서드를 정의하고" />
+    <meta property="og:url" content="https://nageom.github.io/java-comparator-comparable" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-06-22T09:14:00+09:00" />
-    <meta property="article:modified_time" content="2021-06-22T09:14:00+09:00" />
-    <meta property="article:tag" content="Algorithm" />
+    <meta property="article:published_time" content="2021-06-30T09:14:00+09:00" />
+    <meta property="article:modified_time" content="2021-06-30T09:14:00+09:00" />
+    <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)" />
-    <meta name="twitter:description" content="알고리즘의 시작, 정렬 왜 알고리즘 공부는 정렬부터할까? 정력만큼 알고리즘의 효율성 차이를 극명하게 보여주는 것이 없기 때문이다. 비효율 정렬 -&gt; 효율 정렬 순으로 공부! [가장 작은 거을 선택해서 제일 앞으로 보내면 어떨까?] (구현하긴 쉽지만 효율적이진 않다) 1 10 5 8 7 6 4 3 2 9 1 2 5 8 7" />
+    <meta name="twitter:title" content="Comparator와 Comparable" />
+    <meta name="twitter:description" content="자주 쓰이는 Arrays.sort() 를 이용해 배열을 정렬할 때, 사실 내림&amp;오름차순 말고도 원하는 대로 정렬이 가능한데 이를 가능하게 해주는 인터페이스 두가지를 소개하고자한다. Comparator와 Comparable 자주 쓰이는 Arrays.sort()를 호출만 하면 컴퓨터가 알아서 배열을 정렬하는 것처럼 보이지만, 사실은 Character클래스의 Comparable의 구현에 의해 정렬되었던 것이다. Comparator와 Comparable은 모두 인터페이스로 컬렉션을 정렬하는데 필요한 메서드를 정의하고" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Algorithm" />
+    <meta name="twitter:data2" content="Java" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -85,18 +85,18 @@
         "name": "nageom's blog",
         "logo": "https://nageom.github.io/"
     },
-    "url": "https://nageom.github.io/algorithm-select-sort",
+    "url": "https://nageom.github.io/java-comparator-comparable",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/algorithm/cover.png",
+        "url": "https://nageom.github.io/assets/built/images/java/cover/cover_java.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://nageom.github.io/algorithm-select-sort"
+        "@id": "https://nageom.github.io/java-comparator-comparable"
     },
-    "description": "알고리즘의 시작, 정렬 왜 알고리즘 공부는 정렬부터할까? 정력만큼 알고리즘의 효율성 차이를 극명하게 보여주는 것이 없기 때문이다. 비효율 정렬 -&gt; 효율 정렬 순으로 공부! [가장 작은 거을 선택해서 제일 앞으로 보내면 어떨까?] (구현하긴 쉽지만 효율적이진 않다) 1 10 5 8 7 6 4 3 2 9 1 2 5 8 7"
+    "description": "자주 쓰이는 Arrays.sort() 를 이용해 배열을 정렬할 때, 사실 내림&amp;오름차순 말고도 원하는 대로 정렬이 가능한데 이를 가능하게 해주는 인터페이스 두가지를 소개하고자한다. Comparator와 Comparable 자주 쓰이는 Arrays.sort()를 호출만 하면 컴퓨터가 알아서 배열을 정렬하는 것처럼 보이지만, 사실은 Character클래스의 Comparable의 구현에 의해 정렬되었던 것이다. Comparator와 Comparable은 모두 인터페이스로 컬렉션을 정렬하는데 필요한 메서드를 정의하고"
 }
     </script>
 
@@ -109,7 +109,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="<정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Comparator와 Comparable" href="/feed.xml" />
 
 
 </head>
@@ -177,106 +177,92 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-algorithm post ">
+        <article class="post-full  tag-java post ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="22 June 2021">22 June 2021</time>
+                    <time class="post-full-meta-date" datetime="30 June 2021">30 June 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/algorithm/'>ALGORITHM</a>
+                               <a href='/tag/java/'>JAVA</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title"><정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)</h1>
+                <h1 class="post-full-title">Comparator와 Comparable</h1>
             </header>
 
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/algorithm/cover.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/java/cover/cover_java.png)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <hr />
-<blockquote>
-  <h3>알고리즘의 시작, 정렬 </h3>
+                    <blockquote>
+  <p>자주 쓰이는 Arrays.sort() 를 이용해 배열을 정렬할 때, 사실 내림&amp;오름차순 말고도 원하는 대로
+정렬이 가능한데 이를 가능하게 해주는 인터페이스 두가지를 소개하고자한다. <br /></p>
 </blockquote>
 
-<h6>왜 알고리즘 공부는 정렬부터할까?</h6>
-<p>정력만큼 알고리즘의 효율성 차이를 극명하게 보여주는 것이 없기 때문이다.<br /></p>
+<h6> Comparator와 Comparable </h6>
+<p>자주 쓰이는 Arrays.sort()를 호출만 하면 컴퓨터가 알아서 배열을 정렬하는 것처럼 보이지만, 사실은 
+Character클래스의 Comparable의 구현에 의해 정렬되었던 것이다. 
+Comparator와 Comparable은 모두 인터페이스로 컬렉션을 정렬하는데 필요한 메서드를 정의하고 있으며
+Comparable을 구현하고 있는 클래스들은 같은 타입의 인스턴스끼리 서로 비교할 수 있는 클래스들, 주로 Integer 와 같은
+wrapper클래스와 String, Date, File과 같은 것들이며 기본적으로 오름차순으로 구현되어 있다. 
+그래서 <u>Comparable을 구현한 클래스는 정렬이 가능하다는 것을 의미한다. </u></p>
 
-<p>비효율 정렬 -&gt; 효율 정렬 순으로 공부! <br /></p>
+<p>Comparator와 COmparable의 실제 소스</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">public</span> <span class="kr">interface</span> <span class="nx">Comparator</span><span class="p">{</span>
+    <span class="nx">int</span> <span class="nx">compare</span><span class="p">(</span><span class="nb">Object</span> <span class="nx">o1</span><span class="p">,</span> <span class="nb">Object</span> <span class="nx">o2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">boolean</span> <span class="nx">equals</span><span class="p">(</span><span class="nb">Object</span> <span class="nx">obj</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kr">public</span> <span class="kr">interface</span> <span class="nx">Comparable</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">int</span> <span class="nx">compareTo</span><span class="p">(</span><span class="nb">Object</span> <span class="nx">o</span><span class="p">);</span>
+<span class="p">}</span>
 
-<h6>[가장 작은 거을 선택해서 제일 앞으로 보내면 어떨까?]</h6>
-<p>(구현하긴 쉽지만 효율적이진 않다)<br /></p>
+</code></pre></div></div>
+<p>참고 : Comparable은 java.lang패키지에 있고, Comparator는 java.util패키지에 있다.</p>
 
-<p>1 10 5 8 7 6 4 3 2 9<br />
-1 2 5 8 7 6 4 3 10 9<br /><br /></p>
+<p>compare()와 compareTo()는 선언형태와 이름이 약간 다를 뿐 두 객체를 비교한다는 같은 기능을 목적으로한다. 
+compareTo()으ㅣ 반환값은 int이지만 실제로는 비교하는 두 객체가 같으면 0, 비교하는 값보다 작으면 음수, 크면 양수를 반환하도록 구현해야한다.<br /> 
+compare()도 이와 동일.<br /></p>
 
-<h6> 구현해보자 </h6>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//선택정렬  </span>
-<span class="nx">int</span> <span class="nx">main</span><span class="p">(</span><span class="k">void</span><span class="p">)</span> <span class="p">{</span>
+<p><strong>Integer클래스의 compareTo메서드</strong></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">public</span> <span class="nx">final</span> <span class="kd">class</span> <span class="nx">Integer</span> <span class="kd">extends</span> <span class="nb">Number</span> <span class="kr">implements</span> <span class="nx">Comparable</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="nx">int</span> <span class="nx">compareTo</span><span class="p">(</span><span class="nx">Integer</span> <span class="nx">anotherInteger</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">int</span> <span class="nx">thisVal</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+        <span class="nx">int</span> <span class="nx">anotherVal</span> <span class="o">=</span> <span class="nx">anotherInteger</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
 
-
-	<span class="nx">int</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">min</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">temp</span><span class="p">;</span>
-	<span class="nx">int</span> <span class="nx">array</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">};</span>
-	<span class="nx">int</span> <span class="nx">arraySize</span> <span class="o">=</span> <span class="nx">sizeof</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span><span class="o">/</span><span class="nx">sizeof</span><span class="p">(</span><span class="nx">int</span><span class="p">);</span>
-	
-
-	<span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">min</span> <span class="o">=</span> <span class="mi">9999</span><span class="p">;</span> <span class="c1">//모든 원소들보다 큰 숫자</span>
-		<span class="k">for</span> <span class="p">(</span><span class="nx">j</span><span class="o">=</span><span class="nx">i</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span> <span class="nx">arraySize</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-			<span class="k">if</span> <span class="p">(</span><span class="nx">min</span> <span class="o">&gt;</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
-				<span class="nx">min</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
-				<span class="nx">index</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
-			<span class="p">}</span>
-			
-		<span class="p">}</span> 
-		<span class="nx">temp</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-		<span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">];</span>
-		<span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
-		
-		
-	<span class="p">}</span>
-	<span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">printf</span><span class="p">(</span><span class="dl">"</span><span class="s2">%d </span><span class="dl">"</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-	<span class="p">}</span>
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-
+        <span class="c1">//비교하는 값이 크면 -1, 같으면 0, 작으면 1을 반환한다. </span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">thisVal</span><span class="o">&lt;</span><span class="nx">anotherVal</span> <span class="p">?</span> <span class="o">-</span><span class="mi">1</span>  <span class="p">:</span> <span class="p">(</span><span class="nx">thisVal</span> <span class="o">==</span> <span class="nx">anotherVal</span> <span class="p">?</span> <span class="mi">0</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">));</span>
+    <span class="p">}</span>
 
 
 <span class="p">}</span>
 </code></pre></div></div>
+<p>Comparable과 Comparable을 구분해보자면
+Comparable을 구현한 클래스들이 기본적으로 오름차순으로 정렬되어 있지만, 내림차순으로 정렬 또는 다른 기준에 의해 정렬되도록 하고 싶을 때, 
+Comparator를 구현해서 정렬기준을 변경할 수 있다.</p>
 
-<h6>[선택 정렬의 시간 복잡도 O(N^2) ]</h6>
-<p>int arr[] = {1 10 5 8 7 6 4 3 2 9} 를 정렬하기위해 비교하는 횟수<br />
-10 + 9 + 8 + 7 + .. + 1<br />
-=&gt; 등차수열 공식으로 봤을 때<br />
-10* (10+1)/2 = 55 번의 비교연산을 하게 된다.<br />
-=&gt; N * (N+1)/2<br />
-일반적으로 컴퓨터에서는 N이 굉장히 큰 수라는 가정하에<br />
-2로 나눈값이 별다른 큰 의미가 없다고 보고 간단하게 나누고 더하는 연산을 무시한다<br />
-=&gt; N<em>N 으로 표기<br />
-=&gt; O(N</em>N)  <br />
-이 때 사용하는 것이 <strong>‘빅오 표기법(big-O notation)’</strong> <br />
-<u>특정한 알고리즘의 수행시간을 가장 간략하게 표기하는것 </u><br />
-그리하여 선택 정렬의 시간 복잡도가 O(N^2)라 말한다.<br /><br /></p>
+<blockquote>
+  <p>Comparable 기본 정렬기준을 구현하는데 사용<br />
+Comparator 기본 정렬기준 외에 다른 기준으로 정렬하고자할 때 사용</p>
+</blockquote>
 
-<p>x값 처리할 데이터가 많을수록 연산 횟수가 엄청나게 증가한다. <br />
-x제곱 그래프 
-<img src="../../assets/built/images/algorithm/sort/select sort.png" alt="ex_screenshot" /></p>
+<p><img src="../../assets/built/images/java/basic of java/comparator(1).png" alt="ex_screenshot" /></p>
 
-<p>References<br /> 
-https://www.youtube.com/watch?v=8ZiSzteFRYc&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;index=2 <br />
-강의 최고시다..<br /><br /></p>
+<p>앞으로 코드를 살펴볼때 
+static void sort(Object[] a) //는 객체 배열에 저장된 객체가 구현한 Comparable에 의한 정렬
+static void sort(Object[] a , Comparator c) //지정한 Comparator에 의한 정렬이라 보면 된다.</p>
 
-<p>사진<br />
-https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squared.html</p>
+<p>다만 compare()의 매개변수가 Object 타입이기 때문에 compareTo()를 바로 호출할 수 없으므로 먼저 Comparable로 형변환해야 한다는 것을 명심하자.
+매개변수를 Integer, String 등으로 받는 경우에 형변환 필요없이 바로 compareTo()를 호출이 가능하다.</p>
+
 
                 </div>
             </section>
@@ -343,9 +329,9 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://nageom.github.io/algorithm-select-sort';
-                            var this_page_identifier = '/algorithm-select sort';
-                            var this_page_title = '<정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)';
+                            var this_page_url = 'https://nageom.github.io/java-comparator-comparable';
+                            var this_page_identifier = '/java-comparator comparable';
+                            var this_page_title = 'Comparator와 Comparable';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -379,7 +365,7 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; nageom's blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/algorithm/">Algorithm</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/java/">Java</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -389,17 +375,6 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/algorithm-merge-sort"><정렬> 병합 정렬(Merge Sort)</a></li>
-                                        
                                     
                                   
                                 
@@ -418,39 +393,9 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/algorithm-quick-sort"><정렬> 퀵 정렬 (Quick Sort)</a></li>
-                                        
-                                    
-                                  
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/algorithm-insertion-sort"><정렬> 삽입 정렬(Insertion Sort)</a></li>
-                                        
-                                    
-                                  
                                 
-                                  
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
                                   
                                 
                                   
@@ -467,7 +412,29 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
                                     
                                         
                                         
+                                            <li><a href="/java-version">자바 1.8버전 차이를 알아보자</a></li>
+                                        
                                     
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/java-thread">쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/java-abstract-class">추상과 인터페이스</a></li>
+                                        
+                                    
+                                  
+                                
                                   
                                 
                                   
@@ -483,6 +450,15 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
                                 
                                   
                                 
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
                                   
                                 
                                   
@@ -496,9 +472,9 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/algorithm/">
+                            <a href="/tag/java/">
                                 
-                                    See all 7 posts  →
+                                    See all 5 posts  →
                                 
                             </a>
                         </footer>
@@ -508,55 +484,6 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/algorithm-insertion-sort">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/algorithm/cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/algorithm-insertion-sort">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Algorithm</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title"><정렬> 삽입 정렬(Insertion Sort)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>삽입 정렬(Insertion Sort) [각 숫자를 적절한 위치에 삽입하는 방법 ] 필요할 때만 위치를 바꾸기 떄문에 버블 정렬, 선택정렬보다 더 빠르다. (O(N^2) 중에서) 그렇지만 정렬이 되어있지 않은 경우는 다름없는 O(N^2) 이기때문에 항상 비효율적이지 않다고는</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/RubyIcon.jpg" alt="nageom" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/nageom/">nageom</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -564,29 +491,27 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/algorithm-bubble-sort">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/algorithm/cover.png)"></div>
+            <a class="post-card-image-link" href="/coding-sort(2)">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/algorithm-bubble-sort">
+            <a class="post-card-content-link" href="/coding-sort(2)">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Algorithm</span>
+                                <span class="post-card-tags">Coding</span>
                             
                         
                     
 
-                    <h2 class="post-card-title"><정렬>버블정렬(Bubble Sort)</h2>
+                    <h2 class="post-card-title"><프로그래머스> 정렬  Level 2 가장 큰 수(2)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
                         <p>
-
-  버블정렬 
-
+프로그래머스 &gt; 정렬 &gt; K번째 수
 
 </p>
                     
@@ -628,18 +553,18 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title"><정렬> 정렬 알고리즘의 개요와 선택정렬(Select Sort)</div>
+    <div class="floating-header-title">Comparator와 Comparable</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%EC%A0%95%EB%A0%AC%3E+%EC%A0%95%EB%A0%AC+%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%98+%EA%B0%9C%EC%9A%94%EC%99%80+%EC%84%A0%ED%83%9D%EC%A0%95%EB%A0%AC%28Select+Sort%29&amp;url=https://nageom.github.io/algorithm-select-sort"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Comparator%EC%99%80+Comparable&amp;url=https://nageom.github.io/java-comparator-comparable"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/algorithm-select-sort"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/java-comparator-comparable"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>티끌 공부방</description>
+    <description>티끌모아 공부방</description>
     <link>
     https://nageom.github.io</link>
+    
+      
+      <item>
+        <title>&lt;프로그래머스&gt; 정렬  Level 1 K번째 수(1)</title>
+        
+          <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 30 Jun 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/coding-sort(1)</link>
+        <guid isPermaLink="true">https://nageom.github.io/coding-sort(1)</guid>
+      </item>
+      
     
       
       <item>
@@ -247,8 +263,7 @@
           <description>&lt;hr /&gt;
 &lt;blockquote&gt;
   &lt;p&gt;요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도
-조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 
-1) 멀티 catch블럭&lt;br /&gt;&lt;/p&gt;
+조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>
@@ -426,12 +441,12 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
     
       
       <item>
-        <title>Java_equals와 '=='연산자의 차이</title>
+        <title>Java_equals와 '=='연산자 그리고 hashCode()</title>
         
           <description>&lt;hr /&gt;
 &lt;p&gt;안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  &lt;br /&gt;
-우선  equals는 메서드 &lt;br /&gt;
-      ‘==’은 비교를 위한 연산자입니다.&lt;/p&gt;
+우선  &lt;strong&gt;equals&lt;/strong&gt;는 메서드 &lt;br /&gt;
+&lt;strong&gt;==연산자&lt;/strong&gt;는 비교를 위한 연산자입니다.&lt;/p&gt;
 
 </description>
         

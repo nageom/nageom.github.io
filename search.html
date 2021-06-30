@@ -45,7 +45,7 @@
     <![endif]-->
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="티끌 공부방" />
+    <meta name="description" content="티끌모아 공부방" />
     <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
     <link rel="canonical" href="https://nageom.github.io/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -54,13 +54,13 @@
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Search Result" />
-    <meta property="og:description" content="티끌 공부방" />
+    <meta property="og:description" content="티끌모아 공부방" />
     <meta property="og:url" content="https://nageom.github.io/search" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/algorithm/cover_algorithm.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Search Result" />
-    <meta name="twitter:description" content="티끌 공부방" />
+    <meta name="twitter:description" content="티끌모아 공부방" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/algorithm/cover_algorithm.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -90,7 +90,7 @@
         "@type": "WebPage",
         "@id": "https://nageom.github.io/search"
     },
-    "description": "티끌 공부방"
+    "description": "티끌모아 공부방"
 }
     </script>
 
@@ -190,6 +190,15 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
+    
+    "coding-sort-1": {
+        "title": "&lt;프로그래머스&gt; 정렬  Level 1 K번째 수(1)",
+            "author": "nageom",
+            "category": "",
+            "content": "프로그래머스 &gt; 정렬 &gt; K번째 수문제 설명배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.2에서 나온 배열의 3번째 숫자는 5입니다.배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.제한사항array의 길이는 1 이상 100 이하입니다.array의 각 원소는 1 이상 100 이하입니다.commands의 길이는 1 이상 50 이하입니다.commands의 각 원소는 길이가 3입니다.입출력 예 설명[1, 5, 2, 6, 3, 7, 4]를 2번째부터 5번째까지 자른 후 정렬합니다. [2, 3, 5, 6]의 세 번째 숫자는 5입니다.[1, 5, 2, 6, 3, 7, 4]를 4번째부터 4번째까지 자른 후 정렬합니다. [6]의 첫 번째 숫자는 6입니다.[1, 5, 2, 6, 3, 7, 4]를 1번째부터 7번째까지 자릅니다. [1, 2, 3, 4, 5, 6, 7]의 세 번째 숫자는 3입니다.[지저분하게 완성된 첫 풀이]테스트에 통화는 했지만 풀면서 이게 아님을 느꼈지만 일단 진행했고 더 간략하게 짤 수 있었을텐데 하는 아쉬움이 많이 남았다.이런 코딩을 한 이유1) 주어진 배열 array의 i와 j 범위를 다른 배열안에 넣어 정렬을 해야하는데 일반 배열은 크기를 정해줘야함으로i와 j의 범위가 다 다르기 때문에 크기를 정할 필요없는 ArrayList를 골랐다.   2) 바보같이 answer의 배열 크기를 모를거라 생각하고 k값을 넣어줄 배열 또한 ArrayList를 골랐다.그리하여 첫 제출한 코드package sort;import java.util.*;public class K {\tpublic static int[] solution(int[] array, int[][] commands) {        int[] answer = null;        List&lt;Integer&gt; answerTmp = new ArrayList&lt;Integer&gt;();        List&lt;Integer&gt; arr = null;        int i=0;        for (; i&lt; commands.length; i ++) {        \tarr = new ArrayList&lt;Integer&gt;();        \t            int start =commands[i][0];            int end = commands[i][1];            int k = commands[i][2];                   for (int t=start-1; t&lt;end; t++) {                arr.add(array[t]);                          }               Collections.sort(arr);            //정렬                   answerTmp.add(arr.get(k-1));           }         i =0;        answer = new int[answerTmp.size()];        for (int a : answerTmp) {        \tanswer[i++] = a;        }                return answer;    }\t\tpublic static void main(String[] args) {\t\tint[] array = {1,5,2,6,3,7,4};\t\tint[][] commands= [[2,5,3], [4,4,1], [1, 7, 3]]; // 블로그 업로드 과정에서 에러가 나서 중괄호를 대괄호로 수정한것이니 참고하세요.\t\tint[] answer = solution(array, commands);\t\tfor (int a : answer ) {\t\t\tSystem.out.println(a+ \" \");\t\t}\t}}[이 후 두번째 풀이]1) 주어진 i~k 의 범위가 commands배열의 크기를 넘지 않을 것을 깨닫고 그 범위를 담을 tmp배열의 크기를 정해주고2) Arrays.copyOfRange()를 이용하여 배열안에 i ~ k 범위를 담아주었다.그로인해 쓸데없는 for문 하나를 없앨 수 있었다.물 흐르듯 코드가 간략해졌다. import java.util.*;class Solution {    public int[] solution(int[] array, int[][] commands) {        int[] answer = new int[commands.length];        int[] tmp = new int[commands.length];        int index =0;                for (int i=0; i&lt; commands.length; i ++) {            int start =commands[i][0];            int end = commands[i][1];            int k = commands[i][2];                   tmp = Arrays.copyOfRange(array, start-1, end);                        Arrays.sort(tmp);            answer[i] = tmp[k-1];            //정렬                 }                                return answer;            }}커버사진 출처 프로그래머스",
+        "url": "/coding-sort(1)"
+    }
+    ,
     
     "algorithm-merge-sort": {
         "title": "&lt;정렬&gt; 병합 정렬(Merge Sort)",
@@ -312,7 +321,7 @@ into the {body} of the default.hbs template -->
         "title": "자바 1.8버전 차이를 알아보자",
             "author": "nageom",
             "category": "",
-            "content": "  요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다. 1) 멀티 catch블럭JDK1.7부터 여러 catch블럭을 ‘|’ 기호를 이용해서, 하나의 catch블럭로 합칠 수 있게 되었고, 이를 ‘멀티 catch블럭’이라한다. //본래 사용법try {    ...}catch (ExceptionA e) {    e.printStackTrace();}catch (ExceptionB e2){    e2.printStackTrace();}//변경후 멀티 catch블럭try {    ...}catch (ExceptionA | ExceptionB e) {    e.printStackTrace();}중복된 코드를 줄일 수 있는 큰 장점이 있는데멀티 catch블럭을 사용할 때 지켜줘야하는 것이 있다.바로 ‘|’ 기호로 연결된 예외 클래스가 조상과 자손의 관계에 있다면 컴파일 에러가 발생한다는것, 왜냐하면, 두 예외 클래스가 조상과 자손의 관계에 있다면, 그것은 조상 클래스만 써주는 것과 똑같기 때문이다. 불필요한 코드는 제거하라는 의미에서 에러가 발생한다. try {    ...}catch (ParentException | ChildException e){    e.printStackTrace();//에러가 난다. }그리고 멀티 catch는 하나의 catch블럭으로 여러 예외를 처리하는 것이기 때문에,멀티 catch 블럭 내에서는 실제로 어떤 예외가 발생한 것인지 알 수 없다. 그래서 연결된 예외 클래스들의 공통 분모인 조상 예외 클래스에 선언된 멤버만을 사용할 수 있다. 필요하다면 이러한 코드로 어떤 에러가 발생한 것인지 확인 할 수 있다. try {...}catch (ExceptionA | ExceptionB e) {    e.methodA(); //에러 -&gt; Exception A에서 선언된 methodA() 는 호출불가         if (e instanceof ExceptionA) {        ExceptionA e1 = (ExceptionA) e;        e1.methodA(); // 호출 가능    } else {    ..    }    e.printStackTrace();}  상수와 리터럴 (constant &amp; literal)본래 상수  final int MAX_SPEED = 10; 은 반드시 선언과 동시에 초기화해야 하며, 그 후 부터는 상수의 값을 변경하는 것이 허용되지 않는다. final int MAX_SPEED ; //에러final int MAX_VALUE = 100; // OK현재는 JDK1.6부터 상수를 선언과 동시에 초기화 하지 않아도 되며, 사용하기 전에만 초기화하면 되도록 바뀌었다. 하지만 상수는 성언과 동시에 초기화하는 습관을 들이는 것이 좋다고 한다. _2021-06-21",
+            "content": "  요즘은 자바의 정석이라는 책으로 공부중인데 읽다보면 중간중간 JDK 버전 상승에 따라 바뀐 기능에 대해서도조금씩 나온다. 사실 면접질문에서도 나왔는데 대답을 하지 못한게 한이 맺혀서.. 책에 나올때마다 포스팅 하려합니다.1) 멀티 catch블럭JDK1.7부터 여러 catch블럭을 ‘|’ 기호를 이용해서, 하나의 catch블럭로 합칠 수 있게 되었고, 이를 ‘멀티 catch블럭’이라한다. //본래 사용법try {    ...}catch (ExceptionA e) {    e.printStackTrace();}catch (ExceptionB e2){    e2.printStackTrace();}//변경후 멀티 catch블럭try {    ...}catch (ExceptionA | ExceptionB e) {    e.printStackTrace();}중복된 코드를 줄일 수 있는 큰 장점이 있는데멀티 catch블럭을 사용할 때 지켜줘야하는 것이 있다.바로 ‘|’ 기호로 연결된 예외 클래스가 조상과 자손의 관계에 있다면 컴파일 에러가 발생한다는것, 왜냐하면, 두 예외 클래스가 조상과 자손의 관계에 있다면, 그것은 조상 클래스만 써주는 것과 똑같기 때문이다. 불필요한 코드는 제거하라는 의미에서 에러가 발생한다. try {    ...}catch (ParentException | ChildException e){    e.printStackTrace();//에러가 난다. }그리고 멀티 catch는 하나의 catch블럭으로 여러 예외를 처리하는 것이기 때문에,멀티 catch 블럭 내에서는 실제로 어떤 예외가 발생한 것인지 알 수 없다. 그래서 연결된 예외 클래스들의 공통 분모인 조상 예외 클래스에 선언된 멤버만을 사용할 수 있다. 필요하다면 이러한 코드로 어떤 에러가 발생한 것인지 확인 할 수 있다. try {...}catch (ExceptionA | ExceptionB e) {    e.methodA(); //에러 -&gt; Exception A에서 선언된 methodA() 는 호출불가         if (e instanceof ExceptionA) {        ExceptionA e1 = (ExceptionA) e;        e1.methodA(); // 호출 가능    } else {    ..    }    e.printStackTrace();}2. 상수와 리터럴 (constant &amp; literal)본래 상수     final int MAX_SPEED = 10;    은 반드시 선언과 동시에 초기화해야 하며, 그 후 부터는 상수의 값을 변경하는 것이 허용되지 않는다.    final int MAX_SPEED ; //에러   final int MAX_VALUE = 100; // OK   현재는 JDK1.6부터 상수를 선언과 동시에 초기화 하지 않아도 되며, 사용하기 전에만 초기화하면 되도록 바뀌었다. 하지만 상수는 성언과 동시에 초기화하는 습관을 들이는 것이 좋다고 한다. _2021-06-21",
         "url": "/java-version"
     }
     ,
@@ -399,10 +408,10 @@ into the {body} of the default.hbs template -->
     ,
     
     "java-equals": {
-        "title": "Java_equals와 '=='연산자의 차이",
+        "title": "Java_equals와 '=='연산자 그리고 hashCode()",
             "author": "nageom",
             "category": "",
-            "content": "안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  우선  equals는 메서드       ‘==’은 비교를 위한 연산자입니다.equals는 대상의 hashcode를 비교하고 == 연산자는 대상의 주소값을 비교합니다.    hashCode란?Object클래스는 hashCode() 라는 메서드를 가지고 있습니다 hashCode() 메서드는 말그대로 hashCode를 생성해 리턴해주는 메서드이죠 hashcode란 Object클래스의 메서드가 리턴하는 각 객체에 대응하는 고유한 정수값을 이야기하며     기본적으로 hashCode는 객체의 주소값과 연관이 있습니다비교했을때 주소값이 다른 obj와 obj2의 hashcode값이 다르죠 그리고 obj2의 주소값 @ 뒤의 값 6d06d69c (16진수) -&gt; hashCode 1829164700(10진수) 값으로변환이 되는것을 볼 수 있습니다. 그렇다면 주소값으로도 hashCode처럼 대상을 비교할 수 있지않나?그럼 equals랑 ==이랑 같게 쓰여야하는거 아닌가?라는 생각을 했었는데  멍-충 주소값이 서로 다르지만 문자열은 같은 두 String 객체를 가지고 hashCode를 비교해보았습니다.주소값은 다르지만 같은 문자열에 대해 hashCode가 같은 것을 볼 수 있습니다.  응? 주소값으로 hashCode만드는데 주소값이 다른데 hashCode가 같네? 모순모순!  이라고 할 뻔 했지만   String의 hashCode() 는 재정의가 되어 사용된다.가 정답입니다.String은 문자열이고 “에이”와 “에이”가 주소가 다르다고 다른말이라면 hashCode의 의미가 없을뿐더러 발생할 수 있는 나쁜 예로  -&gt; HashMap에서 일치하는 key 값을 찾아낼 수 없게 되겠죠 그래서 String은 hashCode를 생성할 때 주소값 말고 문자열로 생성하는 것으로 hashCode() 메서드가 재정의 된 것이랍니다.여기까지 equals메서드와 ‘==’연산자의 간단한 차이였습니다.아래는 String 기본 설명 살짝 덧붙여봤습니다.우선 spring 둘의 주소값이 다른 이유String aa = \"에이\";String bb =new String(\"에이\");리터널 aa변수는 stack 메모리에, “에이”라는 문자열은 Heap 메모리 내에 String pool 이라는 곳에 저장. 그 주소가 aa변수에 저장됩니다. 또한 String pool에 저장될때 intern() 이라는 메서드가 실행되는데  intern() = 같은 값이 있는 경우 기존 값의 메모리 주소를 사용하고, 다른 값일 경우 객체를 생성해 값을 저장하고 그 메모리 주소를 리턴합니다.Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막습니다. 그래서String c = \"씨\";String cc = \"씨\";c == cc --&gt; true 라는 결과를 얻게되는것이죠.반대로   new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. 그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? 오늘도 화이팅입니다!",
+            "content": "안녕하세요 오늘은 비교비교 equals 와 ‘==’ 에 대해 알아보려합니다.  우선  equals는 메서드 ==연산자는 비교를 위한 연산자입니다.== 연산자는 대상의 주소값을 비교하고equals는 오버라이딩을 통해 원하는 값을 비교할 수 있도록 한다. 우선 equals(Object obj) 매개변수로 객체의 참조변수를 받아서 비교하여 그 결과를 boolean값으로 알려 주는 역할을 한다. Object 클래스에 정의되어 있는 equals메서드의 실제 내용public boolean equals(Object obj) {     return (this==obj);}이 코드에서 알 수 있듯이 두 객체의 같고 다름을 참조변수(주소값)의 값으로 판단한다. 그렇기 때문에 서로 다른 두 객체를 equals 메서드로 비교하면 항상 false를 결과로 얻게 된다.public static void main(String[] args) { Obj obj1 = new obj(10); Obj obj2 = new obj(10);  System.out.println(obj1.equals(obj2));// false class Obj {  int value;    Obj(int value) {    this.value=value;  }}**그렇다면 equals 메서드로 Obj 인스턴스가 가지고 있는 value값을 비교 하도록 할 수는 없을까?이럴땐 Obj 클래스에서 equals메서드를 오버라이딩하여 주소가 아니라 객체에 저장된 내용을 비교하도록 변경하면 된다.class Person {  int value;    public boolean equals(Object obj) {     if(obj instanceof Person) {         return id==((Person).obj).id; //obj가 Object타입이므로 id 값을 참조하기 위해서는 Person타입으로 형변환이 필요하다.      }else{         return false;     }   }}class EqualEx2 { public static void main(String[] args) {    Person p1 = new Person(1020);    Person p2 = new Person(1020); if(p1 == p2) {    System.out.println(\"두 객체는 같다\"); }else {    System.out.println(\"두 객체는 다르다\");  } if(p1.equals(p2)) {    System.out.println(\"두 객체는 같다\"); }else {    System.out.println(\"두 객체는 다르다\");  }결과값은 “두 객체는 다르다”“두 객체는 같다”가 나왔다.String 클래스 역시  hashCode란?Object클래스는 hashCode() 라는 메서드를 가지고 있습니다 hashCode() 메서드는 말그대로 hashCode를 생성해 리턴해주는 메서드이죠 hashcode란 Object클래스의 메서드가 리턴하는 각 객체에 대응하는 고유한 정수값을 이야기하며     기본적으로 hashCode는 객체의 주소값과 연관이 있습니다비교했을때 주소값이 다른 obj와 obj2의 hashcode값이 다르죠 그리고 obj2의 주소값 @ 뒤의 값 6d06d69c (16진수) -&gt; hashCode 1829164700(10진수) 값으로변환이 되는것을 볼 수 있습니다. 그렇다면 주소값만으로도 hashCode처럼 대상을 비교할 수 있지않나?그럼 equals랑 ==이랑 같게 쓰여야하는거 아닌가?라는 생각을 했었는데  멍-충 주소값이 서로 다르지만 문자열은 같은 두 String 객체를 가지고 hashCode를 비교해보았습니다.주소값은 다르지만 같은 문자열에 대해 hashCode가 같은 것을 볼 수 있습니다.  [응? 주소값으로 hashCode만드는데 주소값이 다른데 hashCode가 같네? 모순모순!]이라고 할 뻔 했지만   String의 hashCode() 는 재정의가 되어 사용된다.가 정답입니다.String은 문자열이고 “에이”와 “에이”가 주소가 다르다고 다른말이라면 hashCode의 의미가 없을뿐더러 발생할 수 있는 나쁜 예로  -&gt; HashMap에서 일치하는 key 값을 찾아낼 수 없게 되겠죠 그래서 String은 hashCode를 생성할 때 주소값 말고 문자열로 생성하는 것으로 hashCode() 메서드가 재정의 된 것이랍니다.여기까지 equals메서드와 ‘==’연산자의 간단한 차이였습니다.아래는 String 기본 설명 살짝 덧붙여봤습니다.우선 spring 둘의 주소값이 다른 이유String aa = \"에이\";String bb =new String(\"에이\");리터널 aa변수는 stack 메모리에, “에이”라는 문자열은 Heap 메모리 내에 String pool 이라는 곳에 저장. 그 주소가 aa변수에 저장됩니다. 또한 String pool에 저장될때 intern() 이라는 메서드가 실행되는데  intern() = 같은 값이 있는 경우 기존 값의 메모리 주소를 사용하고, 다른 값일 경우 객체를 생성해 값을 저장하고 그 메모리 주소를 리턴합니다.Spring pool이 HashMap 자료구조 형태로 중복된 데이터 저장을 막습니다. 그래서String c = \"씨\";String cc = \"씨\";c == cc --&gt; true 라는 결과를 얻게되는것이죠.반대로   new 연산자 사용시 bb은 stack메모리에, “Hello” 는 일반 Heap 메모리 내에 생성되어 문자열이 같더라도 계속 새로운 인스턴스가 생성되게 되는것입니다. 그렇다면 메모리관리를 위해서라도 String은 리터널로 생성하는것이 권장되겠죠? 오늘도 화이팅입니다!",
         "url": "/java-equals"
     }
     ,

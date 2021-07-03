@@ -191,6 +191,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "coding-exhaustive-search-2": {
+        "title": "&lt;프로그래머스&gt; 완전탐색  Level 2 소수찾기(2)",
+            "author": "nageom",
+            "category": "",
+            "content": "프로그래머스 &gt; 완전탐색 &gt; 소수찾기문제 설명한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다.각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때, 종이 조각으로 만들 수 있는 소수가 몇 개인지 return 하도록 solution 함수를 완성해주세요.제한사항numbers는 길이 1 이상 7 이하인 문자열입니다.numbers는 0~9까지 숫자만으로 이루어져 있습니다.“013”은 0, 1, 3 숫자가 적힌 종이 조각이 흩어져있다는 의미입니다.입출력 예numbers\treturn“17”            \t3“011”        \t2입출력 예 설명예제 #1[1, 7]으로는 소수 [7, 17, 71]를 만들 수 있습니다.예제 #2[0, 1, 1]으로는 소수 [11, 101]를 만들 수 있습니다.11과 011은 같은 숫자로 취급합니다.[풀이과정]순열 알고리즘과 제곱근을 이용한 소수판별법을 사용해 코드를 작성했다. 정말 내 머리로는 힘들어서  https://hidelookit.tistory.com/67 이 분의 힘을 빌렸다.. 파워풀..[코드를 살펴보자]package exhaustiveSearch;import java.util.*;public class PrimeNum {\tprivate static int cnt = 0;    private static String[] map;    private static String[] result;    private static boolean[] visit;    private static HashSet&lt;Integer&gt; list;\tpublic static int solution(String numbers) {\t\tint answer = 0;        visit = new boolean[numbers.length()];        map = new String[numbers.length()];        map = numbers.split(\"\");        list = new HashSet();        for (int i=1; i&lt;=numbers.length(); i++) {            result = new String[i];            cycle(0, i, numbers.length());        }        return list.size();\t    \t    \t}\t\t\t public static void cycle(int start, int end, int length) {\t        if (start == end) {\t            findPrime();\t        } else {\t            for (int i=0; i&lt;length; i++) {\t                if (!visit[i]) { //true로 바꿔서 배열 2번째, 3번째 값들을 하나씩 배열에 넣어주는 역할\t                    visit[i] = true;\t                    result[start] = map[i]; // result[0]=[1], result[1]=[7] \t                    cycle(start+1, end, length); //findPrime에 도달하기위해 start++\t                    visit[i] = false;\t                }\t            }\t        }\t    }\tpublic static void findPrime() {\t        // 숫자로 변환\t        String str = \"\";\t        for(int i=0; i&lt;result.length; i++)\t            str += result[i];\t        int num = Integer.parseInt(str);\t        // 예외 처리\t        if(num == 1 || num == 0)\t            return;\t        // 소수 인지 검사\t        boolean flag = false;\t        for(int i=2; i&lt;=Math.sqrt(num); i++){  //Math.sqrt()는 num의 제곱근을 구해주는 메서드이다. \t            if(num % i == 0)\t            \t\t                flag = true;\t        }\t        if(!flag)\t            list.add(num);\t    }\t\tpublic static void main(String[] args) {\t\tString numbers = \"17\";\t\tString numbers2 = \"011\";\t\t\t\tint result = solution(numbers);\t\t\t\tSystem.out.println(\"result : \"+ result);\t}}배운것Math.sqrt()는 num의 제곱근을 구해주는 메서드를 처음 알았다. 또 private static boolean[] visit 배열의 활용을 공부하니앞으로의 코딩에도 유용하게 사용될 것 같다.커버사진 출처 프로그래머스",
+        "url": "/coding-exhaustive-search(2)"
+    }
+    ,
+    
     "coding-sort-3": {
         "title": "&lt;프로그래머스&gt; 정렬  Level 2 H-Index(2)",
             "author": "nageom",

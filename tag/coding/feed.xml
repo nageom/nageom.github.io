@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-07-04T23:17:14+09:00</updated>
+  <updated>2021-07-04T23:46:37+09:00</updated>
   <id>https://nageom.github.io/tag/coding/feed.xml</id>
 
   
@@ -135,7 +135,7 @@ yellow의 모양을 가늠할 수는 없지만 결국 네모를 만들것이라�
       <content type="html" xml:base="https://nageom.github.io/coding-greedy(1)">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 체육법&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;문제 설명
+&lt;p&gt;문제 설명&lt;br /&gt;
 점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.&lt;/p&gt;
 
 &lt;p&gt;전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
@@ -165,14 +165,17 @@ yellow의 모양을 가늠할 수는 없지만 결국 네모를 만들것이라�
 
 &lt;p&gt;나는 막히는 테스트케이스가 딱 두가지 있었는데&lt;br /&gt;
 &lt;strong&gt;n=5; lost = {3,5}; reserve={2,4};의 경우&lt;/strong&gt;&lt;br /&gt;
-답 5&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;또는 &lt;br /&gt;&lt;/p&gt;
+답 5&lt;br /&gt;
+s
+또는 &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;n=5; lost={2,3,4}; reserve= {1,2,3};&lt;/strong&gt; &lt;br /&gt;
 답 4&lt;br /&gt;&lt;br /&gt;
 이때는 도둑맞은 학생이 여벌을 갖을 경우에는 남을 빌려주지않고 본인이 입는다는 조건을 충족시켜야한다. 
-이 경우에는 나는 겹치는 수를 reserve에서 0으로 만들고 코드에 0인 경우에 대한 조건문을 추가했다.&lt;/p&gt;
+이 경우에는 나는 겹치는 수를 reserve에서 0으로 만들고 코드에 0인 경우에 대한 조건문을 추가했다. 
+배열 안에 특정 원소를 가지고 있는지 확인 할 수 있는 메서드 Arrays.stream(reserve).anyMatch(i-&amp;gt;i==a)를 사용했다.&lt;br /&gt;
+이외의 같은 기능을 하는 메서드는 https://www.delftstack.com/ko/howto/java/java-array-contains-int 
+ 이 분이 잘 정리 하셨다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;하지만 다른 분들의 코드에 비해 아주 길었고.. 보기 편한 코드는 아니기 때문에 
 한번 더 재코딩해서 올릴 예정이다. &lt;br /&gt;

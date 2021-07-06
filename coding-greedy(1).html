@@ -357,6 +357,54 @@ s
 <p>결과
 <img src="../../assets/built/images/coding/greedy(1)_2.png" alt="ex_screenshot" /></p>
 
+<p><strong>[새로운 풀이]</strong><br />
+다른 분들의 풀이를 살펴보았다. 나는 true와 false만 담을 수 있는 boolean배열을 사용해서 <br />
+손봐야 하는 부분들이 번거롭게 생겼었고, <br />
+이 분은 int[] 배열에 0,-1,1 로 구분해주어서 더 깔끔한 코드를 완성했다.  <br /></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">package</span> <span class="nx">greedy</span><span class="p">;</span>
+
+<span class="kr">public</span> <span class="kd">class</span> <span class="nx">Gym2</span> <span class="p">{</span>
+	<span class="kr">public</span> <span class="kd">static</span> <span class="nx">int</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">int</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">int</span><span class="p">[]</span> <span class="nx">lost</span><span class="p">,</span> <span class="nx">int</span><span class="p">[]</span> <span class="nx">reserve</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">int</span><span class="p">[]</span> <span class="nx">people</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">int</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span>
+        <span class="nx">int</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">n</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">l</span> <span class="p">:</span> <span class="nx">lost</span><span class="p">)</span> 
+            <span class="nx">people</span><span class="p">[</span><span class="nx">l</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">r</span> <span class="p">:</span> <span class="nx">reserve</span><span class="p">)</span> 
+            <span class="nx">people</span><span class="p">[</span><span class="nx">r</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">people</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+                    <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="o">&lt;</span> <span class="nx">people</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+                    <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span> 
+                    <span class="nx">answer</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+
+	<span class="kr">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+		
+		<span class="nx">int</span> <span class="nx">n</span><span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+		<span class="nx">int</span><span class="p">[]</span> <span class="nx">lost</span><span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+		<span class="nx">int</span><span class="p">[]</span> <span class="nx">reserve</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
+		<span class="c1">//5나와야함 </span>
+		<span class="nx">int</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">lost</span><span class="p">,</span> <span class="nx">reserve</span><span class="p">);</span>
+		
+		<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="dl">"</span><span class="s2">Result : </span><span class="dl">"</span><span class="o">+</span> <span class="nx">result</span> <span class="p">);</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p><strong>이해하려 적어본 메모</strong>
+<img src="../../assets/built/images/coding/greedy(1)_3.png.jpg" alt="ex_screenshot" /></p>
+
 <p><br /><br />
 커버사진 출처 프로그래머스</p>
 
@@ -656,7 +704,6 @@ s
                 <section class="post-card-excerpt">
                     
                         <p>
- 애너테이션(anotation)
 
 </p>
                     
@@ -676,7 +723,7 @@ s
                 <span class="reading-time">
                     
                     
-                      1 min read
+                      2 min read
                     
                 </span>
             </footer>

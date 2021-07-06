@@ -215,7 +215,7 @@ Comparable을 구현하고 있는 클래스들은 같은 타입의 인스턴스�
 wrapper클래스와 String, Date, File과 같은 것들이며 기본적으로 오름차순으로 구현되어 있다. 
 그래서 <u>Comparable을 구현한 클래스는 정렬이 가능하다는 것을 의미한다. </u></p>
 
-<p>Comparator와 COmparable의 실제 소스</p>
+<p>Comparator와 Comparable의 실제 소스</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">public</span> <span class="kr">interface</span> <span class="nx">Comparator</span><span class="p">{</span>
     <span class="nx">int</span> <span class="nx">compare</span><span class="p">(</span><span class="nb">Object</span> <span class="nx">o1</span><span class="p">,</span> <span class="nb">Object</span> <span class="nx">o2</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">boolean</span> <span class="nx">equals</span><span class="p">(</span><span class="nb">Object</span> <span class="nx">obj</span><span class="p">);</span>

@@ -8,6 +8,27 @@
     
       
       <item>
+        <title>프로세스와 쓰레드</title>
+        
+          <description>&lt;hr /&gt;
+&lt;h6&gt;[프로세스와 쓰레드의 개념]&lt;/h6&gt;
+&lt;p&gt;프로세스(process)란 간단히 말해서 ‘실행 중인 프로그램(program)’이다.
+지금 당장 작업 관리자를 열어 확인 할 수 있는 실행 중인 프로그램을 말한다. (멜론, 이클립스.. )&lt;br /&gt;
+프로그램을 실행하면 OS로부터 실행에 필요한 자원(메모리)을 할당받아 프로세스가 된다. 
+정확히는 프로세스는 프로그램을 수행하는 데 필요한 데이터와 메모리 등의 자원 그리고 
+쓰레드로 구성되어 있으며, 이 때 쓰레드는 실제로 작업을 수행하는 친구이다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 07 Jul 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/java-thread-basic</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-thread-basic</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>자바의 애너테이션(annotation)</title>
         
           <description>&lt;hr /&gt;

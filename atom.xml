@@ -427,18 +427,16 @@
     
       
       <item>
-        <title>쓰레드(thread)와 러버블(Runnable)로 쓰레드 구현</title>
+        <title>쓰레드 구현</title>
         
           <description>&lt;hr /&gt;
-&lt;p&gt;오늘은 정말 기초수업에 들었지만 기억은 하나도 나지 않았던 쓰레드 구현입니다.&lt;br /&gt;
-옛 기억을 살려가며 포스팅&lt;/p&gt;
 
 </description>
         
         <pubDate>Fri, 18 Jun 2021 09:14:00 +0900</pubDate>
         <link>
-        https://nageom.github.io/java-thread</link>
-        <guid isPermaLink="true">https://nageom.github.io/java-thread</guid>
+        https://nageom.github.io/java-thread(1)</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-thread(1)</guid>
       </item>
       
     

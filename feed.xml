@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-07-09T23:42:15+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">탐욕법 큰 수 만들기</title><link href="https://nageom.github.io/coding-greedy(3)" rel="alternate" type="text/html" title="탐욕법 큰 수 만들기" /><published>2021-07-09T09:14:00+09:00</published><updated>2021-07-09T09:14:00+09:00</updated><id>https://nageom.github.io/coding-greedy(3)</id><content type="html" xml:base="https://nageom.github.io/coding-greedy(3)">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-07-09T23:45:27+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">탐욕법 큰 수 만들기</title><link href="https://nageom.github.io/coding-greedy(3)" rel="alternate" type="text/html" title="탐욕법 큰 수 만들기" /><published>2021-07-09T09:14:00+09:00</published><updated>2021-07-09T09:14:00+09:00</updated><id>https://nageom.github.io/coding-greedy(3)</id><content type="html" xml:base="https://nageom.github.io/coding-greedy(3)">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 큰 수 만들기&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;문제 설명
@@ -13,14 +13,14 @@ number는 1자리 이상, 1,000,000자리 이하인 숫자입니다.
 k는 1 이상 number의 자릿수 미만인 자연수입니다.
 &lt;img src=&quot;../../assets/built/images/coding/greedy(3)_2.jpg.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;h6&gt;[풀이과정]&lt;/h6&gt;
+&lt;h6&gt;풀이과정&lt;/h6&gt;
 
 &lt;p&gt;모랄까.. 느낌은 알겠는데 도저히 코드가 안나와서 다른 분의 코드를 해석했다. 
-&lt;img src=&quot;../../assets/built/images/coding/greedy(3)_1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;../../assets/built/images/coding/greedy(3)_1.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;참고 코드 https://velog.io/@hyeon930/&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;알게된것?&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;알게된것&lt;/strong&gt;&lt;br /&gt;
 int num = number.charAt(j) - ‘0’;&lt;br /&gt;
 문자열-‘0’을 하면 문자열를 정수로 바꿔 받을 수 있다.&lt;/p&gt;
 

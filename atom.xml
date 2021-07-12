@@ -8,6 +8,24 @@
     
       
       <item>
+        <title>&lt;정렬&gt; 힙 정렬(Heap Sort)</title>
+        
+          <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;힙이란??&lt;/strong&gt;
+최댓값이나 최솟값을 찾아내는 연산을 빠르게 하기위해 고안된 완전 이진트리를 기본으로 한 자료구조입니다. 
+최소힙, 최대힙이 있는데 트리 루트가 최솟값인지, 최댓값인지에 따라 구분된다.&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 12 Jul 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/algorithm-heap-sort</link>
+        <guid isPermaLink="true">https://nageom.github.io/algorithm-heap-sort</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>&lt;프로그래머스&gt; 탐욕법 구명보트</title>
         
           <description>&lt;hr /&gt;

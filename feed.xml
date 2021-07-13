@@ -1,35 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-07-13T23:57:15+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드의 start()와 run() (2)</title><link href="https://nageom.github.io/java-thread(2)" rel="alternate" type="text/html" title="쓰레드의 start()와 run() (2)" /><published>2021-07-13T09:14:00+09:00</published><updated>2021-07-13T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(2)</id><content type="html" xml:base="https://nageom.github.io/java-thread(2)">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-07-14T01:17:53+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드의 start()와 run() (2)</title><link href="https://nageom.github.io/java-thread(2)" rel="alternate" type="text/html" title="쓰레드의 start()와 run() (2)" /><published>2021-07-13T09:14:00+09:00</published><updated>2021-07-13T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(2)</id><content type="html" xml:base="https://nageom.github.io/java-thread(2)">&lt;p&gt;쓰레드를 구현하고 나면서 드는 생각이 있었다. &lt;br /&gt;
+쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 
+그래서 이 둘에 대해 자세히 알아보았다. &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용한다는게 좀 이상했다. 
-이 둘에 대해 자세히 알아보자.&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyThread01&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//구현&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyThread01&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Override&lt;/span&gt;
 	&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 		&lt;span class=&quot;nx&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt; 
 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ex01&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//실행&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ex01&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 		&lt;span class=&quot;nx&quot;&gt;MyThread01&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mt01&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyThread01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 		&lt;span class=&quot;c1&quot;&gt;// run을 호출(XXX) start사용	&lt;/span&gt;
 		&lt;span class=&quot;nx&quot;&gt;mt01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;간단히 말해서&lt;br /&gt;
-run() - main메서드에서 run()을 호출하는 것은 생성된 쓰레드를 실행시키는 것이 아니라 단순히 클래스에 선언된 메서드를 호출하는 것일 뿐이다.&lt;br /&gt;
-start() - 새로운 쓰레드가 작업을 실행하는데 필요한 호출스택(call stack)을 생성한 다음에 run()을 호출해서 
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;간단히 말해서&lt;br /&gt;
+&lt;strong&gt;run()&lt;/strong&gt; - main메서드에서 run()만을 호출하는 것은 생성된 쓰레드를 실행시키는 것이 아니라 단순히 클래스에 선언된 메서드를 호출하는 것일 뿐이다.&lt;br /&gt;
+반면에 &lt;strong&gt;start()&lt;/strong&gt; - 새로운 쓰레드가 작업을 실행하는데 필요한 호출스택(call stack)을 생성한 다음에 run()을 호출해서 
 생성된 호출스택에 run()이 첫 번째로 올라가게 한다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;h6&gt;main 또한 쓰레드이다.&lt;/h6&gt;
-&lt;p&gt;&lt;br /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;main 또한 쓰레드이다.&lt;br /&gt;
 프로그램의 시작과 함께 생성되는 하나의 쓰레드가 main메서드를 호출하여 작업이 수행되도록 하는데 &lt;br /&gt;
-1) 그렇다면 호출스택에 main이 가장아래 깔리게 된다. &lt;br /&gt;
+1) 그렇다면 호출스택에 main이 가장 아래 깔리게 된다. &lt;br /&gt;
 2) 이후 start()가 호출되어 main 위로 올라가고 새로운 쓰레드를 생성하고, 쓰레드가 작업하는데 사용될 호출스택을 새로 생성한다. &lt;br /&gt;
 3) 그리하여 그 호출스택에 run()이 호출되어, 쓰레드가 독립된 공간에서 작업을 수행한다. start는 할일을 다해서 종료됨. &lt;br /&gt;
-4) 이렇게 생긴 main의 호출스택과 새로 생성된 run의 호출스택 두개가 남게된다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;일부러 새로 생성한 쓰레드에서 예외를 발생시키고 예외가 발생한 당시의 호출스택을 출력하는 예제로
+4) 이렇게 생긴 main의 호출스택과 새로 생성된 run의 호출스택 두개가 남게된다. &lt;br /&gt;
+물론,  main쓰레드 호출스택은 run쓰레드의 종료와 상관없이 임무를 마치면 혼자 사라진다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;일부러 새로 생성한 쓰레드에서 예외를 발생시키고 예외가 발생한 당시의 호출스택을 출력하는 예제로
 쓰레드 간의 영향을 확인해보자.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 &lt;noscript&gt;&lt;pre&gt;package thread;
 
 public class MyThread01 {
@@ -66,11 +74,22 @@ class MyThreadEx extends Thread {
 &lt;script src=&quot;https://gist.github.com/nageom/d05e50c02edae4efdf30a21cd0821470.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;결과
-&lt;img src=&quot;../../assets/built/images/java/thread/thread(2)_1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;../../assets/built/images/java/thread/thread(2)_1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+호출스택&lt;br /&gt;
+&lt;strong&gt;&lt;u&gt;|throwException&lt;/u&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;u&gt;|run&lt;/u&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;호출스택의 첫 번째 메서드가 main메서드가 아닌 run메서드인 것을 확인할 수 있다. &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;호출스택의 첫 번째 메서드가 main메서드가 아닌 run메서드인 것을 확인할 수 있다.
+즉, 한 쓰레드가 예외를 발생해서 종료되어도 다른 쓰레드의 실행에는 영향을 미치지 않는다.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;즉, 한 쓰레드가 예외를 발생해서 종료되어도 다른 쓰레드의 실행에는 영향을 미치지 않는다. 그래서&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html"></summary></entry><entry><title type="html">힙 정렬(Heap Sort)</title><link href="https://nageom.github.io/algorithm-heap-sort" rel="alternate" type="text/html" title="힙 정렬(Heap Sort)" /><published>2021-07-12T09:14:00+09:00</published><updated>2021-07-12T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-heap%20sort</id><content type="html" xml:base="https://nageom.github.io/algorithm-heap-sort">&lt;hr /&gt;
+&lt;p&gt;start()로 쓰레드를 생성함과 동시에 호출스택을 생성해 내는것을 한번 더 기억하자. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;4. 그렇다면 run()으로 쓰레드를 바로 실행하면 어떻게 될까?&lt;/u&gt; &lt;br /&gt;
+호출스택&lt;br /&gt;
+&lt;strong&gt;&lt;u&gt;|throwException&lt;/u&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;u&gt;|run&lt;/u&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;u&gt;|main&lt;/u&gt;&lt;/strong&gt;&lt;br /&gt;
+이런 식으로 하나의 main쓰레드 호출스택에서 호출된다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">쓰레드를 구현하고 나면서 드는 생각이 있었다. 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 그래서 이 둘에 대해 자세히 알아보았다.</summary></entry><entry><title type="html">힙 정렬(Heap Sort)</title><link href="https://nageom.github.io/algorithm-heap-sort" rel="alternate" type="text/html" title="힙 정렬(Heap Sort)" /><published>2021-07-12T09:14:00+09:00</published><updated>2021-07-12T09:14:00+09:00</updated><id>https://nageom.github.io/algorithm-heap%20sort</id><content type="html" xml:base="https://nageom.github.io/algorithm-heap-sort">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;힙이란??&lt;/strong&gt;
 최댓값이나 최솟값을 찾아내는 연산을 빠르게 하기위해 고안된 완전 이진트리를 기본으로 한 자료구조입니다. 
 최소힙, 최대힙이 있는데 트리 루트가 최솟값인지, 최댓값인지에 따라 구분된다.&lt;br /&gt;&lt;/p&gt;

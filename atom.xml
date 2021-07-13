@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>쓰레드의 start()와 run() (2)</title>
+        
+          <description>&lt;hr /&gt;
+
+</description>
+        
+        <pubDate>Tue, 13 Jul 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/java-thread(2)</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-thread(2)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>&lt;정렬&gt; 힙 정렬(Heap Sort)</title>
         
           <description>&lt;hr /&gt;
@@ -477,7 +492,7 @@
     
       
       <item>
-        <title>쓰레드 구현</title>
+        <title>쓰레드 구현 (1)</title>
         
           <description>&lt;hr /&gt;
 

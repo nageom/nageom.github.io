@@ -11,7 +11,7 @@
 
 
 
-    <title><정렬> 병합 정렬(Merge Sort)</title>
+    <title>쓰레드의 start()와 run() (2)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -47,30 +47,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="티끌모아 공부방" />
     <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
-    <link rel="canonical" href="https://nageom.github.io/algorithm-merge-sort" />
+    <link rel="canonical" href="https://nageom.github.io/java-thread(2)" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<정렬> 병합 정렬(Merge Sort)" />
-    <meta property="og:description" content="[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀵 정렬과 다르게 피벗 값이 없고 무조건 반으로 모두 나누고 합하면서 정렬한다는 방법이다. 실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다. 각 하나로 만들고 분할 병합하며 정렬하는 방식이다. 더 자세히 코드느낌으로 보자면 나누어진 두 배열을 비교하며 작은 값을 k인덱스에 하나씩" />
-    <meta property="og:url" content="https://nageom.github.io/algorithm-merge-sort" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
+    <meta property="og:title" content="쓰레드의 start()와 run() (2)" />
+    <meta property="og:description" content="쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용한다는게 좀 이상했다. 이 둘에 대해 자세히 알아보자. class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); // run을 호출(XXX) start사용 mt01.start(); 간단히 말해서 run()" />
+    <meta property="og:url" content="https://nageom.github.io/java-thread(2)" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-06-29T09:14:00+09:00" />
-    <meta property="article:modified_time" content="2021-06-29T09:14:00+09:00" />
-    <meta property="article:tag" content="Algorithm" />
+    <meta property="article:published_time" content="2021-07-13T09:14:00+09:00" />
+    <meta property="article:modified_time" content="2021-07-13T09:14:00+09:00" />
+    <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<정렬> 병합 정렬(Merge Sort)" />
-    <meta name="twitter:description" content="[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀵 정렬과 다르게 피벗 값이 없고 무조건 반으로 모두 나누고 합하면서 정렬한다는 방법이다. 실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다. 각 하나로 만들고 분할 병합하며 정렬하는 방식이다. 더 자세히 코드느낌으로 보자면 나누어진 두 배열을 비교하며 작은 값을 k인덱스에 하나씩" />
+    <meta name="twitter:title" content="쓰레드의 start()와 run() (2)" />
+    <meta name="twitter:description" content="쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용한다는게 좀 이상했다. 이 둘에 대해 자세히 알아보자. class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); // run을 호출(XXX) start사용 mt01.start(); 간단히 말해서 run()" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/algorithm/cover.png" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Algorithm" />
+    <meta name="twitter:data2" content="Java" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -85,18 +85,18 @@
         "name": "nageom's blog",
         "logo": "https://nageom.github.io/"
     },
-    "url": "https://nageom.github.io/algorithm-merge-sort",
+    "url": "https://nageom.github.io/java-thread(2)",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/algorithm/cover.png",
+        "url": "https://nageom.github.io/assets/built/images/java/cover/cover_java.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://nageom.github.io/algorithm-merge-sort"
+        "@id": "https://nageom.github.io/java-thread(2)"
     },
-    "description": "[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ] 퀵 정렬과 다르게 피벗 값이 없고 무조건 반으로 모두 나누고 합하면서 정렬한다는 방법이다. 실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다. 각 하나로 만들고 분할 병합하며 정렬하는 방식이다. 더 자세히 코드느낌으로 보자면 나누어진 두 배열을 비교하며 작은 값을 k인덱스에 하나씩"
+    "description": "쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용한다는게 좀 이상했다. 이 둘에 대해 자세히 알아보자. class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); // run을 호출(XXX) start사용 mt01.start(); 간단히 말해서 run()"
 }
     </script>
 
@@ -109,7 +109,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="<정렬> 병합 정렬(Merge Sort)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="쓰레드의 start()와 run() (2)" href="/feed.xml" />
 
 
 </head>
@@ -177,26 +177,26 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-algorithm post ">
+        <article class="post-full  tag-java post ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="29 June 2021">29 June 2021</time>
+                    <time class="post-full-meta-date" datetime="13 July 2021">13 July 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/algorithm/'>ALGORITHM</a>
+                               <a href='/tag/java/'>JAVA</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title"><정렬> 병합 정렬(Merge Sort)</h1>
+                <h1 class="post-full-title">쓰레드의 start()와 run() (2)</h1>
             </header>
 
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/algorithm/cover.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/java/cover/cover_java.png)">
             </figure>
             
             -->
@@ -204,117 +204,78 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <hr />
 
-<h6>[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ]</h6>
-<p>퀵 정렬과 다르게 피벗 값이 없고 무조건 반으로 모두 나누고 합하면서 정렬한다는 방법이다.<br /></p>
-
-<p><img src="../../assets/built/images/algorithm/sort/merge sort(1).png" alt="ex_screenshot" /></p>
-
-<p>실제로 각 다른 배열을 갖는것이아니라 논리적으로 그렇다고 생각하고 그림처럼 정렬시킨다.<br />
-각 하나로 만들고 분할 병합하며 정렬하는 방식이다.<br /></p>
-
-<p>더 자세히 코드느낌으로 보자면<br />
-<img src="../../assets/built/images/algorithm/sort/merge sort(2).png" alt="ex_screenshot" />
-나누어진 두 배열을 비교하며 작은 값을 <u>k인덱스</u>에 하나씩 집어넣는다. <br />
-이 때 실제로 <u>k</u>은 새로운 배열이 아니라 <u>i</u>와 같은 배열이다.<br /></p>
-
-<h6>[병합 정렬의 시간 복잡도 O(N* log2N) ]</h6>
-
-<p><img src="../../assets/built/images/algorithm/sort/merge sort(3).png" alt="ex_screenshot" />
-배열의 (너비) N *  (높이) log2 N = O(N*log2 N) 시간복잡도가 나온다. <br /></p>
-
-<p>어째서 정렬에 높이 log2 N 밖에 안나오냐라는 질문에는 이미 정렬된 두 배열을 정렬하기 때문이라고 답할 수 있다. <br /></p>
-
-<p>실제로 나누어진 두 배열을 하나로 합하며 정렬해 나갈때 N번의 반복만 수행이 된다. <br />
-내가 이해한 루트로 설명해보자면 <br /></p>
-
-<p>1번째 줄에서 2번째 줄로 분할병합 할 때, 먼저 <strong>{6,5}  {5,8}</strong> <br />
-1회전-&gt;  i(0)과 j(0)비교<br /> 
-2회전-&gt; i(0)과 j(1)비교<br />
-3회전-&gt; i(1)과 j(0)비교<br />
-4회전-&gt; i(1)과 j(1)비교<br />
-총 4회 -&gt; 배열의 총 크기만큼만 수행된다. <br />
-그렇다면 그 옆 배열 <strong>{3,5}, {1,9}</strong>의 분할병합에서도 <u>4회의 반복</u>이 될것이고<br />
-즉, 그림에 한 줄 <strong>N번의 수행</strong>을 한다라는것을 알 수 있다. <br /></p>
-
-<p>시간 복잡도가 퀵 정렬과 같은데 다른 점이라 하면<br />
-<strong>퀵 정렬</strong>은 정렬 알고리즘 중 가장 빠른 속도를 자랑하지만 최악의 경우에는 O(N^2)가 될 수 있는 정렬이고,<br />
-<strong>병합 정렬</strong>은 최악의 상황에서도 평균 O(N*logN)을 보장할 수 있다는 것이 큰 장점으로 쓰인다. <br /></p>
-
-<h6>[코드를 살펴보자]</h6>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="err">#</span><span class="nx">include</span> <span class="o">&lt;</span><span class="nx">stdio</span><span class="p">.</span><span class="nx">h</span><span class="o">&gt;</span>
-
-<span class="nx">int</span> <span class="nx">number</span> <span class="o">=</span><span class="mi">8</span><span class="p">;</span> 
-<span class="nx">int</span> <span class="nx">sorted</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span> <span class="c1">// 정렬 배열은 반드시 전역 변수로 선언</span>
- 
-<span class="c1">//정렬된 배열을 담을 뱅</span>
-<span class="c1">// 논리적으로 둘로 나누어진 i, j 배열을 정렬하며 합치는 메서드 merge </span>
-										<span class="c1">//n은 j의 끝 인덱스 </span>
-<span class="k">void</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">int</span> <span class="nx">a</span><span class="p">[],</span> <span class="nx">int</span> <span class="nx">m</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">middle</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">n</span> <span class="p">)</span> <span class="p">{</span>
-	
-	<span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="nx">m</span><span class="p">;</span> <span class="c1">// 왼쪽배열 시작점 </span>
-	<span class="nx">int</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">middle</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// 한칸 띄움 </span>
-	<span class="nx">int</span> <span class="nx">k</span><span class="o">=</span><span class="nx">m</span><span class="p">;</span> <span class="c1">//정렬된 배열 </span>
-	<span class="c1">//k는 사실상 i와 동일한 위치를 가진다. </span>
-	<span class="c1">// 그림은 정렬 전 배열과 정렬 후의 배열을 따로 두었지만</span>
-	<span class="c1">// 실제로는 하나의 배열을 사용중  </span>
-	
-	<span class="c1">//작은 순서대로 배열에 삽입 </span>
-	<span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;=</span><span class="nx">middle</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">n</span> <span class="p">)</span> <span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="p">{</span>
-			<span class="nx">sorted</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span><span class="o">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-			<span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-		<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
-			<span class="nx">sorted</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span><span class="o">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
-			<span class="nx">j</span><span class="o">++</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="nx">k</span><span class="o">++</span><span class="p">;</span>	
-	<span class="p">}</span>
-	
-	<span class="c1">//남은 데이터도 삽입 </span>
-	<span class="k">if</span> <span class="p">(</span><span class="nx">i</span><span class="o">&gt;</span><span class="nx">middle</span><span class="p">)</span> <span class="p">{</span>
-		<span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">t</span><span class="o">=</span><span class="nx">j</span><span class="p">;</span> <span class="nx">t</span><span class="o">&lt;=</span><span class="nx">n</span><span class="p">;</span> <span class="nx">t</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nx">sorted</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span><span class="o">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span>
-			<span class="nx">k</span><span class="o">++</span><span class="p">;</span>
-		<span class="p">}</span>
-		
-	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-		<span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">t</span><span class="o">=</span><span class="nx">i</span><span class="p">;</span> <span class="nx">t</span><span class="o">&lt;=</span><span class="nx">middle</span><span class="p">;</span> <span class="nx">t</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nx">sorted</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span>
-			<span class="nx">k</span><span class="o">++</span><span class="p">;</span>
-			
-		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="c1">// 정렬된 배열을 삽입</span>
-	<span class="k">for</span><span class="p">(</span><span class="nx">int</span> <span class="nx">t</span><span class="o">=</span><span class="nx">m</span><span class="p">;</span> <span class="nx">t</span><span class="o">&lt;=</span><span class="nx">n</span><span class="p">;</span> <span class="nx">t</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">a</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sorted</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span>
-	<span class="p">}</span> 
-	
-	
-<span class="p">}</span>
- 
-<span class="k">void</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">int</span> <span class="nx">a</span><span class="p">[],</span> <span class="nx">int</span> <span class="nx">m</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-	<span class="c1">//크기가 1보다 큰 경우</span>
-	<span class="k">if</span><span class="p">(</span><span class="nx">m</span> <span class="o">&lt;</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">int</span> <span class="nx">middle</span> <span class="o">=</span> <span class="p">(</span><span class="nx">m</span><span class="o">+</span><span class="nx">n</span><span class="p">)</span> <span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-		<span class="nx">mergeSort</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">m</span><span class="p">,</span><span class="nx">middle</span><span class="p">);</span>
-		<span class="nx">mergeSort</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">middle</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nx">n</span> <span class="p">);</span>
-		<span class="nx">merge</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">m</span><span class="p">,</span> <span class="nx">middle</span><span class="p">,</span> <span class="nx">n</span><span class="p">);</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-<span class="nx">int</span> <span class="nx">main</span><span class="p">(</span><span class="k">void</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">int</span> <span class="nx">array</span><span class="p">[</span><span class="nx">number</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span> <span class="p">;</span>
-	<span class="nx">mergeSort</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">number</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-	<span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">number</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-		<span class="nx">printf</span><span class="p">(</span><span class="dl">"</span><span class="s2">%d </span><span class="dl">"</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<p>쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용한다는게 좀 이상했다. 
+이 둘에 대해 자세히 알아보자.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">MyThread01</span> <span class="kd">extends</span> <span class="nx">Thread</span> <span class="p">{</span>
+	<span class="p">@</span><span class="nd">Override</span>
+	<span class="kr">public</span> <span class="k">void</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">getName</span><span class="p">());</span> 
 	<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<p>References <br />
-강의영상<br />
-https://www.youtube.com/watch?v=ctkuGoJPmAE&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&amp;index=8<br />
-사진첨부<br />
-https://blog.naver.com/ndb796/221227934987</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">public</span> <span class="kd">class</span> <span class="nx">Ex01</span> <span class="p">{</span>
+	<span class="kr">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">MyThread01</span> <span class="nx">mt01</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyThread01</span><span class="p">();</span>
+		<span class="c1">// run을 호출(XXX) start사용	</span>
+		<span class="nx">mt01</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span> 
+</code></pre></div></div>
+<p>간단히 말해서<br />
+run() - main메서드에서 run()을 호출하는 것은 생성된 쓰레드를 실행시키는 것이 아니라 단순히 클래스에 선언된 메서드를 호출하는 것일 뿐이다.<br />
+start() - 새로운 쓰레드가 작업을 실행하는데 필요한 호출스택(call stack)을 생성한 다음에 run()을 호출해서 
+생성된 호출스택에 run()이 첫 번째로 올라가게 한다.<br /></p>
+
+<h6>main 또한 쓰레드이다.</h6>
+<p><br />
+프로그램의 시작과 함께 생성되는 하나의 쓰레드가 main메서드를 호출하여 작업이 수행되도록 하는데 <br />
+1) 그렇다면 호출스택에 main이 가장아래 깔리게 된다. <br />
+2) 이후 start()가 호출되어 main 위로 올라가고 새로운 쓰레드를 생성하고, 쓰레드가 작업하는데 사용될 호출스택을 새로 생성한다. <br />
+3) 그리하여 그 호출스택에 run()이 호출되어, 쓰레드가 독립된 공간에서 작업을 수행한다. start는 할일을 다해서 종료됨. <br />
+4) 이렇게 생긴 main의 호출스택과 새로 생성된 run의 호출스택 두개가 남게된다. <br /></p>
+
+<p>일부러 새로 생성한 쓰레드에서 예외를 발생시키고 예외가 발생한 당시의 호출스택을 출력하는 예제로
+쓰레드 간의 영향을 확인해보자.</p>
+<noscript><pre>package thread;
+
+public class MyThread01 {
+
+	public static void main(String[] args) throws Exception{
+		MyThreadEx my = new MyThreadEx();
+		my.start();
+	}
+	
+}
+
+
+
+class MyThreadEx extends Thread {
+	
+	public void run() {
+		throwException();
+		
+	}
+
+	
+	private void throwException() {
+		// TODO Auto-generated method stub
+		try {
+			throw new Exception();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+}
+</pre></noscript>
+<script src="https://gist.github.com/nageom/d05e50c02edae4efdf30a21cd0821470.js"> </script>
+
+<p>결과
+<img src="../../assets/built/images/java/thread/thread(2)_1.png" alt="ex_screenshot" /></p>
+
+<p>호출스택의 첫 번째 메서드가 main메서드가 아닌 run메서드인 것을 확인할 수 있다. <br /></p>
+
+<p>즉, 한 쓰레드가 예외를 발생해서 종료되어도 다른 쓰레드의 실행에는 영향을 미치지 않는다. 그래서</p>
+
 
                 </div>
             </section>
@@ -381,9 +342,9 @@ https://blog.naver.com/ndb796/221227934987</p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://nageom.github.io/algorithm-merge-sort';
-                            var this_page_identifier = '/algorithm-merge sort';
-                            var this_page_title = '<정렬> 병합 정렬(Merge Sort)';
+                            var this_page_url = 'https://nageom.github.io/java-thread(2)';
+                            var this_page_identifier = '/java-thread(2)';
+                            var this_page_title = '쓰레드의 start()와 run() (2)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -417,7 +378,7 @@ https://blog.naver.com/ndb796/221227934987</p>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; nageom's blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/algorithm/">Algorithm</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/java/">Java</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -427,13 +388,6 @@ https://blog.naver.com/ndb796/221227934987</p>
                                 
                                 
                                   
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/algorithm-heap-sort"><정렬> 힙 정렬(Heap Sort)</a></li>
-                                        
                                     
                                   
                                 
@@ -444,29 +398,21 @@ https://blog.naver.com/ndb796/221227934987</p>
                                   
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/java-thread-basic">프로세스와 쓰레드</a></li>
+                                        
                                     
                                   
                                 
                                   
-                                
+                                    
+                                        
+                                        
+                                            <li><a href="/java-annotation">자바의 애너테이션(annotation)</a></li>
+                                        
+                                    
                                   
                                 
                                   
@@ -483,39 +429,29 @@ https://blog.naver.com/ndb796/221227934987</p>
                                     
                                         
                                         
-                                            <li><a href="/algorithm-quick-sort"><정렬> 퀵 정렬 (Quick Sort)</a></li>
+                                            <li><a href="/java-comparator-comparable">Comparator와 Comparable</a></li>
                                         
                                     
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/algorithm-insertion-sort"><정렬> 삽입 정렬(Insertion Sort)</a></li>
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -543,11 +479,36 @@ https://blog.naver.com/ndb796/221227934987</p>
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
                                 
                                   
                                 
                                   
                                 
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
                                   
                                 
                                   
@@ -561,7 +522,7 @@ https://blog.naver.com/ndb796/221227934987</p>
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/algorithm/">
+                            <a href="/tag/java/">
                                 
                                     See all 8 posts  →
                                 
@@ -573,58 +534,6 @@ https://blog.naver.com/ndb796/221227934987</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/coding-sort(1)">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/coding-sort(1)">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Coding</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title"><프로그래머스> 정렬  Level 1 K번째 수(1)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>
-프로그래머스 &gt; 정렬 &gt; K번째 수
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/RubyIcon.jpg" alt="nageom" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/nageom/">nageom</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -632,29 +541,29 @@ https://blog.naver.com/ndb796/221227934987</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/coding-heap(3)">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
+            <a class="post-card-image-link" href="/algorithm-heap-sort">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/algorithm/cover.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/coding-heap(3)">
+            <a class="post-card-content-link" href="/algorithm-heap-sort">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Coding</span>
+                                <span class="post-card-tags">Algorithm</span>
                             
                         
                     
 
-                    <h2 class="post-card-title"><프로그래머스> 힙(Heap)  Level 3  디스크 컨트롤러 (2)</h2>
+                    <h2 class="post-card-title"><정렬> 힙 정렬(Heap Sort)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
                         <p>
-
-  프로그래머스 &gt; 힙(Heap) &gt;디스크 컨트롤러
-
+힙이란??
+최댓값이나 최솟값을 찾아내는 연산을 빠르게 하기위해 고안된 완전 이진트리를 기본으로 한 자료구조입니다. 
+최소힙, 최대힙이 있는데 트리 루트가 최솟값인지, 최댓값인지에 따라 구분된다.
 
 </p>
                     
@@ -696,18 +605,18 @@ https://blog.naver.com/ndb796/221227934987</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title"><정렬> 병합 정렬(Merge Sort)</div>
+    <div class="floating-header-title">쓰레드의 start()와 run() (2)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%EC%A0%95%EB%A0%AC%3E+%EB%B3%91%ED%95%A9+%EC%A0%95%EB%A0%AC%28Merge+Sort%29&amp;url=https://nageom.github.io/algorithm-merge-sort"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%93%B0%EB%A0%88%EB%93%9C%EC%9D%98+start%28%29%EC%99%80+run%28%29+%282%29&amp;url=https://nageom.github.io/java-thread(2)"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/algorithm-merge-sort"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/java-thread(2)"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

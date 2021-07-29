@@ -1,12 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-07-29T23:37:12+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드 정리 (3)</title><link href="https://nageom.github.io/java-thread(3)" rel="alternate" type="text/html" title="쓰레드 정리 (3)" /><published>2021-07-29T09:14:00+09:00</published><updated>2021-07-29T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(3)</id><content type="html" xml:base="https://nageom.github.io/java-thread(3)">&lt;h6&gt; 쓰레드의 우선순위&lt;/h6&gt;
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-07-29T23:51:38+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드 정리 (3)</title><link href="https://nageom.github.io/java-thread(3)" rel="alternate" type="text/html" title="쓰레드 정리 (3)" /><published>2021-07-29T09:14:00+09:00</published><updated>2021-07-29T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(3)</id><content type="html" xml:base="https://nageom.github.io/java-thread(3)">&lt;h6&gt; 쓰레드의 우선순위&lt;/h6&gt;
 &lt;p&gt;쓰레드는 우선순위(priority)라는 멤버변수를 가지고 있어 ,이 우선순위의 값에 따라
-쓰레드가 얻는 실행시간이 달라진다. 
+쓰레드가 얻는 실행시간이 달라진다. &lt;br /&gt;
 어떨 때 쓰느냐하면 
 카톡을 사용할때 파일 다운로드를 처리하는 쓰레드보다 채팅내용을 전송하는 쓰레드의 우선순위가 더 높아야 
 사용자가 채팅하는데 불편함이 없을 것이다. 대신 파일다운로드 작업에 걸리는 시간은 더 길어질테니만,
 이러한 작업의 중요도에 따라 쓰레드의 우선순위를 서로 다르게 지정하여 특정 쓰레드가 더 많은 작업시간을 갖도록 하는 것이 
-우선순위의 용도이다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">쓰레드의 우선순위</summary></entry><entry><title type="html">쓰레드의 start()와 run() (2)</title><link href="https://nageom.github.io/java-thread(2)" rel="alternate" type="text/html" title="쓰레드의 start()와 run() (2)" /><published>2021-07-13T09:14:00+09:00</published><updated>2021-07-13T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(2)</id><content type="html" xml:base="https://nageom.github.io/java-thread(2)">&lt;p&gt;쓰레드를 구현하고 나면서 드는 생각이 있었다. &lt;br /&gt;
+우선순위의 용도이다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;쓰레드의 우선순위 지정하기 &lt;br /&gt;
+void setPriority(int newPriority) //쓰레드의 우선순위를 지정한 값으로 변경한다.&lt;br /&gt;
+int getPriority() //쓰레드의 우선순위를 반환한다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;우선순위의 범위는 1~10이며 숫자가 높을수록 우선순위가 높다.
+쓰레드의 우선순위는 쓰레드를 생성한 쓰레드로부터 상속받는다. 
+main메서드를 수행하는 쓰레드는 우선순위가 5이므로 main메서드내에서 생성하는 쓰레드의 우선순위는 자동적으로 5가 된다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;예제
+gist&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">쓰레드의 우선순위 쓰레드는 우선순위(priority)라는 멤버변수를 가지고 있어 ,이 우선순위의 값에 따라 쓰레드가 얻는 실행시간이 달라진다. 어떨 때 쓰느냐하면 카톡을 사용할때 파일 다운로드를 처리하는 쓰레드보다 채팅내용을 전송하는 쓰레드의 우선순위가 더 높아야 사용자가 채팅하는데 불편함이 없을 것이다. 대신 파일다운로드 작업에 걸리는 시간은 더 길어질테니만, 이러한 작업의 중요도에 따라 쓰레드의 우선순위를 서로 다르게 지정하여 특정 쓰레드가 더 많은 작업시간을 갖도록 하는 것이 우선순위의 용도이다.</summary></entry><entry><title type="html">쓰레드의 start()와 run() (2)</title><link href="https://nageom.github.io/java-thread(2)" rel="alternate" type="text/html" title="쓰레드의 start()와 run() (2)" /><published>2021-07-13T09:14:00+09:00</published><updated>2021-07-13T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(2)</id><content type="html" xml:base="https://nageom.github.io/java-thread(2)">&lt;p&gt;쓰레드를 구현하고 나면서 드는 생각이 있었다. &lt;br /&gt;
 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 
 그래서 이 둘에 대해 자세히 알아보았다. &lt;br /&gt;&lt;/p&gt;
 

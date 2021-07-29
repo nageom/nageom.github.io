@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-07-14T01:17:53+09:00</updated>
+  <updated>2021-07-29T23:37:12+09:00</updated>
   <id>https://nageom.github.io/tag/algorithm/feed.xml</id>
 
   
@@ -105,8 +105,8 @@
       <id>https://nageom.github.io/algorithm-merge%20sort</id>
       <content type="html" xml:base="https://nageom.github.io/algorithm-merge-sort">&lt;hr /&gt;
 
-&lt;h6&gt;[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ]&lt;/h6&gt;
-&lt;p&gt;퀵 정렬과 다르게 피벗 값이 없고 무조건 반으로 모두 나누고 합하면서 정렬한다는 방법이다.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;[ 일단 반으로 나누고 나중에 합쳐서 정렬해보자 ]&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+퀵 정렬과 다르게 피벗 값이 없고 무조건 반으로 모두 나누고 합하면서 정렬한다는 방법이다.&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../assets/built/images/algorithm/sort/merge sort(1).png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
@@ -657,9 +657,7 @@ https://ko.depositphotos.com/10608715/stock-illustration-drawing-of-graph-on-squ
       <updated>2021-06-22T09:14:00+09:00</updated>
       <id>https://nageom.github.io/algorithm-bubble%20sort</id>
       <content type="html" xml:base="https://nageom.github.io/algorithm-bubble-sort">&lt;hr /&gt;
-&lt;blockquote&gt;
-  &lt;h4&gt;버블정렬 &lt;/h4&gt;
-&lt;/blockquote&gt;
+&lt;h4&gt;버블정렬 &lt;/h4&gt;
 
 &lt;h6&gt;[옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 방법]&lt;/h6&gt;
 &lt;p&gt;직관적이고 쉽게 구현할 수 있지만 정렬 알고리즘 중에서 가장 비효율적인 알고리즘이다!&lt;br /&gt;
@@ -809,8 +807,7 @@ https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6
       <published>2021-06-02T09:14:00+09:00</published>
       <updated>2021-06-02T09:14:00+09:00</updated>
       <id>https://nageom.github.io/algorithm-basic</id>
-      <content type="html" xml:base="https://nageom.github.io/algorithm-basic">&lt;hr /&gt;
-&lt;p&gt;해시테이블과 해시맵의 차이를 알아보기 전, 어떤 것 인지부터 알아보도록 하겠습니다.&lt;/p&gt;
+      <content type="html" xml:base="https://nageom.github.io/algorithm-basic">&lt;p&gt;해시테이블과 해시맵의 차이를 알아보기 전, 어떤 것 인지부터 알아보도록 하겠습니다.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;해시테이블(Hash Table)&lt;/p&gt;
 &lt;/blockquote&gt;

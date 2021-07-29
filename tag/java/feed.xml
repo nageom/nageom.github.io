@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-07-14T01:17:53+09:00</updated>
+  <updated>2021-07-29T23:37:12+09:00</updated>
   <id>https://nageom.github.io/tag/java/feed.xml</id>
 
   
@@ -30,6 +30,48 @@
   
   
 
+  
+    <entry>
+      <title type="html">쓰레드 정리 (3)</title>
+      <link href="https://nageom.github.io/java-thread(3)" rel="alternate" type="text/html" title="쓰레드 정리 (3)" />
+      <published>2021-07-29T09:14:00+09:00</published>
+      <updated>2021-07-29T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/java-thread(3)</id>
+      <content type="html" xml:base="https://nageom.github.io/java-thread(3)">&lt;h6&gt; 쓰레드의 우선순위&lt;/h6&gt;
+
+&lt;p&gt;쓰레드는 우선순위(priority)라는 멤버변수를 가지고 있어 ,이 우선순위의 값에 따라
+쓰레드가 얻는 실행시간이 달라진다. 
+어떨 때 쓰느냐하면 
+카톡을 사용할때 파일 다운로드를 처리하는 쓰레드보다 채팅내용을 전송하는 쓰레드의 우선순위가 더 높아야 
+사용자가 채팅하는데 불편함이 없을 것이다. 대신 파일다운로드 작업에 걸리는 시간은 더 길어질테니만,
+이러한 작업의 중요도에 따라 쓰레드의 우선순위를 서로 다르게 지정하여 특정 쓰레드가 더 많은 작업시간을 갖도록 하는 것이 
+우선순위의 용도이다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">쓰레드의 우선순위</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">쓰레드의 start()와 run() (2)</title>
@@ -252,7 +294,6 @@ MP3 파일의 데이터 압축을 해제하면서
       <updated>2021-07-05T09:14:00+09:00</updated>
       <id>https://nageom.github.io/java-annotation</id>
       <content type="html" xml:base="https://nageom.github.io/java-annotation">&lt;hr /&gt;
-
 &lt;p&gt;간단히 프로그램의 소스코드 안에 다른 프로그램을 위한 정보를 미리 약속된 형식으로 포함시킨 것이 바로 애너테이션이다. 
 애너테이션은 주석처럼 프로그래밍 언어에 영향을 미치지 않으면서도 다른 프로그램에게 유용한 정보를 제공할 수 있다는 장점을 갖는다.&lt;br /&gt; 
 예로, 특정 메서드만 테스트하기 원한다면 ‘@Test’ 애너테이션을 메서드에 붙임으로 테스트 프로그램에게
@@ -367,7 +408,7 @@ java.lang.annotation.Annotation&lt;br /&gt;
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">간단히 프로그램의 소스코드 안에 다른 프로그램을 위한 정보를 미리 약속된 형식으로 포함시킨 것이 바로 애너테이션이다. 애너테이션은 주석처럼 프로그래밍 언어에 영향을 미치지 않으면서도 다른 프로그램에게 유용한 정보를 제공할 수 있다는 장점을 갖는다. 예로, 특정 메서드만 테스트하기 원한다면 ‘@Test’ 애너테이션을 메서드에 붙임으로 테스트 프로그램에게 테스트 할 것을 알리는 역할을 하며, 메서드가 포함된 프로그램 자체에 아무런 영향을 미치지 않는다.</summary>
       
 
       
@@ -572,7 +613,10 @@ static void sort(Object[] a , Comparator c) //지정한 Comparator에 의한 정
       <updated>2021-06-18T09:14:00+09:00</updated>
       <id>https://nageom.github.io/java-thread(1)</id>
       <content type="html" xml:base="https://nageom.github.io/java-thread(1)">&lt;hr /&gt;
-
+&lt;p&gt;아래의 코드를 보면,
+Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다.
+Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을
+만들어 주는 것뿐이다.&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;//Thread &lt;/span&gt;
@@ -617,10 +661,6 @@ static void sort(Object[] a , Comparator c) //지정한 Comparator에 의한 정
 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;위의 코드를 보며, 
-Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다.
-Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을
-만들어 주는 것뿐이다.&lt;/p&gt;
 
 &lt;p&gt;이 둘은 인스턴스 생성 방법의 차이를 아래 코드로 확인해보자.&lt;br /&gt;
 Runnable 인터페이스를 구현한 경우, Runnable인터페이스를 구현한 클래스의 인스턴스를
@@ -744,7 +784,7 @@ t1.start();&lt;br /&gt;&lt;/p&gt;</content>
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">아래의 코드를 보면, Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다. Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을 만들어 주는 것뿐이다. ~~~ javascript package thread;</summary>
       
 
       
@@ -758,11 +798,8 @@ t1.start();&lt;br /&gt;&lt;/p&gt;</content>
       <updated>2021-06-17T09:14:00+09:00</updated>
       <id>https://nageom.github.io/java-abstract%20class</id>
       <content type="html" xml:base="https://nageom.github.io/java-abstract-class">&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;면접질문 공부하는데 추상클래스와 인터페이스 차이를 찾아봐도 모르겠더라고요 다들 차이 아시나요..&lt;br /&gt;
-그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전! &lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 &lt;br /&gt;
+그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h6&gt; 추상클래스 &lt;/h6&gt;
 &lt;p&gt;&lt;br /&gt;
@@ -850,7 +887,7 @@ move(int x, int y)와 attack(D d)을 멤버로 갖게 된다.&lt;br /&gt;
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전</summary>
       
 
       
@@ -864,8 +901,7 @@ move(int x, int y)와 attack(D d)을 멤버로 갖게 된다.&lt;br /&gt;
       <updated>2021-06-11T09:14:00+09:00</updated>
       <id>https://nageom.github.io/java-interview</id>
       <content type="html" xml:base="https://nageom.github.io/java-interview">&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/itv.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
+&lt;p&gt;면접질문을 공부하면서 정리해둔 메모&lt;/p&gt;
 &lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
 &lt;p&gt;JRE - 자바코드가 실행 될 수 있는 환경 , JVM을 생성하는 디스크 상의 부분  &lt;br /&gt;
 JVM - 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고   &lt;br /&gt;
@@ -1047,7 +1083,7 @@ To be continue... .
       
 
       
-        <summary type="html"></summary>
+        <summary type="html">면접질문을 공부하면서 정리해둔 메모 &amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt; JRE - 자바코드가 실행 될 수 있는 환경 , JVM을 생성하는 디스크 상의 부분 JVM - 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고            재사용을 가능하게 해준다.          - JRE 내에 존재한다. JAVAC (자바 컴파일러)    JDK가 컴파일하는 기능을 가지고 있는데 그게 javac이다.    자바 컴파일러는 컴퓨터가 이해하는 기계어로 변환 해주는 컴파일을 하는 녀석인데,    정확히는 OS와 자바의 중개자인 JVM이 이해할 수 있는 형태로 컴파일된다.(바이트코드) JDK - (Java Development Kit) 자바 애플리케이션을 구축하기 위한 핵심 플랫폼 구성요소        - 개발자들이 JVM과 JRE에 의해 실행되고 구동될 수 있는 자바 프로그램을        생성할 수 있게 해준다.</summary>
       
 
       

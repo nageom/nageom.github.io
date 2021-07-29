@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-07-14T01:17:53+09:00</updated>
+  <updated>2021-07-29T23:37:12+09:00</updated>
   <id>https://nageom.github.io/tag/coding/feed.xml</id>
 
   
@@ -38,12 +38,10 @@
       <updated>2021-07-10T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-greedy(4)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-greedy(4)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 구명보트&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명
-무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 사람들의 몸무게가 [70kg, 50kg, 80kg, 50kg]이고 구명보트의 무게 제한이 100kg이라면 2번째 사람과 4번째 사람은 같이 탈 수 있지만 1번째 사람과 3번째 사람의 무게의 합은 150kg이므로 구명보트의 무게 제한을 초과하여 같이 탈 수 없습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 구명보트&lt;/strong&gt;&lt;br /&gt;
+문제 설명&lt;br /&gt;
+무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다.&lt;br /&gt;
+예를 들어, 사람들의 몸무게가 [70kg, 50kg, 80kg, 50kg]이고 구명보트의 무게 제한이 100kg이라면 2번째 사람과 4번째 사람은 같이 탈 수 있지만 1번째 사람과 3번째 사람의 무게의 합은 150kg이므로 구명보트의 무게 제한을 초과하여 같이 탈 수 없습니다.&lt;/p&gt;
 
 &lt;p&gt;구명보트를 최대한 적게 사용하여 모든 사람을 구출하려고 합니다.&lt;/p&gt;
 
@@ -135,7 +133,7 @@
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 구명보트</summary>
+        <summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 구명보트 문제 설명 무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다. 예를 들어, 사람들의 몸무게가 [70kg, 50kg, 80kg, 50kg]이고 구명보트의 무게 제한이 100kg이라면 2번째 사람과 4번째 사람은 같이 탈 수 있지만 1번째 사람과 3번째 사람의 무게의 합은 150kg이므로 구명보트의 무게 제한을 초과하여 같이 탈 수 없습니다.</summary>
       
 
       
@@ -149,12 +147,10 @@
       <updated>2021-07-09T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-greedy(3)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-greedy(3)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 큰 수 만들기&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명
-어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 큰 수 만들기&lt;/strong&gt;&lt;br /&gt;
+문제 설명&lt;br /&gt;
+어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.&lt;br /&gt;
+예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.&lt;/p&gt;
 
 &lt;p&gt;문자열 형식으로 숫자 number와 제거할 수의 개수 k가 solution 함수의 매개변수로 주어집니다. number에서 k 개의 수를 제거했을 때 만들 수 있는 수 중 가장 큰 숫자를 문자열 형태로 return 하도록 solution 함수를 완성하세요.&lt;/p&gt;
 
@@ -197,7 +193,7 @@ int num = number.charAt(j) - ‘0’;&lt;br /&gt;
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 큰 수 만들기</summary>
+        <summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 큰 수 만들기 문제 설명 어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다. 예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.</summary>
       
 
       
@@ -211,9 +207,8 @@ int num = number.charAt(j) - ‘0’;&lt;br /&gt;
       <updated>2021-07-04T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-exhaustive%20search(3)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-exhaustive-search(3)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 완전탐색 &amp;gt; 카펫&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Leo는 카펫을 사러 갔다가 아래 그림과 같이 중앙에는 노란색으로 칠해져 있고 테두리 1줄은 갈색으로 칠해져 있는 격자 모양 카펫을 봤습니다.
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 완전탐색 &amp;gt; 카펫&lt;/strong&gt;&lt;br /&gt;
+Leo는 카펫을 사러 갔다가 아래 그림과 같이 중앙에는 노란색으로 칠해져 있고 테두리 1줄은 갈색으로 칠해져 있는 격자 모양 카펫을 봤습니다.
 &lt;img src=&quot;../../assets/built/images/coding/exhaustive search(3)_1.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
 Leo는 집으로 돌아와서 아까 본 카펫의 노란색과 갈색으로 색칠된 격자의 개수는 기억했지만, 전체 카펫의 크기는 기억하지 못했습니다.&lt;/p&gt;
 
@@ -292,7 +287,7 @@ yellow의 모양을 가늠할 수는 없지만 결국 네모를 만들것이라�
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 완전탐색 &amp;gt; 카펫</summary>
+        <summary type="html">프로그래머스 &amp;gt; 완전탐색 &amp;gt; 카펫 Leo는 카펫을 사러 갔다가 아래 그림과 같이 중앙에는 노란색으로 칠해져 있고 테두리 1줄은 갈색으로 칠해져 있는 격자 모양 카펫을 봤습니다. Leo는 집으로 돌아와서 아까 본 카펫의 노란색과 갈색으로 색칠된 격자의 개수는 기억했지만, 전체 카펫의 크기는 기억하지 못했습니다.</summary>
       
 
       
@@ -306,9 +301,8 @@ yellow의 모양을 가늠할 수는 없지만 결국 네모를 만들것이라�
       <updated>2021-07-04T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-greedy(1)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-greedy(1)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 체육법&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 체육법&lt;/strong&gt;&lt;br /&gt;
+문제 설명&lt;br /&gt;
 점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.&lt;/p&gt;
 
 &lt;p&gt;전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
@@ -530,7 +524,7 @@ s
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 체육법</summary>
+        <summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 체육법 문제 설명 점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.</summary>
       
 
       
@@ -544,12 +538,10 @@ s
       <updated>2021-07-03T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-exhaustive%20search(2)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-exhaustive-search(2)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 완전탐색 &amp;gt; 소수찾기&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명&lt;br /&gt;
-한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다.&lt;/p&gt;
-
-&lt;p&gt;각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때, 종이 조각으로 만들 수 있는 소수가 몇 개인지 return 하도록 solution 함수를 완성해주세요.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;*프로그래머스 &amp;gt; 완전탐색 &amp;gt; 소수찾기&lt;/em&gt;&lt;br /&gt;
+문제 설명&lt;br /&gt;
+한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다.&lt;br /&gt;
+각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때, 종이 조각으로 만들 수 있는 소수가 몇 개인지 return 하도록 solution 함수를 완성해주세요.&lt;/p&gt;
 
 &lt;p&gt;제한사항
 numbers는 길이 1 이상 7 이하인 문자열입니다.
@@ -686,7 +678,7 @@ Math.sqrt()는 num의 제곱근을 구해주는 메서드를 처음 알았다. &
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 완전탐색 &amp;gt; 소수찾기</summary>
+        <summary type="html">*프로그래머스 &amp;gt; 완전탐색 &amp;gt; 소수찾기 문제 설명 한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다. 각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때, 종이 조각으로 만들 수 있는 소수가 몇 개인지 return 하도록 solution 함수를 완성해주세요.</summary>
       
 
       
@@ -700,12 +692,10 @@ Math.sqrt()는 num의 제곱근을 구해주는 메서드를 처음 알았다. &
       <updated>2021-07-01T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-exhaustive%20search(1)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-exhaustive-search(1)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 완전탐색 &amp;gt; 모의고사&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명&lt;br /&gt;
-수포자는 수학을 포기한 사람의 준말입니다. 수포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다. 수포자는 1번 문제부터 마지막 문제까지 다음과 같이 찍습니다.&lt;/p&gt;
-
-&lt;p&gt;1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, …&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 완전탐색 &amp;gt; 모의고사&lt;/strong&gt;&lt;br /&gt;
+문제 설명&lt;br /&gt;
+수포자는 수학을 포기한 사람의 준말입니다. 수포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다. 수포자는 1번 문제부터 마지막 문제까지 다음과 같이 찍습니다.&lt;br /&gt;
+1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, …&lt;br /&gt;
 2번 수포자가 찍는 방식: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5, …&lt;br /&gt;
 3번 수포자가 찍는 방식: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, …&lt;br /&gt;&lt;/p&gt;
 
@@ -814,7 +804,7 @@ Math.max(a,b)는 두개의 인자값을 비교하여 더 큰 값을 return 한�
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 완전탐색 &amp;gt; 모의고사</summary>
+        <summary type="html">프로그래머스 &amp;gt; 완전탐색 &amp;gt; 모의고사 문제 설명 수포자는 수학을 포기한 사람의 준말입니다. 수포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다. 수포자는 1번 문제부터 마지막 문제까지 다음과 같이 찍습니다. 1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, … 2번 수포자가 찍는 방식: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5, … 3번 수포자가 찍는 방식: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, …</summary>
       
 
       
@@ -822,20 +812,17 @@ Math.max(a,b)는 두개의 인자값을 비교하여 더 큰 값을 return 한�
     </entry>
   
     <entry>
-      <title type="html">정렬 Level 2 H-Index(2)</title>
-      <link href="https://nageom.github.io/coding-sort(3)" rel="alternate" type="text/html" title="&lt;프로그래머스&gt; 정렬  Level 2 H-Index(2)" />
+      <title type="html">정렬 Level 2 H-Index(3)</title>
+      <link href="https://nageom.github.io/coding-sort(3)" rel="alternate" type="text/html" title="&lt;프로그래머스&gt; 정렬  Level 2 H-Index(3)" />
       <published>2021-07-01T09:14:00+09:00</published>
       <updated>2021-07-01T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-sort(3)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-sort(3)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; H-Index&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명
-H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 어느 과학자의 H-Index를 나타내는 값인 h를 구하려고 합니다. 위키백과1에 따르면, H-Index는 다음과 같이 구합니다.&lt;/p&gt;
-
-&lt;p&gt;어떤 과학자가 발표한 논문 n편 중, h번 이상 인용된 논문이 h편 이상이고 나머지 논문이 h번 이하 인용되었다면 h의 최댓값이 이 과학자의 H-Index입니다.&lt;/p&gt;
-
-&lt;p&gt;어떤 과학자가 발표한 논문의 인용 횟수를 담은 배열 citations가 매개변수로 주어질 때, 이 과학자의 H-Index를 return 하도록 solution 함수를 작성해주세요.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; H-Index&lt;/strong&gt;
+문제 설명
+H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 어느 과학자의 H-Index를 나타내는 값인 h를 구하려고 합니다. 위키백과1에 따르면, H-Index는 다음과 같이 구합니다.&lt;br /&gt;
+어떤 과학자가 발표한 논문 n편 중, h번 이상 인용된 논문이 h편 이상이고 나머지 논문이 h번 이하 인용되었다면 h의 최댓값이 이 과학자의 H-Index입니다.&lt;br /&gt;
+어떤 과학자가 발표한 논문의 인용 횟수를 담은 배열 citations가 매개변수로 주어질 때, 이 과학자의 H-Index를 return 하도록 solution 함수를 작성해주세요.&lt;/p&gt;
 
 &lt;p&gt;제한사항
 과학자가 발표한 논문의 수는 1편 이상 1,000편 이하입니다.
@@ -922,7 +909,7 @@ h이상의 h 개수가 조건인가보다.&lt;/p&gt;
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 정렬 &amp;gt; H-Index</summary>
+        <summary type="html">프로그래머스 &amp;gt; 정렬 &amp;gt; H-Index 문제 설명 H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 어느 과학자의 H-Index를 나타내는 값인 h를 구하려고 합니다. 위키백과1에 따르면, H-Index는 다음과 같이 구합니다. 어떤 과학자가 발표한 논문 n편 중, h번 이상 인용된 논문이 h편 이상이고 나머지 논문이 h번 이하 인용되었다면 h의 최댓값이 이 과학자의 H-Index입니다. 어떤 과학자가 발표한 논문의 인용 횟수를 담은 배열 citations가 매개변수로 주어질 때, 이 과학자의 H-Index를 return 하도록 solution 함수를 작성해주세요.</summary>
       
 
       
@@ -936,12 +923,10 @@ h이상의 h 개수가 조건인가보다.&lt;/p&gt;
       <updated>2021-06-30T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-sort(2)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-sort(2)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명
-0 또는 양의 정수가 주어졌을 때, 정수를 이어 붙여 만들 수 있는 가장 큰 수를 알아내 주세요.&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 주어진 정수가 [6, 10, 2]라면 [6102, 6210, 1062, 1026, 2610, 2106]를 만들 수 있고, 이중 가장 큰 수는 6210입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수&lt;/strong&gt;&lt;br /&gt;
+문제 설명&lt;br /&gt;
+0 또는 양의 정수가 주어졌을 때, 정수를 이어 붙여 만들 수 있는 가장 큰 수를 알아내 주세요.&lt;br /&gt;
+예를 들어, 주어진 정수가 [6, 10, 2]라면 [6102, 6210, 1062, 1026, 2610, 2106]를 만들 수 있고, 이중 가장 큰 수는 6210입니다.&lt;/p&gt;
 
 &lt;p&gt;0 또는 양의 정수가 담긴 배열 numbers가 매개변수로 주어질 때, 순서를 재배치하여 만들 수 있는 가장 큰 수를 문자열로 바꾸어 return 하도록 solution 함수를 작성해주세요.&lt;/p&gt;
 
@@ -1016,7 +1001,7 @@ Comparator,Comparable의 공부 필요성을 느끼고
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수</summary>
+        <summary type="html">프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수 문제 설명 0 또는 양의 정수가 주어졌을 때, 정수를 이어 붙여 만들 수 있는 가장 큰 수를 알아내 주세요. 예를 들어, 주어진 정수가 [6, 10, 2]라면 [6102, 6210, 1062, 1026, 2610, 2106]를 만들 수 있고, 이중 가장 큰 수는 6210입니다.</summary>
       
 
       
@@ -1030,12 +1015,10 @@ Comparator,Comparable의 공부 필요성을 느끼고
       <updated>2021-06-30T09:14:00+09:00</updated>
       <id>https://nageom.github.io/coding-sort(1)</id>
       <content type="html" xml:base="https://nageom.github.io/coding-sort(1)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;문제 설명
-배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수&lt;/strong&gt;
+문제 설명
+배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.&lt;br /&gt;
+예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면&lt;/p&gt;
 
 &lt;p&gt;array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.
 1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.
@@ -1167,7 +1150,7 @@ i와 j의 범위가 다 다르기 때문에 크기를 정할 필요없는 ArrayL
       
 
       
-        <summary type="html">프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수</summary>
+        <summary type="html">프로그래머스 &amp;gt; 정렬 &amp;gt; K번째 수 문제 설명 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다. 예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면</summary>
       
 
       

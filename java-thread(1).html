@@ -54,7 +54,7 @@
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="쓰레드 구현 (1)" />
-    <meta property="og:description" content="package thread; //Thread /* * * 자바에서 Thread를 만드는 방법 2가지 * 1. Thread를 상속 받아 정의 * * 2. Runnable 인터페이스 구현하여 Thread를 생성하는 방법 * * Runnable 은 쓰레드의 인터페이스화 된 형태 * 자바에서 다중상속이 불가능 함으로 다른 클래스를 상속 받은 클래스의 경우 * implements 로 Runnable을 상속받아" />
+    <meta property="og:description" content="아래의 코드를 보면, Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다. Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을 만들어 주는 것뿐이다. package thread; //Thread /* * * 자바에서 Thread를 만드는 방법 2가지 * 1. Thread를 상속 받아 정의 * * 2. Runnable 인터페이스 구현하여 Thread를 생성하는 방법 * *" />
     <meta property="og:url" content="https://nageom.github.io/java-thread(1)" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -64,7 +64,7 @@
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="쓰레드 구현 (1)" />
-    <meta name="twitter:description" content="package thread; //Thread /* * * 자바에서 Thread를 만드는 방법 2가지 * 1. Thread를 상속 받아 정의 * * 2. Runnable 인터페이스 구현하여 Thread를 생성하는 방법 * * Runnable 은 쓰레드의 인터페이스화 된 형태 * 자바에서 다중상속이 불가능 함으로 다른 클래스를 상속 받은 클래스의 경우 * implements 로 Runnable을 상속받아" />
+    <meta name="twitter:description" content="아래의 코드를 보면, Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다. Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을 만들어 주는 것뿐이다. package thread; //Thread /* * * 자바에서 Thread를 만드는 방법 2가지 * 1. Thread를 상속 받아 정의 * * 2. Runnable 인터페이스 구현하여 Thread를 생성하는 방법 * *" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -96,7 +96,7 @@
         "@type": "WebPage",
         "@id": "https://nageom.github.io/java-thread(1)"
     },
-    "description": "package thread; //Thread /* * * 자바에서 Thread를 만드는 방법 2가지 * 1. Thread를 상속 받아 정의 * * 2. Runnable 인터페이스 구현하여 Thread를 생성하는 방법 * * Runnable 은 쓰레드의 인터페이스화 된 형태 * 자바에서 다중상속이 불가능 함으로 다른 클래스를 상속 받은 클래스의 경우 * implements 로 Runnable을 상속받아"
+    "description": "아래의 코드를 보면, Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다. Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을 만들어 주는 것뿐이다. package thread; //Thread /* * * 자바에서 Thread를 만드는 방법 2가지 * 1. Thread를 상속 받아 정의 * * 2. Runnable 인터페이스 구현하여 Thread를 생성하는 방법 * *"
 }
     </script>
 
@@ -203,7 +203,10 @@ into the {body} of the default.hbs template -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
                     <hr />
-
+<p>아래의 코드를 보면,
+Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다.
+Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을
+만들어 주는 것뿐이다.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">package</span> <span class="nx">thread</span><span class="p">;</span>
 
 <span class="c1">//Thread </span>
@@ -248,10 +251,6 @@ into the {body} of the default.hbs template -->
 	<span class="p">}</span> 
 <span class="p">}</span>
 </code></pre></div></div>
-<p>위의 코드를 보며, 
-Runnable인터페이스는 오로지 run()만 정의되어 있는 간단한 인터페이스이다.
-Runnable인터페이스를 구현하기 위해서 할 일은 추상메서드인 run() 의 몸통{}을
-만들어 주는 것뿐이다.</p>
 
 <p>이 둘은 인스턴스 생성 방법의 차이를 아래 코드로 확인해보자.<br />
 Runnable 인터페이스를 구현한 경우, Runnable인터페이스를 구현한 클래스의 인스턴스를
@@ -471,6 +470,15 @@ t1.start();<br /></p>
                                     
                                         
                                         
+                                            <li><a href="/java-thread(3)">쓰레드 정리 (3)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                             <li><a href="/java-thread(2)">쓰레드의 start()와 run() (2)</a></li>
                                         
                                     
@@ -494,8 +502,6 @@ t1.start();<br /></p>
                                   
                                     
                                         
-                                        
-                                            <li><a href="/java-annotation">자바의 애너테이션(annotation)</a></li>
                                         
                                     
                                   
@@ -604,7 +610,7 @@ t1.start();<br /></p>
                         <footer class="read-next-card-footer">
                             <a href="/tag/java/">
                                 
-                                    See all 8 posts  →
+                                    See all 9 posts  →
                                 
                             </a>
                         </footer>
@@ -696,6 +702,8 @@ t1.start();<br /></p>
                 <section class="post-card-excerpt">
                     
                         <p>
+면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 
+그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 
 
 </p>
                     

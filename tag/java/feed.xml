@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-02T22:14:27+09:00</updated>
+  <updated>2021-08-02T23:15:49+09:00</updated>
   <id>https://nageom.github.io/tag/java/feed.xml</id>
 
   
@@ -121,6 +121,51 @@ void setDaemon(boolean on) //쓰레드를 데몬쓰레드로 변경 &lt;br /&gt;
 &lt;img src=&quot;../../assets/built/images/java/thread/thread(3)_priority4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;신기신기&lt;/p&gt;
+
+&lt;h6&gt;세번째는 &lt;/h6&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;쓰레드 그룹(thread group)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;쓰레드 그룹은 서로 관련된 쓰레드를 그룹으로 다루기 위한 것으로,
+폴더를 생성해서 관련된 파일들을 함께 넣어서 관리하는 것처럼 그룹을 생성해서 쓰레드를 구룹으로 묶어서 
+관리할 수 있다. 
+또한 폴더 안에 폴더생성이 가능하듯이 쓰레드 그룹에 다른 쓰레드 그룹을 포함 시킬 수 있다.
+쓰레드 그룹은 보안상의 이유로 도입되어 자신이 속한 쓰레드 그룹이나 하위 쓰레드 그룹은 변경 가능하지만
+다른 쓰레드 그룹의 쓰레드는 변경 불가능.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;쓰레드 그룹에서 알아둘 점&lt;/u&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;모든 쓰레드는 반드시 그룹에 포함되어 있어야한다.&lt;/li&gt;
+  &lt;li&gt;자바 어플리케이션이 실행되면, JVM은 main과 system이라는 쓰레드 그룹을 만들고
+JVM운영에 필요한 쓰레드들을 생성해서 이 쓰레드 그룹에 포함시킨다.&lt;/li&gt;
+  &lt;li&gt;우리가 생성한 모든 쓰레드 그룹은 MAIN쓰레드 그룹의 하위 쓰레드 그룹이 되며,
+그룹을 지정하지 않은 쓰레드는 자동으로 main쓰레드 그룹에 속하게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;쓰레드를 쓰레드 그룹에 포함시키려면 Thread의 생성자를 이용한다.
+Thread(ThreadGroup group, Runnable target, String name)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;기본 쓰레드 그룹 생성, 지정 예시&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//main 안에서&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ThreadGroup&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grp1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ThreadGroup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Group1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//쓰레드 그룹 생성&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Runnable&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Runnable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+           &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;InterruptedException&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//Thread(ThreadGourp tg, Runnable r, String name)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grp1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;th1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//쓰레드 그룹 포함 &amp;amp; 실행&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 이 메서드로 main쓰레드 그룹의 정보를 출력한다. &lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content>
 

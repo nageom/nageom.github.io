@@ -10,12 +10,12 @@
       <item>
         <title>쓰레드-실행제어편 (4)</title>
         
-          <description>&lt;쓰레드의 스케줄링을=&quot;&quot; 위해=&quot;&quot; 알아야하는=&quot;&quot; 지식=&quot;&quot;&gt;
+          <description>&lt;h6&gt;&lt;쓰레드의 스케줄링을=&quot;&quot; 위해=&quot;&quot; 알아야하는=&quot;&quot; 지식=&quot;&quot;&gt;&amp;lt;/h6&amp;gt;
 
-&lt;/쓰레드의&gt;
+&lt;/쓰레드의&gt;&lt;/h6&gt;
 </description>
         
-        <pubDate>Thu, 29 Jul 2021 09:14:00 +0900</pubDate>
+        <pubDate>Tue, 03 Aug 2021 09:14:00 +0900</pubDate>
         <link>
         https://nageom.github.io/java-thread(4)</link>
         <guid isPermaLink="true">https://nageom.github.io/java-thread(4)</guid>

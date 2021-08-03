@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-03T23:49:37+09:00</updated>
+  <updated>2021-08-04T00:01:32+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -30,6 +30,59 @@
   
   
 
+  
+    <entry>
+      <title type="html">쓰레드-실행제어편 (4)</title>
+      <link href="https://nageom.github.io/java-thread(4)" rel="alternate" type="text/html" title="쓰레드-실행제어편 (4)" />
+      <published>2021-08-03T09:14:00+09:00</published>
+      <updated>2021-08-03T09:14:00+09:00</updated>
+      <id>https://nageom.github.io/java-thread(4)</id>
+      <content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;h6&gt;&lt;쓰레드의 스케줄링을=&quot;&quot; 위해=&quot;&quot; 알아야하는=&quot;&quot; 지식=&quot;&quot;&gt;&amp;lt;/h6&amp;gt;
+
+쓰레드의 상태 
+![ex_screenshot](../../assets/built/images/java/thread/thread(4)_1.jpg)
+이걸보면 쓰레드를 머릿속에 그리기 더 쉬울 것이다.&lt;br /&gt;
+1) 쓰레드 생성후, start()를 호출하면 일단 실행대기열에 저장된다. &lt;br /&gt;
+실행대기열은 큐와 같은 구조로 가장 앞 쓰레드가 먼저 실행된다. &lt;br /&gt;
+2) 실행대기상태에서 차례로 실행한다. &lt;br /&gt;
+3) 주어진 실행시간이 다되거나 yield()룰 만나면 다시 실행대기열에 들어간다 (제일 뒷자리)&lt;br /&gt;
+
+
+참고문서 - 자바의 정석
+
+
+
+
+
+
+ 
+&lt;/쓰레드의&gt;&lt;/h6&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">&amp;lt;/h6&amp;gt;</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">쓰레드 정리 (3)</title>
@@ -189,59 +242,6 @@ Thread(ThreadGroup group, Runnable target, String name)&lt;/p&gt;
 
       
         <summary type="html">첫번째 알아볼 쓰레드 정의는</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">쓰레드-실행제어편 (4)</title>
-      <link href="https://nageom.github.io/java-thread(4)" rel="alternate" type="text/html" title="쓰레드-실행제어편 (4)" />
-      <published>2021-07-29T09:14:00+09:00</published>
-      <updated>2021-07-29T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/java-thread(4)</id>
-      <content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;쓰레드의 스케줄링을=&quot;&quot; 위해=&quot;&quot; 알아야하는=&quot;&quot; 지식=&quot;&quot;&gt;
-
-쓰레드의 상태 
-![ex_screenshot](../../assets/built/images/java/thread/thread(4)_1.jpg)
-이걸보면 쓰레드를 머릿속에 그리기 더 쉬울 것이다.
-1) 쓰레드 생성후, start()를 호출하면 일단 실행대기열에 저장된다. 
-실행대기열은 큐와 같은 구조로 가장 앞 쓰레드가 먼저 실행된다. 
-2) 실행대기상태에서 차례로 실행한다. 
-3) 주어진 실행시간이 다되거나 yield()룰 만나면 다시 실행대기열에 들어간다 (제일 뒷자리)
-
-
-참고문서 - 자바의 정석
-
-
-
-
-
-
- 
-&lt;/쓰레드의&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html"></summary>
       
 
       

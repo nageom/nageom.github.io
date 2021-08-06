@@ -54,7 +54,7 @@
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="쓰레드-동기화(Synchronization) (4)" />
-    <meta property="og:description" content="오늘은 ‘사용해본적은 있지만 자세히는 모른다 시리즈’의 synchronized에 대해 포스팅해보려한다. 가보자 한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다. 알다시피 싱글 쓰레드와 다르게 멀티 쓰레드는 여러 쓰레드들이 같은 프로세스 내의 자원을 공유해 작업하기 때문에 서로의 작업에 영향이 갈 수 밖에 없다. A 쓰레드가 작업" />
+    <meta property="og:description" content="오늘은 '사용해본적은 있지만 자세히는 모른다 시리즈'의 synchronized에 대해 포스팅해보려한다. 가보자 한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다. 알다시피 싱글 쓰레드와 다르게 멀티 쓰레드는 여러 쓰레드들이 같은 프로세스 내의 자원을 공유해 작업하기 때문에 서로의 작업에 영향이 갈 수 밖에 없다. A 쓰레드가 작업" />
     <meta property="og:url" content="https://nageom.github.io/java-thread(5)" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -64,7 +64,7 @@
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="쓰레드-동기화(Synchronization) (4)" />
-    <meta name="twitter:description" content="오늘은 ‘사용해본적은 있지만 자세히는 모른다 시리즈’의 synchronized에 대해 포스팅해보려한다. 가보자 한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다. 알다시피 싱글 쓰레드와 다르게 멀티 쓰레드는 여러 쓰레드들이 같은 프로세스 내의 자원을 공유해 작업하기 때문에 서로의 작업에 영향이 갈 수 밖에 없다. A 쓰레드가 작업" />
+    <meta name="twitter:description" content="오늘은 '사용해본적은 있지만 자세히는 모른다 시리즈'의 synchronized에 대해 포스팅해보려한다. 가보자 한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다. 알다시피 싱글 쓰레드와 다르게 멀티 쓰레드는 여러 쓰레드들이 같은 프로세스 내의 자원을 공유해 작업하기 때문에 서로의 작업에 영향이 갈 수 밖에 없다. A 쓰레드가 작업" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -96,7 +96,7 @@
         "@type": "WebPage",
         "@id": "https://nageom.github.io/java-thread(5)"
     },
-    "description": "오늘은 ‘사용해본적은 있지만 자세히는 모른다 시리즈’의 synchronized에 대해 포스팅해보려한다. 가보자 한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다. 알다시피 싱글 쓰레드와 다르게 멀티 쓰레드는 여러 쓰레드들이 같은 프로세스 내의 자원을 공유해 작업하기 때문에 서로의 작업에 영향이 갈 수 밖에 없다. A 쓰레드가 작업"
+    "description": "오늘은 '사용해본적은 있지만 자세히는 모른다 시리즈'의 synchronized에 대해 포스팅해보려한다. 가보자 한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다. 알다시피 싱글 쓰레드와 다르게 멀티 쓰레드는 여러 쓰레드들이 같은 프로세스 내의 자원을 공유해 작업하기 때문에 서로의 작업에 영향이 갈 수 밖에 없다. A 쓰레드가 작업"
 }
     </script>
 
@@ -202,7 +202,7 @@ into the {body} of the default.hbs template -->
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>오늘은 ‘사용해본적은 있지만 자세히는 모른다 시리즈’의 synchronized에 대해 포스팅해보려한다. 가보자<br /></p>
+                    <p>오늘은 <u>'사용해본적은 있지만 자세히는 모른다 시리즈'</u>의 synchronized에 대해 포스팅해보려한다. 가보자<br /></p>
 
 <p>한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다.</p>
 
@@ -218,12 +218,12 @@ A 쓰레드가 작업을 마쳤을 때 원래 의도했던 것과는 다른 결�
 그리고 해당 쓰레드가 임계 영역 내의 모든 코드를 수행하고 벗어나서 lock을 반납해야만
 다른 쓰레드가 반납된 lock을 획득하여 임계 영역의 코드를 수행할 수 있게 된다. <br /></p>
 
-<p>JDK1.5 이후
-java.util.concurrent.locks
-java.util.concurrent.atomic 패키지 지원 <br /></p>
+<p>(JDK1.5 이후
+java.util.concurrent.locks / 
+java.util.concurrent.atomic 패키지 지원 )<br /></p>
 
-<p>가볍게 메서드 전체를 임계 영역으로 지정하거나 특정한 영역을 임계 영역으로 지정하는 방법이있다.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//1. 메서드 전체</span>
+<p>임계 영역을 지정하는데는 두 가지 방법이 있다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//1. 메서드 전체를 지정</span>
 <span class="kr">public</span> <span class="nx">synchronized</span> <span class="k">void</span> <span class="nx">aa</span><span class="p">(){</span>
     <span class="c1">//..</span>
 <span class="p">}</span>
@@ -249,6 +249,16 @@ java.util.concurrent.atomic 패키지 지원 <br /></p>
 
 <p>24 줄의 메서드를 동기화하지 않으면 한 쓰레드가 출금 중, 다른 쓰레드가 balance에 영향을 줘서
 balance가 음수가 되어버린다.</p>
+
+<blockquote>
+  <p>알게된것</p>
+</blockquote>
+
+<p>위의 예제에서 쓰레드들이 구현될때 account 객체를 따로 생성해 가지고 있을거라 생각하고
+동기화 없이도 balance가 음수가 되지않을거라고 예상했고 이는 틀렸다.</p>
+
+<p>내가 만든 RunnableEx 안의 멤버 또는 메서드들은 모두
+메인에서 구현된 쓰레드들이 같이 공유한다. 라는걸 기억해두자.</p>
 
 <p>참고문서 - 자바의 정석</p>
 
@@ -389,7 +399,7 @@ balance가 음수가 되어버린다.</p>
                                     
                                         
                                         
-                                            <li><a href="/java-thread(2)">쓰레드의 start()와 run() (2)</a></li>
+                                            <li><a href="/java-thread(2)">쓰레드- start()와 run() (2)</a></li>
                                         
                                     
                                   

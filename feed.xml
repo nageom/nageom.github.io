@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-08-06T17:46:20+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드-동기화(Synchronization) (4)</title><link href="https://nageom.github.io/java-thread(5)" rel="alternate" type="text/html" title="쓰레드-동기화(Synchronization) (4)" /><published>2021-08-05T09:14:00+09:00</published><updated>2021-08-05T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(5)</id><content type="html" xml:base="https://nageom.github.io/java-thread(5)">&lt;p&gt;오늘은 ‘사용해본적은 있지만 자세히는 모른다 시리즈’의 synchronized에 대해 포스팅해보려한다. 가보자&lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-08-06T18:05:38+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드-동기화(Synchronization) (4)</title><link href="https://nageom.github.io/java-thread(5)" rel="alternate" type="text/html" title="쓰레드-동기화(Synchronization) (4)" /><published>2021-08-05T09:14:00+09:00</published><updated>2021-08-05T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(5)</id><content type="html" xml:base="https://nageom.github.io/java-thread(5)">&lt;p&gt;오늘은 &lt;u&gt;'사용해본적은 있지만 자세히는 모른다 시리즈'&lt;/u&gt;의 synchronized에 대해 포스팅해보려한다. 가보자&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다.&lt;/p&gt;
 
@@ -14,12 +14,12 @@ A 쓰레드가 작업을 마쳤을 때 원래 의도했던 것과는 다른 결�
 그리고 해당 쓰레드가 임계 영역 내의 모든 코드를 수행하고 벗어나서 lock을 반납해야만
 다른 쓰레드가 반납된 lock을 획득하여 임계 영역의 코드를 수행할 수 있게 된다. &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;JDK1.5 이후
-java.util.concurrent.locks
-java.util.concurrent.atomic 패키지 지원 &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;(JDK1.5 이후
+java.util.concurrent.locks / 
+java.util.concurrent.atomic 패키지 지원 )&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;가볍게 메서드 전체를 임계 영역으로 지정하거나 특정한 영역을 임계 영역으로 지정하는 방법이있다.&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//1. 메서드 전체&lt;/span&gt;
+&lt;p&gt;임계 영역을 지정하는데는 두 가지 방법이 있다.&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//1. 메서드 전체를 지정&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;//..&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -46,7 +46,17 @@ java.util.concurrent.atomic 패키지 지원 &lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;24 줄의 메서드를 동기화하지 않으면 한 쓰레드가 출금 중, 다른 쓰레드가 balance에 영향을 줘서
 balance가 음수가 되어버린다.&lt;/p&gt;
 
-&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 ‘사용해본적은 있지만 자세히는 모른다 시리즈’의 synchronized에 대해 포스팅해보려한다. 가보자</summary></entry><entry><title type="html">쓰레드-실행제어편 (4)</title><link href="https://nageom.github.io/java-thread(4)" rel="alternate" type="text/html" title="쓰레드-실행제어편 (4)" /><published>2021-08-03T09:14:00+09:00</published><updated>2021-08-03T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(4)</id><content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;p&gt;쓰레드의 스케줄링을 위해 알아야하는 지식&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;알게된것&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;위의 예제에서 쓰레드들이 구현될때 account 객체를 따로 생성해 가지고 있을거라 생각하고
+동기화 없이도 balance가 음수가 되지않을거라고 예상했고 이는 틀렸다.&lt;/p&gt;
+
+&lt;p&gt;내가 만든 RunnableEx 안의 멤버 또는 메서드들은 모두
+메인에서 구현된 쓰레드들이 같이 공유한다. 라는걸 기억해두자.&lt;/p&gt;
+
+&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 '사용해본적은 있지만 자세히는 모른다 시리즈'의 synchronized에 대해 포스팅해보려한다. 가보자</summary></entry><entry><title type="html">쓰레드-실행제어편 (4)</title><link href="https://nageom.github.io/java-thread(4)" rel="alternate" type="text/html" title="쓰레드-실행제어편 (4)" /><published>2021-08-03T09:14:00+09:00</published><updated>2021-08-03T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(4)</id><content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;p&gt;쓰레드의 스케줄링을 위해 알아야하는 지식&lt;/p&gt;
 
 &lt;p&gt;쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 
 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 
@@ -231,7 +241,7 @@ Thread(ThreadGroup group, Runnable target, String name)&lt;/p&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">첫번째 알아볼 쓰레드 정의는</summary></entry><entry><title type="html">쓰레드의 start()와 run() (2)</title><link href="https://nageom.github.io/java-thread(2)" rel="alternate" type="text/html" title="쓰레드의 start()와 run() (2)" /><published>2021-07-13T09:14:00+09:00</published><updated>2021-07-13T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(2)</id><content type="html" xml:base="https://nageom.github.io/java-thread(2)">&lt;p&gt;쓰레드를 구현하고 나면서 드는 생각이 있었다. &lt;br /&gt;
+&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">첫번째 알아볼 쓰레드 정의는</summary></entry><entry><title type="html">쓰레드- start()와 run() (2)</title><link href="https://nageom.github.io/java-thread(2)" rel="alternate" type="text/html" title="쓰레드- start()와 run() (2)" /><published>2021-07-13T09:14:00+09:00</published><updated>2021-07-13T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(2)</id><content type="html" xml:base="https://nageom.github.io/java-thread(2)">&lt;p&gt;쓰레드를 구현하고 나면서 드는 생각이 있었다. &lt;br /&gt;
 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 
 그래서 이 둘에 대해 자세히 알아보았다. &lt;br /&gt;&lt;/p&gt;
 

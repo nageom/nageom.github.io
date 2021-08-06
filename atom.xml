@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>쓰레드-동기화(Synchronization) (4)</title>
+        
+          <description>&lt;p&gt;오늘은 ‘사용해본적은 있지만 자세히는 모른다 시리즈’의 synchronized에 대해 포스팅해보려한다. 가보자&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 05 Aug 2021 09:14:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/java-thread(5)</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-thread(5)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>쓰레드-실행제어편 (4)</title>
         
           <description>&lt;p&gt;쓰레드의 스케줄링을 위해 알아야하는 지식&lt;/p&gt;

@@ -242,13 +242,13 @@ java.util.concurrent.atomic 패키지 지원 )<br /></p>
 */</span>
 </code></pre></div></div>
 <p>이 두 방법 모두 lock의 획득과 반납이 모두 자동적으로 이루어진다. 
-참고로 임계 영역은 최소화하여 synchronized블럭을 사용하는것이 좋다.</p>
+참고로 synchronized블럭으로 임계 영역을 최소화해서 보다 효율적인 프로그램이 되도록 노력하는 것이 좋다.</p>
 
 <p>출금하려는 금액이 잔고보다 작을 경우에만 출금할 수 있는 은행시스템에서 필요한 쓰레드 동기화
 <script src="https://gist.github.com/nageom/ba97d73b55ce060e79fb91dedc72723d.js"></script></p>
 
 <p>24 줄의 메서드를 동기화하지 않으면 한 쓰레드가 출금 중, 다른 쓰레드가 balance에 영향을 줘서
-balance가 음수가 되어버린다.</p>
+balance가 음수가 되어버린다. <synchronized 를="" 지우고="" 결과를="" 확인해보자=""></synchronized></p>
 
 <blockquote>
   <p>알게된것</p>

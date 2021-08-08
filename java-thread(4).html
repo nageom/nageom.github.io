@@ -255,7 +255,30 @@ sleep()메서드는 static으로 선언되어 있어 참조변수를 이용해�
   </li>
 </ul>
 
-<p>메서드 하나하나 올리기엔 좀 귀..ㅊ…ㅣㅏㄴㅎ아서 틈틈ㅎ ㅣ올리는걸로! (2021-08-04) <br /></p>
+<p>메서드 하나하나 올리기엔 좀 귀..ㅊ…ㅣㅏㄴㅎ아서 틈틈ㅎ ㅣ올리는걸로! (2021-08-04 업데이트) <br /></p>
+
+<p>interrupt() - 쓰레드의 작업을 취소시킨다. <br />
+멈추는게 아니고 취소시킨다! 
+너무 오래걸리는 다운로드를 취소시킬때 사용한다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Thread</span> <span class="nx">th</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Thread</span><span class="p">();</span>
+<span class="nx">th</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="nx">th</span><span class="p">.</span><span class="nx">interrupt</span><span class="p">();</span> <span class="c1">//쓰레드에 interrupt() 호출</span>
+<span class="kd">class</span> <span class="nx">MyThread</span> <span class="kd">extends</span> <span class="nx">Thread</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">interrupted</span><span class="p">())</span> <span class="p">{</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="p">)</span>
+</code></pre></div></div>
+<p>보면 알 수 있듯이 interrupted()는 interrupted상태를 반환한다. <br />
+void interrupt() - 쓰레드의 interrupted상태를 false -&gt; true로 전환 <br />
+boolean isInterrupted () -쓰레드의 interrupted상태를 그냥 반환. <br />
+static boolean interrupted() - 쓰레드의 interrupted상태를 반환하고, false로 변경 <br />
+더 자세한 예시는 책에서 확인 ( 753pg ) - (2021-08-08 업데이트)</p>
 
 <p>참고문서 - 자바의 정석</p>
 

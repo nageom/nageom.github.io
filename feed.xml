@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-08-14T23:56:13+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드-동기화(Synchronization) (4)</title><link href="https://nageom.github.io/java-thread(5)" rel="alternate" type="text/html" title="쓰레드-동기화(Synchronization) (4)" /><published>2021-08-05T09:14:00+09:00</published><updated>2021-08-05T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(5)</id><content type="html" xml:base="https://nageom.github.io/java-thread(5)">&lt;p&gt;오늘은 &lt;u&gt;'사용해본적은 있지만 자세히는 모른다 시리즈'&lt;/u&gt;의 synchronized에 대해 포스팅해보려한다. 가보자&lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-08-14T23:58:18+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">쓰레드-동기화(Synchronization) (4)</title><link href="https://nageom.github.io/java-thread(5)" rel="alternate" type="text/html" title="쓰레드-동기화(Synchronization) (4)" /><published>2021-08-05T09:14:00+09:00</published><updated>2021-08-05T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(5)</id><content type="html" xml:base="https://nageom.github.io/java-thread(5)">&lt;p&gt;오늘은 &lt;u&gt;'사용해본적은 있지만 자세히는 모른다 시리즈'&lt;/u&gt;의 synchronized에 대해 포스팅해보려한다. 가보자&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;한 쓰레드가 진행 중인 작업을 다른 쓰레드가 간섭하지 못하도록 막는 것을 ‘쓰레드의 동기화 (synchronization)’라고 한다.&lt;/p&gt;
 
@@ -56,9 +56,8 @@ balance가 음수가 되어버린다. &lt;synchronized 를=&quot;&quot; 지우�
 &lt;p&gt;내가 만든 RunnableEx 안의 멤버 또는 메서드들은 모두
 메인에서 구현된 쓰레드들이 같이 공유한다. 라는걸 기억해두자.&lt;/p&gt;
 
-&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 '사용해본적은 있지만 자세히는 모른다 시리즈'의 synchronized에 대해 포스팅해보려한다. 가보자</summary></entry><entry><title type="html">쓰레드-실행제어편 (4)</title><link href="https://nageom.github.io/java-thread(4)" rel="alternate" type="text/html" title="쓰레드-실행제어편 (4)" /><published>2021-08-03T09:14:00+09:00</published><updated>2021-08-03T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(4)</id><content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;p&gt;쓰레드의 스케줄링을 위해 알아야하는 지식&lt;/p&gt;
-
-&lt;p&gt;쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 
+&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">오늘은 '사용해본적은 있지만 자세히는 모른다 시리즈'의 synchronized에 대해 포스팅해보려한다. 가보자</summary></entry><entry><title type="html">쓰레드-실행제어편 (4)</title><link href="https://nageom.github.io/java-thread(4)" rel="alternate" type="text/html" title="쓰레드-실행제어편 (4)" /><published>2021-08-03T09:14:00+09:00</published><updated>2021-08-03T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(4)</id><content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;p&gt;쓰레드의 스케줄링을 위해 기초지식 다지기&lt;br /&gt;
+쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 
 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 
 그래서 공부할 것들을 적어봤다.&lt;/p&gt;
 
@@ -134,7 +133,7 @@ boolean isInterrupted () -쓰레드의 interrupted상태를 그냥 반환. &lt;b
 static boolean interrupted() - 쓰레드의 interrupted상태를 반환하고, false로 변경 &lt;br /&gt;
 더 자세한 예시는 책에서 확인 ( 753pg ) - (2021-08-08 업데이트)&lt;/p&gt;
 
-&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">쓰레드의 스케줄링을 위해 알아야하는 지식</summary></entry><entry><title type="html">쓰레드 정리 (3)</title><link href="https://nageom.github.io/java-thread(3)" rel="alternate" type="text/html" title="쓰레드 정리 (3)" /><published>2021-07-29T09:14:00+09:00</published><updated>2021-07-29T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(3)</id><content type="html" xml:base="https://nageom.github.io/java-thread(3)">&lt;h6&gt; 첫번째 알아볼 쓰레드 정의는 &lt;/h6&gt;
+&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content><author><name>nageom</name></author><category term="java" /><summary type="html">쓰레드의 스케줄링을 위해 기초지식 다지기 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다.</summary></entry><entry><title type="html">쓰레드 정리 (3)</title><link href="https://nageom.github.io/java-thread(3)" rel="alternate" type="text/html" title="쓰레드 정리 (3)" /><published>2021-07-29T09:14:00+09:00</published><updated>2021-07-29T09:14:00+09:00</updated><id>https://nageom.github.io/java-thread(3)</id><content type="html" xml:base="https://nageom.github.io/java-thread(3)">&lt;h6&gt; 첫번째 알아볼 쓰레드 정의는 &lt;/h6&gt;
 &lt;p&gt;쓰레드는 우선순위(priority)이다.&lt;/p&gt;
 
 &lt;blockquote&gt;

@@ -54,7 +54,7 @@
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="쓰레드-실행제어편 (4)" />
-    <meta property="og:description" content="쓰레드의 스케줄링을 위해 알아야하는 지식 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다. 쓰레드의 상태 NEW - 쓰레드가 생성되고 아직 START()가 호출되진 않은 상태 RUNNABLE - 실행 중 OR 실행 가능 상태 BLOCKED - 동기화블럭에 의해 일시정지된 상태" />
+    <meta property="og:description" content="쓰레드의 스케줄링을 위해 기초지식 다지기 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다. 쓰레드의 상태 NEW - 쓰레드가 생성되고 아직 START()가 호출되진 않은 상태 RUNNABLE - 실행 중 OR 실행 가능 상태 BLOCKED - 동기화블럭에 의해 일시정지된 상태" />
     <meta property="og:url" content="https://nageom.github.io/java-thread(4)" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -64,7 +64,7 @@
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="쓰레드-실행제어편 (4)" />
-    <meta name="twitter:description" content="쓰레드의 스케줄링을 위해 알아야하는 지식 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다. 쓰레드의 상태 NEW - 쓰레드가 생성되고 아직 START()가 호출되진 않은 상태 RUNNABLE - 실행 중 OR 실행 가능 상태 BLOCKED - 동기화블럭에 의해 일시정지된 상태" />
+    <meta name="twitter:description" content="쓰레드의 스케줄링을 위해 기초지식 다지기 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다. 쓰레드의 상태 NEW - 쓰레드가 생성되고 아직 START()가 호출되진 않은 상태 RUNNABLE - 실행 중 OR 실행 가능 상태 BLOCKED - 동기화블럭에 의해 일시정지된 상태" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -96,7 +96,7 @@
         "@type": "WebPage",
         "@id": "https://nageom.github.io/java-thread(4)"
     },
-    "description": "쓰레드의 스케줄링을 위해 알아야하는 지식 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다. 쓰레드의 상태 NEW - 쓰레드가 생성되고 아직 START()가 호출되진 않은 상태 RUNNABLE - 실행 중 OR 실행 가능 상태 BLOCKED - 동기화블럭에 의해 일시정지된 상태"
+    "description": "쓰레드의 스케줄링을 위해 기초지식 다지기 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다. 쓰레드의 상태 NEW - 쓰레드가 생성되고 아직 START()가 호출되진 않은 상태 RUNNABLE - 실행 중 OR 실행 가능 상태 BLOCKED - 동기화블럭에 의해 일시정지된 상태"
 }
     </script>
 
@@ -202,9 +202,8 @@ into the {body} of the default.hbs template -->
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>쓰레드의 스케줄링을 위해 알아야하는 지식</p>
-
-<p>쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 
+                    <p>쓰레드의 스케줄링을 위해 기초지식 다지기<br />
+쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 
 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 
 그래서 공부할 것들을 적어봤다.</p>
 

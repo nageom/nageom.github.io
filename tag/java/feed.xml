@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-14T23:56:13+09:00</updated>
+  <updated>2021-08-14T23:58:18+09:00</updated>
   <id>https://nageom.github.io/tag/java/feed.xml</id>
 
   
@@ -129,9 +129,8 @@ balance가 음수가 되어버린다. &lt;synchronized 를=&quot;&quot; 지우�
       <published>2021-08-03T09:14:00+09:00</published>
       <updated>2021-08-03T09:14:00+09:00</updated>
       <id>https://nageom.github.io/java-thread(4)</id>
-      <content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;p&gt;쓰레드의 스케줄링을 위해 알아야하는 지식&lt;/p&gt;
-
-&lt;p&gt;쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 
+      <content type="html" xml:base="https://nageom.github.io/java-thread(4)">&lt;p&gt;쓰레드의 스케줄링을 위해 기초지식 다지기&lt;br /&gt;
+쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 
 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 
 그래서 공부할 것들을 적어봤다.&lt;/p&gt;
 
@@ -228,7 +227,7 @@ static boolean interrupted() - 쓰레드의 interrupted상태를 반환하고, f
       
 
       
-        <summary type="html">쓰레드의 스케줄링을 위해 알아야하는 지식</summary>
+        <summary type="html">쓰레드의 스케줄링을 위해 기초지식 다지기 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다.</summary>
       
 
       

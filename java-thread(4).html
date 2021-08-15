@@ -285,7 +285,53 @@ stop() 호출 시 즉시 종료
 일반적인 쓰레드 사용 메서드들이지만 교착상태(deadlock)을 일으키기 쉬워 사용이 권장되지 않는다. (‘deprecated’되어있음)
 (고로 예시는 안적음)</p>
 
-<p>yield() -  다른 쓰레드에게 양보한다.</p>
+<p>yield() -  다른 쓰레드에게 양보한다. interrupt()를 적절히 사용하여 효율적인 실행을 가능케한다.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">yiledTest</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span> <span class="nx">args</span><span class="p">[])</span>  <span class="p">{</span>
+        <span class="nx">ThreadEx</span> <span class="nx">th1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ThreadEx</span><span class="p">(</span><span class="dl">"</span><span class="s2">*</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nx">ThreadEx</span> <span class="nx">th1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ThreadEx</span><span class="p">(</span><span class="dl">"</span><span class="s2">**</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nx">ThreadEx</span> <span class="nx">th1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ThreadEx</span><span class="p">(</span><span class="dl">"</span><span class="s2">***</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nx">th1</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+        <span class="nx">th2</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+        <span class="nx">th3</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+        
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="nx">Thread</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+            <span class="nx">th1</span><span class="p">.</span><span class="nx">suspend</span><span class="p">();</span>
+            <span class="nx">Thread</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+            <span class="nx">th2</span><span class="p">.</span><span class="nx">suspend</span><span class="p">();</span>
+            <span class="nx">Thread</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+            <span class="nx">th1</span><span class="p">.</span><span class="nx">resume</span><span class="p">();</span>
+            <span class="nx">Thread</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+            <span class="nx">th1</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+            <span class="nx">th2</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+            <span class="nx">Thread</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+            <span class="nx">th3</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+        <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">InterruptedExveption</span> <span class="nx">e</span><span class="p">){}</span>
+
+    <span class="p">}</span>
+    
+    <span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">ThreadEx</span> <span class="kr">implements</span> <span class="nx">Runnable</span> <span class="p">{</span>
+    <span class="nx">boolean</span> <span class="nx">suspended</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="nx">boolean</span> <span class="nx">stopped</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    
+    <span class="nx">Thread</span> <span class="nx">th</span><span class="p">;</span>
+    
+    <span class="nx">ThreadEx</span> <span class="p">(</span><span class="nb">String</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">th</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Thread</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">name</span><span class="p">);</span> <span class="c1">//쓰레드 생성</span>
+    <span class="p">}</span>
+    <span class="c1">//뤈뤈 </span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">run</span><span class="p">()</span>  <span class="p">{}</span>
+
+    
+    
+    
+    
+<span class="p">}</span>
+
+</code></pre></div></div>
 
 <p>참고문서 - 자바의 정석</p>
 

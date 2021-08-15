@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-14T23:58:18+09:00</updated>
+  <updated>2021-08-15T23:29:53+09:00</updated>
   <id>https://nageom.github.io/tag/java/feed.xml</id>
 
   
@@ -204,7 +204,15 @@ sleep()메서드는 static으로 선언되어 있어 참조변수를 이용해�
 void interrupt() - 쓰레드의 interrupted상태를 false -&amp;gt; true로 전환 &lt;br /&gt;
 boolean isInterrupted () -쓰레드의 interrupted상태를 그냥 반환. &lt;br /&gt;
 static boolean interrupted() - 쓰레드의 interrupted상태를 반환하고, false로 변경 &lt;br /&gt;
-더 자세한 예시는 책에서 확인 ( 753pg ) - (2021-08-08 업데이트)&lt;/p&gt;
+더 자세한 예시는 책에서 확인 ( 753pg ) - (2021-08-08 업데이트)
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;suspend() - sleep()처럼 쓰레드를 멈추기함. resume()을 호출해서 다시 실행대기 상태가 되고
+stop() 호출 시 즉시 종료 
+일반적인 쓰레드 사용 메서드들이지만 교착상태(deadlock)을 일으키기 쉬워 사용이 권장되지 않는다. (‘deprecated’되어있음)
+(고로 예시는 안적음)&lt;/p&gt;
+
+&lt;p&gt;yield() -  다른 쓰레드에게 양보한다.&lt;/p&gt;
 
 &lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content>
 

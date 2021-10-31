@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>블록체인의 시작</title>
+        
+          <description>&lt;hr /&gt;
+&lt;h6&gt; 프로그래머스 &amp;gt; 스택/큐 &lt;/h6&gt;
+
+</description>
+        
+        <pubDate>Sun, 31 Oct 2021 09:00:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/blockchain-start(1)</link>
+        <guid isPermaLink="true">https://nageom.github.io/blockchain-start(1)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>쓰레드-동기화(Synchronization) (4)</title>
         
           <description>&lt;p&gt;오늘은 &lt;u&gt;'사용해본적은 있지만 자세히는 모른다 시리즈'&lt;/u&gt;의 synchronized에 대해 포스팅해보려한다. 가보자&lt;br /&gt;&lt;/p&gt;
@@ -60,15 +76,15 @@
         <title>쓰레드- start()와 run() (2)</title>
         
           <description>&lt;p&gt;쓰레드를 구현하고 나면서 드는 생각이 있었다. &lt;br /&gt;
-쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 
+쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까?
 그래서 이 둘에 대해 자세히 알아보았다. &lt;br /&gt;&lt;/p&gt;
 
 </description>
         
-        <pubDate>Tue, 13 Jul 2021 09:14:00 +0900</pubDate>
+        <pubDate>Tue, 13 Jul 2021 09:00:00 +0900</pubDate>
         <link>
-        https://nageom.github.io/java-thread(2)</link>
-        <guid isPermaLink="true">https://nageom.github.io/java-thread(2)</guid>
+        https://nageom.github.io/java-thread(22)</link>
+        <guid isPermaLink="true">https://nageom.github.io/java-thread(22)</guid>
       </item>
       
     

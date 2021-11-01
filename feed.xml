@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-11-01T03:28:24+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">블록체인의 시작(1)_개념</title><link href="https://nageom.github.io/blockchain-start(1)" rel="alternate" type="text/html" title="블록체인의 시작(1)_개념" /><published>2021-10-31T09:00:00+09:00</published><updated>2021-10-31T09:00:00+09:00</updated><id>https://nageom.github.io/blockchain-start(1)</id><content type="html" xml:base="https://nageom.github.io/blockchain-start(1)">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://nageom.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nageom.github.io/" rel="alternate" type="text/html" /><updated>2021-11-02T00:32:46+09:00</updated><id>https://nageom.github.io/feed.xml</id><title type="html">nageom’s blog</title><subtitle>티끌모아 공부방</subtitle><entry><title type="html">블록체인의 시작(4)_디파이</title><link href="https://nageom.github.io/blockchain-start(4)" rel="alternate" type="text/html" title="블록체인의 시작(4)_디파이" /><published>2021-11-01T09:00:00+09:00</published><updated>2021-11-01T09:00:00+09:00</updated><id>https://nageom.github.io/blockchain-start(4)</id><content type="html" xml:base="https://nageom.github.io/blockchain-start(4)">&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;디파이와 서비스&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 디파이(De-fi)란?&lt;/strong&gt;&lt;br /&gt;
+탈중앙화 금융(Decentralized Finance)의 약자로서, 탈중앙화된 분산금융 또는 분산재정을 의미한다. 
+탈중앙화는 저번 포스팅에서 설명했고, 은행처럼 예치, 대출이 가능하지만 실제화폐가 아닌
+암호화폐로 거래된다는 점이 다르다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.디파이 서비스&lt;/strong&gt;&lt;br /&gt;
+탈중앙화 금융서비스는 무엇을 제공할까? &lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;암호화폐 예치와 대출&lt;br /&gt;
+테더를 예치한 A와, 이더리움을 담보로 테더 대출하려는 B가 있다. (이때 대출받는 측(B)의 이자와 수수료가 투자자(A)에게 수익으로 작용된다.)
+가치 변동성이 적은 코인을 팔지않고 예치함으로써 B의 대출이자와 수수료로 수익을 보는 A &lt;br /&gt;
+변동성이 큰 코인(이더)를 팔고싶지않을때 이더를 담보로 테더를 대출 받을 수 있는 B&lt;br /&gt;
+모두에게 이득이다.&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;자산토큰화&lt;br /&gt;
+개인투자자들도 고가의 부동산이나 예슬품에 쉽게 투자할 수 있도록 자산 소유권을 소액으로 나누는 것을 말한다. 
+여러 개로 나눠진 소유권을 블록체인 기술로 암호화하여 저장하는 것을 토큰화, 이를 자산토큰화라고 한다. &lt;br /&gt;&lt;br /&gt;
+예시로 100억원 상당의 빌딩을 5000원의 부동산 디지털 수익증권으로 200만여개로 나누어 공모를 진행한다. 
+개인 투자자는 원하는 만큼의 디지털 수익증권을 살 수 있다. 
+이걸 삼으로써 임대료를 받거나 매각할 때 시세차익을 벌 수 있고
+또는 차익이 벌어질때 보유한 수익증권을 마켓플레이스에서 매매할 수 있다. &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;스테이킹&lt;br /&gt;
+스테이킹(staking)은 암호화폐의 일정량을 지분으로 고정시키는 행위이다. &lt;br /&gt;
+스테이킹 서비스란 저축과 유사한 개념으로 사용자가 가진 암호화폐를 블록체인 네트워크 운영에 활용할 수 있도록 맡기고, 그 대가로 수익 보상을 받는 서비스다.
+일반 예치와 다른점이 바로
+예치만 하는 것이 아니라 데이터 검증에 참여하여 암호화폐를 보상받는 점이다. 
+이 절차를 복잡하게 느끼는 일반투자자들을 위해 전문적으로 스테이킹과 데이터 검증을 하는 서비스를 제공하는 업체도 등장했다. &lt;br /&gt;
+(대표적으로 스테이크드, 스테이크피쉬, 업비트 등이 있다)&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;덱스 거래&lt;br /&gt;
+덱스 = (Decentralized Exchange) 탈중앙화 거래소&lt;br /&gt;
+덱스 거래 = 탈중앙화 환전, 스왑&lt;br /&gt;&lt;br /&gt;
+원화와 달러를 환전함을 생각하면되는데 사실 덱스 거래는 많이 다르다. 
+기존에 은행이 달러나 원화를 어느정도 보유하고 있는 방식이 아니라 투자자가 예치한 암호화폐들로 환전이 이루어지는 방식이다. &lt;br /&gt;&lt;br /&gt;
+물론 투자자들의 모든 예치금을 말하는것은 아니고 사용자에게 여러 암호화폐로 환전할 수 있도록 만들어진 유동성 풀을 제공하고
+암호화폐 투자자들이 서로 다른 암호화폐 둘을 1대1비율로 예치합니다. &lt;br /&gt;&lt;br /&gt;
+이 유동성풀에 있는 암호화폐로 사용자에게 환전서비스를 제공합니다. 이때 환전 서비스를 스왑이라하고
+스왑시 발생하는 수수료를 위의 암호화폐 투자자들에게 배분합니다.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>nageom</name></author><category term="blockchain" /><summary type="html">디파이와 서비스</summary></entry><entry><title type="html">블록체인의 시작(1)_개념</title><link href="https://nageom.github.io/blockchain-start(1)" rel="alternate" type="text/html" title="블록체인의 시작(1)_개념" /><published>2021-10-31T09:00:00+09:00</published><updated>2021-10-31T09:00:00+09:00</updated><id>https://nageom.github.io/blockchain-start(1)</id><content type="html" xml:base="https://nageom.github.io/blockchain-start(1)">&lt;hr /&gt;
 &lt;p&gt;블록체인을 좀 쉽고 빠르게 습득하기 위한 포스팅. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;내가 블록체인을 공부할 때에는 읽어도 정말 읽어도 몰랐다 &lt;br /&gt;
@@ -61,7 +105,7 @@
 &lt;p&gt;블록체인은 새로운 신뢰/보안의 형태이다. 이제 시작이고 가야할 길이 멀고도 험하다 
  ERC20? 토큰이랑 코인? 스마트컨트랙트? 블록체인을 공부하면서 어려웠던 이것들 모두 짚고 넘어가보자.&lt;/p&gt;
 
-&lt;p&gt;다음은 스마트컨트랙트에 대해 알아볼거다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="blockchain" /><summary type="html">블록체인을 좀 쉽고 빠르게 습득하기 위한 포스팅.</summary></entry><entry><title type="html">블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp</title><link href="https://nageom.github.io/blockchain-start(3)" rel="alternate" type="text/html" title="블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp" /><published>2021-10-31T09:00:00+09:00</published><updated>2021-10-31T09:00:00+09:00</updated><id>https://nageom.github.io/blockchain-start(3)</id><content type="html" xml:base="https://nageom.github.io/blockchain-start(3)">&lt;hr /&gt;
+&lt;p&gt;다음은 스마트컨트랙트에 대해 알아볼거다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="blockchain" /><summary type="html">블록체인을 좀 쉽고 빠르게 습득하기 위한 포스팅.</summary></entry><entry><title type="html">블록체인의 시작(4)_ERC20토큰과 스마트컨트랙트, Dapp</title><link href="https://nageom.github.io/blockchain-start(3)" rel="alternate" type="text/html" title="블록체인의 시작(4)_ERC20토큰과 스마트컨트랙트, Dapp" /><published>2021-10-31T09:00:00+09:00</published><updated>2021-10-31T09:00:00+09:00</updated><id>https://nageom.github.io/blockchain-start(3)</id><content type="html" xml:base="https://nageom.github.io/blockchain-start(3)">&lt;hr /&gt;
 &lt;ol&gt;
   &lt;li&gt;코인과 토큰의 차이.&lt;/li&gt;
   &lt;li&gt;ERC20?&lt;/li&gt;
@@ -85,32 +129,31 @@
 &lt;p&gt;&lt;strong&gt;2.이제 ERC20이 무엇인가&lt;/strong&gt;&lt;br /&gt;
 이더리움의 자체 블록체인 네트워크 상에서 발행되는 &lt;u&gt;토큰의 호환성을 보장&lt;/u&gt;하기 위한 표준 사양을 말합니다. 
 위의 정의처럼 토큰은 블록체인 네트워크를 빌려 만들어진 것이잖아요? 만들때 최소한의 조건이 ERC20인거죠.&lt;br /&gt;
-그래서 ERC20에 맞춘 토큰 ERC20토큰이라 부릅니다.&lt;/p&gt;
+그래서 ERC20의 표준 사양을 맞춘 토큰을 ERC20토큰이라 부릅니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3. Dapp(디앱)??&lt;/strong&gt;
-이더리움 목적 자체는 애플리케이션 제작을 위한 플랫폼을 만드는 것이다. 
-모바일의 OS 안드로이드와 iOS 처럼 블록체인계의 OS를 꿈꾸는 이더리움..!&lt;br /&gt;
-스마트컨트랙트가 포함된 이더리움의 블록체인 네트워크 위에서 돌아가는 어플리케이션이라는 것..!&lt;/p&gt;
+디앱이란 블록체인을 기반으로 돌아가는 애플리케이션을 말한다.
+모바일의 OS 안드로이드와 iOS 처럼 블록체인계의 OS에서 돌아가는 애플리케이션.&lt;/p&gt;
 
-&lt;p&gt;예를 들자면 만약 30분 안에 배달이 완료되면 결제가 계약인 스마트컨트랙트를 씌운 배달의 민족이라는 어플을 Dapp이라 할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/blockchain3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;이더리움 블록체인에서는 이더(ETH)가 사용되고, 이더리움 블록체인 상의 Dapp(디앱)은
+&lt;p&gt;디앱은 블록체인에서 스마트 계약이 도입되면서 생겨났다(이더리움이 처음 도입). 스마트 계약이 없는 비트코인에는 디앱이 존재하지 않는다.
+스마트컨트랙트가 포함된 블록체인 네트워크 위에서 돌아가는 어플리케이션이라 정리할 수 있다. 
+예를 들자면 배달의 민족 어플에 만약 30분 안에 배달이 완료되면 자동 결제가 되는 스마트컨트랙트를 추가한다면 Dapp이라 할 수 있다.
+이처럼 디앱의 종류는 코인관련 뿐만 아니라 안드로이드의 앱처럼 모든 앱이 될 수 있다.&lt;/p&gt;
+
+&lt;p&gt;현재 여러 블록체인 플랫폼들이 있는데 대표주자가 이더리움이다. 처음 블록체인에 스마트 계약을 도입하며
+디앱을 탄생시킨게 이더리움이기도하고 디앱 수로 봤을때도 1위가 이더리움, 2위는 이오스. 그 수가 
+이더리움이 2,341개이상, 이오스는 235개로 차이가 엄청나다.&lt;/p&gt;
+
+&lt;p&gt;대표적인 이더리움 블록체인에서는 이더(ETH)가 사용되고, 이더리움 블록체인 상의 Dapp(디앱)은
 또 다른 다양한 분야에 적용될 수 있는 각각의 솔루션으로 그에 맞는 토큰을 발행하는 것이다.&lt;/p&gt;
 
-&lt;p&gt;본래 각각의 앱을 사용하면서 발생되는 일정부분의 포인트를 통합하여 사용하는 것은 같은 회사계열의 앱이 아닌 이상 거의 불가능하다.
-하지만 이더리움 플랫폼에서는 각각의 디앱이 발행한 토큰을 통합하여 현금화하는 것이 가능하다.
-디앱 내에서의 토큰 교환은 물론, 또 다른 이더리움 플랫폼을 기반으로 한 디앱의 토큰과 교환 가능한데 이를 위해서 ERC-20 토큰 표준이 만들어졌다.
-다양한 디앱에 흩어져있는 ERC-20 표준 호환 토큰들은 나중에 통합되어 한 번에 이더로 모두 바꾸어 현금화 할 수 있다. 너무 좋다&lt;/p&gt;
+&lt;p&gt;본래 각각의 앱을 사용하면서 발생되는 일정부분의 포인트를 통합하여 사용하는 것은 같은 회사계열의 앱이 아닌 이상 거의 불가능하지만 
+이더리움 플랫폼에서는 각각의 디앱이 발행한 토큰을 통합하여 현금화하는 것이 가능하다.
+다양한 디앱에 흩어져있는 ERC-20 표준 호환 토큰들이 나중에 통합이 가능하여 한 번에 이더로 모두 바꾸고 현금화 할 수 있는것이다.&lt;/p&gt;
 
-&lt;p&gt;디앱의 종류에 대해 더 살펴보자.
-&lt;img src=&quot;../../assets/built/images/blockchain/blockchain3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Contract Only : 스마트컨트랙트만으로 구성된 Dapp &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Hybrid : OffChain 서비스와 OnChain 서비스가 하나의 서비스로 이루어진 Dapp&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Save Data Only : OffChain 서비스와 함께 블록체인을 사용하지만 블록체인을 데이터 저장 용도만으로 사용하는 Dapp&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;내가 사용하는 Dapp도 여기포함되어있&lt;/p&gt;</content><author><name>nageom</name></author><category term="blockchain" /><summary type="html">코인과 토큰의 차이. ERC20? Dapp(디앱)??</summary></entry><entry><title type="html">블록체인의 시작(2)_스마트컨트랙트</title><link href="https://nageom.github.io/blockchain-start(2)" rel="alternate" type="text/html" title="블록체인의 시작(2)_스마트컨트랙트" /><published>2021-10-31T09:00:00+09:00</published><updated>2021-10-31T09:00:00+09:00</updated><id>https://nageom.github.io/blockchain-start(2)</id><content type="html" xml:base="https://nageom.github.io/blockchain-start(2)">&lt;hr /&gt;
+&lt;p&gt;다음시간에는 디앱의종류 중 디파이에 대해 알아볼것이다.&lt;/p&gt;</content><author><name>nageom</name></author><category term="blockchain" /><summary type="html">코인과 토큰의 차이. ERC20? Dapp(디앱)??</summary></entry><entry><title type="html">블록체인의 시작(2)_스마트컨트랙트</title><link href="https://nageom.github.io/blockchain-start(2)" rel="alternate" type="text/html" title="블록체인의 시작(2)_스마트컨트랙트" /><published>2021-10-31T09:00:00+09:00</published><updated>2021-10-31T09:00:00+09:00</updated><id>https://nageom.github.io/blockchain-start(2)</id><content type="html" xml:base="https://nageom.github.io/blockchain-start(2)">&lt;hr /&gt;
 &lt;p&gt;스마트컨트랙트는 블록체인 위에 올리는 코드이다.&lt;/p&gt;
 
 &lt;p&gt;본래는 코드대로 실행되는 계약 시스템이였지만 블록체인에 도입됨으로써 취약했던 보안과 신뢰를 보완하여 세상에 나왔다.&lt;/p&gt;
@@ -620,30 +663,4 @@ Thread(ThreadGroup group, Runnable target, String name)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
-커버사진 출처 프로그래머스&lt;/p&gt;</content><author><name>nageom</name></author><category term="coding" /><summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 구명보트 문제 설명 무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다. 예를 들어, 사람들의 몸무게가 [70kg, 50kg, 80kg, 50kg]이고 구명보트의 무게 제한이 100kg이라면 2번째 사람과 4번째 사람은 같이 탈 수 있지만 1번째 사람과 3번째 사람의 무게의 합은 150kg이므로 구명보트의 무게 제한을 초과하여 같이 탈 수 없습니다.</summary></entry><entry><title type="html">탐욕법 큰 수 만들기</title><link href="https://nageom.github.io/coding-greedy(3)" rel="alternate" type="text/html" title="탐욕법 큰 수 만들기" /><published>2021-07-09T09:14:00+09:00</published><updated>2021-07-09T09:14:00+09:00</updated><id>https://nageom.github.io/coding-greedy(3)</id><content type="html" xml:base="https://nageom.github.io/coding-greedy(3)">&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;프로그래머스 &amp;gt; 탐욕법 &amp;gt; 큰 수 만들기&lt;/strong&gt;&lt;br /&gt;
-문제 설명&lt;br /&gt;
-어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.&lt;br /&gt;
-예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.&lt;/p&gt;
-
-&lt;p&gt;문자열 형식으로 숫자 number와 제거할 수의 개수 k가 solution 함수의 매개변수로 주어집니다. number에서 k 개의 수를 제거했을 때 만들 수 있는 수 중 가장 큰 숫자를 문자열 형태로 return 하도록 solution 함수를 완성하세요.&lt;/p&gt;
-
-&lt;p&gt;제한 조건
-number는 1자리 이상, 1,000,000자리 이하인 숫자입니다.
-k는 1 이상 number의 자릿수 미만인 자연수입니다.
-&lt;img src=&quot;../../assets/built/images/coding/greedy(3)_2.jpg.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;h6&gt;풀이과정&lt;/h6&gt;
-
-&lt;p&gt;모랄까.. 느낌은 알겠는데 도저히 코드가 안나와서 다른 분의 코드를 해석했다. 
-&lt;img src=&quot;../../assets/built/images/coding/greedy(3)_1.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;참고 코드 https://velog.io/@hyeon930/&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;알게된것&lt;/strong&gt;&lt;br /&gt;
-int num = number.charAt(j) - ‘0’;&lt;br /&gt;
-문자열-‘0’을 하면 문자열를 정수로 바꿔 받을 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;
-커버사진 출처 프로그래머스&lt;/p&gt;</content><author><name>nageom</name></author><category term="coding" /><summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 큰 수 만들기 문제 설명 어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다. 예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.</summary></entry></feed>
+커버사진 출처 프로그래머스&lt;/p&gt;</content><author><name>nageom</name></author><category term="coding" /><summary type="html">프로그래머스 &amp;gt; 탐욕법 &amp;gt; 구명보트 문제 설명 무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다. 예를 들어, 사람들의 몸무게가 [70kg, 50kg, 80kg, 50kg]이고 구명보트의 무게 제한이 100kg이라면 2번째 사람과 4번째 사람은 같이 탈 수 있지만 1번째 사람과 3번째 사람의 무게의 합은 150kg이므로 구명보트의 무게 제한을 초과하여 같이 탈 수 없습니다.</summary></entry></feed>

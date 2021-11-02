@@ -8,6 +8,23 @@
     
       
       <item>
+        <title>블록체인의 시작(5)_블록체인 이해하기</title>
+        
+          <description>&lt;hr /&gt;
+&lt;p&gt;블록체인은 대충 알겠고 그래서 코드는 어떻게 쓰는데? &lt;br /&gt;
+해서 냅다 니콜라스의 도움으로 typescript로 간단 블록체인 구조를 생성해보았다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 02 Nov 2021 09:00:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/blockchain-start(5)</link>
+        <guid isPermaLink="true">https://nageom.github.io/blockchain-start(5)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>블록체인의 시작(4)_디파이</title>
         
           <description>&lt;hr /&gt;

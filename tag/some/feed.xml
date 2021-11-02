@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/some/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-02T00:32:46+09:00</updated>
+  <updated>2021-11-02T20:18:55+09:00</updated>
   <id>https://nageom.github.io/tag/some/feed.xml</id>
 
   
@@ -94,7 +94,8 @@
   &lt;p&gt;&amp;lt;’script src=”https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js”&amp;gt;&amp;lt;/script’&amp;gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;{‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %’} 는 비추천&lt;/p&gt;
+&lt;p&gt;{‘% gist nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa %’} 는 해야할 것이 많다.. 예상치못한 에러때문에 시간을 
+너무 허비해서 안쓰기로함.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/nageom/7dcd0b8fedc4ce5e44003d237e2fc0fa.js&quot;&gt;&lt;/script&gt;</content>
 

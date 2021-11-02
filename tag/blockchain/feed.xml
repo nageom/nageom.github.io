@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/tag/blockchain/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-02T20:18:55+09:00</updated>
+  <updated>2021-11-02T21:50:06+09:00</updated>
   <id>https://nageom.github.io/tag/blockchain/feed.xml</id>
 
   
@@ -46,7 +46,8 @@
 -&amp;gt; 대형 프로젝트, 팀으로 일할 경우 버그를 최소화하기 좋다
 -&amp;gt; 언어가 예측 가능하고 읽기 쉬운 코드로 자바스크립트를 더 잘 사용할 수 있게 해준다.&lt;/p&gt;
 
-&lt;p&gt;Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매니저&lt;br /&gt;
+&lt;p&gt;먼저, &lt;strong&gt;기본 설정&lt;/strong&gt; &lt;br /&gt;
+Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매니저&lt;br /&gt;
 = Java의 gradle&lt;/p&gt;
 
 &lt;p&gt;npm 보다 빠르고 안전하며 npm과 같이 자바스크립트 패키지의 저장소를 제공할 뿐만 아니라
@@ -55,19 +56,51 @@
 &lt;p&gt;하지만 나는 yarn 이 돌아가지 않아서 npm을 사용했다. &lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;yarn initialize &lt;br /&gt;
+    &lt;p&gt;1.yarn initialize &lt;br /&gt;
 (&amp;gt; yarn init) 또는 
 (&amp;gt;npm init ) &lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;타임스크립트 설치  &lt;br /&gt;
+    &lt;p&gt;2.타임스크립트 설치  &lt;br /&gt;
 (&amp;gt; yarn global add typescript) 
 또는
 (&amp;gt; npm install typescript)&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;3.tsconfig.json 파일 생성 
+타임스크립트가 어떻게 자바스크립트로 컴파일 할지 명시해둘 파일&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;1.일단 냅다 블록 구조 만들기&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/bc4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;4.index.ts 파일 생성
+블록체인 만들 ts 파일 -&amp;gt; 컴파일하면 index.js가 생성됨&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;5.컴파일은 tsc 또는 npx tsc 
+여기까지하고 컴파일 실행해보자&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;6.tsc-watch 패키지 설치&lt;br /&gt;
+원래는 ts코드가 바뀔때마다 js로 컴파일 하고 node로 실행&lt;br /&gt;
+-&amp;gt; ts코드가 수정 될때마다 자동으로 컴파일하고 js를 실행해줌 (쉽게 말해 tsc의 watch모드 )&lt;br /&gt;
+(&amp;gt; yarn add tsc-watch –dev 또는 npm add tsc-watch –dev)&lt;br /&gt;
+그니까 yarn start, yarn start 계속 안쳐도 수정될때마다 알아서 컴파일, 실행 되서 출력값 띄워줌&lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc5.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+참고로 yarn으로 init했을때와 npm 으로 init했을때의 package.json 형태가 다르다. &lt;br /&gt;
+yarn의 경우 “script”가 없으니 추가해주면 되고&lt;br /&gt;
+npm의 경우 “test”까지 만들어져있으니 “start”만 추가해준다. &lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;블록체인 생성&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1.이제 index.ts에 냅다 블록 구조 만들기&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Block&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -178,11 +211,7 @@
 &lt;p&gt;실행&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;createNewBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;첫 블록&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;createNewBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;아더 블록&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;포스팅을 마치며&lt;br /&gt;
-타임스크립트는 처음 사용해봤는데 나는 자바 유저인데도
-사용할만했다. 이로써 블록체인의 구조는 대강 알겠다.&lt;/p&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       

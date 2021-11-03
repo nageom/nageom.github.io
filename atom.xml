@@ -8,9 +8,56 @@
     
       
       <item>
-        <title>블록체인의 시작(5)_블록체인 이해하기</title>
+        <title>자바스크립트 backtick(`)과 single quoto(') 나만 주의..</title>
         
           <description>&lt;hr /&gt;
+
+</description>
+        
+        <pubDate>Wed, 03 Nov 2021 09:00:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/error-typescript</link>
+        <guid isPermaLink="true">https://nageom.github.io/error-typescript</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>블록체인의 시작(6)_스마트컨트랙트를 작성해보자</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;오늘은 스마트컨트랙트 개발을 해볼겁니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 02 Nov 2021 09:00:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/blockchain-start(6)</link>
+        <guid isPermaLink="true">https://nageom.github.io/blockchain-start(6)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>블록체인의 시작(5)_블록체인 이해하기</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;p&gt;블록체인은 대충 알겠고 그래서 코드는 어떻게 쓰는데? &lt;br /&gt;
 해서 냅다 니콜라스의 도움으로 typescript로 간단 블록체인 구조를 생성해보았다.&lt;/p&gt;
 
@@ -27,7 +74,15 @@
       <item>
         <title>블록체인의 시작(4)_디파이</title>
         
-          <description>&lt;hr /&gt;
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;blockquote&gt;
   &lt;p&gt;디파이와 서비스&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -43,9 +98,17 @@
     
       
       <item>
-        <title>블록체인의 시작(4)_ERC20토큰과 스마트컨트랙트, Dapp</title>
+        <title>블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp</title>
         
-          <description>&lt;hr /&gt;
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;ol&gt;
   &lt;li&gt;코인과 토큰의 차이.&lt;/li&gt;
   &lt;li&gt;ERC20?&lt;/li&gt;
@@ -65,8 +128,17 @@
       <item>
         <title>블록체인의 시작(2)_스마트컨트랙트</title>
         
-          <description>&lt;hr /&gt;
-&lt;p&gt;스마트컨트랙트는 블록체인 위에 올리는 코드이다.&lt;/p&gt;
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h6&gt;스마트컨트랙트는 블록체인 위에 올리는 코드이다. &lt;/h6&gt;
+&lt;p&gt;본래는 코드대로 실행되는 계약 시스템이였지만 블록체인에 도입됨으로써 취약했던 보안과 신뢰를 보완하여 세상에 나왔다.&lt;/p&gt;
 
 </description>
         
@@ -81,7 +153,15 @@
       <item>
         <title>블록체인의 시작(1)_개념</title>
         
-          <description>&lt;hr /&gt;
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;p&gt;블록체인을 좀 쉽고 빠르게 습득하기 위한 포스팅. &lt;br /&gt;&lt;/p&gt;
 
 </description>
@@ -872,21 +952,6 @@ RDB_관계형 데이터베이스라고 합니다.&lt;/p&gt;
         <link>
         https://nageom.github.io/java-equals</link>
         <guid isPermaLink="true">https://nageom.github.io/java-equals</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>자바스크립트 backtick(`)과 single quoto(') 나만 주의..</title>
-        
-          <description>&lt;hr /&gt;
-
-</description>
-        
-        <pubDate>Tue, 25 May 2021 09:14:00 +0900</pubDate>
-        <link>
-        https://nageom.github.io/error-typescript</link>
-        <guid isPermaLink="true">https://nageom.github.io/error-typescript</guid>
       </item>
       
     

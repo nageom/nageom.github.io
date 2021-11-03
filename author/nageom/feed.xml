@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-02T21:50:06+09:00</updated>
+  <updated>2021-11-03T15:15:27+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -67,7 +67,7 @@ Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매�
 (&amp;gt; npm install typescript)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;3.tsconfig.json 파일 생성 
+    &lt;p&gt;3.tsconfig.json 파일 생성 &lt;br /&gt;
 타임스크립트가 어떻게 자바스크립트로 컴파일 할지 명시해둘 파일&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -76,11 +76,11 @@ Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매�
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;4.index.ts 파일 생성
+    &lt;p&gt;4.index.ts 파일 생성&lt;br /&gt;
 블록체인 만들 ts 파일 -&amp;gt; 컴파일하면 index.js가 생성됨&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;5.컴파일은 tsc 또는 npx tsc 
+    &lt;p&gt;5.컴파일은 tsc 또는 npx tsc &lt;br /&gt;
 여기까지하고 컴파일 실행해보자&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -88,7 +88,7 @@ Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매�
 원래는 ts코드가 바뀔때마다 js로 컴파일 하고 node로 실행&lt;br /&gt;
 -&amp;gt; ts코드가 수정 될때마다 자동으로 컴파일하고 js를 실행해줌 (쉽게 말해 tsc의 watch모드 )&lt;br /&gt;
 (&amp;gt; yarn add tsc-watch –dev 또는 npm add tsc-watch –dev)&lt;br /&gt;
-그니까 yarn start, yarn start 계속 안쳐도 수정될때마다 알아서 컴파일, 실행 되서 출력값 띄워줌&lt;br /&gt;
+그니까 tsc, yarn start, yarn start를 계속 안쳐도 수정될때마다 알아서 컴파일, 실행 되서 출력값 띄워줌&lt;br /&gt;
 &lt;img src=&quot;../../assets/built/images/blockchain/bc5.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
 참고로 yarn으로 init했을때와 npm 으로 init했을때의 package.json 형태가 다르다. &lt;br /&gt;
 yarn의 경우 “script”가 없으니 추가해주면 되고&lt;br /&gt;
@@ -486,17 +486,17 @@ npm의 경우 “test”까지 만들어져있으니 “start”만 추가해준
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;1. 코인과 토큰의 차이.&lt;/strong&gt;&lt;br /&gt;
-코인은 자체적인 블록체인 네트워크를 가지고 웅용되어 지는 것
-토큰은 코인의 기존 블록체인 네트워크를 차용해서 운용되어 지는 것이다. 
-대표적인 비트코인, 이더리움 등을 제외한 대부분은 토큰이다. (이더리움의 코인 이름은 이더..!)&lt;/p&gt;
+코인은 &lt;strong&gt;&lt;u&gt;자체적인 블록체인 네트워크&lt;/u&gt;&lt;/strong&gt;를 가지고 웅용되어 지는 것&lt;br /&gt;
+토큰은 코인의 &lt;strong&gt;&lt;u&gt;기존 블록체인 네트워크&lt;/u&gt;&lt;/strong&gt;를 차용해서 운용되어 지는 것이다. &lt;br /&gt;
+대표적인 비트코인, 이더리움 등을 제외한 대부분은 토큰이다. (이더리움의 코인 이름은 이더..!) &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;그렇다고 영원히 토큰이냐? 그것도 아닙니다. 메인넷이라고 기존에 존재하는 플랫폼에 종속 되어있지 않고
-독립적으로 생태계를 구성하는 것이 있습니다.
+독립적으로 생태계를 구성하는 것이 있습니다.&lt;br /&gt;
 토큰에서 코인이 되는 과정 &lt;br /&gt;
 기존 블록체인 네트워크를 기반으로 토큰을 제작하고, ICO(initial coin offering) 들을 통해 대중에게 알립니다.
 (ICO: 백서를 공개한 후 신규 암호화폐를 발행해 투자자들로부터 사업 자금을 모집하는 방식)
-이후 테스트넷으로 실제 실행이 잘되는지 확인하는 과정을 거쳐 이가 성공하면 메인넷이 릴리즈 된다.
-독립적인 플랫폼으로 거래하고 생태계 구성이 된다는 것이다. 이게 토큰에서 코인으로 업그레이드가 되는 과정이다.
+이후 테스트넷으로 실제 실행이 잘되는지 확인하는 과정을 거쳐 이가 성공하면 메인넷이 릴리즈 된다.&lt;br /&gt;
+독립적인 플랫폼으로 거래하고 생태계 구성이 된다는 것이다. 이거시! 토큰에서 코인으로 업그레이드가 되는 과정이다.
 예) 이오스토큰 -&amp;gt; 이오스 코인&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.이제 ERC20이 무엇인가&lt;/strong&gt;&lt;br /&gt;
@@ -504,27 +504,28 @@ npm의 경우 “test”까지 만들어져있으니 “start”만 추가해준
 위의 정의처럼 토큰은 블록체인 네트워크를 빌려 만들어진 것이잖아요? 만들때 최소한의 조건이 ERC20인거죠.&lt;br /&gt;
 그래서 ERC20의 표준 사양을 맞춘 토큰을 ERC20토큰이라 부릅니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3. Dapp(디앱)??&lt;/strong&gt;
-디앱이란 블록체인을 기반으로 돌아가는 애플리케이션을 말한다.
+&lt;p&gt;&lt;strong&gt;3. Dapp(디앱)??&lt;/strong&gt;&lt;br /&gt;
+디앱이란 블록체인을 기반으로 돌아가는 애플리케이션을 말한다.&lt;br /&gt;
 모바일의 OS 안드로이드와 iOS 처럼 블록체인계의 OS에서 돌아가는 애플리케이션.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/blockchain3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;디앱은 블록체인에서 스마트 계약이 도입되면서 생겨났다(이더리움이 처음 도입). 스마트 계약이 없는 비트코인에는 디앱이 존재하지 않는다.
-스마트컨트랙트가 포함된 블록체인 네트워크 위에서 돌아가는 어플리케이션이라 정리할 수 있다. 
-예를 들자면 배달의 민족 어플에 만약 30분 안에 배달이 완료되면 자동 결제가 되는 스마트컨트랙트를 추가한다면 Dapp이라 할 수 있다.
-이처럼 디앱의 종류는 코인관련 뿐만 아니라 안드로이드의 앱처럼 모든 앱이 될 수 있다.&lt;/p&gt;
+&lt;p&gt;디앱은 블록체인에서 스마트 계약이 도입되면서 생겨났다(이더리움이 처음 도입).&lt;br /&gt; 스마트 계약이 없는 비트코인에는 디앱이 존재하지 않는다.
+스마트컨트랙트가 포함된 블록체인 네트워크 위에서 돌아가는 어플리케이션이라 정리할 수 있다. &lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;예를 들자면&lt;/strong&gt; 배달의 민족 어플에 만약 30분 안에 배달이 완료되면 자동 결제가 되는 스마트컨트랙트를 추가한다면 Dapp이라 할 수 있다.
+이처럼 디앱의 종류는 코인관련 뿐만 아니라 &lt;strong&gt;안드로이드의 앱처럼 모든 앱&lt;/strong&gt;이 될 수 있다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;현재 여러 블록체인 플랫폼들이 있는데 대표주자가 이더리움이다. 처음 블록체인에 스마트 계약을 도입하며
 디앱을 탄생시킨게 이더리움이기도하고 디앱 수로 봤을때도 1위가 이더리움, 2위는 이오스. 그 수가 
 이더리움이 2,341개이상, 이오스는 235개로 차이가 엄청나다.&lt;/p&gt;
 
-&lt;p&gt;대표적인 이더리움 블록체인에서는 이더(ETH)가 사용되고, 이더리움 블록체인 상의 Dapp(디앱)은
+&lt;p&gt;대표적인 이더리움 블록체인 상의 Dapp(디앱)은
 또 다른 다양한 분야에 적용될 수 있는 각각의 솔루션으로 그에 맞는 토큰을 발행하는 것이다.&lt;/p&gt;
 
 &lt;p&gt;본래 각각의 앱을 사용하면서 발생되는 일정부분의 포인트를 통합하여 사용하는 것은 같은 회사계열의 앱이 아닌 이상 거의 불가능하지만 
-이더리움 플랫폼에서는 각각의 디앱이 발행한 토큰을 통합하여 현금화하는 것이 가능하다.
-다양한 디앱에 흩어져있는 ERC-20 표준 호환 토큰들이 나중에 통합이 가능하여 한 번에 이더로 모두 바꾸고 현금화 할 수 있는것이다.&lt;/p&gt;</content>
+이더리움 플랫폼에서는 각각의 디앱이 발행한 &lt;strong&gt;ERC-20 표준 호환 토큰들을 통합&lt;/strong&gt;하여 현금화하는 것이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;내용 계속 추가 할 예정&lt;/strong&gt;&lt;/p&gt;</content>
 
       
       

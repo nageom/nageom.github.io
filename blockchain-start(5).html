@@ -232,7 +232,7 @@ Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매�
 (&gt; npm install typescript)</p>
   </li>
   <li>
-    <p>3.tsconfig.json 파일 생성 
+    <p>3.tsconfig.json 파일 생성 <br />
 타임스크립트가 어떻게 자바스크립트로 컴파일 할지 명시해둘 파일</p>
   </li>
 </ul>
@@ -241,11 +241,11 @@ Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매�
 
 <ul>
   <li>
-    <p>4.index.ts 파일 생성
+    <p>4.index.ts 파일 생성<br />
 블록체인 만들 ts 파일 -&gt; 컴파일하면 index.js가 생성됨</p>
   </li>
   <li>
-    <p>5.컴파일은 tsc 또는 npx tsc 
+    <p>5.컴파일은 tsc 또는 npx tsc <br />
 여기까지하고 컴파일 실행해보자</p>
   </li>
   <li>
@@ -253,7 +253,7 @@ Yarn 은 프로젝트의 의존성을 관리하는 JavaScript의 패키지 매�
 원래는 ts코드가 바뀔때마다 js로 컴파일 하고 node로 실행<br />
 -&gt; ts코드가 수정 될때마다 자동으로 컴파일하고 js를 실행해줌 (쉽게 말해 tsc의 watch모드 )<br />
 (&gt; yarn add tsc-watch –dev 또는 npm add tsc-watch –dev)<br />
-그니까 yarn start, yarn start 계속 안쳐도 수정될때마다 알아서 컴파일, 실행 되서 출력값 띄워줌<br />
+그니까 tsc, yarn start, yarn start를 계속 안쳐도 수정될때마다 알아서 컴파일, 실행 되서 출력값 띄워줌<br />
 <img src="../../assets/built/images/blockchain/bc5.png" alt="ex_screenshot" />
 참고로 yarn으로 init했을때와 npm 으로 init했을때의 package.json 형태가 다르다. <br />
 yarn의 경우 “script”가 없으니 추가해주면 되고<br />
@@ -525,6 +525,8 @@ npm의 경우 “test”까지 만들어져있으니 “start”만 추가해준
                                         
                                         
                                     
+                                  
+                                
                                   
                                 
                                   

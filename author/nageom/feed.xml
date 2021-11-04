@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-04T02:32:30+09:00</updated>
+  <updated>2021-11-04T22:28:09+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -30,6 +30,275 @@
   
   
 
+  
+    <entry>
+      <title type="html">블록체인의 시작(6)_스마트컨트랙트 작성(2)</title>
+      <link href="https://nageom.github.io/blockchain-start(7)" rel="alternate" type="text/html" title="블록체인의 시작(6)_스마트컨트랙트 작성(2)" />
+      <published>2021-11-03T09:00:00+09:00</published>
+      <updated>2021-11-03T09:00:00+09:00</updated>
+      <id>https://nageom.github.io/blockchain-start(7)</id>
+      <content type="html" xml:base="https://nageom.github.io/blockchain-start(7)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h6&gt;지난 포스팅에서는 IDE를 IntelliJ를 사용했습니다. 
+이번 포스팅은 이더리움에서 제공하는 IDE Remix를 사용하는 포스팅입니다.&lt;/h6&gt;
+
+&lt;p&gt;시작전에 간단하게 스마트컨트랙트 배포의 큰 줄기는 
+코드작성 -&amp;gt; 컴파일 -&amp;gt; 가상 블록체인 네트워크 연결 -&amp;gt; 배포
+(로 생각하고 가시면 좋을것같습니다. )&lt;/p&gt;
+
+&lt;p&gt;암튼 스타또 &lt;br /&gt;
+가나슈를 켜두시고 &lt;br /&gt;
+&lt;strong&gt;Remix 접속&lt;/strong&gt;&lt;br /&gt; -&amp;gt; &lt;a href=&quot;https://remix.ethereum.org&quot;&gt;https://remix.ethereum.org&lt;/a&gt; &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc16.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+일단 제일 왼쪽에&lt;br /&gt;
+첫번째 아이콘은 File explorers&lt;br /&gt;
+두번째 아이콘은 Solidity Compiler&lt;br /&gt;
+세번째 아이콘은 Deploy &amp;amp; run transactions&lt;br /&gt;
+차례대로 작성, 설정해보자.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. File explorers&lt;/strong&gt;&lt;br /&gt;
+Workspace 이다. 프로젝트 구성도 전 포스팅과 유사하다 &lt;br /&gt;
+스마트컨트랙트를 작성하는 constracts, 테스트 &lt;br /&gt;
+컴파일된 파일은 constracts/artifacts/ 하위로 들어간다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;전과 같이 constracts/HelloWorld.sol 작성,&lt;br /&gt;
+(이번엔 simple_storage.sol 하나를 더 만들었다)&lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc19.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Solidity Compiler&lt;/strong&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc20.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+말그대로 컴파일러 관련 설정파트이다. &lt;br /&gt;
+&lt;strong&gt;COMPILER&lt;/strong&gt;는 &lt;u&gt;버전 설정&lt;/u&gt; -&amp;gt; 안정적인 버전으로 추천. 나는 0.8.4버전 사용&lt;br /&gt;
+&lt;strong&gt;LANGUAGE&lt;/strong&gt;는 &lt;u&gt;솔리디티 선택&lt;/u&gt;&lt;br /&gt;
+자동 컴파일 체크&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;TMI! 컴파일할 파일을 클릭하고 돌아와야 파란색 Compile 버튼이 클릭 가능하다.&lt;br /&gt;
+그리고 Compilation Details를 클릭하면 컴파일된 bytecode와 abi 확인이 가능하다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;컴파일된 json 파일은 constracts/artifacts 하위로 들어간다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Deploy &amp;amp; run transactions&lt;/strong&gt;&lt;br /&gt;
+배포파트! 그리고 트랜잭션 설정이다. &lt;br /&gt;
+가나슈의 네트워크와 연결하기위해 &lt;strong&gt;ENVIRONMENT&lt;/strong&gt; 로 &lt;strong&gt;Web3 Provider&lt;/strong&gt; 클릭
+&lt;img src=&quot;../../assets/built/images/blockchain/bc21.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+연결완료!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/bc14.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+가나슈의 가상 계정들이 ACCOUNT 항목에서도 나타나는걸 볼 수 있다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이제 배포!!Deploy 클릭 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;저는 배포를 세번 했고 블럭이 생성되었다고 띠롱띠롱뜹니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/bc22.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/bc23.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+가나슈에서도 블록이 생성된것을 확인 할 수 있습니다. &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc24.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+Transaction 을 누르면 방금 배포를 하면서 발생시킨 transaction이 들어있습니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 Remix 에서 스마트 컨트랙트 작성과 배포를 마쳤습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blockchain" />
+      
+
+      
+        <summary type="html">블록체인 카테고리 블록체인의 시작(1)_개념 블록체인의 시작(2)_스마트컨트랙트 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp 블록체인의 시작(4)_디파이 블록체인의 시작(5)_블록체인 이해하기 지난 포스팅에서는 IDE를 IntelliJ를 사용했습니다. 이번 포스팅은 이더리움에서 제공하는 IDE Remix를 사용하는 포스팅입니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">블록체인의 시작(6)_스마트컨트랙트 작성(1)</title>
+      <link href="https://nageom.github.io/blockchain-start(6)" rel="alternate" type="text/html" title="블록체인의 시작(6)_스마트컨트랙트 작성(1)" />
+      <published>2021-11-03T09:00:00+09:00</published>
+      <updated>2021-11-03T09:00:00+09:00</updated>
+      <id>https://nageom.github.io/blockchain-start(6)</id>
+      <content type="html" xml:base="https://nageom.github.io/blockchain-start(6)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;오늘은 스마트컨트랙트 개발을 해볼겁니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 개발도구&lt;/strong&gt; &lt;br /&gt;
+먼저 개발환경 조성부터 샤샥 나열해보겠습니다.&lt;br /&gt;
+Solidity(솔리디티) : 이더리움의 스마트컨트랙트 프로그래밍 언어입니다. &lt;br /&gt;
+Truffle(트러플): 컴파일, 배포, 디버깅을 지원하는 개발 도구입니다. &lt;br /&gt;
+Ganache(가나슈) : 가상의 이더리움 네트워크를 생성해줘서 스마트 컨트랙트를 실행할 수 있게해주는 모듈입니다.&lt;br /&gt;
+-&amp;gt; https://www.trufflesuite.com/ganache 에서 다운로드 &lt;br /&gt;
+IDE는 인텔리제이를 사용했습니다. 설치하지 않은 경우에는 Remix를 이용하세요 &lt;br /&gt;
+-&amp;gt; https://remix.ethereum.org/&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 트러플 설치&lt;/strong&gt;&lt;br /&gt;
+cmd 오픈&lt;br /&gt;
+-&amp;gt; npm install -g truffle  (npm으로 트러플 설치 )&lt;br /&gt;
+-&amp;gt; truffle version (버전 확인)&lt;br /&gt;
+Truffle v5.4.16 (core: 5.4.16)&lt;br /&gt;
+Solidity v0.5.16 (solc-js)     &lt;br /&gt;
+Node v11.15.0&lt;br /&gt;
+Web3.js v1.5.3&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 프로젝트 생성&lt;/strong&gt;&lt;br /&gt;
+-&amp;gt; mkdir smartsample (트러플 프로젝트 만들기 위한 폴더 생성 )&lt;br /&gt;
+-&amp;gt; cd smartsample&lt;br /&gt;
+-&amp;gt; truffle init (트러플로 프로젝트 초기화)&lt;br /&gt;
+-&amp;gt; dir 폴더 안 확인&lt;br /&gt;
+2021-10-30  오전 01:16 contracts ( 스마트컨트랙트 작성 )&lt;br /&gt;
+2021-10-30  오전 01:16 migrations (배포 디렉터리)&lt;br /&gt;
+2021-10-30  오전 01:16 test (단위 테스트 공간)&lt;br /&gt;
+1985-10-26  오후 05:15  4,900 truffle-config.js ( 트러플 관련 설정 파일) &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. 인텔리제이 오픈&lt;/strong&gt;&lt;br /&gt;
+이제 contracts 디렉터리 안에 스마트컨트랙트를 작성한다. &lt;br /&gt;
+-&amp;gt; contracts/HelloWorld.sol 생성 &lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
+&lt;span class=&quot;c1&quot;&gt;//컨트랙트 이름 HelloWorld가 됨&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//상태변수&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//세터&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//출력메서드&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;1) solidity 버전 변경&lt;br /&gt;
+-&amp;gt; truffle-config.js 내에 compilders 키 안에 version부분을 최신으로 수정, &lt;br /&gt;
+솔리디티파일의 pragma solidity 도 수정 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. 컴파일&lt;/strong&gt;&lt;br /&gt;
+솔리디티 파일 HelloWorld를 컴파일한다.&lt;br /&gt;
+PS C:\smartsample&amp;gt; truffle compile&lt;br /&gt;
+build/contracts/컴파일된 json 파일들 생성됨&lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc6.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;강제 컴파일시 (수정이 없을시)&lt;br /&gt;
+PS C:\smartsample&amp;gt; truffle compile –all &lt;br /&gt;
+***
+컴파일된 HelloWorld.json 파일에서 &lt;br /&gt;
+bytecode는 실제로 이더리움 메인넷상에 블록안에 심어지게되서 실제 evm 상에서 동작하는 바이트코드가 된다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;abi (Application binary Interface)는&lt;br /&gt;&lt;/dt&gt;
+  &lt;dd&gt;배포후 어플리케이션에서 바이트코드와 통신할때 사용되는 인터페이스를 정의해놓은 하나의 데이터이다. &lt;br /&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/bc17.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc18.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;TMI! 혹시 컴파일된 json 파일의 생성위치를 바꾸고싶다면
+&lt;img src=&quot;../../assets/built/images/blockchain/bc7.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. 가나슈 (가상의 이더리움 네트워크을 이용해보자) , 이더리움 네트워크 접속&lt;/strong&gt; &lt;br /&gt;
+가나슈 다운로드 &lt;br /&gt;
+-&amp;gt; https://www.trufflesuite.com/ganache &lt;br /&gt;
+실행 - Quick Start 클릭 (트랜잭션을 저장하지 않음)&lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc9.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+10개의 가상 계정에 각 100이더의 잔액있음 &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;truffle-config.js에 가상의 이더리움 네트워크 접속 정보 입력 &lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc8.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. 배포&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;migrations 디렉토리에 1_initial_migration.js 처럼 배포할 js 파일을 생성한다.&lt;br /&gt;
+생성시 이름은 1 다음 숫자 2로 지어준다. &lt;br /&gt;
+2_deploy_helloworld.js&lt;br /&gt;
+이유는 이 숫자를 보고 순서대로 배포되기 때문임!&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;2_deploy_helloworld.js&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;artifacts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/*네이밍 중요
+* 순번 중요
+* 순번 기준으로 배포함
+/*
+module.exports = function (deployer) {
+  deployer.deploy(HelloWorld, &quot;HelloWorld&quot;);
+                // 생성자 아규먼트 (생성할때 파라미터 필요 )
+};
+*/&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;배포 명령어&lt;/strong&gt;&lt;br /&gt;
+PS C:\smartsample&amp;gt; truffle migrate –network development&lt;br /&gt;
+트러플아 network키에서 develpoment 파라미터를 갖고 migrate해라! &lt;br /&gt;
+기본 명령어는 &lt;br /&gt;
+PS C:\smartsample&amp;gt; truffle migrate&lt;br /&gt;
+강제 배포&lt;br /&gt;
+PS C:\smartsample&amp;gt; truffle migrate –reset &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;** 확인**&lt;br /&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc10.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
+1_initial_migration.js와 2_deploy_helloworld.js 둘 다 실행됐다. &lt;br /&gt;
+가스비가 빠져나간것도 확인 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;가나슈에서도 확인 
+&lt;img src=&quot;../../assets/built/images/blockchain/bc11.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;0.01이더가 빠져나갔다. 구우웃&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nageom</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blockchain" />
+      
+
+      
+        <summary type="html">블록체인 카테고리 블록체인의 시작(1)_개념 블록체인의 시작(2)_스마트컨트랙트 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp 블록체인의 시작(4)_디파이 블록체인의 시작(5)_블록체인 이해하기 오늘은 스마트컨트랙트 개발을 해볼겁니다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">자바스크립트 backtick(`)과 single quoto(‘) 나만 주의..</title>
@@ -305,171 +574,6 @@ npm의 경우 “test”까지 만들어져있으니 “start”만 추가해준
 
       
         <summary type="html">블록체인 카테고리 블록체인의 시작(1)_개념 블록체인의 시작(2)_스마트컨트랙트 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp 블록체인의 시작(4)_디파이 블록체인의 시작(5)_블록체인 이해하기 블록체인은 대충 알겠고 그래서 코드는 어떻게 쓰는데? 해서 냅다 니콜라스의 도움으로 typescript로 간단 블록체인 구조를 생성해보았다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">블록체인의 시작(6)_스마트컨트랙트를 작성해보자</title>
-      <link href="https://nageom.github.io/blockchain-start(6)" rel="alternate" type="text/html" title="블록체인의 시작(6)_스마트컨트랙트를 작성해보자" />
-      <published>2021-11-02T09:00:00+09:00</published>
-      <updated>2021-11-02T09:00:00+09:00</updated>
-      <id>https://nageom.github.io/blockchain-start(6)</id>
-      <content type="html" xml:base="https://nageom.github.io/blockchain-start(6)">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;오늘은 스마트컨트랙트 개발을 해볼겁니다.&lt;/p&gt;
-
-&lt;p&gt;##1. 개발도구 &lt;br /&gt;
-먼저 개발환경 조성부터 샤샥 나열해보겠습니다.&lt;br /&gt;
-Solidity(솔리디티) : 이더리움의 스마트컨트랙트 프로그래밍 언어입니다. &lt;br /&gt;
-Truffle(트러플): 컴파일, 배포, 디버깅을 지원하는 개발 도구입니다. &lt;br /&gt;
-Ganache(가나슈) : 가상의 이더리움 네트워크를 생성해줘서 스마트 컨트랙트를 실행할 수 있게해주는 모듈입니다.&lt;br /&gt;
--&amp;gt; https://www.trufflesuite.com/ganache 에서 다운로드 &lt;br /&gt;
-IDE는 인텔리제이를 사용했습니다. 설치하지 않은 경우에는 Remix를 이용하세요 &lt;br /&gt;
--&amp;gt; https://remix.ethereum.org/&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;##2. 트러플 설치&lt;br /&gt;
-cmd 오픈&lt;br /&gt;
--&amp;gt; npm install -g truffle  (npm으로 트러플 설치 )&lt;br /&gt;
--&amp;gt; truffle version (버전 확인)&lt;br /&gt;
-Truffle v5.4.16 (core: 5.4.16)&lt;br /&gt;
-Solidity v0.5.16 (solc-js)     &lt;br /&gt;
-Node v11.15.0&lt;br /&gt;
-Web3.js v1.5.3&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;##3. 프로젝트 생성&lt;br /&gt;
--&amp;gt; mkdir smartsample (트러플 프로젝트 만들기 위한 폴더 생성 )&lt;br /&gt;
--&amp;gt; cd smartsample&lt;br /&gt;
--&amp;gt; truffle init (트러플로 프로젝트 초기화)&lt;br /&gt;
--&amp;gt; dir 폴더 안 확인&lt;br /&gt;
-2021-10-30  오전 01:16 contracts ( 스마트컨트랙트 작성 )&lt;br /&gt;
-2021-10-30  오전 01:16 migrations (배포 디렉터리)&lt;br /&gt;
-2021-10-30  오전 01:16 test (단위 테스트 공간)&lt;br /&gt;
-1985-10-26  오후 05:15  4,900 truffle-config.js ( 트러플 관련 설정 파일) &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;##4. 인텔리제이 오픈&lt;br /&gt;
-이제 contracts 디렉터리 안에 스마트컨트랙트를 작성한다. &lt;br /&gt;
--&amp;gt; contracts/HelloWorld.sol 생성 &lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   
-&lt;span class=&quot;c1&quot;&gt;//컨트랙트 이름 HelloWorld가 됨&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//상태변수&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//세터&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setStr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memory&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;astr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//출력메서드&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;1) solidity 버전 변경&lt;br /&gt;
--&amp;gt; truffle-config.js 내에 compilders 키 안에 version부분을 최신으로 수정, &lt;br /&gt;
-솔리디티파일의 pragma solidity 도 수정 &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;##5. 컴파일&lt;br /&gt;
-솔리디티 파일 HelloWorld를 컴파일한다.&lt;br /&gt;
-PS C:\smartsample&amp;gt; truffle compile&lt;br /&gt;
-build/contracts/컴파일된 json 파일들 생성됨&lt;br /&gt;
-&lt;img src=&quot;../../assets/built/images/blockchain/bc6.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;강제 컴파일시 (수정이 없을시)&lt;br /&gt;
-PS C:\smartsample&amp;gt; truffle compile –all &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;컴파일된 HelloWorld.json 파일에서 &lt;br /&gt;
-bytecode는 실제로 이더리움 메인넷상에 블록안에 심어지게되서 실제 evm 상에서 동작하는 바이트코드가 된다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;abi (Application binary Interface)는&lt;br /&gt;&lt;/dt&gt;
-  &lt;dd&gt;배포후 어플리케이션에서 바이트코드와 통신할때 사용되는 인터페이스를 정의해놓은 하나의 데이터이다. &lt;br /&gt;&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;TMI! 혹시 컴파일된 json 파일의 생성위치를 바꾸고싶다면
-&lt;img src=&quot;../../assets/built/images/blockchain/bc7.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;##6. 가나슈 (가상의 이더리움 네트워크을 이용해보자) , 이더리움 네트워크 접속 &lt;br /&gt;
-가나슈 다운로드 &lt;br /&gt;
--&amp;gt; https://www.trufflesuite.com/ganache &lt;br /&gt;
-실행 - Quick Start 클릭 (트랜잭션을 저장하지 않음)&lt;br /&gt;
-&lt;img src=&quot;../../assets/built/images/blockchain/bc9.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-10개의 가상 계정에 각 100이더의 잔액있음 &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;truffle-config.js에 가상의 이더리움 네트워크 접속 정보 입력 &lt;br /&gt;
-&lt;img src=&quot;../../assets/built/images/blockchain/bc8.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;##7. 배포&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;migrations 디렉토리에 1_initial_migration.js 처럼 배포할 js 파일을 생성한다.&lt;br /&gt;
-생성시 이름은 1 다음 숫자 2로 지어준다. &lt;br /&gt;
-2_deploy_helloworld.js&lt;br /&gt;
-이유는 이 숫자를 보고 순서대로 배포되기 때문임!&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;2_deploy_helloworld.js&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;artifacts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;/*네이밍 중요
-* 순번 중요
-* 순번 기준으로 배포함
-/*
-module.exports = function (deployer) {
-  deployer.deploy(HelloWorld, &quot;HelloWorld&quot;);
-                // 생성자 아규먼트 (생성할때 파라미터 필요 )
-};
-*/&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;배포 명령어&lt;/strong&gt;&lt;br /&gt;
-PS C:\smartsample&amp;gt; truffle migrate –network development&lt;br /&gt;
-트러플아 network키에서 develpoment 파라미터를 갖고 migrate해라! &lt;br /&gt;
-기본 명령어는 &lt;br /&gt;
-PS C:\smartsample&amp;gt; truffle migrate&lt;br /&gt;
-강제 배포&lt;br /&gt;
-PS C:\smartsample&amp;gt; truffle migrate –reset &lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;확인&quot;&gt;확인&lt;br /&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/blockchain/bc10.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-1_initial_migration.js와 2_deploy_helloworld.js 둘 다 실행됐다. &lt;br /&gt;
-가스비가 빠져나간것도 확인 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;가나슈에서도 확인 
-&lt;img src=&quot;../../assets/built/images/blockchain/bc11.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;0.01이더가 빠져나갔다. 구우웃&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="blockchain" />
-      
-
-      
-        <summary type="html">블록체인 카테고리 블록체인의 시작(1)_개념 블록체인의 시작(2)_스마트컨트랙트 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp 블록체인의 시작(4)_디파이 블록체인의 시작(5)_블록체인 이해하기 오늘은 스마트컨트랙트 개발을 해볼겁니다.</summary>
       
 
       
@@ -1071,171 +1175,6 @@ stop() 호출 시 즉시 종료
 
       
         <summary type="html">쓰레드의 스케줄링을 위해 기초지식 다지기 쓰레드 프로그래밍이 어려운 이유가 동기화(synchronization)과 스케줄링(scheduling) 때문이다. 이를 잘하기 위해서는 쓰레드의 상태와 관련 메서드의 공부가 필요하다. 그래서 공부할 것들을 적어봤다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">쓰레드 정리 (3)</title>
-      <link href="https://nageom.github.io/java-thread(3)" rel="alternate" type="text/html" title="쓰레드 정리 (3)" />
-      <published>2021-07-29T09:14:00+09:00</published>
-      <updated>2021-07-29T09:14:00+09:00</updated>
-      <id>https://nageom.github.io/java-thread(3)</id>
-      <content type="html" xml:base="https://nageom.github.io/java-thread(3)">&lt;h6&gt; 첫번째 알아볼 쓰레드 정의는 &lt;/h6&gt;
-&lt;p&gt;쓰레드는 우선순위(priority)이다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;쓰레드의 우선순위&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;쓰레드는 우선순위(priority)라는 멤버변수를 가지고 있어 ,이 우선순위의 값에 따라
-쓰레드가 얻는 실행시간이 달라진다. &lt;br /&gt;
-어떨 때 쓰느냐하면 
-카톡을 사용할때 파일 다운로드를 처리하는 쓰레드보다 채팅내용을 전송하는 쓰레드의 우선순위가 더 높아야 
-사용자가 채팅하는데 불편함이 없을 것이다. 대신 파일다운로드 작업에 걸리는 시간은 더 길어질테지만,
-이러한 작업의 중요도에 따라 쓰레드의 우선순위를 서로 다르게 지정하여 특정 쓰레드가 더 많은 작업시간을 갖도록 하는 것이 
-우선순위의 용도이다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;쓰레드의 우선순위 지정하기&lt;/strong&gt; &lt;br /&gt;
-void setPriority(int newPriority) //쓰레드의 우선순위를 지정한 값으로 변경한다.&lt;br /&gt;
-int getPriority() //쓰레드의 우선순위를 반환한다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;우선순위의 범위는 1~10이며 숫자가 높을수록 우선순위가 높다. &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;쓰레드의 우선순위는 쓰레드를 생성한 쓰레드로부터 상속받는다. &lt;br /&gt;
-main메서드를 수행하는 쓰레드는 우선순위가 5이므로 main메서드내에서 생성하는 쓰레드의 우선순위는 자동적으로 5가 된다. &lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;예제
-&lt;script src=&quot;https://gist.github.com/nageom/6245e8f2c3c6359706127c8607187d0e.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;결과
-&lt;img src=&quot;../../assets/built/images/java/thread/thread(3)_priority.png&quot; alt=&quot;ex_screenshot&quot; /&gt; 
-main쓰레드의 우선순위 5를 상속받은 th1과 th2 중,
-th2만 우선순위를 7로 변경한 다음 start()를 호출해서 쓰레드를 실행시켰다. 
-결과를 보면 우선순위가 높은 th2의 실행시간이 th1에 비해 늘고 더 우선시 되었다는것을 알 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/thread/thread(3)_priority2.png&quot; alt=&quot;ex_screenshot&quot; /&gt;
-빨간 t1,t2은 실행이 끝난 시점을 나타냄&lt;/p&gt;
-
-&lt;p&gt;위의 발로 그린 그림은 싱글 코어로 두 개의 쓰레드로 두개의 작업을 실행했을 때의 
-결과를 그림으로 나타낸 것인데,
-우선순위가 같은 경우 각 쓰레드에게 거의 같은 양의 실행시간이 주어지지만, 
-우선순위가 다르다면 우선순위가 높은 th2에게 상대적으로 th1보다 더 많은 양의 실행시간이 주어지고
-결과적으로 작업 A가 B보다 더 빨리 완료될 수 있다. 
-싱글코어에서는 이렇다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그러나 멀티코어에서는 쓰레드의 우선순위에 따른 차이가
-전혀 없었다. 완전 한번씩 돌아가며 실행됐다. 
-결국 멀티코어에서는 쓰레드에 높은 우선순위로 실행시간과 실행기회를 줄 수 없다는 것이다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;멀티코어라 해도 OS마다 다른 방식으로 스케쥴링하기 때문에, 어떤 OS에서 실행하느냐에 따라
-다른 결과를 얻을 수 있어 굳이 우선순위에 차등을 두어 쓰레드를 실행하려면 특정 OS의 스케쥴링 정책과
-JVM의 구현을 직접 확인해봐야 한다. 
-만일 확인한다 하더라도 어느 정도 예측만 가능하지 정확히 알 수는 없어,
-차라리 쓰레드에 우선순위를 부여하는 대신 작업에 우선순위를 두어 PriorityQueue에 저장해두고,
-우선순위가 높은 작업에 먼저 처리되도록 하는 것이 나을것이라 한다.&lt;/p&gt;
-
-&lt;h6&gt;두번째는 쓰레드의 또 다른 유형인 &lt;/h6&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;데몬 쓰레드(daemon thread)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;데몬 쓰레드는 다른 일반 쓰레드의 작업을 돕는 보조적인 역할을 수행하는 쓰레드이다 
-일반 쓰레드가 모두 종료되면 데몬 쓰레드는 강제적으로 자동 종료되는데, 그 이유는 앞서 말했듯이
-일반 쓰레드의 보조역할을 수행하기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;데몬 쓰레드의 예로는 가비지 컬렉터, 워드프로세서의 자동저장, 화면자동갱신 등이 있다.&lt;/p&gt;
-
-&lt;p&gt;데몬 쓰레드는 &lt;u&gt;무한루프와 조건문을 이용해서 실행 후 대기하고 있다가 특정 조건이 만족되면 작업을 수행하고 
-다시 대기하도록 작성한다.&lt;/u&gt;&lt;/p&gt;
-
-&lt;p&gt;데몬 쓰레드를 만들어볼건데, 일단 일반 쓰레드 생성와 동일하게 생성하고 실행전에 setDaemon(true)를 호출한다.&lt;br /&gt;
-boolean isDaemon() //데몬 쓰레드인지 확인 &lt;br /&gt;
-void setDaemon(boolean on) //쓰레드를 데몬쓰레드로 변경 &lt;br /&gt;
-//on의 값을 true로 지정해야함. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/thread/thread(3)_priority3.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3초마다 변수 autoSave의 값을 확인해서 그 값이 true이면 autoSave()를 호출하는 일을 무한히
-반복하도록 쓰레드를 작성했다.
-무한 반복임에도 프로그램은 종료되었다.&lt;/p&gt;
-
-&lt;p&gt;만일 setDaemon메서드를 호출하지 않은 일반 쓰레드라면 강제종료를 하지 않는 이상 종료되지 않을 것이다.
-&lt;img src=&quot;../../assets/built/images/java/thread/thread(3)_priority4.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;신기신기&lt;/p&gt;
-
-&lt;h6&gt;세번째는 &lt;/h6&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;쓰레드 그룹(thread group)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;쓰레드 그룹은 서로 관련된 쓰레드를 그룹으로 다루기 위한 것으로,
-폴더를 생성해서 관련된 파일들을 함께 넣어서 관리하는 것처럼 그룹을 생성해서 쓰레드를 구룹으로 묶어서 
-관리할 수 있다. 
-또한 폴더 안에 폴더생성이 가능하듯이 쓰레드 그룹에 다른 쓰레드 그룹을 포함 시킬 수 있다.
-쓰레드 그룹은 보안상의 이유로 도입되어 자신이 속한 쓰레드 그룹이나 하위 쓰레드 그룹은 변경 가능하지만
-다른 쓰레드 그룹의 쓰레드는 변경 불가능.&lt;/p&gt;
-
-&lt;p&gt;&lt;u&gt;쓰레드 그룹에서 알아둘 점&lt;/u&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;모든 쓰레드는 반드시 그룹에 포함되어 있어야한다.&lt;/li&gt;
-  &lt;li&gt;자바 어플리케이션이 실행되면, JVM은 main과 system이라는 쓰레드 그룹을 만들고
-JVM운영에 필요한 쓰레드들을 생성해서 이 쓰레드 그룹에 포함시킨다.&lt;/li&gt;
-  &lt;li&gt;우리가 생성한 모든 쓰레드 그룹은 MAIN쓰레드 그룹의 하위 쓰레드 그룹이 되며,
-그룹을 지정하지 않은 쓰레드는 자동으로 main쓰레드 그룹에 속하게 된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;쓰레드를 쓰레드 그룹에 포함시키려면 Thread의 생성자를 이용한다.
-Thread(ThreadGroup group, Runnable target, String name)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;기본 쓰레드 그룹 생성, 지정 예시&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//main 안에서&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;ThreadGroup&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grp1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ThreadGroup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Group1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//쓰레드 그룹 생성&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;Runnable&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Runnable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-           &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;InterruptedException&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//Thread(ThreadGourp tg, Runnable r, String name)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grp1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;th1&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//쓰레드 그룹 포함 &amp;amp; 실행&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 이 메서드로 main쓰레드 그룹의 정보를 출력한다. &lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;참고문서 - 자바의 정석&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nageom</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">첫번째 알아볼 쓰레드 정의는 쓰레드는 우선순위(priority)이다.</summary>
       
 
       

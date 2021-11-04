@@ -23,7 +23,32 @@
     
       
       <item>
-        <title>블록체인의 시작(6)_스마트컨트랙트를 작성해보자</title>
+        <title>블록체인의 시작(6)_스마트컨트랙트 작성(2)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(1)&quot;&gt; 블록체인의 시작(1)_개념 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(2)&quot;&gt; 블록체인의 시작(2)_스마트컨트랙트 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(3)&quot;&gt; 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(4)&quot;&gt; 블록체인의 시작(4)_디파이 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./blockchain-start(5)&quot;&gt; 블록체인의 시작(5)_블록체인 이해하기  &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h6&gt;지난 포스팅에서는 IDE를 IntelliJ를 사용했습니다. 
+이번 포스팅은 이더리움에서 제공하는 IDE Remix를 사용하는 포스팅입니다.&lt;/h6&gt;
+
+</description>
+        
+        <pubDate>Wed, 03 Nov 2021 09:00:00 +0900</pubDate>
+        <link>
+        https://nageom.github.io/blockchain-start(7)</link>
+        <guid isPermaLink="true">https://nageom.github.io/blockchain-start(7)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>블록체인의 시작(6)_스마트컨트랙트 작성(1)</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt; 블록체인 카테고리&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -38,7 +63,7 @@
 
 </description>
         
-        <pubDate>Tue, 02 Nov 2021 09:00:00 +0900</pubDate>
+        <pubDate>Wed, 03 Nov 2021 09:00:00 +0900</pubDate>
         <link>
         https://nageom.github.io/blockchain-start(6)</link>
         <guid isPermaLink="true">https://nageom.github.io/blockchain-start(6)</guid>

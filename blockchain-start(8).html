@@ -11,7 +11,7 @@
 
 
 
-    <title><프로그래머스> 스택/큐  Level 2 주식가격 (3)</title>
+    <title>블록체인의 시작(7)_ERC20토큰 만들기</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -47,30 +47,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="티끌모아 공부방" />
     <link rel="shortcut icon" href="https://nageom.github.io/assets/built/images/cover/cover_yellow.jpg" type="image/png" />
-    <link rel="canonical" href="https://nageom.github.io/coding-stack&queue(3)" />
+    <link rel="canonical" href="https://nageom.github.io/blockchain-start(8)" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<프로그래머스> 스택/큐  Level 2 주식가격 (3)" />
-    <meta property="og:description" content="프로그래머스 &gt; 스택/큐 문제 설명 초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요. 제한사항 prices의 각 가격은 1 이상 10,000 이하인 자연수입니다. prices의 길이는 2 이상 100,000 이하입니다. 입출력 예 prices            " />
-    <meta property="og:url" content="https://nageom.github.io/coding-stack&queue(3)" />
-    <meta property="og:image" content="https://nageom.github.io/assets/built/images/coding/cover_coding.jpg" />
+    <meta property="og:title" content="블록체인의 시작(7)_ERC20토큰 만들기" />
+    <meta property="og:description" content="블록체인 카테고리 블록체인의 시작(1)_개념 블록체인의 시작(2)_스마트컨트랙트 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp 블록체인의 시작(4)_디파이 블록체인의 시작(5)_블록체인 이해하기 블록체인의 시작(6)_스마트컨트랙트 작성(1) 블록체인의 시작(7)_스마트컨트랙트 작성(2) 블록체인의 시작(8)_ERC20토큰 만들기 오늘은 ERC20토큰을 만들어보기~! 전 포스팅을 하나식 보셨다면 이더리움 관련 개발은 Remix IDE가 필요하다~ 를 아실거에요 오늘은 ERC20토큰을 만드는데 필요한 개발도구는 Remix IDE , 메타마스크(암포화폐 지갑), 토큰" />
+    <meta property="og:url" content="https://nageom.github.io/blockchain-start(8)" />
+    <meta property="og:image" content="https://nageom.github.io/assets/built/images/blockchain/blockCover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-06-27T09:14:00+09:00" />
-    <meta property="article:modified_time" content="2021-06-27T09:14:00+09:00" />
-    <meta property="article:tag" content="Coding" />
+    <meta property="article:published_time" content="2021-11-06T09:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-11-06T09:00:00+09:00" />
+    <meta property="article:tag" content="Blockchain" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<프로그래머스> 스택/큐  Level 2 주식가격 (3)" />
-    <meta name="twitter:description" content="프로그래머스 &gt; 스택/큐 문제 설명 초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요. 제한사항 prices의 각 가격은 1 이상 10,000 이하인 자연수입니다. prices의 길이는 2 이상 100,000 이하입니다. 입출력 예 prices            " />
+    <meta name="twitter:title" content="블록체인의 시작(7)_ERC20토큰 만들기" />
+    <meta name="twitter:description" content="블록체인 카테고리 블록체인의 시작(1)_개념 블록체인의 시작(2)_스마트컨트랙트 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp 블록체인의 시작(4)_디파이 블록체인의 시작(5)_블록체인 이해하기 블록체인의 시작(6)_스마트컨트랙트 작성(1) 블록체인의 시작(7)_스마트컨트랙트 작성(2) 블록체인의 시작(8)_ERC20토큰 만들기 오늘은 ERC20토큰을 만들어보기~! 전 포스팅을 하나식 보셨다면 이더리움 관련 개발은 Remix IDE가 필요하다~ 를 아실거에요 오늘은 ERC20토큰을 만드는데 필요한 개발도구는 Remix IDE , 메타마스크(암포화폐 지갑), 토큰" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
-    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/coding/cover_coding.jpg" />
+    <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/blockchain/blockCover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="nageom's blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Coding" />
+    <meta name="twitter:data2" content="Blockchain" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -85,18 +85,18 @@
         "name": "nageom's blog",
         "logo": "https://nageom.github.io/"
     },
-    "url": "https://nageom.github.io/coding-stack&queue(3)",
+    "url": "https://nageom.github.io/blockchain-start(8)",
     "image": {
         "@type": "ImageObject",
-        "url": "https://nageom.github.io/assets/built/images/coding/cover_coding.jpg",
+        "url": "https://nageom.github.io/assets/built/images/blockchain/blockCover.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://nageom.github.io/coding-stack&queue(3)"
+        "@id": "https://nageom.github.io/blockchain-start(8)"
     },
-    "description": "프로그래머스 &gt; 스택/큐 문제 설명 초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요. 제한사항 prices의 각 가격은 1 이상 10,000 이하인 자연수입니다. prices의 길이는 2 이상 100,000 이하입니다. 입출력 예 prices            "
+    "description": "블록체인 카테고리 블록체인의 시작(1)_개념 블록체인의 시작(2)_스마트컨트랙트 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp 블록체인의 시작(4)_디파이 블록체인의 시작(5)_블록체인 이해하기 블록체인의 시작(6)_스마트컨트랙트 작성(1) 블록체인의 시작(7)_스마트컨트랙트 작성(2) 블록체인의 시작(8)_ERC20토큰 만들기 오늘은 ERC20토큰을 만들어보기~! 전 포스팅을 하나식 보셨다면 이더리움 관련 개발은 Remix IDE가 필요하다~ 를 아실거에요 오늘은 ERC20토큰을 만드는데 필요한 개발도구는 Remix IDE , 메타마스크(암포화폐 지갑), 토큰"
 }
     </script>
 
@@ -109,7 +109,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="<프로그래머스> 스택/큐  Level 2 주식가격 (3)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="블록체인의 시작(7)_ERC20토큰 만들기" href="/feed.xml" />
 
 
 </head>
@@ -177,103 +177,125 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-coding post ">
+        <article class="post-full  tag-blockchain post ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="27 June 2021">27 June 2021</time>
+                    <time class="post-full-meta-date" datetime=" 6 November 2021"> 6 November 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/coding/'>CODING</a>
+                               <a href='/tag/blockchain/'>BLOCKCHAIN</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title"><프로그래머스> 스택/큐  Level 2 주식가격 (3)</h1>
+                <h1 class="post-full-title">블록체인의 시작(7)_ERC20토큰 만들기</h1>
             </header>
 
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/blockchain/blockCover.jpg)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <hr />
-<h6> 프로그래머스 &gt; 스택/큐 </h6>
-<p>문제 설명<br />
-초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요.<br />
-제한사항<br />
-prices의 각 가격은 1 이상 10,000 이하인 자연수입니다.<br />
-prices의 길이는 2 이상 100,000 이하입니다.<br /><br />
-입출력 예<br />
-prices             	return<br />
-[1, 2, 3, 2, 3]	[4, 3, 1, 1, 0]<br /><br />
-입출력 예 설명<br />
-1초 시점의 ₩1은 끝까지 가격이 떨어지지 않았습니다.<br />
-2초 시점의 ₩2은 끝까지 가격이 떨어지지 않았습니다.<br />
-3초 시점의 ₩3은 1초뒤에 가격이 떨어집니다. 따라서 1초간 가격이 떨어지지 않은 것으로 봅니다.<br />
-4초 시점의 ₩2은 1초간 가격이 떨어지지 않았습니다.<br />
-5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다.<br /></p>
+                    <p><span class="table-of-contents-list"> 블록체인 카테고리</span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./blockchain-start(1)"> 블록체인의 시작(1)_개념 </a></li>
+    <li><a href="./blockchain-start(2)"> 블록체인의 시작(2)_스마트컨트랙트 </a></li>
+    <li><a href="./blockchain-start(3)"> 블록체인의 시작(3)_ERC20토큰과 스마트컨트랙트, Dapp </a></li>
+    <li><a href="./blockchain-start(4)"> 블록체인의 시작(4)_디파이 </a></li>
+    <li><a href="./blockchain-start(5)"> 블록체인의 시작(5)_블록체인 이해하기  </a></li>
+    <li><a href="./blockchain-start(6)"> 블록체인의 시작(6)_스마트컨트랙트 작성(1)  </a></li>
+    <li><a href="./blockchain-start(7)"> 블록체인의 시작(7)_스마트컨트랙트 작성(2)  </a></li>
+    <li><a href="./blockchain-start(8)"> 블록체인의 시작(8)_ERC20토큰 만들기   </a></li>
+</ul>
+<hr />
+<p>오늘은 ERC20토큰을 만들어보기~! <br />
+전 포스팅을 하나식 보셨다면 이더리움 관련 개발은 
+Remix IDE가 필요하다~ 를 아실거에요 <br /></p>
 
-<h6> 느낀점 </h6>
-<p>쉬운 문제였다. 
-큐를 사용했고 친구는 사용하지 않고도 풀 수 있다고 했다.</p>
+<p>오늘은 <u>ERC20토큰을 만드는데 필요한 개발도구</u>는<br />
+Remix IDE , 메타마스크(암포화폐 지갑), 토큰 올릴 가스비 (이더) , 제공된 ERC20 소스코드 
+가 있습니다.</p>
+<h6>ERC20 토큰 만들기의 큰 흐름은</h6>
+<p>일단 Remix IDE에서 ERC20 소스코드를 가지고 토큰을 만들거구요.<br />
+토큰을 만들어서 배포할때 필요한 가스비(이더)는 Ropsten 테스트넷에서 받아올겁니다.</p>
 
-<p><br /></p>
-<h6>[코드를 살펴보자]</h6>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">import</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
-    <span class="kd">class</span> <span class="nx">Solution</span> <span class="p">{</span>
-    <span class="kr">public</span> <span class="nx">int</span><span class="p">[]</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">int</span><span class="p">[]</span> <span class="nx">prices</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">que</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="p">();</span>
-        <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">que2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkedList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="p">();</span>
-        
-        <span class="k">for</span><span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">prices</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">que</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">prices</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-        
-        <span class="p">}</span>
-        <span class="nx">int</span> <span class="nx">size</span> <span class="o">=</span> <span class="nx">que</span><span class="p">.</span><span class="nx">size</span><span class="p">();</span> 
-        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">size</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>  <span class="p">{</span>
-        	<span class="nx">int</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
-        	
-        	<span class="nx">int</span> <span class="nx">first</span> <span class="o">=</span> <span class="nx">que</span><span class="p">.</span><span class="nx">poll</span><span class="p">();</span>
-        	
-        	<span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">tmp</span> <span class="p">:</span> <span class="nx">que</span><span class="p">)</span> <span class="p">{</span>  		
-        		<span class="c1">//작거나 같으면 떨어지지않음</span>
-        		<span class="c1">// 3 &lt;= 2 </span>
-        		<span class="k">if</span> <span class="p">(</span><span class="nx">first</span> <span class="o">&lt;=</span> <span class="nx">tmp</span><span class="p">)</span> <span class="p">{</span>
-        			<span class="nx">count</span><span class="o">++</span><span class="p">;</span>        			
-        		<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
-        			<span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-        			<span class="k">break</span><span class="p">;</span>
-        		<span class="p">}</span>  	
-        	<span class="p">}</span>
-
-        	<span class="nx">que2</span><span class="p">.</span><span class="nx">offer</span><span class="p">(</span><span class="nx">count</span><span class="p">);</span>
-   	
-        <span class="p">}</span>
-        
-
-        <span class="nx">int</span><span class="p">[]</span> <span class="nx">answer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">int</span><span class="p">[</span><span class="nx">que2</span><span class="p">.</span><span class="nx">size</span><span class="p">()];</span>
-       
-        <span class="k">for</span> <span class="p">(</span><span class="nx">int</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">answer</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        	
-        	<span class="nx">answer</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">=</span> <span class="nx">que2</span><span class="p">.</span><span class="nx">poll</span><span class="p">();</span>
-        	
-        <span class="p">}</span>
-        
-        
-        <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
+<h6>1. 테스트용 Ether 받아오기</h6>
 <p><br />
-<br />커버사진 출처 프로그래머스</p>
+이제 스마트컨트랙트를 배보할 때 Gas가 필요하다는 것을 아실텐데,
+기존에는 가나슈에서 가상계정과 이더를 제공해줬기 때문에
+배포시 필요한 가스를 지불 할 수 있었지만 
+현재는 실제 우리의 메타마스크를 사용하기때문에 이번엔 가스비가 필요합니다. 어떡하지.. 했는데
+이럴때 사용할 수 있는 테스트용 이더가 있더라지요~ 
+요 사이트는 Rinkeby, Ropsten 등이 있지만
+저는 Rinkeby 에서 페북에 게시물 올리고 어쩌구해야하는데 하다가 실패했기 때문에</p>
+
+<p>Ropsten 테스트넷에서 받아올겁니다. <br />
+<a href="https://faucet.dimensions.network/">https://faucet.dimensions.network/</a> <br />
+이 사이트에 본인 메타마스크 계정을 넣어주기만 하면 바로 받으실 수 있습니다. (간단해서 첨부안함)</p>
+
+<p>받고나면 내 지갑의 Ropsten 테스트 네트워크 항목에서 이더를 확인하실 수 있습니다. (네트워크 항목 선택하셔야해요!)
+<img src="../../assets/built/images/blockchain/bc31.png" alt="ex_screenshot" /></p>
+
+<h6>2. ERC20 소스코드 받아오기</h6>
+<p><br />
+디어리움에서 제공하는 ERC20 소스코드를
+<a href="https://etherscan.io/address/0x6D0F5149c502faf215C89ab306ec3E50b15e2892#code">https://etherscan.io/address/0x6D0F5149c502faf215C89ab306ec3E50b15e2892#code</a>
+<img src="../../assets/built/images/blockchain/bc32.png" alt="ex_screenshot" />
+복사하시면 돼요.
+Copy source code to clipboard 클릭</p>
+
+<h6>3. Remix IDE 로 ERC20토큰 만들기</h6>
+<p><br />
+<a href="https://remix.ethereum.org/">https://remix.ethereum.org/</a>
+workspace에 Ballot.sol 파일 내용을 지우고 <br />
+ERC20 소스코드를 붙여줍니다. 
+<img src="../../assets/built/images/blockchain/bc33.jpg" alt="ex_screenshot" />
+38번 줄의 컨트랙트를 수정해주세요. 만들 토큰의 관한 정보입니다.<br />
+컨트랙트 이름은 내 토큰이름으로. (띄어쓰기 없이)<br />
+그 아래 생성자 constructor의 name, symbol 항목도 고쳐준다. <br />
+name은 토큰이름,<br />
+symbol은 내 토큰별칭 이라 생각하면 됨. <br /><br />
+««««««이제 배포준비 <br /></p>
+
+<p>ENVIRONMENT : Injected Web3 선택,<br />
+ACCOUT: 리믹스와 메타마스크 연결되어 내 지갑계정을 확인할수있음<br />
+내 지갑에 연결됨(초록) 이 뜨는것도 확인됨<br />
+☆중요중요☆ CONTRACT: 컨트랙트는 내가 아까 수정한 컨트랙트 선택
+<img src="../../assets/built/images/blockchain/bc34.png" alt="ex_screenshot" /></p>
+
+<p>deploy: 코드를 이더리움에 배포 클릭!
+<img src="../../assets/built/images/blockchain/bc35.png" alt="ex_screenshot" />
+올릴때 가스비가 소비하나요? 라는 안내문이 뜹니다. 확인 클릭
+<br /><br />
+잠깐 시간이 지나면 터미널에 블록이 생성되었다고 뜹니다. 
+<img src="../../assets/built/images/blockchain/bc38.png" alt="ex_screenshot" /></p>
+
+<h6>4.테스트넷에서 트랜잭션 확인, 메타마스크에 잔고확인 </h6>
+<p>우리가 테스트넷 이더를 받은 곳 ropsten의 이더스캔을 이용해 방금 우리가 일으킨 트랜잭션을 자세히 볼 수 있다. 
+<a href="https://ropsten.etherscan.io/">ropsten.etherscan</a>
+<img src="../../assets/built/images/blockchain/bc37.png" alt="ex_screenshot" />
+이곳에 transaction hash를 검색<br />
+   (transaction hash는 뒤에 Remix에서 배포 후 터미널에 블록생성이 됐다는 알림에서 얻을 수 있습니다.)<br />
+검색 후 컨트랙트 배포에 대한 정보를 확인 할 수 있다.<br /></p>
+
+<p>Interatcted With(To) 클릭 -&gt; 만든 토큰의 정보확인 <br />
+Tracker 클릭 / 이때 나온 Contract: 주소를 복사한다. <br />
+<img src="../../assets/built/images/blockchain/bc39.png" alt="ex_screenshot" />
+이유는 메타마스크는 이더 코인 전용이라 그 외의 코인,토큰들은 따로 추가해줘야하기 때문
+<img src="../../assets/built/images/blockchain/bc40.png" alt="ex_screenshot" />
+import tokens 클릭</p>
+
+<p><img src="../../assets/built/images/blockchain/bc41.png" alt="ex_screenshot" /></p>
+
+<p>내가 만든 토큰이 추가됨을 확인할 수 있습니다.야호
+<img src="../../assets/built/images/blockchain/bc41.png" alt="ex_screenshot" /></p>
+
 
                 </div>
             </section>
@@ -340,9 +362,9 @@ prices             	return<br />
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://nageom.github.io/coding-stack&queue(3)';
-                            var this_page_identifier = '/coding-stack&queue(3)';
-                            var this_page_title = '<프로그래머스> 스택/큐  Level 2 주식가격 (3)';
+                            var this_page_url = 'https://nageom.github.io/blockchain-start(8)';
+                            var this_page_identifier = '/blockchain-start(8)';
+                            var this_page_title = '블록체인의 시작(7)_ERC20토큰 만들기';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -376,7 +398,7 @@ prices             	return<br />
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; nageom's blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/coding/">Coding</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/blockchain/">Blockchain</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -386,29 +408,7 @@ prices             	return<br />
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
+                                    
                                   
                                 
                                   
@@ -417,7 +417,7 @@ prices             	return<br />
                                     
                                         
                                         
-                                            <li><a href="/coding-greedy(4)"><프로그래머스> 탐욕법 구명보트</a></li>
+                                            <li><a href="/blockchain-start(7)">블록체인의 시작(7)_스마트컨트랙트 작성(2)</a></li>
                                         
                                     
                                   
@@ -426,20 +426,16 @@ prices             	return<br />
                                     
                                         
                                         
-                                            <li><a href="/coding-greedy(3)"><프로그래머스> 탐욕법 큰 수 만들기</a></li>
+                                            <li><a href="/blockchain-start(6)">블록체인의 시작(6)_스마트컨트랙트 작성(1)</a></li>
                                         
                                     
-                                  
-                                
-                                  
-                                
                                   
                                 
                                   
                                     
                                         
                                         
-                                            <li><a href="/coding-greedy(1)"><프로그래머스> 탐욕법 체육복</a></li>
+                                            <li><a href="/blockchain-start(5)">블록체인의 시작(5)_블록체인 이해하기</a></li>
                                         
                                     
                                   
@@ -475,65 +471,51 @@ prices             	return<br />
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
-                                  
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                                   
@@ -579,9 +561,9 @@ prices             	return<br />
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/coding/">
+                            <a href="/tag/blockchain/">
                                 
-                                    See all 15 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -591,55 +573,6 @@ prices             	return<br />
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/coding-heap(1)">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/coding-heap(1)">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Coding</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title"><프로그래머스> 힙(Heap)  Level 2 더 맵게 (1)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>프로그래머스 &gt; 힙(Heap) 문제 설명 매운 것을 좋아하는 Leo는 모든 음식의 스코빌 지수를 K 이상으로 만들고 싶습니다. 모든 음식의 스코빌 지수를 K 이상으로 만들기 위해 Leo는 스코빌 지수가 가장 낮은 두 개의 음식을</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/RubyIcon.jpg" alt="nageom" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/nageom/">nageom</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -647,30 +580,26 @@ prices             	return<br />
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/coding-stack&queue(2)">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/coding/cover_coding.jpg)"></div>
+            <a class="post-card-image-link" href="/error-typescript">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/error/5.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/coding-stack&queue(2)">
+            <a class="post-card-content-link" href="/error-typescript">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Coding</span>
+                                <span class="post-card-tags">Error</span>
                             
                         
                     
 
-                    <h2 class="post-card-title"><프로그래머스> 스택/큐 Level 2 프린터 (2)</h2>
+                    <h2 class="post-card-title">자바스크립트 backtick(`)과 single quoto(') 나만 주의..</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
                         <p>
- 프로그래머스 &gt; 스택/큐 
-중요도에 관한 배열이 주어지고 
-프린트 요청이 들어온 문서들을 이 배열에 맞춰 재배열하고 
-지정한 문서가 몇번째로 프린트되는지 리턴해줘야하는 QUEUE를 이용한 ‘프린터’문제이다.
 
 </p>
                     
@@ -712,18 +641,18 @@ prices             	return<br />
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title"><프로그래머스> 스택/큐  Level 2 주식가격 (3)</div>
+    <div class="floating-header-title">블록체인의 시작(7)_ERC20토큰 만들기</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%3C%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4%3E+%EC%8A%A4%ED%83%9D%2F%ED%81%90++Level+2+%EC%A3%BC%EC%8B%9D%EA%B0%80%EA%B2%A9+%283%29&amp;url=https://nageom.github.io/coding-stack&queue(3)"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EC%9D%98+%EC%8B%9C%EC%9E%91%287%29_ERC20%ED%86%A0%ED%81%B0+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;url=https://nageom.github.io/blockchain-start(8)"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/coding-stack&queue(3)"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://nageom.github.io/blockchain-start(8)"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

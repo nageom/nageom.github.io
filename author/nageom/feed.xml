@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://nageom.github.io/author/nageom/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://nageom.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-07T22:53:14+09:00</updated>
+  <updated>2021-11-10T14:37:24+09:00</updated>
   <id>https://nageom.github.io/author/nageom/feed.xml</id>
 
   
@@ -109,7 +109,7 @@ ACCOUT: 리믹스와 메타마스크 연결되어 내 지갑계정을 확인할�
 올릴때 가스비가 소비하나요? 라는 안내문이 뜹니다. 확인 클릭
 &lt;br /&gt;&lt;br /&gt;
 잠깐 시간이 지나면 터미널에 블록이 생성되었다고 뜹니다. 
-&lt;img src=&quot;../../assets/built/images/blockchain/bc38.png&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;../../assets/built/images/blockchain/bc38.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h6&gt;4.테스트넷에서 트랜잭션 확인, 메타마스크에 잔고확인 &lt;/h6&gt;
 &lt;p&gt;우리가 테스트넷 이더를 받은 곳 ropsten의 이더스캔을 이용해 방금 우리가 일으킨 트랜잭션을 자세히 볼 수 있다. 

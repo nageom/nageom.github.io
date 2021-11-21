@@ -245,20 +245,34 @@ compare()도 이와 동일.<br /></p>
 
 <span class="p">}</span>
 </code></pre></div></div>
-<p>Comparable과 Comparable을 구분해보자면
-Comparable을 구현한 클래스들이 기본적으로 오름차순으로 정렬되어 있지만, 내림차순으로 정렬 또는 다른 기준에 의해 정렬되도록 하고 싶을 때, 
-Comparator를 구현해서 정렬기준을 변경할 수 있다.</p>
 
-<blockquote>
-  <p>Comparable 기본 정렬기준을 구현하는데 사용<br />
-Comparator 기본 정렬기준 외에 다른 기준으로 정렬하고자할 때 사용</p>
-</blockquote>
+<p>그냥 보자면 목적도 같고 생김새도 같은 둘이라서 공통점만 알겠는데? 싶지만 <br />
+자세히 보면 둘의 차이는 <u>매개변수, 비교 대상</u>에 있다. <br />
+Comparable은 자기 자식과 매개변수 객체를 비교하는 인터페이스이고, <br />
+Comparator는 두 매개변수 객체를 비교하는 인터페이스이다. <br />
+즉, 본질적으로 비교한다는 것 자체는 같지만, 비교 대상이 다르다는 것이다.<br /></p>
+
+<p>또한, 
+위와 같이 익명 객체(클래스)를 이용해서 comparator의 기능만을 사용할 수 있다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// 문자 길이로 sorting (오름차순)</span>
+    <span class="nx">Arrays</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Comparator</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">@</span><span class="nd">Override</span>
+        <span class="kr">public</span> <span class="nx">int</span> <span class="nx">compare</span><span class="p">(</span><span class="nb">String</span> <span class="nx">s1</span><span class="p">,</span> <span class="nb">String</span> <span class="nx">s2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">s1</span><span class="p">.</span><span class="nx">length</span><span class="p">()</span> <span class="o">-</span> <span class="nx">s2</span><span class="p">.</span><span class="nx">length</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+	<span class="p">}</span>
+	
+</code></pre></div></div>
 
 <p><img src="../../assets/built/images/java/basic of java/comparator(1).png" alt="ex_screenshot" /></p>
 
-<p>앞으로 코드를 살펴볼때 
-static void sort(Object[] a) //는 객체 배열에 저장된 객체가 구현한 Comparable에 의한 정렬
-static void sort(Object[] a , Comparator c) //지정한 Comparator에 의한 정렬이라 보면 된다.</p>
+<p>그래서 Arrays의 메서드 sort를 이용한 정렬을 사용시 원하는 정렬이 있다면 익명 클래스를 이용한 Comparator를 구현하는 경우가 많다.<br />
+static void sort(Object[] a) //는 객체 배열에 저장된 객체가 구현한 Comparable에 의한 정렬<br />
+static void sort(Object[] a , Comparator c) //지정한 Comparator에 의한 정렬이라 보면 된다. <br /></p>
 
 <p>다만 compare()의 매개변수가 Object 타입이기 때문에 compareTo()를 바로 호출할 수 없으므로 먼저 Comparable로 형변환해야 한다는 것을 명심하자.
 매개변수를 Integer, String 등으로 받는 경우에 형변환 필요없이 바로 compareTo()를 호출이 가능하다.</p>

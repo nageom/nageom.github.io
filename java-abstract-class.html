@@ -54,7 +54,7 @@
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="추상과 인터페이스" />
-    <meta property="og:description" content="면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 추상클래스 추상클래스는 미완성 설계도에 비유할 수 있습니다. 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다. 특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를" />
+    <meta property="og:description" content="면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 추상클래스 추상클래스는 미완성 설계도라고 보면됩니다. 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다. 특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는" />
     <meta property="og:url" content="https://nageom.github.io/java-abstract-class" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -64,7 +64,7 @@
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="추상과 인터페이스" />
-    <meta name="twitter:description" content="면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 추상클래스 추상클래스는 미완성 설계도에 비유할 수 있습니다. 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다. 특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를" />
+    <meta name="twitter:description" content="면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 추상클래스 추상클래스는 미완성 설계도라고 보면됩니다. 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다. 특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -96,7 +96,7 @@
         "@type": "WebPage",
         "@id": "https://nageom.github.io/java-abstract-class"
     },
-    "description": "면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 추상클래스 추상클래스는 미완성 설계도에 비유할 수 있습니다. 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다. 특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를"
+    "description": "면접질문 공부하는데 추상클래스와 인터페이스 차이가 헷갈려서 해보는 포스팅이다 그래서 이번에 구입한 자바의정석으로 공부하고 포스팅 도전 추상클래스 추상클래스는 미완성 설계도라고 보면됩니다. 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다. 특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는"
 }
     </script>
 
@@ -208,10 +208,15 @@ into the {body} of the default.hbs template -->
 
 <h6> 추상클래스 </h6>
 <p><br />
-추상클래스는 미완성 설계도에 비유할 수 있습니다.
+추상클래스는 미완성 설계도라고 보면됩니다. 
 좀 더 자세히 보자면 클래스의 미완성이 멤버의 개수에 관계된 것이 아니라, 단지 미완성 메서드(추상메서드)를 포함하고 있다는 의미입니다.<br />
-특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는 없습니다.<br />
-즉, 추상클래스는 상속을 통해 오직 자손클래스에 의해서만 완성될 수 있습니다. 
+특징이라하면 아무래도 미완성 설계도로는 완성된 제품을 만들 수 없듯이 추상클래스로 인스턴스를 생성할 수는 없습니다.<br /></p>
+
+<p>저는 추상클래스를 볼때 추상클래스는 “도형” -&gt; 딱 정해진 형태가 없는 추상적인 형체 
+상속받은 클래스는 “원형”, “사각형”, “삼각형” -&gt; 구현된 형체 를 예로 듭니다. 
+이 셋 모두 도형이라는 큰 틀에 들어맞죠.</p>
+
+<p>즉, 추상클래스는 상속을 통해 오직 자손클래스에 의해서만 완성될 수 있습니다. 
 두번째로는 추상클래스를 상속받은 클래스가 미완성 메서드를 반드시 재정의 해줘야합니다.</p>
 
 <h6> 추상메서드(abstract method)</h6>
@@ -220,7 +225,7 @@ into the {body} of the default.hbs template -->
 <br /><br /></p>
 <h6>사용이유?</h6>
 <p><br />
-여러 객체를 부모클래스로 하나의 list에 모으기 편리함 떄문 <br />
+여러 객체를 부모클래스로 하나의 list에 모으기 편리함 때문 <br />
 재정의를 강조하기 위해</p>
 
 <p>추상클래스는 키워드 ‘abstract’를 붙이기만 하면 됩니다. <br /></p>
@@ -245,7 +250,7 @@ class에서 상속시에 interface를 사용한다.</p>
 <p>특징 1. 제약사항 <br /></p>
 <ul>
   <li>모든 멤버변수는 public static final 이어야하고, 생략가능</li>
-  <li>모든 메서드는 public abstract이어야 하며, 생략 가능
+  <li>모든 메서드는 public abstract 이어야 하며, 생략 가능
 단, static 메서드와 디폴트 메서드는 예외(jdk1.8부터)</li>
 </ul>
 
@@ -261,17 +266,58 @@ class에서 상속시에 interface를 사용한다.</p>
 </code></pre></div></div>
 <p>특징2. 인터페이스는 인터페이스로부터만 상속 받을 수 있으며, 클래스와는 달리 다중상속, 즉 여러 개의 인터페이스로부터 상속을 받는 것이 가능하다. 
 <br /></p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">A</span> <span class="p">{</span> <span class="k">void</span> <span class="nx">move</span><span class="p">(</span><span class="nx">int</span> <span class="nx">x</span><span class="p">.</span> <span class="nx">omt</span> <span class="nx">u</span><span class="p">);}</span>
-<span class="kr">interface</span> <span class="nx">B</span> <span class="p">{</span> <span class="k">void</span> <span class="nx">stop</span><span class="p">(</span><span class="nx">D</span> <span class="nx">d</span><span class="p">);}</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-<span class="kr">interface</span> <span class="nx">A</span> <span class="kd">extends</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">C</span> <span class="p">{}</span>
+<span class="kr">interface</span> <span class="nx">A</span> <span class="p">{</span> <span class="k">void</span> <span class="nx">move</span><span class="p">(</span><span class="nx">int</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">u</span><span class="p">);}</span>
+<span class="kr">interface</span> <span class="nx">B</span> <span class="p">{</span> <span class="k">void</span> <span class="nx">stop</span><span class="p">(</span><span class="nx">int</span> <span class="nx">d</span><span class="p">);}</span>
+
+<span class="kr">interface</span> <span class="nx">D</span> <span class="kd">extends</span> <span class="nx">A</span><span class="p">,</span> <span class="nx">B</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="kr">public</span> <span class="kd">class</span> <span class="nx">One</span> <span class="kr">implements</span> <span class="nx">D</span><span class="p">{</span>
+
+
+    <span class="p">@</span><span class="nd">Override</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">move</span><span class="p">(</span><span class="nx">int</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">int</span> <span class="nx">u</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// TODO Auto-generated method stub</span>
+
+<span class="p">}</span>
+
+    <span class="p">@</span><span class="nd">Override</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">stop</span><span class="p">(</span><span class="nx">int</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// TODO Auto-generated method stub</span>
+
+    <span class="p">}</span>
+
+
+<span class="p">}</span>
+
 </code></pre></div></div>
-<p>인터페이스 A에 정의된 멤버가 하나도 없지만 조상 인터페이스로부터 상속받은 두개의 추상메서드,
-move(int x, int y)와 attack(D d)을 멤버로 갖게 된다.<br />
-특징.3 <br />
+<p>인터페이스 D에 정의된 멤버가 하나도 없지만 조상 인터페이스로부터 상속받은 
+두개의 추상메서드 move(int x, int y)와 attack(D d)을 멤버로 갖게 된다.<br /></p>
+
+<p>특징.3 <br />
 추상클래스처럼 그 자체로는 인스턴스를 생성할 수 없으며,<br />
-추상클래스는 확장한다는 의미의 키워드’extends’를 사용하지만 <br />
-인터페이스는 구현한다는 의미의 키워드 ‘implements’를 사용한다.<br /></p>
+추상클래스는 확장한다는 의미의 키워드 ‘extends’를 사용하지만 <br />
+-&gt; 일반 클래스와 추상 클래스 상속엔 ‘extends’<br />
+-&gt; interface가 interface 상속에도 ‘extends’<br /></p>
+
+<p>인터페이스는 구현한다는 의미의 키워드 ‘implements’를 사용한다.<br />
+-&gt; 일반 클래스가 interface 상속때에 ‘implements’ <br /></p>
+
+<h6> 추상 클래스와 인터페이스 차이점</h6>
+<p>추상 클래스는 <br />
+ -관련성이 높은 클래스들 간에 코드를 공유하고 싶은 경우<br />
+ 공통점을 모아 만든 클래스.<br />
+ -추상 클래스를 상속 받을 클래스들이 공통으로 갖는 메소드와 필드가 많은 경우<br /></p>
+
+<p>인터페이스 <br /></p>
+<ul>
+  <li>서로 관련성이 없는 클래스들의 인터페이스를 구현하게 되는 경우 <br /></li>
+  <li>특정 기능을 넣고 싶은데 어디서 어떻게 행동이 구현되는지는 신경쓰지 않는 경우 <br /></li>
+  <li>다중상속을 허용하고 싶은 경우 <br /></li>
+</ul>
 
 
                 </div>

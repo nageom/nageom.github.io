@@ -302,8 +302,7 @@ Remix IDE가 필요하다~ 를 아실거에요 &lt;br /&gt;&lt;/p&gt;
         <title>쓰레드- start()와 run() (2)</title>
         
           <description>&lt;p&gt;쓰레드를 구현하고 나면서 드는 생각이 있었다. &lt;br /&gt;
-쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까?
-그래서 이 둘에 대해 자세히 알아보았다. &lt;br /&gt;&lt;/p&gt;
+쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까?&lt;br /&gt;&lt;/p&gt;
 
 </description>
         
@@ -891,18 +890,7 @@ package thread;&lt;/p&gt;
           <description>&lt;hr /&gt;
 &lt;p&gt;면접질문을 공부하면서 정리해둔 메모&lt;/p&gt;
 &lt;h5&gt;&amp;lt;자바 JVM, 컴파일러, JDK와 JRE&amp;gt;&lt;/h5&gt;
-&lt;p&gt;JRE - 자바코드가 실행 될 수 있는 환경 , JVM을 생성하는 디스크 상의 부분  &lt;br /&gt;
-JVM - 자바와 OS사이에서 중개자 역할을 수행하며 자바가 OS에 구애받지 않고   &lt;br /&gt;
-           재사용을 가능하게 해준다.&lt;br /&gt;
-         - JRE 내에 존재한다. &lt;br /&gt;
-JAVAC (자바 컴파일러)    &lt;br /&gt;
-    JDK가 컴파일하는 기능을 가지고 있는데 그게 javac이다.  &lt;br /&gt;
-   자바 컴파일러는 컴퓨터가 이해하는 기계어로 변환 해주는 컴파일을 하는 녀석인데,   &lt;br /&gt;
-   정확히는 OS와 자바의 중개자인 JVM이 이해할 수 있는 형태로 컴파일된다.(바이트코드)&lt;/p&gt;
-
-&lt;p&gt;JDK - (Java Development Kit) 자바 애플리케이션을 구축하기 위한 핵심 플랫폼 구성요소   &lt;br /&gt;
-       - 개발자들이 JVM과 JRE에 의해 실행되고 구동될 수 있는 자바 프로그램을    &lt;br /&gt;
-       생성할 수 있게 해준다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/interview/2.jpg&quot; alt=&quot;ex_screenshot&quot; /&gt;&lt;/p&gt;
 
 </description>
         

@@ -54,7 +54,7 @@
     <meta property="og:site_name" content="nageom's blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="쓰레드- start()와 run() (2)" />
-    <meta property="og:description" content="쓰레드를 구현하고 나면서 드는 생각이 있었다. 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 그래서 이 둘에 대해 자세히 알아보았다. //구현 class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } //실행 public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); //" />
+    <meta property="og:description" content="쓰레드를 구현하고 나면서 드는 생각이 있었다. 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 자세히 알아보자 //구현 class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } //실행 public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); // run을 호출(XXX) start사용 mt01.start();" />
     <meta property="og:url" content="https://nageom.github.io/java-thread(22)" />
     <meta property="og:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -64,7 +64,7 @@
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="쓰레드- start()와 run() (2)" />
-    <meta name="twitter:description" content="쓰레드를 구현하고 나면서 드는 생각이 있었다. 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 그래서 이 둘에 대해 자세히 알아보았다. //구현 class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } //실행 public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); //" />
+    <meta name="twitter:description" content="쓰레드를 구현하고 나면서 드는 생각이 있었다. 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 자세히 알아보자 //구현 class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } //실행 public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); // run을 호출(XXX) start사용 mt01.start();" />
     <meta name="twitter:url" content="https://nageom.github.io/" />
     <meta name="twitter:image" content="https://nageom.github.io/assets/built/images/java/cover/cover_java.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -96,7 +96,7 @@
         "@type": "WebPage",
         "@id": "https://nageom.github.io/java-thread(22)"
     },
-    "description": "쓰레드를 구현하고 나면서 드는 생각이 있었다. 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 그래서 이 둘에 대해 자세히 알아보았다. //구현 class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } //실행 public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); //"
+    "description": "쓰레드를 구현하고 나면서 드는 생각이 있었다. 쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까? 자세히 알아보자 //구현 class MyThread01 extends Thread { @Override public void run() { System.out.print(getName()); } } //실행 public class Ex01 { public static void main(String[] args) { MyThread01 mt01 = new MyThread01(); // run을 호출(XXX) start사용 mt01.start();"
 }
     </script>
 
@@ -203,8 +203,9 @@ into the {body} of the default.hbs template -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
                     <p>쓰레드를 구현하고 나면서 드는 생각이 있었다. <br />
-쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까?
-그래서 이 둘에 대해 자세히 알아보았다. <br /></p>
+쓰레드를 실행시킬 때 run()과 start()를 구분해서 사용할까?<br /></p>
+
+<p>자세히 알아보자</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//구현</span>
 <span class="kd">class</span> <span class="nx">MyThread01</span> <span class="kd">extends</span> <span class="nx">Thread</span> <span class="p">{</span>
@@ -225,7 +226,7 @@ into the {body} of the default.hbs template -->
   <li>
     <p>간단히 말해서<br />
 <strong>run()</strong> - main메서드에서 run()만을 호출하는 것은 생성된 쓰레드를 실행시키는 것이 아니라 단순히 클래스에 선언된 메서드를 호출하는 것일 뿐이다.<br />
-반면에 <strong>start()</strong> - 새로운 쓰레드가 작업을 실행하는데 필요한 호출스택(call stack)을 생성한 다음에 run()을 호출해서
+반면에 <br /><strong>start()</strong> - 새로운 쓰레드가 작업을 실행하는데 필요한 호출스택(call stack)을 생성한 다음에 run()을 호출해서
 생성된 호출스택에 run()이 첫 번째로 올라가게 한다.<br /></p>
   </li>
   <li>
@@ -256,12 +257,14 @@ into the {body} of the default.hbs template -->
 
 <p>start()로 쓰레드를 생성함과 동시에 호출스택을 생성해 내는것을 한번 더 기억하자. <br /></p>
 
-<p><u>4. 그렇다면 run()으로 쓰레드를 바로 실행하면 어떻게 될까?</u> <br />
+<p><u>4. 그렇다면 호출스택을 생성하지 않는 run()으로 쓰레드를 바로 실행하면 어떻게 될까?</u> <br />
 호출스택<br />
 <strong><u>|throwException</u></strong><br />
 <strong><u>|run</u></strong><br />
-<strong><u>|main</u></strong><br />
-이런 식으로 하나의 main쓰레드 호출스택에서 호출된다.</p>
+<strong><u>|main</u></strong><br /></p>
+
+<p>앞선 그림과 다르게 main쓰레드가 함께 출력됐다. 
+즉, main쓰레드의 호출스택에서 run()이 실행됐음을 알 수 있다.</p>
 
 
                 </div>
